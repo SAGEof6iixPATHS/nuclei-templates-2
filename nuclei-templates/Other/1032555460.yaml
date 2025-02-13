@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: Conti ftpd
+  name: vftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
     operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Conti FTP Server ready\r\n
+    - ^220 .* Server \(vftpd ([\d.]+)\) ready\.\r\n

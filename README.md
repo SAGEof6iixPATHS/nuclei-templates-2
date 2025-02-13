@@ -20,26 +20,18 @@
 | CVE-2017 | 109 |
 | CVE-2018 | 271 |
 | CVE-2019 | 457 |
-| CVE-2020 | 825 |
-| CVE-2021 | 973 |
+| CVE-2020 | 826 |
+| CVE-2021 | 971 |
 | CVE-2022 | 939 |
-| CVE-2023 | 791 |
+| CVE-2023 | 792 |
 | CVE-2024 | 418 |
 | CVE-2025 | 2 |
-| Other | 41054 |
+| Other | 41061 |
 | wordpress | 49815 |
 ## 近几天数量变化情况
 |2025-02-07 | 2025-02-08 | 2025-02-09 | 2025-02-10 | 2025-02-11 | 2025-02-12 | 2025-02-13|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|52423 | 52427 | 52436 | 52446 | 53201 | 53192 | 96131|
+|52423 | 52427 | 52436 | 52446 | 53201 | 53192 | 96138|
 ## 最近新增文件
 | templates name | 
 | --- |
-| seeyon-OA.yaml |
-| nsfocus-sas-rce-exec.yaml |
-| fanwei-OA.yaml |
-| nsfocus-sas-getfile-fileread.yaml |
-| OA-SQL.yaml |
-| RedCap-Install-Module.yaml |
-| springboot2.x_eureka_rce.yaml |
-| Dahua_DSS_resetPassword.yaml |

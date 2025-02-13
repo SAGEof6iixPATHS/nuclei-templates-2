@@ -1,18 +1,16 @@
 id: smtp
 info:
-  name: Trend Micro InterScan
+  name: Novonyx Novell NetMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $2
-    info: on Postfix
-    operating_system: Unix
-    product: postfix
+    hostname: $1
+    product: netmail
     rarity: 0
-    vendor: postfix
+    vendor: novell
     verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220-InterScan Version (\S+) .*Ready\r\n220 ([-.+\w]+) ESMTP Postfix\r\n
+    - '^220 ([-.+\w]+) Novonyx SMTP ready \$Re..sion: *([\d.]+) *\$\r\n'
