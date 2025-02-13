@@ -1,13 +1,12 @@
 id: pop3
 info:
-  name: DeskNow pop3d
+  name: Solid pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) POP3 server \(DeskNow POP3 Server ([\d.]+)\) ready \r\n
+    - ^\+OK ([\w\d_-]+\.[\w\d_.-]+) POP3 <\d{3,6}\.1[012]\d{8}@[-.\w]+>\r\n

@@ -1,13 +1,16 @@
 id: smtp
 info:
-  name: WebEasyMail smtpd
+  name: qmail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: qmail-smtpd-auth 0.31
+    operating_system: Unix
+    product: qmail
     rarity: 0
-    version: $1
+    vendor: djb
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ESMTP on WebEasyMail \[([\d.]+)\] ready\.  http://www\.51webmail\.com\r\n
+    - ^421 unable to read controls \(#4\.3\.0\)\r\n
