@@ -1,21 +1,21 @@
 id: smtp
 info:
-  name: Canon imageRUNNER C5185 smtpd
+  name: LAN-ACES MERCUR smtp server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    device_type: printer
-    rarity: 8
+    operating_system: $2
+    rarity: 0
+    version: $1
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 \[[\w_.-]+\] ESMTP Ready\r\n501 HELO requires domain address\r\n
+    - '^220.*?MERCUR SMTP[\s-]Server \(v([^)]+)\) for ([-.\w ]+) ready at '

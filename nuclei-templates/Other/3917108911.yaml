@@ -1,12 +1,13 @@
 id: telnet
 info:
-  name: Ambit $1 cable modem telnetd
+  name: Dynalink RTA1320NZ ADSL router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
     device_type: broadband router
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfa\x18\x01\xff\xf0\xff\xfb\x01\xff\xfb\x03Ambit (U\w+) CableModem\r\n\r\nlogin: '
+    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03Dynalink ADSL2\+ Router RTA1320NZ .*\r\nSoftware Version: ([-\w_.]+)\r\n'
