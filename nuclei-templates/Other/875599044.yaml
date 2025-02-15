@@ -1,14 +1,14 @@
 id: imap
 info:
-  name: Sun iPlanet Messaging Server imapd
+  name: Citadel imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
-    product: iplanet_messaging_server
+    product: ux
     rarity: 0
-    vendor: sun
+    vendor: citadel
     verified: true
     version: $2
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+) IMAP4 service \(iPlanet Messaging Server ([\w. ]+) \(built .*\)\)\r\n
+    - ^\* OK \[CAPABILITY IMAP4REV1[^\]]*?\] ([-.\w]+) IMAP4rev1 Citadel ([-.\w]+) ready\r\n

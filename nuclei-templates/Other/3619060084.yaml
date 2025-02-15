@@ -1,12 +1,14 @@
 id: smtp
 info:
-  name: MailMasher smtpd
+  name: MailFrontier smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    device_type: firewall
     hostname: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.+\w]+) ESMTP MailMasher ready to boogie\r\n
+    - ^220 ([-\w_.]+) ESMTP MailFrontier \(([\d.]+)\)\r\n

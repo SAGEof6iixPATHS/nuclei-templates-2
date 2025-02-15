@@ -1,15 +1,14 @@
 id: ssh
 info:
-  name: SilverSHielD sshd
+  name: Axway API Gateway sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    operating_system: Windows
-    product: silvershield
+    product: api_gateway
     rarity: 0
-    vendor: extenua
+    vendor: axway
     verified: true
 tcp:
 - name: 'null'
@@ -21,4 +20,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-SilverSHielD\r\n
+    - ^SSH-([\d.]+)-Axway\.Gateway\r\n
