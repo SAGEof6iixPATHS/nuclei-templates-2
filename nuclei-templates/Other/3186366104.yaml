@@ -1,11 +1,10 @@
 id: smtp
 info:
-  name: Hamster smtpd
+  name: LiteMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: Access denied
     operating_system: Windows
     rarity: 0
 tcp:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^500 Permission denied - closing connection\.\r\n
+    - ^220 LiteMail SMTP Server Ready\.\r\n
