@@ -1,13 +1,12 @@
 id: pop3
 info:
-  name: Kerio MailServer POP3 Server
+  name: Floosietek FTGate4 pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    info: $2
+    operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Kerio MailServer (\d[-.\w]+) POP3 server ready <([-.\w@:]+)>\r\n$
+    - ^\+OK POP3 FTGate4 server ready

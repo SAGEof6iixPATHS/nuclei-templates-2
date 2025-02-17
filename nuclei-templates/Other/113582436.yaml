@@ -1,11 +1,14 @@
 id: pop3
 info:
-  name: Atmail pop3d
+  name: Merak Mail Server pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
+    operating_system: Windows
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Welcome to the Atmail POP3 server - Login with user@domain\.\r\n
+    - ^\+OK ([-\w_.]+) [-\w_.]+ Mail Server ([\d.]+) POP3 .*\d:\d\d:\d\d \+
