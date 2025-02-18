@@ -11,37 +11,70 @@
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
 | CVE-2010 | 123 |
-| CVE-2011 | 22 |
+| CVE-2011 | 21 |
 | CVE-2012 | 38 |
 | CVE-2013 | 30 |
 | CVE-2014 | 63 |
-| CVE-2015 | 72 |
+| CVE-2015 | 71 |
 | CVE-2016 | 74 |
 | CVE-2017 | 109 |
 | CVE-2018 | 271 |
 | CVE-2019 | 457 |
-| CVE-2020 | 827 |
-| CVE-2021 | 973 |
-| CVE-2022 | 939 |
-| CVE-2023 | 792 |
-| CVE-2024 | 419 |
+| CVE-2020 | 824 |
+| CVE-2021 | 972 |
+| CVE-2022 | 938 |
+| CVE-2023 | 791 |
+| CVE-2024 | 420 |
 | CVE-2025 | 2 |
-| Other | 45784 |
-| wordpress | 62768 |
+| Other | 45347 |
+| wordpress | 62672 |
 ## 近几天数量变化情况
-|2025-02-11 | 2025-02-12 | 2025-02-13 | 2025-02-14 | 2025-02-15 | 2025-02-16 | 2025-02-17|
+|2025-02-12 | 2025-02-13 | 2025-02-14 | 2025-02-15 | 2025-02-16 | 2025-02-17 | 2025-02-18|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|53201 | 53192 | 96138 | 113232 | 113686 | 113825 | 113818|
+|53192 | 96138 | 113232 | 113686 | 113825 | 113818 | 113278|
 ## 最近新增文件
 | templates name | 
 | --- |
-| wp-smushit_4.yaml |
-| wordfence_4.yaml |
-| updraftplus_4.yaml |
-| all-in-one-seo-pack_4.yaml |
-| sg-cachepress_4.yaml |
-| contact-form-cfdb7_4.yaml |
-| sg-security_4.yaml |
-| custom-post-type-ui_4.yaml |
-| tinymce-advanced_4.yaml |
-| signatures_25.yaml |
+| CVE-2025-0924.yaml |
+| cve-2016-10956-2.yaml |
+| cve-2016-1000129-2654_1.yaml |
+| cve-2018-18326.yaml |
+| CVE-2024-46982.yaml |
+| cardano-event-logging.yaml |
+| hyperledger fabric-gas-inefficiency.yaml |
+| cosmos sdk-gas-inefficiency.yaml |
+| polkadot-unused-variable.yaml |
+| tezos-gas-inefficiency.yaml |
+| hyperledger-missing-access-control.yaml |
+| hyperledger fabric-event-logging.yaml |
+| polkadot-redundant-code.yaml |
+| cosmos sdk-redundant-code.yaml |
+| signatures_26.yaml |
+| cosmos-unbounded-storage.yaml |
+| cardano-redundant-code.yaml |
+| tezos-event-logging.yaml |
+| cosmos sdk-unused-variable.yaml |
+| tezos-redundant-code.yaml |
+| ethereum-unused-variable.yaml |
+| solana-event-logging.yaml |
+| polkadot-event-logging.yaml |
+| ethereum-selfdestruct.yaml |
+| polkadot-unauthorized-runtime-upgrade.yaml |
+| solana-unchecked-signer.yaml |
+| cardano-unused-variable.yaml |
+| solana-unvalidated-cpi.yaml |
+| ethereum-integer-overflow.yaml |
+| ethereum-redundant-code.yaml |
+| ethereum-event-logging.yaml |
+| tezos-unchecked-storage-update.yaml |
+| ethereum-reentrancy.yaml |
+| solana-redundant-code.yaml |
+| solana-gas-inefficiency.yaml |
+| ethereum-unchecked-low-level-call.yaml |
+| hyperledger fabric-unused-variable.yaml |
+| cardano-gas-inefficiency.yaml |
+| cardano-unsafe-monad.yaml |
+| cosmos sdk-event-logging.yaml |
+| ethereum-visibility-flaws.yaml |
+| solana-unused-variable.yaml |
+| tezos-unused-variable.yaml |

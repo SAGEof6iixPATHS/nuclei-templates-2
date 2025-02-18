@@ -1,11 +1,10 @@
 id: pop3
 info:
-  name: vm-pop3d
+  name: Teapop pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    info: derived from gnu-pop3d
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 Welcome to vm-pop3d (\d[-.\w]+)
+    - ^\+OK Teapop \[v?(\d[-.\w ]+)\] - Teaspoon stirs around again .*\r\n
