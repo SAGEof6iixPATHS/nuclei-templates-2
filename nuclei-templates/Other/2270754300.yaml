@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: Qtopia ftpd
+  name: ArGoSoft ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: PDA
+    operating_system: Windows
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Qtopia ([\d.]+) FTP Server\n
+    - ^220.ArGoSoft FTP Server for Windows NT/2000/XP, Version [\d.]+ \(([\d.]+)\)\r\n
