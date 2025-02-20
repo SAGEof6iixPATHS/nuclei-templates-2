@@ -1,18 +1,14 @@
 id: pop3
 info:
-  name: Cyrus pop3d
+  name: SCO-modified QPOP pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    info: Red Hat
-    operating_system: Linux
-    product: cyrus_imap_server
+    hostname: $2
+    operating_system: SCO UNIX
     rarity: 0
-    vendor: cmu
-    verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-.\w]+) Cyrus POP3 v(\d[-.\w]+)-Red Hat [-\d.]+ server ready <
+    - ^\+OK QPOP modified by SCO \(version ([-\w.]+)\) at ([-\w_.]+) starting\.  \r\n
