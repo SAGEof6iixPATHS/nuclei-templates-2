@@ -1,23 +1,23 @@
 id: http
 info:
-  name: IBM WebSphere Application Server
+  name: Konica Minolta bizhub C452 OpenAPI
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    product: websphere_application_server
-    rarity: 0
-    vendor: ibm
-    verified: true
-    version: $1
+    device_type: printer
+    fallback:
+    - get-request
+    rarity: 5
 tcp:
-- name: 'null'
+- name: rtsprequest
   inputs:
-  - data: ''
+  - data: OPTIONS / RTSP/1.0\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 408 Request Timeout\r\nServer: WebSphere Application Server/([\w._-]+)\r\nContent-Type: text/html\r\nContent-Length: 117\r\n'
+    - '^HTTP/1\.1 505 HTTP Version not supported\r\nContent-Length: 0\r\nDate: .* GMT\r\nConnection: close\r\n\r\n'

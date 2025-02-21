@@ -1,12 +1,12 @@
 id: imap
 info:
-  name: Merak Mail Server imapd
+  name: DavMail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \]-:\^:-\[ IMAP4rev1 .*\r\n
+    - ^\* OK \[CAPABILITY IMAP4REV1 AUTH=LOGIN[\w._ -]+\] IMAP4rev1 DavMail ([\w._-]+) server ready\r\n

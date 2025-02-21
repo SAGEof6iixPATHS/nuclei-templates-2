@@ -1,12 +1,16 @@
 id: ssh
 info:
-  name: Elastic Hosts emergency SSH console
+  name: Gravitational Teleport sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
+    product: teleport
     rarity: 0
+    vendor: gravitational
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-elastic-sshd\n
+    - ^SSH-([\d.]+)-Teleport (\d[\w._-]+)\n
