@@ -1,13 +1,13 @@
 id: ftp
 info:
-  name: Avalaunch ftpd
+  name: NRG 2205/2238/2212 copier ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: game console
-    info: XBox
+    device_type: printer
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 The Avalaunch FTP system -- enter user name\r\n
+    - ^220 NRG 2205/2238/2212 FTP server \(([\d.]+)\) ready\.\r\n

@@ -1,16 +1,14 @@
 id: smtp
 info:
-  name: Microsoft Exchange smtpd
+  name: MailMax smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
     operating_system: Windows
-    product: exchange_server
     rarity: 0
-    vendor: microsoft
-    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) Microsoft ESMTP MAIL Service ready at
+    - ^220 ([-\w_.]+) ESMTP MailMax ([\d.]+) [A-Z][a-z][a-z].*\r\n

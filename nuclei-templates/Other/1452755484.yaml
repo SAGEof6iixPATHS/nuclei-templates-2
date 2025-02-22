@@ -1,11 +1,13 @@
 id: telnet
 info:
-  name: Optimcom DSLink 260E ADSL router telnetd
+  name: Allied Telesyn $1 switch telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    device_type: switch
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfb\x03ssss   ssss sss     s         ss           sss   sss   sss  sssss \r\n s  s s   s  s                 s          s   s s  s  s   s  s   \r\n s  s s      s                 s          s   s s     s   s  s  \r\n s  s  ss    s     ss   ssss   s sss         s  ssss  s   s  sss  \r\n s  s    s   s      s    s  s  s s          s   s   s s   s  s   \r\n s  s     s  s      s    s  s  sss         s    s   s s   s  s    \r\n s  s s   s  s   s  s    s  s  s  s       s     s   s s   s  s   \r\nssss  ssss  ssssss sss  sss sssss ss      sssss  sss   sss  sssss\r\nLogin: $'
+    - ^\x1b\[0;37;40m\x1b\[2J\x1b\[0;37;40m\x1b\[1m\x1b\[15;22HAT-(\w+), version ([\d.]+)\x1b
