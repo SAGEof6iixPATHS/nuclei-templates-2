@@ -1,12 +1,18 @@
 id: pop3
 info:
-  name: Samsung Contact pop3d
+  name: Cyrus pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
+    info: Mac OS X $3
+    operating_system: Mac OS X
+    product: cyrus_imap_server
     rarity: 0
+    vendor: cmu
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +23,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - '^\+OK Samsung Contact POP3 interface ready on: ([-\w_.]+)\r\n'
+    - ^\+OK ([-.\w]+) Cyrus POP3 v(\d[-.\w]+)-OS X ([\d.]+) server ready <

@@ -1,14 +1,19 @@
 id: sip
 info:
-  name: D-Link DVG-5121SP VoIP adapter
+  name: RingCentral Softphone
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP adapter
     fallback:
     - get-request
+    info: 'arch: $3-bit; OS Version $4'
+    operating_system: $2
+    product: softphone
     rarity: 5
+    vendor: ringcentral
+    verified: true
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -20,4 +25,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: VOIP_Agent_001\r\nAllow: INVITE, ACK, BYE, CANCEL, OPTIONS, SUBSCRIBE, REFER, NOTIFY, UPDATE, MESSAGE, SERVICE, INFO, PING\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Softphone/([\d.]+) \(RingCentral(?: \(\d+\))?; (Windows \w+) \((\d\d) bits\)/([\d.]+); revision: \d+\)\r\n'
