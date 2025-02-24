@@ -1,16 +1,15 @@
 id: pop3
 info:
-  name: IMail pop3d
+  name: GNU mailutils pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: imail
+    product: mailutils
     rarity: 0
-    vendor: ipswitch
+    vendor: gnu
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK X1 NT-POP3 Server ([-\w.]+) \(IMail ([^)]+)\)\r\n
+    - ^\+OK POP3 Ready <\d{3,6}\.1[012]\d{8}@([-.\w]+)>\r\n

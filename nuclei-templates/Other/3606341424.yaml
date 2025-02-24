@@ -1,17 +1,12 @@
 id: ftp
 info:
-  name: Serv-U ftpd
+  name: Quick 'n Easy FTP Server
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Name $2
     operating_system: Windows
-    product: serv-u
     rarity: 0
-    vendor: serv-u
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-SECURE FTP SERVER VERSION ([\d.]+) \(([-\w_.]+)\)\r\n
+    - '^220- \w+\r\n220 FTP Server powered by: Quick ''n Easy FTP Server\r\n'

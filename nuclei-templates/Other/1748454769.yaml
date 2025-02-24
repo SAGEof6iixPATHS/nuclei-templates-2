@@ -1,15 +1,12 @@
 id: imap
 info:
-  name: UW imapd
+  name: eXtremail IMAP server
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    product: imap_toolkit
     rarity: 0
-    vendor: uw
-    verified: true
-    version: $1
+    version: $1.$2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY (?:IMAP4 )?IMAP4REV1 .*IMAP4rev1 (200\d\.[-.\w]+) at
+    - ^\* OK eXtremail V(\d[-.\w]+) release (\d+) IMAP4 server started\r\n
