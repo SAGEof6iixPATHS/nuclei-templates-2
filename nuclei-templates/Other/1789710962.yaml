@@ -1,11 +1,14 @@
 id: imap
 info:
-  name: Courier IMAP4rev1 imapd
+  name: Dovecot imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    product: dovecot
     rarity: 0
+    vendor: dovecot
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4rev1 .*?Courier-IMAP ready\. Copyright 1998-\d+ Double Precision, Inc\.  See COPYING for distribution information\.\r\n
+    - ^\* OK \[CAPABILITY IMAP4rev1 SORT THREAD=REFERENCES MULTIAPPEND UNSELECT LITERAL\+ IDLE CHILDREN NAMESPACE LOGIN-REFERRALS [^\]]+\]

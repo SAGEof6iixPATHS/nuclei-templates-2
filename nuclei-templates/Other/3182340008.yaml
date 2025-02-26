@@ -1,14 +1,14 @@
 id: pop3
 info:
-  name: Novell GroupWise pop3d
+  name: CommuniGate Pro pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Unix
-    product: groupwise
+    info: access disabled
+    product: communigate_pro
     rarity: 0
-    vendor: novell
+    vendor: stalker
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK GroupWise POP3 server ready\r\n$
+    - ^-ERR access from your network is temporarily disabled\r\n

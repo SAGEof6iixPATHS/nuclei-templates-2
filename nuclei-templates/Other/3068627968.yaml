@@ -1,15 +1,14 @@
 id: ssh
 info:
-  name: Bitvise WinSSHD
+  name: Apache Mina sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: sshlib $2; protocol $1; server version hidden
-    operating_system: Windows
-    product: winsshd
+    info: Atlassian Bitbucket; protocol $1
+    product: sshd
     rarity: 0
-    vendor: bitvise
+    vendor: apache
     verified: true
 tcp:
 - name: 'null'
@@ -21,4 +20,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - '^SSH-([\d.]+)-(\d[-.\w]+) sshlib: WinSSHD\r?\n'
+    - ^SSH-([\d.]+)-SSHD-UNKNOWN\r\n
