@@ -1,11 +1,10 @@
 id: ftp
 info:
-  name: Plan 9 ftpd
+  name: IndiFTPD
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Plan 9
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Plan 9 FTP server ready\r\n
+    - ^220 Connected to IndiFTPD\r\n

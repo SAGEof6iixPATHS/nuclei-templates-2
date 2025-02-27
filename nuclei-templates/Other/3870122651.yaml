@@ -1,12 +1,13 @@
 id: pop3
 info:
-  name: GNU POP3 Server
+  name: VisNetic MailServer pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 Welcome to GNU POP3 Server Version (\d[-.\w]+) <.*>\r\n
+    - '^\+OK ([-.\w]+) VisNetic.MailServer.v([-.\w]+) POP3 '
