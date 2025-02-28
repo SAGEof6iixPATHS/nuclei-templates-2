@@ -1,16 +1,14 @@
 id: imap
 info:
-  name: Novell NetMail imapd
+  name: Nortel CallPilot imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    device_type: telecom-misc
     hostname: $1
-    operating_system: Unix
-    product: netmail
     rarity: 0
-    vendor: novell
-    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-.\w]+) NetMail IMAP4 Agent server ready <.*>\r\n
+    - ^\* OK ([-\w_.]+) CallPilot IMAP4rev1 v([\d.]+) server ready\.?\r\n

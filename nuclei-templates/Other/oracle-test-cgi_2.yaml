@@ -5,11 +5,12 @@ info:
   author: DhiyaneshDk
   severity: info
   metadata:
+    max-request: 1
     verified: true
     shodan-query: title:"Oracle Application Server"
   tags: oracle,exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cgi-bin/test-cgi"

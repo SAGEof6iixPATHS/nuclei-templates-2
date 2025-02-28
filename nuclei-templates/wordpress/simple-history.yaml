@@ -1,23 +1,21 @@
 id: simple-history
 
 info:
-  name: >
-    Simple History <= 1.0.7 - Sensitive Information Disclosure
+  name: "Simple History Plugin < 2.7.5 - Sensitive Information Disclosure"
   author: topscoder
-  severity: medium
-  description: >
-    The Simple History plugin for WordPress is vulnerable to Sensitive Data Exposure in versions up to, and including, 1.0.7 via the 'rss_secret' parameter. This can allow unauthenticated attackers to view sensitive information from the RSS feed.
+  severity: low
+  description: "The Simple History plugin for WordPress is vulnerable to Sensitive Data Exposure in versions up to, and including, 2.7.4 via the ajax_simple_history_filters_search_user function. This can allow authenticated attackers to extract sensitive data including logged in usernames and their email address."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f30af3c4-82be-40d5-be9f-82631b8f3ee2?source=api-prod
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    cvss-score: 5.3
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/simple-history/"
     google-query: inurl:"/wp-content/plugins/simple-history/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-history,medium
+  tags: cve,wordpress,wp-plugin,simple-history,low
 
 http:
   - method: GET
@@ -55,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.7')
+          - compare_versions(version, '<=  2.7.4')

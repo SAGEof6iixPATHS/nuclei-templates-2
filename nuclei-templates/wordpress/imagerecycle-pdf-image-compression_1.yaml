@@ -2,14 +2,14 @@ id: imagerecycle-pdf-image-compression
 
 info:
   name: >
-    ImageRecycle pdf & image compression <= 3.1.13 - Cross-Site Request Forgery to Settings Update in optimizeAllOn
+    ImageRecycle pdf & image compression <= 3.1.13 - Missing Authorization to Settings Update in enableOptimization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca4cf299-9dee-4ebf-83f3-4c3471bd9fb0?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/175dd04d-ce06-45a0-8cfe-14498e2f9198?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/imagerecycle-pdf-image-compression/"
     google-query: inurl:"/wp-content/plugins/imagerecycle-pdf-image-compression/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,imagerecycle-pdf-image-compression,medium
+  tags: cve,wordpress,wp-plugin,imagerecycle-pdf-image-compression,high
 
 http:
   - method: GET
