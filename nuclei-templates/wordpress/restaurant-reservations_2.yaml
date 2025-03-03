@@ -2,14 +2,14 @@ id: restaurant-reservations
 
 info:
   name: >
-    Five Star Restaurant Reservations <= 2.4.11 - Missing Authorization to Stored Cross-Site Scripting
+    Five Star Restaurant Reservations <= 2.6.7 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1fe257e6-4bdf-49ef-adbb-f82ce378e3e7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6d420e73-24d5-4da8-8257-e0c7f0273031?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/restaurant-reservations/"
     google-query: inurl:"/wp-content/plugins/restaurant-reservations/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,restaurant-reservations,high
+  tags: cve,wordpress,wp-plugin,restaurant-reservations,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.11')
+          - compare_versions(version, '<= 2.6.7')

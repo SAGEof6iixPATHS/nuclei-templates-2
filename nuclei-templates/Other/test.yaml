@@ -1,14 +1,17 @@
-id: "test"
+id: go-integration-test
 
 info:
-  name: "test"
-  author: "pdteam"
-  description: "test"
-  reference: []
-  severity: "info"
-  tags: "test"
+  name: Basic Go Integration Test
+  author: pdteam
+  severity: info
 
 http:
-  - method: "GET"
+  - method: GET
     path:
-      - "{{BaseURL}}/"
+      - "{{BaseURL}}"
+    headers:
+      test: nuclei
+    matchers:
+      - type: word
+        words:
+          - "This is test headers matcher text"

@@ -1,0 +1,34 @@
+id: openwebui-panel
+
+info:
+  name: Openweb UI Panel - Detect
+  author: rxerium
+  severity: info
+  description: |
+    An OpenWebUI panel was detected
+  reference:
+    - https://openwebui.com/
+  metadata:
+    verified: true
+    max-request: 1
+    shodan-query: http.favicon.hash:-286484075
+  tags: panel,openwebui,login
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - '<title>Open WebUI</title>'
+
+      - type: status
+        status:
+          - 200
+# digest: 4a0a00473045022068440fad9ff8fd995cfc47e8db27a92ded654d8ec5e685196bea4311183b49e6022100c751c6dcc7a4efb5d9d5af750158b809f8b2b284151b1c872827be719f67c178:922c64590222798bb761d5b6d8e72950

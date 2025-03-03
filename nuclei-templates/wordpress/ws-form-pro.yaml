@@ -2,14 +2,14 @@ id: ws-form-pro
 
 info:
   name: >
-    WS Form LITE and Pro < 1.8.176 - Stored Cross-Site Scripting
+    WS Form LITE <= 1.9.217 - Unauthenticated CSV Injection
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bd650510-2d1c-48a1-a5fa-d4c26f3d030c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/38ccaa81-77ec-46f2-9bec-d74fa2e093f3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ws-form-pro/"
     google-query: inurl:"/wp-content/plugins/ws-form-pro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ws-form-pro,high
+  tags: cve,wordpress,wp-plugin,ws-form-pro,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.8.176')
+          - compare_versions(version, '<= 1.9.217')

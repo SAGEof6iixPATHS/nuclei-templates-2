@@ -2,23 +2,23 @@ id: social-warfare
 
 info:
   name: >
-    Social Warfare <= 4.3.0 - Missing Authorization
+    Several WordPress.org Plugins <= Various Versions  - Injected Backdoor
   author: topscoder
-  severity: high
+  severity: critical
   description: >
-    
+    Several plugins for WordPress hosted on WordPress.org have been compromised and injected with malicious PHP scripts. A malicious threat actor compromised the source code of various plugins and injected code that exfiltrates database credentials and is used to create new, malicious, administrator users and send that data back to a server. Currently, not all plugins have been patched and we strongly recommend uninstalling the plugins for the time being and running a complete malware scan.
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4bc4ba2c-32eb-46c5-bb40-7c0150fc1ca4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/56d24bc8-4a1a-4e60-aec5-960703a6058a?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    cvss-score: 10
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/social-warfare/"
     google-query: inurl:"/wp-content/plugins/social-warfare/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,social-warfare,high
+  tags: cve,wordpress,wp-plugin,social-warfare,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.3.0')
+          - compare_versions(version, '>= 4.4.6.4', '<= 4.4.7.1')

@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/mailchimp-for-woocommerce
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/mailchimp-for-woocommerce/readme.txt"
@@ -46,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a00473045022100f512ebce152b603cf1b3439bef0b1369e3ac28e9db0f73a4675f89bbadcaac3e02200d45166d92409d97a90d2ed46246136f2d6463f3cdb763b49b33252f35ed64c5:922c64590222798bb761d5b6d8e72950

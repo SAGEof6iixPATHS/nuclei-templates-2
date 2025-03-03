@@ -1,0 +1,49 @@
+id: wordpress-wp-seopress
+
+info:
+  name: SEOPress – On-site SEO Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/wp-seopress/
+  metadata:
+    plugin_namespace: wp-seopress
+    wpscan: https://wpscan.com/plugin/wp-seopress
+  tags: tech,wordpress,wp-plugin,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/wp-seopress/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/wp-seopress.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a0047304502210089a266c4766d02e239d98690847cde3bbc295a44084751a85ec8d8339b23f8cc022029da1cbc4be04640f0b129880f172e8cee61ec6d8cd3279a376d84e703c780cb:922c64590222798bb761d5b6d8e72950

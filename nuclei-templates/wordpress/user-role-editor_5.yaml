@@ -1,21 +1,24 @@
 id: user-role-editor
 
 info:
-  name: "User Role Editor <= 4.24 - Authenticated Privilege Escalation"
+  name: >
+    User Role Editor <= 4.64.3 - Cross-Site Request Forgery to Privilege Escalation
   author: topscoder
-  severity: low
-  description: "The User Role Editor plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the 'update' function in versions up to, and including, 4.24. This makes it possible for any authenticated attackers to grant themselves the administrator role."
+  severity: medium
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6f359d02-d4ce-4045-9e79-ae0f92b84766?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/user-role-editor/"
     google-query: inurl:"/wp-content/plugins/user-role-editor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,user-role-editor,low
+  tags: cve,wordpress,wp-plugin,user-role-editor,medium
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.25')
+          - compare_versions(version, '<= 4.64.3')

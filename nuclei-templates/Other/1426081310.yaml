@@ -1,16 +1,16 @@
 id: pop3
 info:
-  name: UW Imap pop3d
+  name: iPlanet pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
-    product: imap_toolkit
+    hostname: $1
+    product: iplanet_messaging_server
     rarity: 0
-    vendor: uw
+    vendor: sun
     verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 v?([\d.]+) server ready <[\w.]+@([-\w_.]+)>\r\n
+    - ^\+OK ([-\w_.]+) POP3 service \(iPlanet Messaging Server ([-\w_.\s]+) \(built .*\)\)\r\n

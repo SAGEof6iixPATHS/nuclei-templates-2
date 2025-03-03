@@ -2,14 +2,14 @@ id: wpss
 
 info:
   name: >
-    WordPress Spreadsheet <= 0.62 - SQL Injection
+    WordPress Spreadsheet <= 0.6 - Unauthenticated SQL Injection
   author: topscoder
   severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9a3c3b3b-7fc9-4586-9a51-33642654dc9f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/424ebeb4-eb53-4c87-9a86-aff1c784aa3c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.62')
+          - compare_versions(version, '<= 0.6')

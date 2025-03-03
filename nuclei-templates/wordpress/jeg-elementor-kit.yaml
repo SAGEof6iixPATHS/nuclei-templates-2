@@ -1,59 +1,49 @@
-id: jeg-elementor-kit
+id: wordpress-jeg-elementor-kit
 
 info:
-  name: >
-    Jeg Elementor Kit <= 2.6.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via Testimonial
-  author: topscoder
-  severity: low
-  description: >
-    
+  name: Jeg Elementor Kit Detection
+  author: ricardomaia
+  severity: info
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d54c7623-25af-4bf1-a6e0-9022ec26f391?source=api-scan
-  classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    - https://wordpress.org/plugins/jeg-elementor-kit/
   metadata:
-    fofa-query: "wp-content/plugins/jeg-elementor-kit/"
-    google-query: inurl:"/wp-content/plugins/jeg-elementor-kit/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,jeg-elementor-kit,low
+    plugin_namespace: jeg-elementor-kit
+    wpscan: https://wpscan.com/plugin/jeg-elementor-kit
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/jeg-elementor-kit/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/jeg-elementor-kit.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "jeg-elementor-kit"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '<= 2.6.3')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100c62376f6a94599dea6379a4d8ec25f0e2fedcda30fb62ed42fe15b10313589cc022100ec7bcffe8a01514d6389c6b074f040e65c0e6a0faf86c3d49741c5991e9b2081:922c64590222798bb761d5b6d8e72950

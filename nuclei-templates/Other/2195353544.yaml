@@ -1,12 +1,13 @@
 id: smtp
 info:
-  name: Nortel CallPilot imapd
+  name: PowerMTA smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    device_type: telecom-misc
+    hostname: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 I, CALLPILOT\[[\d.]+\], speak ESMTP\.  Talk to me\.\r\n
+    - ^220 ([\w._-]+) \(PowerMTA\(TM\) v([\w._-]+)\) dummy ESMTP ready\r\n

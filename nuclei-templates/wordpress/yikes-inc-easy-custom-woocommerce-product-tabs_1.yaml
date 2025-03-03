@@ -2,14 +2,14 @@ id: yikes-inc-easy-custom-woocommerce-product-tabs
 
 info:
   name: >
-    Custom Product Tabs for WooCommerce <= 1.8.5 - Authenticated (Shop Manager+) PHP Object Injection
+    Custom Product Tabs for WooCommerce <= 1.7.7 - Subscriber+ Settings Update
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1ad0d6eb-aafa-4f0b-bf1c-73d94e361087?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e093a923-4b9b-4def-a81b-78584aead5c1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.5')
+          - compare_versions(version, '<= 1.7.7')

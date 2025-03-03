@@ -1,17 +1,21 @@
 id: avtech-avn801-camera-panel
 
 info:
-  name: Avtech AVN801 Network Camera Panel Detect
+  name: Avtech AVN801 Network Camera Admin Panel - Detect
   author: idealphase
   severity: info
-  description: AVTECH offers a range of IP camera series with different shapes, resolutions and lens to fulfill different demands. Select the items needed to narrow down product search.
+  description: An Avtech AVN801 Network Camera administration panel was detected.
   reference:
     - http://www.avtech.com.tw
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
   metadata:
+    max-request: 1
     shodan-query: title:"login" product:"Avtech AVN801 network camera"
   tags: panel,avtech,iot,camera
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -28,3 +32,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022045be32319589077432e3421140e622fe0b71f2269329a779e684907453b38fc3022100c0c7c7deec26d928fcca7c382fc83fc3bd30eee515ddd67fa8c517da0b4f0e70:922c64590222798bb761d5b6d8e72950

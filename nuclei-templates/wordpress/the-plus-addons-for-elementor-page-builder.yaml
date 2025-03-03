@@ -2,14 +2,14 @@ id: the-plus-addons-for-elementor-page-builder
 
 info:
   name: >
-    The Plus Addons for Elementor – Elementor Addons, Page Templates, Widgets, Mega Menu, WooCommerce <= 5.6.11 - Authenticated (Contributor+) Sensitive Information Exposure via content_template
+    The Plus Addons for Elementor Page Builder Lite <= 5.6.2 - Authenticated (Author+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/46126f88-416a-4430-8596-12f72cd2c1e7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a4fdfc83-cce9-4c87-88f2-331be081b32c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.6.11')
+          - compare_versions(version, '<= 5.6.2')

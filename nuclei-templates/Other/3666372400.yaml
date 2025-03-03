@@ -1,12 +1,14 @@
 id: smtp
 info:
-  name: HMailServer smtpd
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
+    product: postfix
     rarity: 0
+    vendor: postfix
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 HMailServer ESMTP\r\n
+    - '^220 .*\r\n221 2\.7\.0 Error: I can break rules, too\. Goodbye\.\r\n'
