@@ -1,0 +1,49 @@
+id: wordpress-enable-media-replace
+
+info:
+  name: Enable Media Replace Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/enable-media-replace/
+  metadata:
+    plugin_namespace: enable-media-replace
+    wpscan: https://wpscan.com/plugin/enable-media-replace
+  tags: tech,wordpress,wp-plugin,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/enable-media-replace/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/enable-media-replace.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100d5d232f9f555b36abdd4beb1610dc63e9b21561eb6ff632e8c6b323a099c2ebc022100afceb3f872b8ac52809e26f2be5ae9de582cfc71470d21485a3bce8958e0b1eb:922c64590222798bb761d5b6d8e72950

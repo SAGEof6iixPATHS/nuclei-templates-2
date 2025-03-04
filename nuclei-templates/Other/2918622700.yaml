@@ -1,14 +1,11 @@
 id: telnet
 info:
-  name: Check Point FireWall-1 Client Authentication Server
+  name: Quintum Tenor A800 VoIP gateway CDR telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    product: firewall-1
     rarity: 0
-    vendor: checkpoint
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^Check Point FireWall-1 Client Authentication Server running on [-.\w]+\r\n\r\xff\xfb\x01\xff\xfe\x01\xff\xfb\x03User: '
+    - '^Tenor Multipath Switch CDR Server\r\nConnected from IpAddr/Port# [\d.]+/\d+ to Port# \d+\r\nPassword: '

@@ -3,20 +3,19 @@ id: source
 info:
   name: "Source (All Versions) - Cross-Site Scripting"
   author: topscoder
-  severity: medium
+  severity: high
   description: "The Source theme for WordPress is vulnerable to Cross-Site Scripting due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://seclists.org/fulldisclosure/2013/May/77
-    - https://wpscan.com/vulnerability/d23e63c8-9c81-42d0-a2f6-be17c79b9f08
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
+    cvss-metrics:
+    cvss-score:
     cve-id:
   metadata:
-    fofa-query: "wp-content/themes/source/"
-    google-query: inurl:"/wp-content/themes/source/"
+    fofa-query: "wp-content/unknown/source/"
+    google-query: inurl:"/wp-content/unknown/source/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,source,medium
+  tags: cve,wordpress,wp-theme,source,high
 
 http:
   - method: GET
@@ -54,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>0')
+          - compare_versions(version, '*')

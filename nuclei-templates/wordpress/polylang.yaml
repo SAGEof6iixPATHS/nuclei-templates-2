@@ -1,0 +1,49 @@
+id: wordpress-polylang
+
+info:
+  name: Polylang Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/polylang/
+  metadata:
+    plugin_namespace: polylang
+    wpscan: https://wpscan.com/plugin/polylang
+  tags: tech,wordpress,wp-plugin,top-100,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/polylang/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/polylang.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a0046304402200d3354ecec6538d4f7ecd7f436d474dcca0477ecb79405a36dd19dd03b0298e9022018886ac1a38e0d42102fab7ce653920dadbeb6498a8b8944b3cae587a28a1330:922c64590222798bb761d5b6d8e72950

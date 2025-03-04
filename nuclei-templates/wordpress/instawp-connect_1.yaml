@@ -2,14 +2,14 @@ id: instawp-connect
 
 info:
   name: >
-    InstaWP Connect <= 0.1.0.8 - Cross-Site Request Forgery via create_file_db_manager
+    InstaWP Connect – 1-click WP Staging & Migration <= 0.1.0.44 - Authentication Bypass to Admin
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5954c35a-7d0a-4bc5-9cad-3223e7be56eb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/963f2485-3afa-4e17-8278-b75415af3915?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/instawp-connect/"
     google-query: inurl:"/wp-content/plugins/instawp-connect/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,instawp-connect,medium
+  tags: cve,wordpress,wp-plugin,instawp-connect,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.1.0.8')
+          - compare_versions(version, '<= 0.1.0.44')
