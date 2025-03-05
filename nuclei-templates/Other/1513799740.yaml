@@ -1,12 +1,10 @@
 id: telnet
 info:
-  name: ELSA Lancom 1000 ISDN router telnetd
+  name: Slirp PPP/SLIP-on-terminal emulator telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    hostname: $3
-    info: Serial $2
     rarity: 0
     version: $1
 tcp:
@@ -19,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\xff\xfb\x03\r\n\r\n#\r\n\| ELSA LANCOM 1000 Office\r\n\| Ver\. ([-\w_.]+) / [\d.]+\r\n\| SN\.  ([\w.]+)\r\n\| Copyright \(c\) ELSA AG, Aachen\r\n\r\n([-\w_.]+), Verbindung
+    - '^Slirp v([\w._-]+)(?: \(BETA\))?(?: FULL_BOLT)?\n\nCopyright \(c\) 1995,1996 Danny Gasparovski and others\.\n'

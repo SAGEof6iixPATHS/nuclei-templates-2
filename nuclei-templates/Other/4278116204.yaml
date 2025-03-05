@@ -1,12 +1,16 @@
 id: pop3
 info:
-  name: Merak Mail Server pop3d
+  name: Cyrus POP3
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    product: cyrus_imap_server
     rarity: 0
+    vendor: cmu
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK \]-:\^:-\[ \]-:\^:-\[ POP3
+    - ^\+OK ([-.\w]+) Cyrus POP3 v(\d[-.\w\+]+) server ready ?\r\n

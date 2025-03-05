@@ -1,7 +1,7 @@
 id: wordpress-ninja-forms
 
 info:
-  name: Ninja Forms – The Contact Form Builder That Grows With You Detection
+  name: Ninja Forms Contact Form – The Drag and Drop Form Builder for WordPress Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/ninja-forms
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/ninja-forms/readme.txt"
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100cecac954fd36308f198879f31c39166b44ad2debe729bfe1fab46f6a274a2521022100898eb181ba69b523605aed4433e5e477aeea63448189046f9664a720169d7763:922c64590222798bb761d5b6d8e72950

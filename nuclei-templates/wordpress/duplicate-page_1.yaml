@@ -7,14 +7,12 @@ info:
   reference:
     - https://wordpress.org/plugins/duplicate-page/
   metadata:
-    max-request: 1
     plugin_namespace: duplicate-page
     wpscan: https://wpscan.com/plugin/duplicate-page
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/duplicate-page/readme.txt"
 
@@ -48,3 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100bcc526451d64aeb4e95a0ebb1b32ff980df6508c10bc77df622eb764536d813f022100fec3ed1d12e8fb3bdf3f3249b089e4be6ea7bc6ed747077009a66ed482a05422:922c64590222798bb761d5b6d8e72950

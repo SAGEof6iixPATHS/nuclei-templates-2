@@ -9,7 +9,7 @@ info:
   metadata:
     plugin_namespace: mailpoet
     wpscan: https://wpscan.com/plugin/mailpoet
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
@@ -46,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a00463044022001a66f0d375d71105714e1c8276a61e0a455e0137b35ac9d5e98b4a034fd83f30220580c76ab521d533f8f5d954d9aa48532200b9e4ea737960c56a9dbb8d618ac41:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100ecd5f4814a03d2c490e8692cd4365e4283c8df25b41f5f77b0efe11ba206ed95022100a8b0d42424ab60cd4e40f1334f85217de607adda6ce01c40dd1b57eab5437111:922c64590222798bb761d5b6d8e72950

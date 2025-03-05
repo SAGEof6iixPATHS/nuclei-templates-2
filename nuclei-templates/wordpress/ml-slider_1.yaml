@@ -1,18 +1,20 @@
 id: wordpress-ml-slider
 
 info:
-  name: Slider, Gallery, and Carousel by MetaSlider – Image Slider, Video Slider Detection
+  name: Slider, Gallery, and Carousel by MetaSlider – Responsive WordPress Slideshows Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/ml-slider/
   metadata:
+    max-request: 1
     plugin_namespace: ml-slider
     wpscan: https://wpscan.com/plugin/ml-slider
-  tags: tech,wordpress,wp-plugin,top-200
+  tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/ml-slider/readme.txt"
 
@@ -46,4 +48,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100cd0ec9d6098f31a66ef3cef7074a0ebca9f49b134f0a5195d83524b654e78fb6022100aac81a3e0c5a81d60b9dce525d7170076dd28e0a52cde15d2242a657171f32c6:922c64590222798bb761d5b6d8e72950
