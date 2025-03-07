@@ -2,14 +2,14 @@ id: ocean-extra
 
 info:
   name: >
-    Ocean Extra <= 2.2.6 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Ocean Extra <= 2.1.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a292579c-9755-4bd4-996c-23d19ca1c197?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/596e970b-5a40-46cd-aa32-ac6ace39c21b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.6')
+          - compare_versions(version, '<= 2.1.2')

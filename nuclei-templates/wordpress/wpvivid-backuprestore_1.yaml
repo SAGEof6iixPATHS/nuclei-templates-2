@@ -1,7 +1,7 @@
 id: wordpress-wpvivid-backuprestore
 
 info:
-  name: Migration, Backup, Staging – WPvivid Detection
+  name: Migration, Backup, Staging – WPvivid Backup & Migration Detection
   author: ricardomaia
   severity: info
   reference:
@@ -46,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402200fbf227c19826772ef8c276a90138699b162623f41f58bb3e6d76792f38b4385022079c99a20ba0b96339305658cbcf901cf339aa19f18a6c6807564bcf89f4dc294:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a0048304602210080e28fcbfd4be4343462ccf83960e7402e5f4f7e054a3fcf2e8a4b26719ac0a2022100b3e41448cc25a8f3f038cb3377e7ebe588e907e519f70e32734a8fb2b3c48e35:922c64590222798bb761d5b6d8e72950

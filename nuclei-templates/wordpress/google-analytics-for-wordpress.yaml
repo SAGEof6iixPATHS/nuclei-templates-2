@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/google-analytics-for-wordpress
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/google-analytics-for-wordpress/readme.txt"
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a004630440220298f3721bc19ac9d669c3d7c48441db68dcd4380c341a04e00de11c748ddb070022036535b22f6f55a049f09235f62692a2ca91bf9bd629fbe939d8fb658c4584ab1:922c64590222798bb761d5b6d8e72950

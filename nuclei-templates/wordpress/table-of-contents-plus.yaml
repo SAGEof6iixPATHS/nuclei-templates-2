@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/table-of-contents-plus
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/table-of-contents-plus/readme.txt"
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a00463044022021ff2fb50028cd1d296b1d730c38224980c8a214a17df468046946984569ca170220169b3832a8321244d76ce6929143092e69c325edf1f6cd942306d372f445a11d:922c64590222798bb761d5b6d8e72950

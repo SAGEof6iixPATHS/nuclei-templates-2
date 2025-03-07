@@ -1,14 +1,13 @@
 id: pop3-proxy
 info:
-  name: AVG pop3 proxy
+  name: AnalogX POP3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: anti-virus
+    product: proxy
     rarity: 0
-    vendor: avg
+    vendor: analogx
     verified: true
     version: $1
 tcp:
@@ -21,4 +20,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK AVG POP3 Proxy Server ([\d/.]+) \[[\w/.]+\]\r\n
+    - ^\+OK POP3 AnalogX Proxy (\d[-.\w]+) \(Release\) ready\.\n$

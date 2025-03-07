@@ -1,18 +1,20 @@
 id: wordpress-woocommerce-payments
 
 info:
-  name: WooPayments' Integrated WooCommerce Payments Detection
+  name: WooCommerce Payments – Fully Integrated Solution Built and Supported by Woo Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/woocommerce-payments/
   metadata:
+    max-request: 1
     plugin_namespace: woocommerce-payments
     wpscan: https://wpscan.com/plugin/woocommerce-payments
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/woocommerce-payments/readme.txt"
 
@@ -46,4 +48,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a0048304602210095fa704439638a5d1736f391c6f28f400fae2c4a57db3bf42e811d5e68b379ec022100e28c6cb4e0171db4a5af03ab6ea831d6f8bf2d75a2d4a86619d14a854c023ba5:922c64590222798bb761d5b6d8e72950

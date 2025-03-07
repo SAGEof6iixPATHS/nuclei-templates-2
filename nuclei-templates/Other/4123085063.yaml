@@ -1,11 +1,15 @@
 id: imap
 info:
-  name: Freemail imapd
+  name: Perdition imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    hostname: $1
+    product: perdition
     rarity: 0
+    vendor: horms
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4rev1 CHILDREN NAMESPACE\] Freemail ready - hit me with your rhythm stick\.\r\n
+    - ^\* OK \[CAPABILITY IMAP4 IMAP4REV1\] perdition ready on ([\w._-]+) [a-f\d]+\r\n
