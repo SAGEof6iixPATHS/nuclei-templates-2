@@ -11,13 +11,14 @@ info:
     wpscan: https://wpscan.com/plugin/disable-comments
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/disable-comments/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/disable-comments.txt
+      last_version: ../../../helpers/wordpress/plugins/disable-comments.txt
 
     extractors:
       - type: regex
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a0047304502200f2773006648824d9d3b2e71906cb27fae952d0e06ff42a1d0ecd70e50177d4f022100ae7b4982124d328039de357a9abc0a507107b58f978a8c9ddaf2e4c2714b6f66:922c64590222798bb761d5b6d8e72950

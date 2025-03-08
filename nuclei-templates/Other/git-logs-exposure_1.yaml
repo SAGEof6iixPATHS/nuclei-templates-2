@@ -6,8 +6,10 @@ info:
   severity: Info
   description: Searches Git Logs files and passed URLs.
   tags: logs,git,exposure
+  metadata:
+    max-request: 1
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.git/logs/HEAD"

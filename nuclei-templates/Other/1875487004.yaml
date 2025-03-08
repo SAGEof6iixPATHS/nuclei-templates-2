@@ -1,14 +1,17 @@
 id: sip
 info:
-  name: SJphone SIP client
+  name: Wowza Streaming Engine sipd
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
     fallback:
     - get-request
+    product: wowza_streaming_engine
     rarity: 5
-    version: $1
+    vendor: wowza
+    verified: true
+    version: $1 build $2
 tcp:
 - name: sipoptions
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 405 Method Not Allowed.*\r\nServer: SJphone/([-\w_.]+) \(SJ Labs\)\r\n'
+    - '(?i)^SIP/2\.0 403 Forbidden\r\nAllow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY\r\n(?:[^\r\n]+\r\n)*?User-Agent: Wowza Streaming Engine ([\w._-]+) build(\d+)\r\n'

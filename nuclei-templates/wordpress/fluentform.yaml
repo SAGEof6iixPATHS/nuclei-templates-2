@@ -1,7 +1,7 @@
 id: wordpress-fluentform
 
 info:
-  name: Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder Detection
+  name: Contact Form Plugin – Fastest Contact Form Builder Plugin for WordPress by Fluent Forms Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,13 +11,14 @@ info:
     wpscan: https://wpscan.com/plugin/fluentform
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/fluentform/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/fluentform.txt
+      last_version: ../../../helpers/wordpress/plugins/fluentform.txt
 
     extractors:
       - type: regex
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402205cdf34faadccaf0790071e0a2b10bb31b3789e382a276a3493bb249ae2dad40f0220040d2251802210fa1079ad39b56c11f47579d2295966e9479eb0dd5fbb0cc4c8:922c64590222798bb761d5b6d8e72950

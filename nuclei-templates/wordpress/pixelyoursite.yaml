@@ -1,7 +1,7 @@
 id: wordpress-pixelyoursite
 
 info:
-  name: PixelYourSite – Your smart PIXEL (TAG) & API Manager Detection
+  name: PixelYourSite – Your smart PIXEL (TAG) Manager Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,13 +11,14 @@ info:
     wpscan: https://wpscan.com/plugin/pixelyoursite
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/pixelyoursite/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/pixelyoursite.txt
+      last_version: ../../../helpers/wordpress/plugins/pixelyoursite.txt
 
     extractors:
       - type: regex
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a00463044022043dbbe2b17af3383a922489161ea726414c9813362f6b0ec3e2b33e247281d9402200c31ccb401b882a77029a5d24c6a7c5c0ff1e95092a03e065b1dfc72d44cbc25:922c64590222798bb761d5b6d8e72950

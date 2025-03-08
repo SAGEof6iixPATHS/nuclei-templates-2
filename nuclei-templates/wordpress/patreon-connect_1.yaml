@@ -2,14 +2,14 @@ id: patreon-connect
 
 info:
   name: >
-    Patreon WordPress <= 1.8.7 - Cross-Site Request Forgery
+    Patreon WordPress <= 1.6.9 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/481121b2-4ea9-489e-b582-ec8bbf87c902?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fbcd569d-f524-4012-add0-ba0afc19e47e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.7')
+          - compare_versions(version, '< 1.7.0')

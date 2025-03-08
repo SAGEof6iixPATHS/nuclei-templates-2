@@ -9,15 +9,16 @@ info:
   metadata:
     plugin_namespace: ultimate-addons-for-gutenberg
     wpscan: https://wpscan.com/plugin/ultimate-addons-for-gutenberg
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+  tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/ultimate-addons-for-gutenberg/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/ultimate-addons-for-gutenberg.txt
+      last_version: ../../../helpers/wordpress/plugins/ultimate-addons-for-gutenberg.txt
 
     extractors:
       - type: regex
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a004630440220181dae64ae1a506156ec8e21322031c8d49eb767ef9cec283b48d76f9bc096e802200e457edbfa343921c36eb2173d5503d6eb0f42cc10dfede62642ecbb38788231:922c64590222798bb761d5b6d8e72950

@@ -9,15 +9,16 @@ info:
   metadata:
     plugin_namespace: under-construction-page
     wpscan: https://wpscan.com/plugin/under-construction-page
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+  tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/under-construction-page/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/under-construction-page.txt
+      last_version: ../../../helpers/wordpress/plugins/under-construction-page.txt
 
     extractors:
       - type: regex
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022043ad189fa73ef7ea6be17f44e146b2badb4064ef6d7edf47b1ec0678219a3220022100b4f74c2e7a3b6df77fe37f1dc85fbde8aea869500153260507d20f75a457e686:922c64590222798bb761d5b6d8e72950

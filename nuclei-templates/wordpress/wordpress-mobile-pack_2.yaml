@@ -2,14 +2,14 @@ id: wordpress-mobile-pack
 
 info:
   name: >
-    WordPress Mobile Pack – Mobile Plugin for Progressive Web Apps & Hybrid Mobile Apps < 2.0.2 - Information Disclosure
+    WordPress Mobile Pack <= 3.4.1 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eb6bbbbb-b201-4fd5-8ee1-2369fb27070f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1f545c20-5be1-42bc-9268-640590ee4bf2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wordpress-mobile-pack/"
     google-query: inurl:"/wp-content/plugins/wordpress-mobile-pack/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wordpress-mobile-pack,low
+  tags: cve,wordpress,wp-plugin,wordpress-mobile-pack,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.0.2')
+          - compare_versions(version, '<= 3.4.1')

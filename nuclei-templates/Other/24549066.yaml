@@ -1,11 +1,11 @@
 id: imap
 info:
-  name: TeamXchange imapd
+  name: JanaServer imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK TeamXchange IMAP4rev1 server \(([\w._-]+)\) ready\.\r\n
+    - ^\* OK IMAP4rev1 Service at Jana-Server ready\r\n

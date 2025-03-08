@@ -13,7 +13,7 @@ info:
     shodan-query: http.html:"CS141"
   tags: hiawatha,iot,default-login
 
-http:
+requests:
   - raw:
       - |
         POST /api/login HTTP/1.1

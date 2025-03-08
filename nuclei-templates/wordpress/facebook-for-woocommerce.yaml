@@ -9,15 +9,16 @@ info:
   metadata:
     plugin_namespace: facebook-for-woocommerce
     wpscan: https://wpscan.com/plugin/facebook-for-woocommerce
-  tags: tech,wordpress,wp-plugin,top-200
+  tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/facebook-for-woocommerce/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/facebook-for-woocommerce.txt
+      last_version: ../../../helpers/wordpress/plugins/facebook-for-woocommerce.txt
 
     extractors:
       - type: regex
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402201fb987d1cb73c73803329aa471ac985b6a3c7edea994528f0043901f18e64b5e02201de95eae85c8b3b1c44a712314e33357c5cd289422ae1bf06c0520704827295e:922c64590222798bb761d5b6d8e72950

@@ -1,7 +1,7 @@
 id: wordpress-meta-box
 
 info:
-  name: Meta Box Detection
+  name: Meta Box – WordPress Custom Fields Framework Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,13 +11,14 @@ info:
     wpscan: https://wpscan.com/plugin/meta-box
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/meta-box/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/meta-box.txt
+      last_version: ../../../helpers/wordpress/plugins/meta-box.txt
 
     extractors:
       - type: regex
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100eeec6f4262ca31e4581ca7555b4e15674b9fc1055479033ef64d472940089e1b022007b00d111bee9a4917afc6dd8cb544871153abb95a08616293a731018b264eca:922c64590222798bb761d5b6d8e72950
