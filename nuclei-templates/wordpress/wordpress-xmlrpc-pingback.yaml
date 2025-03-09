@@ -37,6 +37,7 @@ http:
           - "/blog/xmlrpc.php"
           - "/xmlrpc"
     matchers-condition: and
+    stop-at-first-match: true
     matchers:
       - type: status
         status:
@@ -49,5 +50,3 @@ http:
         part: interactsh_protocol
         words:
           - "dns"
-
-    stop-at-first-match: true

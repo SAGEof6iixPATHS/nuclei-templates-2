@@ -1,15 +1,13 @@
 id: irc
 info:
-  name: BitlBee ircd
+  name: ConferenceRoom ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
     hostname: $1
-    product: bitlbee
+    info: Spanish
     rarity: 0
-    vendor: bitlbee
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^:([\w._-]+) NOTICE \* :BitlBee-IRCd initialized, please go on\r\n
+    - ^:([\w._-]+) 451 \* HELP :No te has registrado\r\n

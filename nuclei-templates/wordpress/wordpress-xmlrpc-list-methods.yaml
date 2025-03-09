@@ -33,6 +33,8 @@ http:
         part: body
         regex:
           - "<string>([a-zA-Z0-9.]+)</string>"
+    matchers-condition: and
+    stop-at-first-match: true
     matchers:
       - type: word
         words:
@@ -40,5 +42,3 @@ http:
       - type: regex
         regex:
           - "<string>[a-zA-Z0-9.]+</string>"
-    matchers-condition: and
-    stop-at-first-match: true
