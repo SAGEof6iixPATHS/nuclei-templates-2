@@ -1,22 +1,24 @@
 id: mainwp-child
 
 info:
-  name: "MainWP Dashboard and MainWP Child <= 2.0.22 - Unspecified Vulnerability"
+  name: >
+    MainWP Child – Securely connects sites to the MainWP WordPress Manager Dashboard < 2.0.9.2 - Authentication Bypass
   author: topscoder
-  severity: unknown
-  description: "Unspecified vulnerability in the MainWP Dashboard and MainWP Child plugins in versions up to and including 2.0.22 for WordPress has unspecified impact and remote attack vectors."
+  severity: critical
+  description: >
+    The MainWP Child – Securely connects sites to the MainWP WordPress Manager Dashboard plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 2.0.9.1. This is due to a missing credential check within the WordPress init hook. This makes it possible for unauthenticated attackers to log in as any user, including administrator-level accounts, if the attacker knows the username.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/1214999
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-mainwp-dashboard-unspecified-vulnerability-2-0-22/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/84019c69-32fd-4331-95d7-53ea1aaff616?source=api-prod
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/mainwp-child/"
     google-query: inurl:"/wp-content/plugins/mainwp-child/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mainwp-child,
+  tags: cve,wordpress,wp-plugin,mainwp-child,critical
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.22')
+          - compare_versions(version, '< 2.0.9.2')

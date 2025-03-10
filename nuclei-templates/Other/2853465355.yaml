@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: AMX DXLink HDMI receiver telnetd
+  name: Blitzz BWA601 WAP telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: media device
+    device_type: WAP
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\r\nWelcome to DXLINK-HDMI-RX v([\w._-]+) Copyright AMX LLC \d\d\d\d\r\n\r\n>
+    - '^ \x1b\[2JAccess Point Console\r\n--------------------\r\nVersion ([\w._-]+)\r\n\r\n\r\x07Password: \xff\xfb\x01'

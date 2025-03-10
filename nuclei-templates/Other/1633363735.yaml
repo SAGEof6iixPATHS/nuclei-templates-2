@@ -1,15 +1,16 @@
 id: vnc
 info:
-  name: RealVNC
+  name: RealVNC Enterprise
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    info: Unlicensed; protocol 3.$1; Spanish
+    info: protocol 5.0
     product: realvnc
     rarity: 0
     vendor: realvnc
     verified: true
+    version: 5.3 or later
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 003\.00(\d)\n\0\0\0\0\0\0\0\x8cLa licencia de VNC Server no se ha activado correctamente\.\n\nNo se permitir\xc3\xa1n conexiones hasta que se aplique una clave de licencia v\xc3\xa1lida\.
+    - ^RFB 005\.000\n

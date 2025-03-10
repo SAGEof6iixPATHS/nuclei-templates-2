@@ -1,5 +1,4 @@
 id: aem-groovyconsole
-
 info:
   name: AEM Groovy Console Discovery
   author: Dheerajmadhukar
@@ -8,10 +7,7 @@ info:
   reference:
     - https://hackerone.com/reports/672243
     - https://twitter.com/XHackerx007/status/1435139576314671105
-  metadata:
-    shodan-query: http.component:"Adobe Experience Manager"
-  tags: aem,adobe,hackerone
-
+  tags: aem,adobe
 requests:
   - method: GET
     path:
@@ -20,7 +16,6 @@ requests:
     headers:
       Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
       Accept-Language: en-US,en;q=0.9,hi;q=0.8
-
     stop-at-first-match: true
     matchers-condition: and
     matchers:
@@ -31,7 +26,6 @@ requests:
           - "Groovy Web Console"
         part: body
         condition: and
-
       - type: status
         status:
           - 200
