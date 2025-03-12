@@ -1,12 +1,16 @@
 id: pop3
 info:
-  name: SeattleLab SLMail pop3d
+  name: SurgeMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    product: surgemail
     rarity: 0
+    vendor: netwin
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Welcome to the SLnet POP3 Service\r\n
+    - ^\+OK POP3 ([-\w_.]+) \(Version ([-\w.]+)\) http://surgemail\.com\r\n

@@ -1,0 +1,35 @@
+id: target-phish
+
+info:
+  name: target phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A target phishing website was detected
+  reference:
+    - https://target.com
+  metadata:
+    max-request: 1
+  tags: phishing,target,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Target : Expect More. Pay Less.'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"target.com")'
+# digest: 4a0a0047304502203324cd86eca7fac5972e807894e8d1ed4ffec4d0f736234b5acb01b98fd1ef1b022100b7daf6a7cb89069cb4d8bec15ec386629c3ade8bd588e4eae9299f6e3040e3a3:922c64590222798bb761d5b6d8e72950

@@ -1,15 +1,16 @@
 id: imap
 info:
-  name: Microsoft Exchange Online imapd
+  name: Cyrus Murder imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: exchange_server
+    hostname: $1
+    product: cyrus_imap_server
     rarity: 0
-    vendor: microsoft
+    vendor: cmu
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK The Microsoft Exchange IMAP4 service is ready\. \[\w+=*\]\r\n
+    - ^\* OK (?:\[CAPABILITY IMAP4[^\]]*?\] )?([-.\w]+) Cyrus IMAP4? Murder v([-.\w]+) server ready\r\n

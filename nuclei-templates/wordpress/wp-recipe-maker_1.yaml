@@ -2,14 +2,14 @@ id: wp-recipe-maker
 
 info:
   name: >
-    WP Recipe Maker <= 9.1.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via icon_color
+    WP Recipe Maker <= 9.1.2 - Missing Authorization to Authenticated (Subscriber+) SQL Injecton
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/53a51408-e5d8-4727-9dec-8321c062c31e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b10d8f8a-517f-4286-b501-0ca040529362?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 9.1.0')
+          - compare_versions(version, '<= 9.1.2')
