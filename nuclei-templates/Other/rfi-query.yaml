@@ -6,7 +6,7 @@ info:
   severity: high
   reference:
     - https://www.invicti.com/learn/remote-file-inclusion-rfi/
-  tags: fuzzing-req,fuzzing-req-lfi,fuzzing-req-body-query,fuzzing-req-query
+  tags: fuzzing-req,fuzzing-req-lfi,fuzzing-req-body-query,fuzzing-req-query,lfi,rfi
 
 http:
   - pre-condition:
@@ -22,6 +22,7 @@ http:
         - "https://rfi.nessus.org/rfi.txt#image.jpg"
         - "https://rfi.nessus.org/rfi.txt#image.png"
         - "\\rfi.nessus.org\rfi.txt"
+        - "https://cirt.net/rfiinc.txt"
         
     fuzzing:
       - part: query
@@ -37,3 +38,4 @@ http:
         part: body
         words:
           - "NessusCodeExecTest"
+          - "nikto:10227245764.38:<br>"

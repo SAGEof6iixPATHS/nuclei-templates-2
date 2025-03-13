@@ -8,8 +8,9 @@ info:
     A eset phishing website was detected
   reference:
     - https://eset.com
+  metadata:
+    max-request: 1
   tags: phishing,eset,osint
-
 http:
   - method: GET
     path:
@@ -31,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"eset.com")'
-# digest: 4a0a0047304502204befda3ba80d027438e390205bf3cb321408aa4420ff6ff483c423cc788637ed0221009c8f81ef571cf704d37cdb24a787c27c8e8551bacd2b2a6b175150fd796e00ba:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b3534aecc3eaa21cff9df83952b016aa73751eb341d63d68ee6045e124a523fa022100b451745e889319eb6b264a13ab9d2c470321c5e70ea4d2354fce8b9a27526bb8:922c64590222798bb761d5b6d8e72950

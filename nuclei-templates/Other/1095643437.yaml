@@ -1,16 +1,17 @@
 id: smtp
 info:
-  name: Microsoft Exchange smtpd
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Windows
-    product: exchange_server
+    info: $3
+    product: postfix
     rarity: 0
-    vendor: microsoft
+    vendor: postfix
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) Microsoft ESMTP MAIL Service ready at
+    - ^220 ([-.\w]+) ESMTP Postfix \(([-.\w]+)\) \(([-.\w ]+)\)

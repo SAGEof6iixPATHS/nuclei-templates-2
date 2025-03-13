@@ -4,7 +4,7 @@ info:
   name: Remote File Inclusion
   author: reewardius
   severity: high
-  tags: fuzzing-req,fuzzing-req-lfi,fuzzing-req-body-query,fuzzing-req-body
+  tags: fuzzing-req,fuzzing-req-lfi,fuzzing-req-body-query,fuzzing-req-body,lfi,rfi
   reference:
     - https://www.invicti.com/learn/remote-file-inclusion-rfi/
 
@@ -25,6 +25,7 @@ http:
         - "https://rfi.nessus.org/rfi.txt#image.jpg"
         - "https://rfi.nessus.org/rfi.txt#image.png"
         - "\\rfi.nessus.org\rfi.txt"
+        - "https://cirt.net/rfiinc.txt"
         
     fuzzing:
       - part: body
@@ -40,3 +41,4 @@ http:
         part: body
         words:
           - "NessusCodeExecTest"
+          - "nikto:10227245764.38:<br>"

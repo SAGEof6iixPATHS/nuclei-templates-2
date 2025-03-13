@@ -1,4 +1,5 @@
 id: pieregister-open-redirect
+
 info:
   name: WordPress Pie Register < 3.7.2.4 - Open Redirect
   author: 0x_Akoko
@@ -9,11 +10,13 @@ info:
     - https://wordpress.org/plugins/pie-register/
   classification:
     cwe-id: CWE-601
-  tags: wordpress,redirect,wp-plugin,pieregister
+  tags: redirect,wp-plugin,pieregister,wpscan,wordpress
+
 requests:
   - method: GET
     path:
       - "{{BaseURL}}/?piereg_logout_url=true&redirect_to=https://interact.sh"
+
     matchers:
       - type: regex
         part: header

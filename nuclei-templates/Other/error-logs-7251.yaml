@@ -45,8 +45,6 @@ requests:
           - "script headers"
           - "Broken pipe"
           - "Array"
-          - "Exception"
-          - "Fatal"
         condition: or
 
       - type: word
