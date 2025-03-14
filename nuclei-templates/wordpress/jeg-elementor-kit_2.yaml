@@ -2,14 +2,14 @@ id: jeg-elementor-kit
 
 info:
   name: >
-    Jeg Elementor Kit <= 2.6.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via Testimonial
+    Jeg Elementor Kit <= 2.6.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via Countdown Widget
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d54c7623-25af-4bf1-a6e0-9022ec26f391?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/48a13fb7-bf1a-4bf2-ac3b-3b5a75fec616?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.6.3')
+          - compare_versions(version, '<= 2.6.4')

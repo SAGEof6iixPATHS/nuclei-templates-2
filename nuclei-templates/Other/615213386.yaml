@@ -1,16 +1,15 @@
 id: imap
 info:
-  name: DBMail imapd
+  name: Lotus Domino imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: imapd version may differ from overal dbmail version number
-    product: dbmail
+    info: Unable to connect
+    product: lotus_domino
     rarity: 0
-    vendor: paul_j_stevens
+    vendor: ibm
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK dbmail imap \(protocol version 4r1\) server (\d[-.\w]+) ready to run\r\n
+    - ^\* BYE Domino IMAP4 Server Unable to authenticate session\.
