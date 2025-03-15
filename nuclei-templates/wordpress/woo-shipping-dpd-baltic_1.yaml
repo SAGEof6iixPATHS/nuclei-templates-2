@@ -2,14 +2,14 @@ id: woo-shipping-dpd-baltic
 
 info:
   name: >
-    WooCommerce Shipping – DPD baltic <= 1.2.8 - Authenticated (Admin+) Stored Cross-Site Scripting
+    DPD Baltic Shipping <= 1.2.83 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/926827a5-4231-4188-bece-fd37c1829412?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6251d0f6-b536-4122-8fdf-bb77665a4f41?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woo-shipping-dpd-baltic/"
     google-query: inurl:"/wp-content/plugins/woo-shipping-dpd-baltic/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-shipping-dpd-baltic,low
+  tags: cve,wordpress,wp-plugin,woo-shipping-dpd-baltic,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.8')
+          - compare_versions(version, '<= 1.2.83')

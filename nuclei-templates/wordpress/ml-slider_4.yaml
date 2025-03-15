@@ -1,21 +1,24 @@
 id: ml-slider
 
 info:
-  name: "Slider, Gallery, and Carousel by MetaSlider – Responsive WordPress Plugin <= 2.1.6 - Full Path Disclosure"
+  name: >
+    Slider, Gallery, and Carousel by MetaSlider <= 3.29.0 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
-  description: "The Meta Slider plugin for WordPress is vulnerable to full path disclosure in versions up to, and including, 2.1.6. This makes it possible for unauthenticated attackers to discover the path of folders and files hosted on a vulnerable system."
+  severity: medium
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/290233f0-a5dd-4c69-8039-7392268daf40?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ml-slider/"
     google-query: inurl:"/wp-content/plugins/ml-slider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ml-slider,low
+  tags: cve,wordpress,wp-plugin,ml-slider,medium
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  2.1.6')
+          - compare_versions(version, '<= 3.29.0')

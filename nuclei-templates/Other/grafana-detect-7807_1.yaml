@@ -1,13 +1,9 @@
 id: grafana-detect
-
 info:
   name: Grafana panel detect
   author: organiccrap
   severity: info
-  metadata:
-    shodan-query: title:"Grafana"
   tags: panel,grafana
-
 requests:
   - method: GET
     path:

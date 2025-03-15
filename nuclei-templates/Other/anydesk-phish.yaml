@@ -1,0 +1,35 @@
+id: anydesk-phish
+
+info:
+  name: anydesk phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    An anydesk phishing website was detected
+  reference:
+    - https://anydesk.com
+  metadata:
+    max-request: 1
+  tags: phishing,anydesk,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'The Fast Remote Desktop Application – AnyDesk'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"anydesk.com")'
+# digest: 4a0a00473045022100c21b34cdbdbbd71ed1b9f8173c737427073ab6e0d304e110823552998a0e4406022070fb14c54995ec40a9278202efc2de084c6062f7f07e0f206b3db2907306de87:922c64590222798bb761d5b6d8e72950

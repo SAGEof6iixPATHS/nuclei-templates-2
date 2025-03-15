@@ -7,12 +7,14 @@ info:
   reference:
     - https://wordpress.org/plugins/siteorigin-panels/
   metadata:
+    max-request: 1
     plugin_namespace: siteorigin-panels
     wpscan: https://wpscan.com/plugin/siteorigin-panels
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-requests:
+http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/siteorigin-panels/readme.txt"
 

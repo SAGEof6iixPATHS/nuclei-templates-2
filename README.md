@@ -6,82 +6,87 @@
 | CVE-2002 | 1 |
 | CVE-2004 | 3 |
 | CVE-2005 | 4 |
-| CVE-2006 | 3 |
+| CVE-2006 | 5 |
 | CVE-2007 | 6 |
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
-| CVE-2010 | 122 |
-| CVE-2011 | 15 |
-| CVE-2012 | 33 |
-| CVE-2013 | 24 |
-| CVE-2014 | 50 |
-| CVE-2015 | 55 |
-| CVE-2016 | 42 |
-| CVE-2017 | 99 |
-| CVE-2018 | 251 |
-| CVE-2019 | 412 |
-| CVE-2020 | 766 |
-| CVE-2021 | 846 |
-| CVE-2022 | 869 |
-| CVE-2023 | 758 |
-| CVE-2024 | 430 |
-| CVE-2025 | 14 |
-| Other | 21963 |
-| wordpress | 50060 |
+| CVE-2010 | 123 |
+| CVE-2011 | 22 |
+| CVE-2012 | 38 |
+| CVE-2013 | 30 |
+| CVE-2014 | 63 |
+| CVE-2015 | 72 |
+| CVE-2016 | 73 |
+| CVE-2017 | 109 |
+| CVE-2018 | 273 |
+| CVE-2019 | 456 |
+| CVE-2020 | 827 |
+| CVE-2021 | 973 |
+| CVE-2022 | 939 |
+| CVE-2023 | 799 |
+| CVE-2024 | 458 |
+| CVE-2025 | 15 |
+| Other | 49082 |
+| wordpress | 84799 |
 ## 近几天数量变化情况
-|2025-03-07 | 2025-03-08 | 2025-03-09 | 2025-03-10 | 2025-03-12 | 2025-03-13 | 2025-03-14|
+|2025-03-08 | 2025-03-09 | 2025-03-10 | 2025-03-12 | 2025-03-13 | 2025-03-14 | 2025-03-15|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|120299 | 138824 | 137832 | 114817 | 138986 | 111648 | 76863|
+|138824 | 137832 | 114817 | 138986 | 111648 | 76863 | 139207|
 ## 最近新增文件
 | templates name | 
 | --- |
-| cc-img-shortcode.yaml |
-| CVE-2025-23619.yaml |
-| CVE-2025-23616.yaml |
-| page-health-o-meter.yaml |
-| CVE-2025-23600.yaml |
-| interactive-page-hierarchy.yaml |
-| CVE-2024-4399.yaml |
-| CVE-2025-23637.yaml |
-| CVE-2025-23663.yaml |
-| arielbrailovsky-viralad.yaml |
-| CVE-2025-23595.yaml |
-| CVE-2024-13887.yaml |
-| CVE-2025-1621.yaml |
-| canalplan-ac.yaml |
-| reportattacks.yaml |
-| CVE-2025-1503.yaml |
-| CVE-2025-23635.yaml |
-| CVE-2021-24278-5668_1.yaml |
-| CVE-2016-10956-2760_1.yaml |
-| CVE-2025-1561.yaml |
-| CVE-2024-13703.yaml |
-| CVE-2025-2104.yaml |
-| CVE-2025-2250.yaml |
-| wpjournal.yaml |
-| wp-xintaoke.yaml |
-| CVE-2021-25028-5787_1.yaml |
-| CVE-2025-1559.yaml |
-| CVE-2025-1785.yaml |
-| CVE-2025-23615.yaml |
-| CVE-2025-23670.yaml |
-| CVE-2025-2107.yaml |
-| CVE-2022-0656(1)_1.yaml |
-| CVE-2025-1119.yaml |
-| contexto.yaml |
-| CVE-2025-23613.yaml |
-| CVE-2024-10942.yaml |
-| CVE-2021-24146-5627_1.yaml |
-| send-booking-invites-to-friends.yaml |
-| realteo.yaml |
-| Divi_1.yaml |
-| 4-author-cheer-up-donate.yaml |
-| CVE-2021-39322-6337_1.yaml |
-| CVE-2021-24495-5747_1.yaml |
-| CVE-2025-2106.yaml |
-| epermissions.yaml |
-| mockoon-lfi.yaml |
-| health-detect.yaml |
-| peoplesoft-xxe-1.yaml |
-| cnnvd-200705-315.yaml |
-| OData.yaml |
+| industrial.yaml |
+| CVE-2024-13118.yaml |
+| cm-faq.yaml |
+| CVE-2024-11286.yaml |
+| CVE-2025-0952.yaml |
+| CVE-2024-13617.yaml |
+| CVE-2025-1620.yaml |
+| CVE-2025-2166.yaml |
+| CVE-2025-1764.yaml |
+| resido.yaml |
+| CVE-2024-13772.yaml |
+| wp-svg-upload.yaml |
+| CVE-2025-2289.yaml |
+| CVE-2024-13376.yaml |
+| CVE-2024-13913.yaml |
+| CVE-2025-25165.yaml |
+| CVE-2024-11847.yaml |
+| CVE-2024-13407.yaml |
+| CVE-2025-1285.yaml |
+| CVE-2024-11283.yaml |
+| CVE-2025-1526.yaml |
+| eco-nature.yaml |
+| CVE-2025-0955.yaml |
+| design-comuni-wordpress-theme.yaml |
+| CVE-2024-11285.yaml |
+| ciyashop.yaml |
+| CVE-2025-2232.yaml |
+| CVE-2024-11284.yaml |
+| aoa-downloadable.yaml |
+| civi.yaml |
+| CVE-2024-13321.yaml |
+| CVE-2024-12810.yaml |
+| CVE-2025-2221.yaml |
+| CVE-2024-13618.yaml |
+| zegen.yaml |
+| analyticswp.yaml |
+| soundrise-music.yaml |
+| CVE-2024-13771.yaml |
+| CVE-2025-1507.yaml |
+| CVE-2024-13824.yaml |
+| vidorev-extensions.yaml |
+| ip-based-login.yaml |
+| CVE-2025-2056.yaml |
+| CVE-2025-1798.yaml |
+| CVE-2024-13773.yaml |
+| CVE-2025-2103.yaml |
+| CVE-2024-12800.yaml |
+| CVE-2025-1528.yaml |
+| hp_laserjet_admin_nopass.yaml |
+| moodle-filter-jmol-lfi_1.yaml |
+| moodle-filter-jmol-xss_1.yaml |
+| efi_fiery_defaultlogin.yaml |
+| minio-browser_1.yaml |
+| moodle-xss_1.yaml |
+| cve-2020-10204.yaml |
