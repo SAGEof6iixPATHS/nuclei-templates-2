@@ -1,15 +1,11 @@
 id: pop3
 info:
-  name: Kerio Connect pop3d
+  name: LiberoPops pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
-    product: connect
     rarity: 0
-    vendor: kerio
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -21,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Kerio Connect ([\w._ -]+) POP3 server ready <[\d.]+@([\w._-]+)>\r\n$
+    - ^\+OK popserver ([\d.]+) pop3 server ready\r\n

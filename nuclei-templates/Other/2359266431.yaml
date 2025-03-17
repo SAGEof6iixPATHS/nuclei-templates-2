@@ -1,15 +1,15 @@
 id: imap
 info:
-  name: Novell GroupWise imapd
+  name: GNU mailutils imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Unix
-    product: groupwise
+    product: mailutils
     rarity: 0
-    vendor: novell
+    vendor: gnu
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4rev1 .*\] GroupWise Server Ready\r\n
+    - ^\* OK IMAP4rev1 GNU mailutils ([\w.]+)\r\n
