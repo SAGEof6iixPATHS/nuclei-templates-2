@@ -1,16 +1,19 @@
 id: sip
 info:
-  name: Thomson $1 router sipd
+  name: RingCentral Softphone
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: broadband router
     fallback:
     - get-request
-    info: 'serial: $3'
+    info: 'arch: $3-bit; OS Version $4'
+    operating_system: $2
+    product: softphone
     rarity: 5
-    version: $2
+    vendor: ringcentral
+    verified: true
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -22,4 +25,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: Thomson ([\w-]+) Build ([\d.]+)\r\nX-Serialnumber: (\w+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Softphone/([\d.]+) \(RingCentral(?: \(\d+\))?; (Windows \w+) \((\d\d) bits\)/([\d.]+); revision: \d+\)\r\n'

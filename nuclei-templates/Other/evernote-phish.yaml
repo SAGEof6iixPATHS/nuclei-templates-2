@@ -1,0 +1,35 @@
+id: evernote-phish
+
+info:
+  name: evernote phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A evernote phishing website was detected
+  reference:
+    - https://evernote.com
+  metadata:
+    max-request: 1
+  tags: phishing,evernote,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Best Note Taking App - Organize Your Notes with Evernote'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"evernote.com")'
+# digest: 4a0a0047304502204d355b1e559286e0b48589e52399ee007d83dc4a342b4ea13f3927662348ed9302210095cca91c6dcdae4dface3aac06e37b6c6a44fae3d347073b34dd23c0d526368b:922c64590222798bb761d5b6d8e72950

@@ -1,6 +1,6 @@
 id: ftp
 info:
-  name: BSD ftpd
+  name: IronPort firewall ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - (?i)^220- .*\n220 ([-.\w]+) FTP server \(Version (.*)\) ready\.\r\n
+    - ^220 ([-.+\w]+) IronPort FTP server \(V([-.\w]+)\) ready\r\n

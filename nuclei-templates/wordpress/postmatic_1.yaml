@@ -2,14 +2,14 @@ id: postmatic
 
 info:
   name: >
-    Replyable – Subscribe to Comments and Reply by Email < 1.4.6 - Cross-Site Scripting
+    Replyable – Subscribe to Comments and Reply by Email <= 2.2.9 - Authenticated (Subscriber+) PHP Object Injection via prompt_dismiss_notice
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c9a3d3c3-278b-46c7-87d0-53528d616951?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f1105dc3-222f-46a5-a9b1-74c11923f886?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/postmatic/"
     google-query: inurl:"/wp-content/plugins/postmatic/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,postmatic,high
+  tags: cve,wordpress,wp-plugin,postmatic,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.4.6')
+          - compare_versions(version, '<= 2.2.9')

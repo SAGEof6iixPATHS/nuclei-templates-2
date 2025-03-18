@@ -1,13 +1,14 @@
 id: ftp
 info:
-  name: Savin 8055 printer ftpd
+  name: Sambar ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    product: sambar_server
     rarity: 0
-    version: $1
+    vendor: sambar
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 SAVIN 8055 FTP server \(([\w._-]+)\) ready\.\r\n
+    - ^220-FTP Server ready\r\n220-Use USER user@host for native FTP proxy\r\n220 Your FTP Session will expire after 300 seconds of inactivity\.\r\n

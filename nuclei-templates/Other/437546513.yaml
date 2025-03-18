@@ -1,15 +1,12 @@
 id: pop3
 info:
-  name: Cyrus pop3d
+  name: IMA pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: cyrus_imap_server
     rarity: 0
-    vendor: cmu
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -21,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK <[\d.]+@([\w._-]+)> [\w._-]+ Cyrus POP3 v([\w._-]+) server ready\r\n
+    - ^\+OK ([-\w_.]+) POP3 Server Version ([\d.]+) Copyright \d{4} International Messaging Associates\r\n
