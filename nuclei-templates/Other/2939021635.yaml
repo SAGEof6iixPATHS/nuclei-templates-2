@@ -1,15 +1,13 @@
 id: ssh
 info:
-  name: CrushFTP sftpd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
-    product: crushftp
-    rarity: 0
-    vendor: crushftp
-    verified: true
+    info: Ubuntu Linux; protocol $1
+    operating_system: Linux
+    version: $2 Ubuntu $3
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-CrushFTPSSHD_5\r\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+)[ -]{1,2}Ubuntu[ -_]([^\r\n]+)\r?\n
