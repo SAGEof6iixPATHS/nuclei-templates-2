@@ -1,12 +1,14 @@
 id: smtp
 info:
-  name: Floosietek FTGate smtpd
+  name: Postfix smtp-sink
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
+    product: postfix
     rarity: 0
+    vendor: postfix
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 \[[\d.]+\] FTGate Server Ready \(#3\.01\)\r\n
+    - ^220 smtp-sink ESMTP\r\n$

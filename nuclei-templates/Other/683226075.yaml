@@ -1,15 +1,13 @@
 id: ftp
 info:
-  name: BQTFTP ftpd
+  name: GlobespanVirata ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: $1
-    product: bqtftp
+    device_type: broadband router
     rarity: 0
-    vendor: bqt
-    verified: true
+    version: '1.0'
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-={61}\r\n220-Welcome\.\r\n220-\r\n220-This is a running (RSX-[\w-]+) system\.\r\n220-={61}\r\n220 Welcome\r\n
+    - ^220 FTP Server \(Version 1.0\) ready.\r\n$
