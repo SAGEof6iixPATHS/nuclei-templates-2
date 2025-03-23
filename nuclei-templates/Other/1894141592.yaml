@@ -1,13 +1,16 @@
 id: ftp
 info:
-  name: Savin 8055 printer ftpd
+  name: ProFTPD
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    hostname: $1
+    info: No server available
+    product: proftpd
     rarity: 0
-    version: $1
+    vendor: proftpd
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 SAVIN 8055 FTP server \(([\w._-]+)\) ready\.\r\n
+    - ^500 Sorry, no server available to handle request on ([-\w_.:]+)\.\r\n

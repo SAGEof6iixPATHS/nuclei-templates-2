@@ -1,11 +1,11 @@
 id: imap
 info:
-  name: Lotus Domino imapd
+  name: Lotus Domino secure imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: SSL-only; imaps on port $1
+    info: SSL redirect
     product: lotus_domino
     rarity: 0
     vendor: ibm
@@ -20,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* BYE Domino IMAP4 Server Configured for SSL Connections only\. Please reconnect using SSL Port (\d+), .*\r\n
+    - ^\* BYE Hi This is the IMAP SSL Redirect\r\n

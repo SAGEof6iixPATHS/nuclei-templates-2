@@ -1,13 +1,16 @@
 id: ssh
 info:
-  name: PSFTPd sshd
+  name: Akamai SSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    operating_system: Windows
+    product: ssh
     rarity: 0
+    vendor: akamai
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-PSFTPd PE\. Secure FTP Server ready\r?\n
+    - ^SSH-(\d[\d.]*)-(Server-V)\r?\n$
