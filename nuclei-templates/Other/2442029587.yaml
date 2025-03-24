@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: Konica Minolta printer ftpd
+  name: pSOSystem ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
     hostname: $1
+    info: MIPS; build date $3
+    operating_system: pSOS
     rarity: 0
     version: $2
 tcp:
@@ -19,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) FTP server \(KONICA FTPD version ([\d.]+)\) ready\.\r\n
+    - ^220 ([\w._-]+) pSOSystem FTP server \(@\(#\)\(#\)pVER IA/MIPS, Version ([\w._ -]+), Built on ([\d/]+)\) ready\.\r\n

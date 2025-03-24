@@ -1,16 +1,13 @@
 id: header-injection
-
 info:
   name: Header SSRF Injection
   author: nullrabbit
   severity: high
   description: Fuzzing headers for OOB SSRF
   tags: fuzz,ssrf
-
 requests:
   - payloads:
       header: helpers/payloads/proxy-headers.txt
-
   - raw:
       - |
         GET / HTTP/1.1

@@ -1,6 +1,6 @@
 id: imap
 info:
-  name: Arvixe imapd
+  name: Freemail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Welcome to Arvixe IMAP server\.\r\n
+    - ^\* OK \[CAPABILITY IMAP4rev1 CHILDREN NAMESPACE\] Freemail ready - hit me with your rhythm stick\.\r\n
