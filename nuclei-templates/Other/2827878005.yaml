@@ -1,11 +1,12 @@
 id: ftp
 info:
-  name: Kyocera $1 printer ftpd
+  name: Dreambox ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    device_type: media device
+    operating_system: Linux
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 (FS-\w+) FTP server\.?\r\n
+    - ^220 Welcome to the OpenDreambox FTP service\.\r\n

@@ -144422,5 +144422,12 @@
     "unify-hipath-default-login.yaml": "2025-03-24 02:56:29",
     "vectoradmin-panel.yaml": "2025-03-24 02:56:29",
     "kentico-13-auth-bypass-wt-2025-0006.yaml": "2025-03-24 02:56:29",
-    "basercms-install.yaml": "2025-03-24 02:56:29"
+    "basercms-install.yaml": "2025-03-24 02:56:29",
+    "CVE-2021-39350-6345_1.yaml": "2025-03-25 02:43:52",
+    "CVE-2025-2129.yaml": "2025-03-25 02:43:52",
+    "CVE-2024-21633.yaml": "2025-03-25 02:43:52",
+    "siam-xss.yaml": "2025-03-25 02:43:52",
+    "drupal7-elfinder-rce.yaml": "2025-03-25 02:43:52",
+    "apache-hertzbeat-detect.yaml": "2025-03-25 02:43:52",
+    "external-service-interaction_1.yaml": "2025-03-25 02:43:52"
 }
