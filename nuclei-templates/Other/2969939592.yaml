@@ -1,15 +1,12 @@
 id: ssh
 info:
-  name: OpenSSH
+  name: SCS sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1; NetApp SolidFire storage node
-    product: openssh
+    info: protocol $1
     rarity: 0
-    vendor: openbsd
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -21,4 +18,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+) SolidFire Element \r\n
+    - ^SSH-([\d.]+)-(\d+\.\d+\.\d+) SSH Secure Shell

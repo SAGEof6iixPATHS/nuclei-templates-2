@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: e1137 ftpd
+  name: home.pl Idea ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $2
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-\.:\.\r\n220-\.:+\r\n220-\.::::::::::\. e1137 FTP Server loading \.::::::::::::::\. WinSock ready \.
+    - ^220-Idea FTP Server v([\d.]+) \(([\w.-]+)\) \[[\d.]+\]\r\n220 Ready\r\n
