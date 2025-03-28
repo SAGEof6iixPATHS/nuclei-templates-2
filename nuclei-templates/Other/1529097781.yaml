@@ -1,13 +1,12 @@
 id: telnet
 info:
-  name: Dreambox OpenDreambox $2 telnetd
+  name: Nut/OS Demo telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: media device
+    operating_system: Nut/OS
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nOpenDreambox ([\w._-]+) (dm\w+)\r\n
+    - ^Welcome to NutOS Telnet\.\r\n----------------------------\r\n

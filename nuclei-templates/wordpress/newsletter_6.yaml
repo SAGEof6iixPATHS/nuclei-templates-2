@@ -2,23 +2,23 @@ id: newsletter
 
 info:
   name: >
-    Newsletter <= 6.5.3 - CSV Injection
+    Newsletter <= 7.4.5 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    The Newsletter plugin for WordPress is vulnerable to CSV Injection in versions up to, and including, 6.5.3 by the use of Microsoft Excel DDE function, or to leak data via maliciously injected hyperlinks. This allows non-privileged attackers to embed untrusted input into exported CSV files, which can result in code execution when these files are downloaded and opened on a local system with a vulnerable configuration.
+    
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e91e6101-bd30-4cf1-9a39-23218c3bff6f?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a27cfa5a-e02a-4c92-8503-2c7cd32fb1f1?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:L
-    cvss-score: 5.5
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/newsletter/"
     google-query: inurl:"/wp-content/plugins/newsletter/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,newsletter,medium
+  tags: cve,wordpress,wp-plugin,newsletter,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.5.3')
+          - compare_versions(version, '< 7.4.6')
