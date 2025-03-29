@@ -1,11 +1,14 @@
 id: domain
 info:
-  name: D J Bernstein djbdns
+  name: Unbound
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
+    product: unbound
     rarity: 1
+    vendor: nlnetlabs
+    verified: true
     version: $1
 tcp:
 - name: dnsversion-bind-req
@@ -18,4 +21,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}djbdns[\s-](\d.\d+)
+    - \x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}unbound ([\w.-]+)$

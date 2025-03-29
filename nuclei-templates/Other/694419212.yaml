@@ -1,15 +1,13 @@
 id: ssh
 info:
-  name: EchoSystem sshd
+  name: Seagate GoFlex NAS device sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
+    device_type: storage-misc
     info: protocol $1
-    product: echosystem
     rarity: 0
-    vendor: echo360
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -21,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-EchoSystem_Server_([\w._-]+)\r\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+)-HipServ\n

@@ -1,15 +1,15 @@
 id: smtp
 info:
-  name: SocketLabs Hurricane MTA smtpd
+  name: Lotus Domino smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    product: hurricane_mta
+    product: lotus_domino
     rarity: 0
-    vendor: socketlabs
+    vendor: ibm
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w.-]+) Hurricane Server ESMTP service ready\.\r\n
+    - '^220   ESMTP Service \(Lotus Domino Release ([\w._-]+)\) ready at '
