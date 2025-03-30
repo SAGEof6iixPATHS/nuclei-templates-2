@@ -11,42 +11,42 @@
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
 | CVE-2010 | 123 |
-| CVE-2011 | 20 |
-| CVE-2012 | 36 |
-| CVE-2013 | 29 |
-| CVE-2014 | 61 |
-| CVE-2015 | 68 |
-| CVE-2016 | 67 |
-| CVE-2017 | 107 |
-| CVE-2018 | 269 |
-| CVE-2019 | 448 |
-| CVE-2020 | 810 |
-| CVE-2021 | 934 |
-| CVE-2022 | 922 |
-| CVE-2023 | 794 |
-| CVE-2024 | 465 |
+| CVE-2011 | 19 |
+| CVE-2012 | 35 |
+| CVE-2013 | 28 |
+| CVE-2014 | 56 |
+| CVE-2015 | 60 |
+| CVE-2016 | 56 |
+| CVE-2017 | 104 |
+| CVE-2018 | 263 |
+| CVE-2019 | 427 |
+| CVE-2020 | 794 |
+| CVE-2021 | 906 |
+| CVE-2022 | 895 |
+| CVE-2023 | 785 |
+| CVE-2024 | 447 |
 | CVE-2025 | 21 |
-| Other | 42173 |
-| wordpress | 79295 |
+| Other | 31876 |
+| wordpress | 65278 |
 ## 近几天数量变化情况
-|2025-03-20 | 2025-03-23 | 2025-03-24 | 2025-03-25 | 2025-03-26 | 2025-03-28 | 2025-03-29|
+|2025-03-23 | 2025-03-24 | 2025-03-25 | 2025-03-26 | 2025-03-28 | 2025-03-29 | 2025-03-30|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|122597 | 128459 | 123511 | 134639 | 119076 | 129709 | 126698|
+|128459 | 123511 | 134639 | 119076 | 129709 | 126698 | 102229|
 ## 最近新增文件
 | templates name | 
 | --- |
-| CVE-2025-2815.yaml |
-| CVE-2025-2328.yaml |
-| CVE-2025-2804.yaml |
-| CVE-2025-2578.yaml |
-| CVE-2024-13124.yaml |
-| CVE-2025-1705.yaml |
-| CVE-2025-2074.yaml |
-| CVE-2025-2294.yaml |
-| CVE-2025-2485.yaml |
-| CVE-2025-2825.yaml |
-| copyright.yaml |
-| xerox-altalink-deflogin.yaml |
-| pantheon.yaml |
-| x-generator.yaml |
-| x-powered-by.yaml |
+| CVE-2025-2803.yaml |
+| CVE-2025-2266.yaml |
+| CVE-2024-13557.yaml |
+| CVE-2024-11180.yaml |
+| so-called-air-quotes.yaml |
+| soj-soundslides.yaml |
+| CVE-2025-2840.yaml |
+| dap-to-autoresponders-daar.yaml |
+| CVE-2025-2006.yaml |
+| CVE-2022-0591-6637_1.yaml |
+| CVE-2025-2249.yaml |
+| exposed-js-sensitive-information.yaml |
+| open-redirect-detection.yaml |
+| PORTSWIGGERLaboratorioInyecSQLclausulaWHERE_.yaml |
+| Git-search-logs.yaml |
