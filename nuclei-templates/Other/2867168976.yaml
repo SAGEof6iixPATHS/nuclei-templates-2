@@ -1,6 +1,6 @@
 id: pop3
 info:
-  name: DAWKCo pop3d
+  name: MailMax PopMax pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK DAWKCo POP3 Server v([-\w_.]+) ready <
+    - ^\+OK [-\w_.]+ PopMax version ([\d. ]+) POP3 Mail Server Ready, Willing, and Waiting\r\n

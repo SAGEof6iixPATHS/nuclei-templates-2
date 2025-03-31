@@ -1,14 +1,16 @@
 id: ftp
 info:
-  name: Dreambox ftpd
+  name: Serv-U ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: media device
-    info: German
-    operating_system: Linux
+    operating_system: Windows
+    product: serv-u
     rarity: 0
+    vendor: serv-u
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Willkomen auf Ihrer Dreambox\.\r\n
+    - '^220[ -]Serv-U FTP[ -]Server v([\w._-]+) '

@@ -144703,5 +144703,7 @@
     "exposed-js-sensitive-information.yaml": "2025-03-30 03:08:36",
     "open-redirect-detection.yaml": "2025-03-30 03:08:36",
     "PORTSWIGGERLaboratorioInyecSQLclausulaWHERE_.yaml": "2025-03-30 03:08:36",
-    "Git-search-logs.yaml": "2025-03-30 03:08:36"
+    "Git-search-logs.yaml": "2025-03-30 03:08:36",
+    "PORTSWIGGERLaboratorioInyecSQLunionSELECTversionDB_.yaml": "2025-03-31 02:54:44",
+    "dell-idrac8-detect_1.yaml": "2025-03-31 02:54:44"
 }
