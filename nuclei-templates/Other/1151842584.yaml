@@ -1,16 +1,16 @@
 id: imap
 info:
-  name: Dovecot imapd
+  name: Axigen imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: Ubuntu
     operating_system: Linux
-    product: dovecot
+    product: axigen_mail_server
     rarity: 0
-    vendor: dovecot
+    vendor: gecad
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[[^\[]+\] Dovecot \(Ubuntu\) ready\.\r\n
+    - ^\* OK AXIGEN ([\w._-]+) \(Linux/i686\) IMAP4rev1 service is ready\r\n
