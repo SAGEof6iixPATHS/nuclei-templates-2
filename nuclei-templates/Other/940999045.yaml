@@ -1,6 +1,6 @@
 id: pop3
 info:
-  name: Oracle pop3d
+  name: Netscape Mail Server pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) Oracle Email Server espop3\t([\d.]+) \t  is ready\r\n
+    - ^\+OK ([-.\w]+) POP3 server \(Netscape Mail Server v(\d[-.\w])\) ready

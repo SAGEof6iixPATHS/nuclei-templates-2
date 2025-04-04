@@ -1,17 +1,16 @@
 id: sip
 info:
-  name: SIP Pulse
+  name: BT Home Hub $1 SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
+    device_type: VoIP adapter
     fallback:
     - get-request
-    product: sippulse
+    info: 'serial: $3'
     rarity: 5
-    vendor: sippulse
-    verified: true
-    version: $1
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -23,4 +22,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 484 Address Incomplete\r\n(?:[^\r\n]+\r\n)*?Server: SIP Pulse (\d[\w.]+)\r\n'
+    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: BT Home Hub ([\w._-]+) Build ([\w._-]+)\r\nX-Serialnumber: (\w+)\r\n'

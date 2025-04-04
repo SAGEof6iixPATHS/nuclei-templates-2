@@ -1,15 +1,12 @@
 id: smtp
 info:
-  name: Exim smtpd
+  name: TurboSendmail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: Serviced refused (IP block)
-    product: exim
+    hostname: $1
     rarity: 0
-    vendor: exim
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^554 SMTP service not available\r\n$
+    - ^220[-\s](\S+) \(IntraStore TurboSendmail\) E?SMTP Service ready

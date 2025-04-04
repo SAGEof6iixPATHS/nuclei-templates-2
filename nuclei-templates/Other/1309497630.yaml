@@ -1,6 +1,6 @@
 id: telnet
 info:
-  name: Swann DVR telnetd
+  name: Raritan $1 KVM switch telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd\x1f\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\r\nlogin: '
+    - '^\r={74}\n\rTransition Networks Telnet Server\n\rSystem name: SMKG-PKGEAST-([\w._-]+)\n\rPress CTRL-D to disconnect\.\n\rEnter password: '
