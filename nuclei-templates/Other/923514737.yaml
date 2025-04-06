@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: ArGoSoft ftpd
+  name: NRG 2205/2238/2212 copier ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: printer
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220.ArGoSoft FTP Server, Version [\d.]+ \(([\d.]+)\)\r\n
+    - ^220 NRG 2205/2238/2212 FTP server \(([\d.]+)\) ready\.\r\n

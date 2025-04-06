@@ -1,28 +1,21 @@
 id: http
 info:
-  name: Virata-EmWeb
+  name: HP Embedded Web Server remote scan service
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
     device_type: printer
-    fallback:
-    - get-request
-    info: HP printer http config
-    product: emweb
-    rarity: 5
-    vendor: virata
-    verified: true
-    version: $SUBST(1,"_",".")
+    info: no scanner found
+    rarity: 0
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 400 Bad Request\r\nServer: Virata-EmWeb/R([\d_]+)\r\nContent-Length: 0\r\n\r\n400 Bad Request\r\n$'
+    - '^HTTP/1.0 500\r\nContent-type: text/plain\r\n\r\nNo Scan Capable Devices Found\r\n'

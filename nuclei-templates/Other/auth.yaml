@@ -3,7 +3,7 @@ id: Authorization
 info:
   name: Authorization
   author: lu3ky-13
-  severity: info
+  severity: critical
 
 requests:
   - method: GET

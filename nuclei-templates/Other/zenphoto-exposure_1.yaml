@@ -17,4 +17,4 @@ requests:
       - type: word
         words:
           - Welcome to Zenphoto! This page will set up Zenphoto
-        part: body 
+        part: body

@@ -1,7 +1,7 @@
 id: adminer-panel
 
 info:
-  name: Adminer Login Panel - Detect
+  name: Adminer Login Panel
   author: random_robbie,meme-lord,ritikchaddha
   severity: info
   description: An Adminer login panel was detected.
@@ -10,12 +10,11 @@ info:
   classification:
     cwe-id: CWE-200
   metadata:
-    max-request: 8
     verified: true
     shodan-query: title:"Login - Adminer"
   tags: panel,adminer
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}/adminer.php'
@@ -35,9 +34,7 @@ http:
     matchers:
       - type: word
         words:
-          - "Adminer</title>"
-          - "Adminer</a>"
-        condition: or
+          - "Login - Adminer"
 
       - type: status
         status:
@@ -49,3 +46,5 @@ http:
         group: 1
         regex:
           - '<span class="version">([0-9.]+)'
+
+# Enhanced by mp on 2022/03/20
