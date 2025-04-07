@@ -1,15 +1,17 @@
 id: pop3
 info:
-  name: GNU Mailutils pop3d
+  name: Mercur pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: mailutils
+    hostname: $2
+    operating_system: Windows
+    product: mercur
     rarity: 0
-    vendor: gnu
+    vendor: atrium
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +22,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 Ready <\d{3,6}\.1[012]\d{8}@(\w+)>\r\n
+    - '^\+OK MERCUR POP3-Server \(v([\w._-]+) [\w=]+\) for Windows(?: NT)? ready <[\d.]+@([-\w_.]+)>\r\n'
