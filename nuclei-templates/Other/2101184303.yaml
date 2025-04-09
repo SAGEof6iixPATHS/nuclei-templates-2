@@ -1,14 +1,15 @@
 id: ssh
 info:
-  name: EchoSystem sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
-    product: echosystem
+    device_type: firewall
+    info: protocol $1; Imperva SecureSphere firewall
+    product: openssh
     rarity: 0
-    vendor: echo360
+    vendor: openbsd
     verified: true
     version: $2
 tcp:
@@ -21,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-EchoSystem_Server_([\w._-]+)\r\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w_.-]+) FIPS\n

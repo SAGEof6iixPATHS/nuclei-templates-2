@@ -9,12 +9,16 @@ info:
     - https://issues.jenkins.io/browse/JENKINS-30107
     - https://issues.jenkins.io/browse/JENKINS-18884
     - https://issues.jenkins.io/browse/JENKINS-26469
-  tags: jenkins
+    - https://rohit-soni.medium.com/chaining-multiple-vulnerabilities-leads-to-remote-code-execution-rce-on-paytm-e77f2fd2295e
+  tags: jenkins,cloud,generic
 
-requests:
+http:
   - method: GET
     path:
+      - "{{BaseURL}}/asynchPeople"
       - "{{BaseURL}}/asynchPeople/"
+      
+    stop-at-first-match: true
     matchers:
       - type: word
         words:
