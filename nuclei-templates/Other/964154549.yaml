@@ -1,12 +1,14 @@
 id: telnet
 info:
-  name: telnet
+  name: Lantronix LPS1 telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    info: generic
+    device_type: print server
+    info: Released $2
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01login:\x20$
+    - '^\xff\xfb\x01\xff\xfb\x03\xff\xfd\x18\r\n\nLantronix LPS1 Version V(\d[\w/-_+.]+)\((\d+)\)\n\r\nType HELP at the ''Local_3> '' prompt for assistance\.\n\r\nUsername> '

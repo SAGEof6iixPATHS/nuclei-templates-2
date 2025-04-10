@@ -11,68 +11,410 @@
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
 | CVE-2010 | 123 |
-| CVE-2011 | 21 |
+| CVE-2011 | 22 |
 | CVE-2012 | 37 |
-| CVE-2013 | 29 |
-| CVE-2014 | 59 |
-| CVE-2015 | 68 |
-| CVE-2016 | 64 |
-| CVE-2017 | 107 |
-| CVE-2018 | 267 |
-| CVE-2019 | 445 |
-| CVE-2020 | 817 |
-| CVE-2021 | 930 |
-| CVE-2022 | 912 |
-| CVE-2023 | 787 |
-| CVE-2024 | 468 |
-| CVE-2025 | 25 |
-| Other | 40873 |
-| wordpress | 77183 |
+| CVE-2013 | 30 |
+| CVE-2014 | 62 |
+| CVE-2015 | 71 |
+| CVE-2016 | 72 |
+| CVE-2017 | 108 |
+| CVE-2018 | 273 |
+| CVE-2019 | 454 |
+| CVE-2020 | 822 |
+| CVE-2021 | 970 |
+| CVE-2022 | 931 |
+| CVE-2023 | 803 |
+| CVE-2024 | 473 |
+| CVE-2025 | 26 |
+| Other | 48400 |
+| wordpress | 85044 |
 ## 近几天数量变化情况
-|2025-03-31 | 2025-04-02 | 2025-04-03 | 2025-04-04 | 2025-04-06 | 2025-04-07 | 2025-04-09|
+|2025-04-02 | 2025-04-03 | 2025-04-04 | 2025-04-06 | 2025-04-07 | 2025-04-09 | 2025-04-10|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|139860 | 133284 | 133488 | 138816 | 93654 | 106902 | 123270|
+|133284 | 133488 | 138816 | 93654 | 106902 | 123270 | 138776|
 ## 最近新增文件
 | templates name | 
 | --- |
-| CVE-2025-3429.yaml |
-| CVE-2025-3427.yaml |
-| CVE-2025-2807.yaml |
-| CVE-2025-2876.yaml |
-| CVE-2025-2808.yaml |
-| simple-wp-events.yaml |
-| CVE-2019-25223.yaml |
-| CVE-2025-2526.yaml |
-| melapress-login-security-premium.yaml |
-| CVE-2025-3428.yaml |
-| streamit.yaml |
-| CVE-2014-2054.yaml |
-| CVE-2025-3064.yaml |
-| accept-sagepay-payments-using-contact-form-7.yaml |
-| CVE-2025-2519.yaml |
-| aawp-obfuscator.yaml |
-| green-money-payment-gateway.yaml |
-| CVE-2025-3437.yaml |
-| CVE-2021-24472-5746_1.yaml |
-| CVE-2025-3432.yaml |
-| CVE-2025-3433.yaml |
-| CVE-2025-2882.yaml |
-| CVE-2025-2568.yaml |
-| CVE-2025-1203.yaml |
-| CVE-2025-3436.yaml |
-| CVE-2025-3430.yaml |
-| CVE-2025-1446.yaml |
-| CVE-2025-2525.yaml |
-| CVE-2025-3431.yaml |
-| CVE-2025-2004.yaml |
-| CVE-2024-13820.yaml |
-| CVE-2025-2883.yaml |
-| CVE-2025-29085.yaml |
-| custom config check.yaml |
-| sub-takeover.yaml |
-| TVE-2024-105082219.yaml |
-| directory_listing.yaml |
-| download_manager.yaml |
-| SQLI-HEADER.yaml |
-| ssh-weak-credentials.yaml |
-| thinkcmf-lfi 1.yaml |
+| CVE-2025-31594.yaml |
+| pcloud-backup.yaml |
+| CVE-2025-31585.yaml |
+| publitio.yaml |
+| leadfox.yaml |
+| auto-scroll-for-reading.yaml |
+| append-content.yaml |
+| cartboss.yaml |
+| CVE-2025-31013.yaml |
+| CVE-2025-31584.yaml |
+| CVE-2025-31876.yaml |
+| CVE-2025-31756.yaml |
+| CVE-2025-31881.yaml |
+| clearbit.yaml |
+| CVE-2025-31746.yaml |
+| CVE-2025-31566.yaml |
+| export-all-post-meta.yaml |
+| payday.yaml |
+| sidebar-manager-light.yaml |
+| CVE-2025-31869.yaml |
+| CVE-2025-31834.yaml |
+| elfsight-testimonials-slider.yaml |
+| CVE-2025-31808.yaml |
+| CVE-2025-31836.yaml |
+| CVE-2025-31872.yaml |
+| 1-click-backup-restore-database-by-sunbytes.yaml |
+| CVE-2025-30996.yaml |
+| libro-de-reclamaciones-y-quejas.yaml |
+| CVE-2025-32167.yaml |
+| CVE-2025-31403.yaml |
+| CVE-2025-31856.yaml |
+| CVE-2025-31897.yaml |
+| CVE-2025-31545.yaml |
+| CVE-2025-32218.yaml |
+| CVE-2025-30596.yaml |
+| CVE-2025-31862.yaml |
+| CVE-2025-31799.yaml |
+| CVE-2025-32233.yaml |
+| CVE-2025-32235.yaml |
+| connector-civicrm-mcrestface.yaml |
+| product-notices-for-woocommerce.yaml |
+| gdpr-cookie-notice.yaml |
+| acme-divi-modules.yaml |
+| vagonic-sortable.yaml |
+| CVE-2025-31547.yaml |
+| CVE-2025-32189.yaml |
+| CVE-2025-31895.yaml |
+| CVE-2025-31731.yaml |
+| CVE-2025-31560.yaml |
+| CVE-2025-31820.yaml |
+| CVE-2025-31865.yaml |
+| CVE-2025-31899.yaml |
+| CVE-2025-31908.yaml |
+| CVE-2025-31758.yaml |
+| CVE-2025-31462.yaml |
+| addonskit-for-elementor.yaml |
+| CVE-2025-22277.yaml |
+| docxpresso.yaml |
+| fpw-category-thumbnails.yaml |
+| CVE-2025-31540.yaml |
+| sticky-add-to-cart-woo.yaml |
+| dn-cookie-notice.yaml |
+| simple-contact-forms.yaml |
+| CVE-2025-31532.yaml |
+| CVE-2025-31896.yaml |
+| CVE-2025-31381.yaml |
+| CVE-2025-32173.yaml |
+| CVE-2025-31843.yaml |
+| CVE-2025-31827.yaml |
+| CVE-2025-31529.yaml |
+| CVE-2025-31798.yaml |
+| CVE-2025-31886.yaml |
+| newsy.yaml |
+| CVE-2025-31780.yaml |
+| CVE-2025-31576.yaml |
+| CVE-2025-31906.yaml |
+| CVE-2025-32161.yaml |
+| CVE-2025-31541.yaml |
+| CVE-2025-31537.yaml |
+| CVE-2025-32250.yaml |
+| CVE-2025-31579.yaml |
+| appointy-appointment-scheduler.yaml |
+| CVE-2025-32136.yaml |
+| mobile-bottom-menu-for-wp.yaml |
+| wpgenealogy.yaml |
+| CVE-2025-32112.yaml |
+| CVE-2025-31825.yaml |
+| CVE-2025-32224.yaml |
+| breaking-news-wp.yaml |
+| easy-wp-optimizer.yaml |
+| simple-website-logo.yaml |
+| CVE-2025-32200.yaml |
+| CVE-2025-32234.yaml |
+| CVE-2025-31580.yaml |
+| CVE-2025-31587.yaml |
+| CVE-2025-31763.yaml |
+| CVE-2025-31572.yaml |
+| CVE-2025-31570.yaml |
+| CVE-2025-32226.yaml |
+| boo-recipes.yaml |
+| postmarkapp-email-integrator.yaml |
+| CVE-2025-31606.yaml |
+| CVE-2025-31764.yaml |
+| CVE-2025-31732.yaml |
+| CVE-2025-31536.yaml |
+| mobile-app.yaml |
+| CVE-2025-31830.yaml |
+| rio-video-gallery.yaml |
+| CVE-2025-32188.yaml |
+| CVE-2025-31386.yaml |
+| author-bio-shortcode.yaml |
+| CVE-2025-31807.yaml |
+| CVE-2025-31562.yaml |
+| CVE-2025-31871.yaml |
+| CVE-2025-31816.yaml |
+| CVE-2025-30853.yaml |
+| CVE-2025-2048.yaml |
+| b-blocks.yaml |
+| openai-tools-for-wp-wc.yaml |
+| CVE-2025-32113.yaml |
+| ni-woocommerce-product-enquiry.yaml |
+| CVE-2025-32256.yaml |
+| CVE-2025-31415.yaml |
+| CVE-2025-32201.yaml |
+| CVE-2025-31904.yaml |
+| CVE-2025-31554.yaml |
+| CVE-2025-31602.yaml |
+| CVE-2025-31569.yaml |
+| CVE-2025-31769.yaml |
+| CVE-2025-31753.yaml |
+| getastra.yaml |
+| CVE-2025-31777.yaml |
+| CVE-2025-31757.yaml |
+| CVE-2025-31555.yaml |
+| free-product-table-for-woocommerce.yaml |
+| CVE-2025-31603.yaml |
+| widget-manager-light.yaml |
+| sidepane.yaml |
+| 6storage-rentals.yaml |
+| advanced-typekit.yaml |
+| CVE-2025-31583.yaml |
+| display-product-variations-dropdown-on-shop-page.yaml |
+| xpro-theme-builder.yaml |
+| CVE-2025-31833.yaml |
+| scss-wp-editor.yaml |
+| CVE-2025-31600.yaml |
+| CVE-2025-31880.yaml |
+| CVE-2025-31854.yaml |
+| CVE-2025-31577.yaml |
+| CVE-2025-32241.yaml |
+| CVE-2025-31739.yaml |
+| CVE-2025-31416.yaml |
+| CVE-2025-31893.yaml |
+| CVE-2025-31822.yaml |
+| CVE-2025-31864.yaml |
+| CVE-2025-31773.yaml |
+| CVE-2025-31736.yaml |
+| woo-giftcards.yaml |
+| CVE-2025-32118.yaml |
+| CVE-2025-31752.yaml |
+| CVE-2025-31787.yaml |
+| CVE-2025-31866.yaml |
+| CVE-2025-31909.yaml |
+| CVE-2025-31751.yaml |
+| contentmx-content-publisher.yaml |
+| wigi.yaml |
+| add-to-all.yaml |
+| cache-control-by-cacholong.yaml |
+| CVE-2025-31546.yaml |
+| CVE-2025-31613.yaml |
+| adverts-click-tracker.yaml |
+| CVE-2025-3100.yaml |
+| CVE-2025-31409.yaml |
+| CVE-2025-31623.yaml |
+| CVE-2025-31078.yaml |
+| clp-custom-login-page.yaml |
+| CVE-2025-31525.yaml |
+| CVE-2025-31615.yaml |
+| auto-post-after-image-upload.yaml |
+| tz-plus-gallery.yaml |
+| rezo.yaml |
+| CVE-2025-31617.yaml |
+| rollbar.yaml |
+| CVE-2025-31786.yaml |
+| CVE-2025-32178.yaml |
+| shopo.yaml |
+| CVE-2025-31755.yaml |
+| varnish-wp.yaml |
+| CVE-2025-31874.yaml |
+| CVE-2025-32239.yaml |
+| CVE-2025-32236.yaml |
+| CVE-2025-31839.yaml |
+| bybrick-accordion.yaml |
+| ship-depot.yaml |
+| CVE-2025-31776.yaml |
+| CVE-2025-32219.yaml |
+| CVE-2025-32187.yaml |
+| sync-wc-google.yaml |
+| slider-path.yaml |
+| CVE-2025-31858.yaml |
+| cf7-spreadsheets.yaml |
+| CVE-2025-31846.yaml |
+| uptime-robot-monitor.yaml |
+| CVE-2025-30594.yaml |
+| revive-so.yaml |
+| CVE-2025-32258.yaml |
+| CVE-2025-31800.yaml |
+| CVE-2025-32229.yaml |
+| CVE-2025-32141.yaml |
+| wp-clone-any-post-type.yaml |
+| ownerrez.yaml |
+| cal-com.yaml |
+| CVE-2025-31809.yaml |
+| related-posts-list-grid-and-slider-all-in-one.yaml |
+| cue.yaml |
+| bloggie.yaml |
+| wp-autokeyword.yaml |
+| CVE-2025-31611.yaml |
+| CVE-2025-31831.yaml |
+| CVE-2025-31894.yaml |
+| CVE-2025-31588.yaml |
+| useinfluence.yaml |
+| CVE-2025-31840.yaml |
+| CVE-2025-31601.yaml |
+| CVE-2025-31768.yaml |
+| CVE-2025-32253.yaml |
+| cleverreach-wc.yaml |
+| CVE-2025-30908.yaml |
+| CVE-2025-31604.yaml |
+| advanced-css3-related-posts-widget.yaml |
+| CVE-2025-31870.yaml |
+| appointify.yaml |
+| CVE-2025-31789.yaml |
+| CVE-2025-31622.yaml |
+| CVE-2025-31765.yaml |
+| CVE-2025-32220.yaml |
+| theme-duplicator.yaml |
+| CVE-2025-31812.yaml |
+| CVE-2025-32260.yaml |
+| CVE-2025-31841.yaml |
+| CVE-2025-31530.yaml |
+| minimalistic-event-manager.yaml |
+| CVE-2025-31596.yaml |
+| swiftxr-3darvr-viewer.yaml |
+| CVE-2025-31791.yaml |
+| wp-copy-media-url.yaml |
+| CVE-2025-31794.yaml |
+| CVE-2025-31616.yaml |
+| CVE-2025-31863.yaml |
+| question-answer.yaml |
+| review-manager.yaml |
+| turitop-booking-system.yaml |
+| CVE-2025-32162.yaml |
+| CVE-2025-31417.yaml |
+| designo.yaml |
+| dragon-calendar-free-version.yaml |
+| chatwee.yaml |
+| CVE-2025-31618.yaml |
+| apimo.yaml |
+| CVE-2025-31528.yaml |
+| staticpress.yaml |
+| CVE-2025-31785.yaml |
+| ship-per-product.yaml |
+| CVE-2025-31774.yaml |
+| CVE-2025-31750.yaml |
+| bulk-user-editor.yaml |
+| printus-cloud-printing-for-woocommerce.yaml |
+| CVE-2025-31852.yaml |
+| CVE-2025-32231.yaml |
+| local-magic.yaml |
+| labinator-content-types-duplicator.yaml |
+| feedbucket.yaml |
+| edmin.yaml |
+| CVE-2025-31859.yaml |
+| wpmbytplayer.yaml |
+| CVE-2025-31625.yaml |
+| cgm-event-calendar.yaml |
+| CVE-2025-31406.yaml |
+| CVE-2025-31779.yaml |
+| CVE-2025-32248.yaml |
+| photobox.yaml |
+| CVE-2025-32254.yaml |
+| CVE-2025-31877.yaml |
+| arrow-twitter-feed.yaml |
+| CVE-2025-32225.yaml |
+| CVE-2025-31775.yaml |
+| CVE-2025-31828.yaml |
+| CVE-2025-30916.yaml |
+| bookingor.yaml |
+| privy-crm-integration.yaml |
+| CVE-2025-31544.yaml |
+| CVE-2025-32147.yaml |
+| CVE-2025-31781.yaml |
+| CVE-2025-31408.yaml |
+| CVE-2025-30793.yaml |
+| richtexteditor.yaml |
+| CVE-2025-32246.yaml |
+| CVE-2025-32237.yaml |
+| CVE-2025-32198.yaml |
+| CVE-2025-30915.yaml |
+| CVE-2025-32247.yaml |
+| CVE-2025-31784.yaml |
+| CVE-2025-31410.yaml |
+| clockify-lite.yaml |
+| advanced-speed-increaser.yaml |
+| CVE-2025-32252.yaml |
+| CVE-2025-31810.yaml |
+| embed-extended.yaml |
+| pin-generator.yaml |
+| CVE-2025-31782.yaml |
+| CVE-2025-31845.yaml |
+| elex-request-a-quote.yaml |
+| CVE-2025-31814.yaml |
+| ai-content-creator.yaml |
+| CVE-2025-31621.yaml |
+| json-structuring-markup.yaml |
+| admail.yaml |
+| CVE-2025-31857.yaml |
+| CVE-2025-31848.yaml |
+| CVE-2025-31817.yaml |
+| CVE-2025-31539.yaml |
+| CVE-2025-32249.yaml |
+| automatic-featured-images-from-videos.yaml |
+| blockwheels.yaml |
+| CVE-2025-31759.yaml |
+| CVE-2025-31125.yaml |
+| CVE-2024-3300.yaml |
+| missing-nginx-hsts.yaml |
+| Ephemeral-Accountant-fuzz.yaml |
+| file-mongodb-audit-log-disabled.yaml |
+| missing-nginx-xss-protection.yaml |
+| mongodb-http-interface-enabled.yaml |
+| missing-nginx-bof-protection.yaml |
+| mongodb-auth-disabled.yaml |
+| file-disable-directory-listing.yaml |
+| Ephemeral-Accountant.yaml |
+| Server-side-xss-fuzz.yaml |
+| disable-http-trace-method.yaml |
+| user_credentials.yaml |
+| file-mongodb-ssl-disabled.yaml |
+| basket-manipulate-fuzz.yaml |
+| DEFENTED-INTERFACE.yaml |
+| forgotten_developer_backup.yaml |
+| file-mongodb-auth-disabled.yaml |
+| file-nginx-rate-limiting.yaml |
+| Server-side-xss.yaml |
+| modicon_340_detect.yaml |
+| file-disable-server-header.yaml |
+| iis-directory-browsing.yaml |
+| basket-manipulate.yaml |
+| forgotten_developer_backup_fuzz.yaml |
+| missing-nginx-rate-limit.yaml |
+| tibco-mft-panel.yaml |
+| disable-nginx-server-tokens.yaml |
+| unsigned_jwt_fuzz.yaml |
+| forge-coupon-fuzz.yaml |
+| two_factor_authentication.yaml |
+| forge-coupon.yaml |
+| file-missing-nginx-bof-protection.yaml |
+| multiple-likes-fuzz.yaml |
+| file-disable-nginx-server-tokens.yaml |
+| user_credentials_fuzz.yaml |
+| modicon_580_detect.yaml |
+| file-missing-nginx-xss-protection.yaml |
+| iis-logging-disabled.yaml |
+| file-mongodb-http-interface-enabled.yaml |
+| disable-server-signature.yaml |
+| spip-rce-exploit.yaml |
+| multiple-likes.yaml |
+| adfinity-panel.yaml |
+| file-disable-server-signature.yaml |
+| file-nginx-hsts-missing.yaml |
+| nosql-manipulation-fuzz.yaml |
+| mongodb-audit-log-disabled.yaml |
+| file-enforce-server-tokens-prod.yaml |
+| disable-server-header.yaml |
+| disable-directory-listing.yaml |
+| mongodb-ssl-disabled.yaml |
+| nosql-manipulation.yaml |
+| unsigned_jwt.yaml |
+| two_factor_authentication_fuzz.yaml |
+| enforce-server-tokens-prod.yaml |
+| file-disable-http-trace-method.yaml |
