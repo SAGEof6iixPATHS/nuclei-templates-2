@@ -1,15 +1,12 @@
 id: smtp
 info:
-  name: CommuniGate Pro mail server
+  name: totemomail Encryption Gateway smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    product: communigate_pro
+    info: 'time zone: $1'
     rarity: 0
-    vendor: stalker
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) ESMTP is glad to see you!\r\n
+    - ^220 totemomail SMTP Server ready [\w, :]+ ([+-]\d\d\d\d) \([A-Z]*\)\r\n

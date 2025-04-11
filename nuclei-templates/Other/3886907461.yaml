@@ -1,13 +1,14 @@
 id: smtp
 info:
-  name: BorderWare MXtreme smtpd
+  name: MgSMTP
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    device_type: firewall
     hostname: $1
+    operating_system: Windows
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ESMTP BorderWare MXtreme Mail Firewall\r\n
+    - ^220 ([\w._-]+) SMTP server ready \(MgSMTP ([\w._-]+)\)\r\n
