@@ -1,15 +1,15 @@
 id: ftp
 info:
-  name: Core FTP Server
+  name: Serv-U ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: core_ftp
+    operating_system: Windows
+    product: serv-u
     rarity: 0
-    vendor: coreftp
+    vendor: serv-u
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Core FTP Server Version ([\w._-]+, build \d+) Registered\r\n
+    - ^220-Serv-U FTP Server for Winsock\r\n

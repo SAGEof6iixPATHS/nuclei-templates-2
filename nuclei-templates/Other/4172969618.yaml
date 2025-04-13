@@ -1,14 +1,13 @@
 id: pop3-proxy
 info:
-  name: PGP Universal pop3 proxy
+  name: IronMail pop3-proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    info: 'Proxied greeting: $1'
-    product: universal_server
+    product: ironmail
     rarity: 0
-    vendor: pgp
+    vendor: ciphertrust
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK (.*) \(PGP Universal service is proxying this connection\)\r\n
+    - ^\+OK POP3 Proxy Server Ready\r\n

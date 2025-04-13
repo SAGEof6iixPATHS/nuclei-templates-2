@@ -1,12 +1,13 @@
 id: telnet
 info:
-  name: BayStack 420 switch telnetd
+  name: D-Link ADSL router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
+    device_type: broadband router
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\x1b\[2J\x1b\[0m\x1b\[1;1H \n\r\x1b\[2;1H\n\r\x1b\[3;1H\n\r\x1b\[4;1H\n\r\x1b\[5;1H\n\r\x1b\[6;1H\n\r\x1b\[7;1H\n\r\x1b\[8;1H\n\r\x1b\[9;1H\n\r\x1b\[10;1H\n\r\x1b\[11;1H\n\r\x1b\[12;1H\n\r\x1b\[13;1H\n\r\x1b\[14;1H\n\r\x1b\[15;1H\n\r\x1b\[16;1HEnter Ctrl-Y to begin\.\x1b\[18;3H\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\x1b\[19;3H\*\*\* BayStack 420 '
+    - ^\xff\xfb\x01\xff\xfd\x03\xff\xfb\x03\n\r +\*+\n\r +Welcome to [-\w_.]+\n\r +\*+\n\r\n\rD-Link (?:Corp|Inc)\., Software Release R([-\w_.]+)[\r\n(]

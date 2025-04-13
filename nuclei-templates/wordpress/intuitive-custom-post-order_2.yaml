@@ -7,6 +7,7 @@ info:
   reference:
     - https://wordpress.org/plugins/intuitive-custom-post-order/
   metadata:
+    max-request: 1
     plugin_namespace: intuitive-custom-post-order
     wpscan: https://wpscan.com/plugin/intuitive-custom-post-order
   tags: tech,wordpress,wp-plugin,top-200
@@ -46,4 +47,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a00463044022055dd47620c8daf6d670b9b81abbcac00b1e63703ec5a9698dc477df7959a2cb9022064d0b6c93a797aaad064a004b8be55974ce1c32618e84826cab91df5cc7b4e59:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220406e88695e30b9570a4dd04659c44e85e7dbff3967930ac01323156eb9cd4ae9022100a5133d6e77d45cdf61a32b4c118f23ce089bc8cb6393aa32009f0146fda66db1:922c64590222798bb761d5b6d8e72950

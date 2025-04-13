@@ -1,16 +1,17 @@
 id: ssh
 info:
-  name: SilverSHielD sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
+    info: RemotelyAnywhere $3; protocol $1
     operating_system: Windows
-    product: silvershield
+    product: openssh
     rarity: 0
-    vendor: extenua
+    vendor: openbsd
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-SilverSHielD\r\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+) in RemotelyAnywhere ([\d.]+)\r?\n

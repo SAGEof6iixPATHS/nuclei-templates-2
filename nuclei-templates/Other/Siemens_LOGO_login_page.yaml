@@ -1,14 +1,14 @@
 id: Detect_Siemens_LOGO_8_PLC
 
 info:
-  name: Find up Siemens Logo! 8 Web panel
+  name: find up siemens logo! 8 web panel
   author: biero-el-corridor
   severity: low
   
 http:
   - method: GET
     path:
-      - "{{Hostname}}/logo_login.shtm?!App-Language="
+      - "{{BaseURL}}/logo_login.shtm?!App-Language="
 
     matchers-condition: and
     matchers:
