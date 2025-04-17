@@ -2,14 +2,14 @@ id: pdf-embedder
 
 info:
   name: >
-    PDF.js < 4.2.67 - Arbitrary JavaScript Execution
+    PDF Embedder <= 4.6.4 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8ce7aa01-7e79-4048-a84d-fcb9541d5f8b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b63f0862-d817-49c6-8ac2-6143d21abc32?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.7.1')
+          - compare_versions(version, '<= 4.6.4')

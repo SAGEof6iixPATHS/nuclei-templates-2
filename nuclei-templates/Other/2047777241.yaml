@@ -1,15 +1,15 @@
 id: ftp
 info:
-  name: Groupcall Xporter ftpd
+  name: FileZilla ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: xporter
+    operating_system: Windows
+    product: filezilla_server
     rarity: 0
-    vendor: groupcall
+    vendor: filezilla-project
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^200 Groupcall Xporter - ([\d.]+)\r\n
+    - ^220-FileZilla Server\r\n
