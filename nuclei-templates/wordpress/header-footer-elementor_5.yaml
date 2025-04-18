@@ -2,14 +2,14 @@ id: header-footer-elementor
 
 info:
   name: >
-    Elementor Header & Footer Builder <= 1.6.46 - Authenticated (Contributor+) Stored Cross-Site Scripting via Page Title Widget
+    Elementor Header & Footer Builder <= 1.6.45 - Authenticated (Author+) Stored Cross-Site Scripting via SVG File Upload
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d82c866-5b35-414e-bd72-30530930d5d8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7773fd3a-2417-415e-97b0-735e99e62097?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.46')
+          - compare_versions(version, '<= 1.6.45')

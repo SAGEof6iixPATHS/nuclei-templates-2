@@ -7,6 +7,7 @@ info:
   reference:
     - https://wordpress.org/plugins/google-analytics-dashboard-for-wp/
   metadata:
+    max-request: 1
     plugin_namespace: google-analytics-dashboard-for-wp
     wpscan: https://wpscan.com/plugin/google-analytics-dashboard-for-wp
   tags: tech,wordpress,wp-plugin,top-200
@@ -46,4 +47,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100d45b163bab2b7159da2c7399020d4e950e6235ee642c71a9f07d95dc1a18f03c022030ee5ead425164a1866981fb8f58a547d33a927dcec3fef560ca0c71684f3057:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402206038e65fb23408a49191d8ac2baccfcb3415d90c4cda9b7e5538347a8244802e02204301485298075b68b765392d7b5bea8449df41e7d4af988bb04f88a196e0e972:922c64590222798bb761d5b6d8e72950
