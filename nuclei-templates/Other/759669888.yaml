@@ -1,6 +1,6 @@
 id: printer
 info:
-  name: Xerox lpd
+  name: Canon MF4360-4390 lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^no entries\n$
+    - ^Fictive printer queue short information\n$

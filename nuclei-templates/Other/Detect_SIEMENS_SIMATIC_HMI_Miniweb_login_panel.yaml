@@ -1,9 +1,14 @@
 id: Detect_SIEMENS_SIMATIC_HMI_Miniweb_login_panel
 
 info:
-  name: find up SIEMENS_SIMATIC_HMI_Miniweb_login_panel
+  name: Find up SIEMENS_SIMATIC_HMI_Miniweb_login_panel
   author: biero-el-corridor
   severity: low
+  metadata:
+    max-request: 2
+    vendor: siemens
+  tags: ICS,siemens
+
 
 http:
   - method: GET

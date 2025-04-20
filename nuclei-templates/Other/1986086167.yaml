@@ -1,18 +1,15 @@
 id: pop3
 info:
-  name: MDaemon pop3d
+  name: Lotus Domino POP3 server
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    info: Spanish
-    operating_system: Windows
-    product: mdaemon
+    product: lotus_domino
     rarity: 0
-    vendor: altn
+    vendor: ibm
     verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) POP MDaemon ([\d.]+) listo <MDAEMON-[\w.]+@[-\w_.]+>\r\n
+    - '^\+OK Lotus Notes POP3 server version ([-.\w]+) ready on '
