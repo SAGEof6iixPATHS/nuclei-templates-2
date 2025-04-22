@@ -1,14 +1,15 @@
 id: sieve
 info:
-  name: Dovecot timsieved
+  name: DBMail timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    product: dovecot
+    product: dbmail
     rarity: 0
-    vendor: dovecot
+    vendor: paul_j_stevens
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"dovecot\"\r\n
+    - ^\"IMPLEMENTATION\" \"DBMail timsieved ([\w._-]+)\"\r\n
