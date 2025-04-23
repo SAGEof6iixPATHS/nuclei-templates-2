@@ -1,14 +1,13 @@
 id: http-proxy
 info:
-  name: I2P anonymizing http proxy
+  name: Kerio Control http proxy
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    info: Polish
-    product: i2p
+    product: control
     rarity: 0
-    vendor: i2p_project
+    vendor: kerio
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: http-proxy
     type: regex
     regex:
-    - '(?i)^HTTP/1\.1 403 Bad Protocol\r\n.*<title>(?:I2P )?Ostrzeżenie: protokół inny niż HTTP</title>\r\n<link rel=\"shortcut icon\" href=\"http://proxy\.i2p/themes/console/images/favicon\.ico\" ?>\r\n'
+    - '^HTTP/1\.0 400 Bad Request\r\nContent-Type: text/html\r\nPragma: no-cache\r\nConnection: close\r\nContent-Type: text/html; charset=us-ascii\r\n\r\n<html><body>Invalid request<P><HR><i>This message was created by Kerio Control Proxy</i></body></html> {665}'

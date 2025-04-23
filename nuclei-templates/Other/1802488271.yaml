@@ -1,26 +1,24 @@
 id: smtp
 info:
-  name: Trend Micro InterScan
+  name: Axigen smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $2
-    info: on Postfix
-    operating_system: Unix
-    product: postfix
-    rarity: 0
-    vendor: postfix
+    hostname: $1
+    product: axigen_mail_server
+    rarity: 8
+    vendor: gecad
     verified: true
-    version: $1
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220-InterScan Version (\S+) .*Ready\r\n220 ([-.+\w]+) ESMTP Postfix\r\n
+    - ^220 ([\w_.-]+)\r\n250-[\w._-]+ Axigen ESMTP hello\r\n

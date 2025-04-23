@@ -1,13 +1,16 @@
 id: smtp
 info:
-  name: eXtremail smtpd
+  name: XMail SMTP server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    product: xmail
     rarity: 0
-    version: $2.$3
+    vendor: davide_libenzi
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) eXtremail V(\d[-.\w]+) release (\d+) ESMTP server ready \.\.\.\r\n
+    - '^220 <1\d+\.\d+@([-.\w]+)> \[XMail (\d[-.\w]+) ESMTP Server\] service ready; '

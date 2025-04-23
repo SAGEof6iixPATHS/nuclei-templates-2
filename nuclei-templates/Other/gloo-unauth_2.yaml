@@ -5,8 +5,6 @@ info:
   author: dhiyaneshDk
   severity: high
   tags: unauth,gloo
-  metadata:
-    max-request: 1
 
 http:
   - method: GET

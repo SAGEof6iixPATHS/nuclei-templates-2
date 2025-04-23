@@ -1,15 +1,13 @@
 id: ftp
 info:
-  name: Code-Crafters Ability ftpd
+  name: ShareIt Pro ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: ability_ftp_server
+    device_type: PDA
     rarity: 0
-    vendor: code-crafters
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Welcome to Code-Crafters Ability FTP Server\.\r\n
+    - ^220 ShareIt FTP Pro ([\d.]+) \(WINCE\) Ready\.\r\n
