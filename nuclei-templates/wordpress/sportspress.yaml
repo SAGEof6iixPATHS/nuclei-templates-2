@@ -1,15 +1,15 @@
-id: sportspress
+id: sportspress-d5cbdf2071f42342c858ea33caee55c5
 
 info:
   name: >
-    SportsPress <= 2.7.1 - Cross-Site Scripting
+    SportsPress – Sports Club & League Manager <= 2.7.17 - Missing Authorization to Unauthenticated Event Permalink Update
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/14c9dc08-6965-4a22-a97a-5afc8152887d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/098dfee2-ba0b-420f-89ed-8ad1e41faec4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.7.2')
+          - compare_versions(version, '<= 2.7.17')

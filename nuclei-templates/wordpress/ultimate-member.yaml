@@ -1,23 +1,24 @@
-id: ultimate-member
+id: ultimate-member-779aa9b0ab0ab983d5a4afb638c26ccc
 
 info:
   name: >
-    Ultimate Member <= 2.0.53 - Cross-Site Scripting
+    Ultimate Member – User Profile, Registration, Login, Member Directory, Content Restriction & Membership Plugin <= 2.10.1 - Unauthenticated Blind SQL Injection
   author: topscoder
-  severity: high
+  severity: critical
   description: >
-    
+    The Ultimate Member – User Profile, Registration, Login, Member Directory, Content Restriction & Membership Plugin plugin for WordPress is vulnerable to blind SQL Injection via the search parameter in all versions up to, and including, 2.10.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. This vulnerability was partially patched in version 2.9.2 when initially addressing CVE-2025-0308.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6eedf009-116c-4a98-8b84-e01bd35e7e60?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8f539e25-5483-417d-a3c5-e7034c03c673?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 7.5
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ultimate-member/"
     google-query: inurl:"/wp-content/plugins/ultimate-member/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-member,high
+  tags: cve,wordpress,wp-plugin,ultimate-member,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.53')
+          - compare_versions(version, '<= 2.10.1')

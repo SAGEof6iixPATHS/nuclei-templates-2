@@ -1,15 +1,15 @@
-id: bricksforge
+id: bricksforge-571faec1fdd767019d712c71c4190b53
 
 info:
   name: >
-    Bricksforge <= 2.0.17 - Missing Authorization to Unauthenticated WordPress Settings Update
+    Bricksforge <= 2.0.17 - Missing Authorization to Unauthenticated WordPress Settings Deletion
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/73445d8f-1f9c-4ba7-9e3c-3e6221f3b23e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bc82745a-f1d3-48fc-ba7b-3ff726edae34?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

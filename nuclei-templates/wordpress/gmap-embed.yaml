@@ -1,15 +1,15 @@
-id: gmap-embed
+id: gmap-embed-83158f5f24679bef7a1dc9a977bca93a
 
 info:
   name: >
-    Maps Plugin using Google Maps for WordPress – WP Google Map <= 1.9.3 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Maps Plugin using Google Maps for WordPress – WP Google Map <= 1.9.3 - Maps Plugin using Google Maps for WordPress – WP Google Map <= 1.9.3 - Authenticated (Admin+) Stored Cross-Site Scripting via Markers
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fea688c7-88d6-424b-90e2-f82eb37c5a0e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7fabdf42-4608-4182-aaa9-ba6ef0b3f001?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

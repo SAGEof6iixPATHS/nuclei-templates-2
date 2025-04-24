@@ -1,15 +1,15 @@
-id: wp-table-manager
+id: wp-table-manager-bb3ac9caab29a9542fe0299ccbd0ca3d
 
 info:
   name: >
-    WP Table Manager <= 3.5.2 - Missing Authorization
+    WP Table Manager <= 4.1.3 - Missing Authorization to Authenticated (Subscriber+) Directory Traversal to Folder/File Name Disclosure
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/df41b8d9-cd0e-4758-b569-2615438b8eba?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/128bc7ee-9763-415f-b726-0e63d4b62271?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-table-manager/"
     google-query: inurl:"/wp-content/plugins/wp-table-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-table-manager,high
+  tags: cve,wordpress,wp-plugin,wp-table-manager,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.2')
+          - compare_versions(version, '<= 4.1.3')

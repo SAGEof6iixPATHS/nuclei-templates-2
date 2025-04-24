@@ -1,14 +1,15 @@
-id: related-post
+id: related-post-2e1f9cfe474bc16a97826335b0ac9d5e
 
 info:
   name: >
-    Related Post <= 2.0.53 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Related Posts, Inline Related Posts, Contextual Related Posts, Related Content By PickPlugins <= 2.0.59 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f08ca5e3-8b48-4333-9c42-cc103d40394c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/29d22612-8e0d-4275-b370-9729352c951e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/related-post/"
     google-query: inurl:"/wp-content/plugins/related-post/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,related-post,low
+  tags: cve,wordpress,wp-plugin,related-post,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.53')
+          - compare_versions(version, '2.0.59')

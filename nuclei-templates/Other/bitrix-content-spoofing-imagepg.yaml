@@ -12,27 +12,24 @@ info:
     cvss-score: 4.3
     cve-id: CVE-2023-002
     cwe-id: CWE-345
-  tags: cve,cve2023,xss,bitrix,spoofing
-
+  tags: cve,cve2023,xss,bitrix
+  
 http:
   - method: GET
     path:
       - '{{BaseURL}}/bitrix/tools/imagepg.php?img=//metascan.ru/assets/images/logo.svg'
-
+      
     stop-at-first-match: true
     matchers-condition: and
     matchers:
-
       - type: word
         part: header
         words:
           - text/html
-
       - type: word
         part: body
         words:
           - 'img src="//metascan.ru/assets/images/logo.svg"'
-
       - type: status
         status:
           - 200

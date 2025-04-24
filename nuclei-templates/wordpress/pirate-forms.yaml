@@ -1,14 +1,15 @@
-id: pirate-forms
+id: pirate-forms-dfd166ca948bd5682a587fac80db3b4f
 
 info:
   name: >
-    Contact Form & SMTP Plugin by PirateForms <= 2.5.1 - Unauthenticated HTML injection
+    Contact Form & SMTP Plugin for WordPress by PirateForms <= 2.5.2 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9e34c3f6-cc84-4e45-9948-6f7fd5cba8cd?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6a99dade-815e-43cf-be24-92c01286f476?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.5.2')
+          - compare_versions(version, '<= 2.5.2')

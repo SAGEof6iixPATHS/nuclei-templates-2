@@ -6,7 +6,7 @@ info:
   severity: high
   description: Apache Dubbo Unauthenticated Access.
   reference:
-  tags: network,dubbo,apache,unauth
+  tags: apache,java,network
 
 network:
   - inputs:

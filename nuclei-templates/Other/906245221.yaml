@@ -1,14 +1,17 @@
 id: rtsp
 info:
-  name: Freebox rtspd
+  name: VideoLAN
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: media device
     fallback:
     - get-request
+    product: vlc_media_player
     rarity: 5
+    vendor: videolan
+    verified: true
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nPublic: OPTIONS, ANNOUNCE, SETUP, RECORD, SET_PARAMETER, GET_PARAMETER, FLUSH, TEARDOWN, POST\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nServer: vlc ([\w._-]+)\r\n'

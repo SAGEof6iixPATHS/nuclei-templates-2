@@ -8,7 +8,7 @@ info:
     Splunk Default Password Vulnerability exposes systems to unauthorized access, compromising data integrity and security.
   metadata:
     verified: true
-    max-request: 9
+    max-request: 3
     shodan-query: http.title:"Splunk"
   tags: default-login,splunk
 
@@ -25,14 +25,12 @@ http:
         Content-Type: application/x-www-form-urlencoded; charset=UTF-8
         X-Requested-With: XMLHttpRequest
         Origin: {{BaseURL}}
-
         {{cval}}&username={{username}}&password={{password}}&return_to=%2Fen-US%2F&set_has_logged_in=false
       - |
         GET /en-US/splunkd/__raw/services/server/health/splunkd?output_mode=json&_= HTTP/1.1
         Host: {{Hostname}}
         Accept-Encoding: gzip, deflate, br
         Referer: {{BaseURL}}
-
     attack: pitchfork
     payloads:
       username:
@@ -66,4 +64,3 @@ http:
         part: header
         regex:
           - 'cval=([0-9]+)'
-# digest: 4b0a00483046022100ce91d4b9bd6a78ad0f1da61f3e9222cdb9db0f17bd4baa08ad302f1a57013161022100f2a44470cac093eedcba91b9a41d16f1c1141f063824121f54ebe9568bfab88f:922c64590222798bb761d5b6d8e72950

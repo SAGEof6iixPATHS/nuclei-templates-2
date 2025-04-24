@@ -1,14 +1,15 @@
-id: structured-content
+id: structured-content-8835ff05c8c621059a7d31e69895528f
 
 info:
   name: >
-    Structured Content <= 1.5.3 - Authenticated (Contributor+) PHP Object Injection
+    Structured Content (JSON-LD) #wpsc <= 1.6.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via sc_fs_local_business Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0b25252b-fad3-4212-be72-94e94779ef67?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8ac5fe69-7885-4fb7-8107-079216d6955e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.3')
+          - compare_versions(version, '<= 1.6.3')

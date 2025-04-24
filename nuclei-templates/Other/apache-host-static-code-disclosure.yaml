@@ -1,4 +1,4 @@
-id: apache-php-env-disclosure
+id: apache-host-static-code-disclosure
 
 info:
   name: PHP env Disclosure in Apache
@@ -8,19 +8,18 @@ info:
   reference: https://blog.orange.tw/2024/08/confusion-attacks-en.html
   tags: apache,php
 
-requests:
 http:
   - method: GET
     path:
       - "{{BaseURL}}/usr/share/doc/websocketd/examples/php/dump-env.php%3f"
       - "{{BaseURL}}/html/usr/share/doc/websocketd/examples/php/dump-env.php%3f"
-
+      
     matchers-condition: and
     matchers:
       - type: status
         status:
           - 200
-
+          
       - type: word
         part: body
         words:
