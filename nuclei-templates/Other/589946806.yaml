@@ -1,11 +1,12 @@
 id: smtp
 info:
-  name: DvISE PostMan smtpd
+  name: Hermes smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    operating_system: Windows
     rarity: 0
     version: $2
 tcp:
@@ -18,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 (\S+) Service ready by DvISE PostMan \((\d+)\) ESMTP Server
+    - ^220 ([-\w_.]+) Hermes ([\d.]+) ML SMTP Ready\.\r\n

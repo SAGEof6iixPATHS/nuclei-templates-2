@@ -9,20 +9,19 @@ info:
   metadata:
     max-request: 1
     shodan-query: http.favicon.hash:-374133142
-  tags: cloud
+  tags: celery,flower,unauth,misconfig
 
 http:
   - method: GET
     path:
-      - '{{BaseURL}}'
+      - '{{BaseURL}}/dashboard'
 
     matchers-condition: and
     matchers:
       - type: word
         words:
-          - /broker
-          - /tasks
-          - github.com/mher/flower
+          - 'Dashboard'
+          - 'Tasks'
         condition: and
 
       - type: status

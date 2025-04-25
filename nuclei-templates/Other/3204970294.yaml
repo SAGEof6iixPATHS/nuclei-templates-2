@@ -1,12 +1,12 @@
 id: printer
 info:
-  name: QMC DeskLaser printer
+  name: lpsched
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    device_type: printer
-    info: Status $1
+    hostname: $1
+    info: host denied
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^Printer Status ---> (.*)                    \nno entries\n
+    - '^([-\w_.]+): lpsched: Your host does not have line printer access\n'

@@ -2,23 +2,23 @@ id: theme-editor
 
 info:
   name: >
-    Theme Editor <= 2.1 - Cross-Site Request Forgery
+    Theme Editor <= 2.7.1 - Authenticated (Administrator+) Arbitrary File Upload
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    The Theme Editor plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.1. This is due to missing or incorrect nonce validation on the [function-name] function. This makes it possible for unauthenticated attackers to [state the impact of the vulnerability] via forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+    
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/98286172-99b0-43d6-9876-972e270aa19f?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a6ede290-a6c4-4c13-872b-60c9601d39db?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/theme-editor/"
     google-query: inurl:"/wp-content/plugins/theme-editor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,theme-editor,medium
+  tags: cve,wordpress,wp-plugin,theme-editor,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.2')
+          - compare_versions(version, '<= 2.7.1')
