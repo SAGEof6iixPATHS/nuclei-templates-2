@@ -1,13 +1,13 @@
 id: ftp
 info:
-  name: Xerox WorkCentre $1 ftpd
+  name: VSE ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    operating_system: z/VSE
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Xerox WorkCentre (\w+) Ver ([\d.]+) FTP server\.\r\n
+    - '^220-TCP/IP for VSE FTP Daemon Version ([\w._-]+) '

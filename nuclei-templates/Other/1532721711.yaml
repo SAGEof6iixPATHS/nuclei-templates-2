@@ -1,11 +1,10 @@
 id: ftp
 info:
-  name: Fuji Xerox DocuPrint $1 ftpd
+  name: NetWare NWFTPD
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - '^220 FUJI XEROX DocuPrint ([A-Z][A-Z\d]+(?: ?[a-zA-Z]{1,2})?)\r\n'
+    - ^220-LRN\r\n220 Service Ready for new User\r\n

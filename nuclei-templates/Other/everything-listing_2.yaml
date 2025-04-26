@@ -12,22 +12,21 @@ info:
     max-request: 1
     verified: 'true'
     shodan-query: http.favicon.hash:-977323269
-  tags: generic,listing
+  tags: exposure,everything,listing,voidtools
 
 http:
   - method: GET
     path:
       - "{{BaseURL}}"
-      
+
     matchers-condition: and
     matchers:
       - type: word
-        part: body
         words:
           - "<title>Everything</title>"
           - "indexof"
         condition: and
-        
+
       - type: status
         status:
           - 200
