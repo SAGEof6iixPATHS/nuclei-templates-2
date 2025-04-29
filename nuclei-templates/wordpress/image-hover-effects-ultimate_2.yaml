@@ -2,14 +2,14 @@ id: image-hover-effects-ultimate
 
 info:
   name: >
-    Image Hover Effects Ultimate <= 9.6.1 - Unauthenticated Arbitrary Options Update
+    Image Hover Effects Ultimate <= 9.7.3 - Authenticated Stored Cross-Site Scripting via Media URL
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8b4fcc97-1b6b-4411-8b55-0ef7a2c8d44e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f5a4a017-52d7-44a5-b00f-ce13eda989bc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 9.6.1')
+          - compare_versions(version, '<= 9.7.3')

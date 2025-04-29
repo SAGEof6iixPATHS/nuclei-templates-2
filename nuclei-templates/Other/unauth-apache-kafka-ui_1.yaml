@@ -9,16 +9,17 @@ info:
     - https://www.acunetix.com/vulnerabilities/web/apache-kafka-unauthorized-access-vulnerability
     - https://github.com/provectus/kafka-ui
   metadata:
+    max-request: 2
     verified: true
     shodan-query: http.title:"UI for Apache Kafka"
-  tags: misconfig,apache,kafka,unauth,exposure
+  tags: apache,java
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'
       - '{{BaseURL}}/ui/clusters/kafka-ui/brokers'
-
+      
     stop-at-first-match: true
     matchers-condition: and
     matchers:
@@ -26,7 +27,7 @@ requests:
         part: body
         words:
           - '<title>UI for Apache Kafka</title>'
-
+          
       - type: status
         status:
           - 200

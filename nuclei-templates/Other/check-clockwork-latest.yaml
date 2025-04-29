@@ -5,12 +5,12 @@ info:
   author: SirBugs
   severity: info
   reference: https://example.com/reference
-  tags: leaks, information, clockwork, latest
+  tags: generic
 
-requests:
+http:
   - method: GET
     path:
-      - "/__clockwork/latest"
+      - "{{BaseURL}}/__clockwork/latest"
 
     matchers:
       - type: word

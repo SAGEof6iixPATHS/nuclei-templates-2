@@ -12,7 +12,7 @@ info:
     cvss-score: 4.3
     cve-id: CVE-2023-002
     cwe-id: CWE-345
-  tags: bitrix
+  tags: cve,cve2023,xss,bitrix,spoofing
 
 http:
   - method: GET

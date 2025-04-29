@@ -7,7 +7,7 @@ info:
   metadata:
     max-request: 1
     shodan-query: http.title:"GitLab"
-  tags: gitlab,misconfig
+  tags: gitlab,cloud
 
 http:
   - method: GET
