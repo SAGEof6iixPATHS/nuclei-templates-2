@@ -1,28 +1,22 @@
 id: teampass-panel
 
 info:
-  name: TeamPass Panel - Detect
+  name: TeamPass Panel Detect
   author: arafatansari
   severity: info
-  description: TeamPass panel was detected.
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cwe-id: CWE-200
   metadata:
-    max-request: 2
     verified: true
     shodan-query: http.html:"teampass"
   tags: panel,teampass
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"
       - "{{BaseURL}}/teampass"
 
     stop-at-first-match: true
-    host-redirects: true
+    redirects: true
     max-redirects: 2
     matchers-condition: and
     matchers:
@@ -33,5 +27,3 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by md on 2023/01/18

@@ -22,7 +22,6 @@ http:
       - "{{BaseURL}}/bitrix/modules/forum/install/admin/forum_index.php"
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: word

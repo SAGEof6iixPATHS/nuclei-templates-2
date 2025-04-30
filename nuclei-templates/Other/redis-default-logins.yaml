@@ -9,7 +9,7 @@ info:
   metadata:
     max-request: 6
     shodan-query: product:"redis"
-  tags: js,redis,default-login,network
+  tags: default-login,brute
 javascript:
   - pre-condition: |
       isPortOpen(Host,Port)

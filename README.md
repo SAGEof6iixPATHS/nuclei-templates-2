@@ -10,129 +10,123 @@
 | CVE-2007 | 6 |
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
-| CVE-2010 | 121 |
-| CVE-2011 | 16 |
-| CVE-2012 | 29 |
-| CVE-2013 | 25 |
-| CVE-2014 | 46 |
-| CVE-2015 | 52 |
-| CVE-2016 | 52 |
-| CVE-2017 | 98 |
-| CVE-2018 | 251 |
-| CVE-2019 | 424 |
-| CVE-2020 | 776 |
-| CVE-2021 | 878 |
-| CVE-2022 | 878 |
-| CVE-2023 | 768 |
-| CVE-2024 | 450 |
-| CVE-2025 | 40 |
-| Other | 25415 |
-| wordpress | 62728 |
+| CVE-2010 | 122 |
+| CVE-2011 | 20 |
+| CVE-2012 | 35 |
+| CVE-2013 | 29 |
+| CVE-2014 | 60 |
+| CVE-2015 | 68 |
+| CVE-2016 | 71 |
+| CVE-2017 | 107 |
+| CVE-2018 | 272 |
+| CVE-2019 | 444 |
+| CVE-2020 | 813 |
+| CVE-2021 | 944 |
+| CVE-2022 | 923 |
+| CVE-2023 | 800 |
+| CVE-2024 | 476 |
+| CVE-2025 | 42 |
+| Other | 44856 |
+| wordpress | 83823 |
 ## 近几天数量变化情况
-|2025-04-20 | 2025-04-22 | 2025-04-23 | 2025-04-24 | 2025-04-25 | 2025-04-26 | 2025-04-29|
+|2025-04-22 | 2025-04-23 | 2025-04-24 | 2025-04-25 | 2025-04-26 | 2025-04-29 | 2025-04-30|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|110040 | 109132 | 134686 | 141794 | 95816 | 105152 | 93102|
+|109132 | 134686 | 141794 | 95816 | 105152 | 93102 | 133960|
 ## 最近新增文件
 | templates name | 
 | --- |
-| CVE-2024-13808.yaml |
-| CVE-2024-13812.yaml |
-| CVE-2025-2105.yaml |
-| anps_theme_plugin.yaml |
-| CVE-2025-3915.yaml |
-| CVE-2025-1458.yaml |
-| CVE-2025-3491.yaml |
-| CVE-2025-3906.yaml |
-| edumall.yaml |
-| CVE-2025-2101.yaml |
-| CVE-2025-2801.yaml |
-| abcsubmit.yaml |
-| aeropage-sync-for-airtable.yaml |
-| xpro-elementor-addons-pro.yaml |
-| add-custom-page-template.yaml |
-| CVE-2025-3914.yaml |
-| integracao-entre-eduzz-e-wc-powers.yaml |
-| CVE-2024-21136.yaml |
-| CVE-2024-51739.yaml |
-| CVE-2024-21641.yaml |
-| CVE-2025-31324.yaml |
-| CVE-2025-34028.yaml |
-| gcloud-service-account-user-keys.yaml |
-| versa-flexvnf-default-login_4.yaml |
-| pre-commit-config_3.yaml |
-| versa-director-api_3.yaml |
-| geniusocean-installer_5.yaml |
-| keycloak-xss-8480_1.yaml |
-| gcloud-api-keys-present.yaml |
-| mashery-takeover-8784_2.yaml |
-| default-plesk-page_1.yaml |
-| leostream-default-login_1.yaml |
-| github_1.yaml |
-| ez-publish-panel_4.yaml |
-| yacht-default-login.yaml |
-| hp-service-manager_2.yaml |
-| gemfury-takeover_2.yaml |
-| go-anywhere-client_2.yaml |
-| avtech-unauth-file-download_2.yaml |
-| aem-sling-userinfo_3.yaml |
-| gitea-installer_4.yaml |
-| hashicorp-consul-webgui_2.yaml |
-| sitecore-xml-xss_2.yaml |
-| seeyon-a8-default-login_2.yaml |
-| heatmiser-wifi-thermostat_2.yaml |
-| generic-env_2.yaml |
-| phpcli-stack-trace_3.yaml |
-| fiorilaunchpad-logon_2.yaml |
-| aws-sftp-detect_1.yaml |
-| genieacs-default-jwt_2.yaml |
-| netskopeDetect.yaml |
-| proposify-takeover-9694_2.yaml |
-| protractor-config_1.yaml |
-| robots-txt_1.yaml |
-| metinfo-lfi_3.yaml |
-| umami-default-login_2.yaml |
-| cortex-xsoar-login_3.yaml |
-| froxlor-xss_4.yaml |
-| elfinder-detect_1.yaml |
-| aem-bulkeditor_3.yaml |
-| prometheus-promtail_1.yaml |
-| emerson-intellislot-webcard.yaml |
-| wanhu-documentedit-sqli_1.yaml |
-| fastpanel-hosting-control-panel_3.yaml |
-| extreme-netconfig-ui_2.yaml |
-| alibaba-secretkey-id_2.yaml |
-| luxtrust-cosi-detect.yaml |
-| manageengine-adaudit-8729_2.yaml |
-| prtg-default-login_4.yaml |
-| nuuo-nvrmini2-rce-9174_2.yaml |
-| default-iis7-page-6859_2.yaml |
-| setup-github-enterprise_3.yaml |
-| nocobase-default-login.yaml |
-| sap-netweaver-backdoor.yaml |
-| exposed-sqlite-manager-7350_3.yaml |
-| retail_xstore_office.yaml |
-| sap-netweaver-metadatauploader.yaml |
-| ansible-awx-detect_3.yaml |
-| default-glassfish-server-page_1.yaml |
-| kube-api-services_2.yaml |
-| unauth-ztp-ping_2.yaml |
-| adobe-connect-version_3.yaml |
-| ngrok-status-page_4.yaml |
-| zimbra-detect_3.yaml |
-| gcloud-iam-separation-duties.yaml |
-| zip-backup-files_1.yaml |
-| groupoffice-lfi_3.yaml |
-| avtech-auth-bypass_2.yaml |
-| gcloud-iam-primitive-roles.yaml |
-| sanhui-smg-file-read_2.yaml |
-| default-runcloud-page_3.yaml |
-| bolt-cms-panel_2.yaml |
-| fine-report-v9-file-upload_2.yaml |
-| netscaler-console-panel.yaml |
-| apache-dubbo-unauth_2.yaml |
-| default-jetty-page_1.yaml |
-| ecology-v8-sqli_3.yaml |
-| gcloud-iam-service-roles-project-level.yaml |
-| default-fastcgi-page_1.yaml |
-| default-django-page_1.yaml |
-| yacht-panel.yaml |
+| elex-woocommerce-xss-7200_2.yaml |
+| CVE-2025-2893.yaml |
+| cve-2012-0896-2133_1.yaml |
+| wordpress-woosidebars_3.yaml |
+| wp-memphis-documents-library-lfi-11497_2.yaml |
+| wp-knews-xss-11486_1.yaml |
+| adminimize_4.yaml |
+| ultimatemember-open-redirect-10879_2.yaml |
+| flow-flow-social-stream-xss_3.yaml |
+| wplms_plugin.yaml |
+| CVE-2025-3452.yaml |
+| CVE-2025-32432.yaml |
+| bitrix-open-redirect_4.yaml |
+| zk-framework-detect.yaml |
+| easyscripts-installer_5.yaml |
+| d-link-wireless-7050_2.yaml |
+| webeditors_2.yaml |
+| nethermind-server-detect_2.yaml |
+| age-public-key_2.yaml |
+| goip-default-login_3.yaml |
+| tongda-login-code-authbypass_1.yaml |
+| bigip-detect_3.yaml |
+| prtg-detect_3.yaml |
+| wamp-server-configuration-11099_1.yaml |
+| dataiku-default-login_3.yaml |
+| adobe-media-server_1.yaml |
+| eko-management-console-login_3.yaml |
+| github-oauth-access_2.yaml |
+| frontify-takeover-7543_2.yaml |
+| xploitspy-default-login_2.yaml |
+| niagara-fox-info-enum_1.yaml |
+| amcrest-login_3.yaml |
+| blesta-installer_4.yaml |
+| ioncube-loader-wizard_3.yaml |
+| xxe-include-retrieve-files.yaml |
+| glpi-status-page_3.yaml |
+| kiwitcms-json-rpc_3.yaml |
+| moleculer-microservices_4.yaml |
+| ntop-panel-exposed_3.yaml |
+| codeclimate-token_2.yaml |
+| less-history_1.yaml |
+| ambassador-edge-stack-detect_3.yaml |
+| deprecated-tls-6959_2.yaml |
+| nextJSActive.yaml |
+| cacti-panel_3.yaml |
+| bitrix-open-redirect_5.yaml |
+| blue-iris-login_3.yaml |
+| gemfury-takeover-7577_2.yaml |
+| aem-debugging-libraries_3.yaml |
+| sogo-detect_3.yaml |
+| php-errors-9512_2.yaml |
+| default-openresty_1.yaml |
+| put-method-enabled_3.yaml |
+| smartjob-takeover-10323_2.yaml |
+| service-pwd-10179_2.yaml |
+| dbeaver-database-connections_3.yaml |
+| hjtcloud-rest-arbitrary-file-read-7976_2.yaml |
+| clearpass-policy-manager_2.yaml |
+| flexbe-takeover_2.yaml |
+| nomad-jobs_1.yaml |
+| moodle-filter-jmol-xss-8944_2.yaml |
+| atom-sync-remote_4.yaml |
+| bitrat-c2_3.yaml |
+| aws-object-listing_3.yaml |
+| oracle-reports-services_2.yaml |
+| default-tengine-page_3.yaml |
+| iotawatt-app-exposure_3.yaml |
+| fortiweb-panel_2.yaml |
+| icedid_3.yaml |
+| eyou-email-rce-7380_2.yaml |
+| bigcartel-takeover_2.yaml |
+| default-ssltls-test-page_1.yaml |
+| sitemap-sql-injection_2.yaml |
+| cors-misconfig_2.yaml |
+| global-domains-lfi_3.yaml |
+| netrc_1.yaml |
+| ruijie-networks-rce-9946_2.yaml |
+| thinkcmf-rce-10728_2.yaml |
+| empirec2-default-login_3.yaml |
+| backup-file-finder.yaml |
+| zip-backup-files_2.yaml |
+| adobe-oauth-secret_3.yaml |
+| insecure-cipher-suite-detect_3.yaml |
+| aem-default-login_3.yaml |
+| herokuapp-detect_2.yaml |
+| hashicorp-token_1.yaml |
+| heroku-api-key_2.yaml |
+| helprace-takeover-7930_2.yaml |
+| exposed-mysql-initial_1.yaml |
+| gruntfile-exposure_2.yaml |
+| connectwise-control-detect_3.yaml |
+| gradle-enterprise-panel_2.yaml |
+| steve-xss_4.yaml |
+| pgsql-workflow.yaml |
+| gocd-login_5.yaml |

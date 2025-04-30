@@ -1,14 +1,13 @@
 id: pop3
 info:
-  name: CommuniGate Pro
+  name: Cyrus pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: communigate_pro
+    product: cyrus_imap_server
     rarity: 0
-    vendor: stalker
+    vendor: cmu
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK CommuniGate Pro POP3 Server ready <[\d.]+@([-\w_.]+)>\r\n
+    - '^-ERR \[SYS/PERM\] Fatal error: tls_init\(\) failed\r\n'

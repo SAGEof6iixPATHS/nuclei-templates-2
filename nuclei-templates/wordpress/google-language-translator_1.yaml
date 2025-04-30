@@ -2,14 +2,14 @@ id: google-language-translator
 
 info:
   name: >
-    Google Language Translator <= 5.0.05 - Cross-Site Scripting
+    Google Language Translator <= 6.0.9 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/68aba88f-e7f9-42d7-9dea-045e7fef7056?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/aa2bd74a-563a-4a2d-b1d7-b3678db82b00?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/google-language-translator/"
     google-query: inurl:"/wp-content/plugins/google-language-translator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,google-language-translator,high
+  tags: cve,wordpress,wp-plugin,google-language-translator,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 5.0.06')
+          - compare_versions(version, '< 6.0.10')

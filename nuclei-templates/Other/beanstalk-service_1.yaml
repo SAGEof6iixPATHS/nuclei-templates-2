@@ -12,7 +12,7 @@ info:
     max-request: 1
     verified: true
     shodan-query: port:11300 "cmd-peek"
-  tags: network
+  tags: network,beanstalk,detect,enum
 
 tcp:
   - inputs:

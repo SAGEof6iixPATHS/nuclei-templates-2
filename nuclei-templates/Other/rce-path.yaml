@@ -134,14 +134,13 @@ http:
         words:
           - "'id' is not recognized as an internal or external command"
           - "syntax error near unexpected token `"
-        condition: or
         
       - type: word
         part: body
         words:
           - "uid="
           - "gid="
-        condition: or
+        condition: and
         
       - type: word
         part: body
@@ -149,8 +148,3 @@ http:
           - "PHP Extension"
           - "PHP Version"
         condition: and
-        
-    extractors:
-      - type: regex
-        regex:
-          - "(u|g)id=.*"

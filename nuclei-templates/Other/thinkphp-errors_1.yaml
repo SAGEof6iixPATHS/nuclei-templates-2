@@ -6,9 +6,9 @@ info:
   severity: medium
   metadata:
     max-request: 1
-    verified: "true"
+    verified: true
     fofa-query: app="ThinkPHP" && title="System Error"
-  tags: php
+  tags: thinkphp,misconfig,exposure
 
 http:
   - method: GET
@@ -28,7 +28,9 @@ http:
       - type: word
         part: body
         words:
+          - "<title>系统发生错误</title>"
           - "<title>System Error</title>"
+        condition: or
 
       - type: word
         part: body
@@ -42,3 +44,4 @@ http:
           - 200
           - 500
           - 404
+        condition: or
