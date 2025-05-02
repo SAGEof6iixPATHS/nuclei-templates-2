@@ -2,14 +2,14 @@ id: facebook-for-woocommerce
 
 info:
   name: >
-    Facebook for WooCommerce <= 1.9.12 - Cross-Site Request Forgery
+    Facebook for WooCommerce <= 1.9.12 - Cross-Site Request Forgery allowing Option Update
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/010df788-42cf-4455-9f5f-b23d03905afb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/655b3a54-34b1-4c1a-a1b5-51d87e3134d4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

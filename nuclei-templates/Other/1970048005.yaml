@@ -1,13 +1,12 @@
 id: ftp
 info:
-  name: Golden PRO ftpd
+  name: Aastra A150 VoIP phone ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: VoIP phone
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Golden FTP Server PRO ready v([\w._-]+)\r\n
+    - ^220-Welcome to the Ascotel FTP server\r\n220 \r\n

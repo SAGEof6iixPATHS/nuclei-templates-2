@@ -1,16 +1,19 @@
 id: travel-light
 
 info:
-  name: "Travel Light <= 1.0 - Cross-Site Request Forgery"
+  name: >
+    Travel Light <= 1.0 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
-  description: "The Travel Light for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.0. This is due to missing or incorrect nonce validation on the 'booktrip', 'filter_plcbrd_action', 'filter_plcservice_action', 'filter_action' and 'filter_service_action' AJAX actions. This makes it possible for unauthenticated attackers to gain restricted access to administrative actions via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f9fe858e-5c89-4cc2-8b66-5c86965f7889?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/travel-light/"
     google-query: inurl:"/wp-content/plugins/travel-light/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  1.0')
+          - compare_versions(version, '<= 1.0')

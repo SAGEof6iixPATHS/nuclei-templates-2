@@ -1,4 +1,5 @@
 id: huawei-router-auth-bypass
+
 info:
   name: Huawei Router - Authentication Bypass
   author: gy741
@@ -10,7 +11,8 @@ info:
     cvss-metrics: CVSS:10.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10.0
     cwe-id: CWE-288
-  tags: huawei,auth-bypass,router
+  tags: auth-bypass,router,edb,huawei
+
 requests:
   - raw:
       - |
@@ -18,11 +20,13 @@ requests:
         Host: {{Hostname}}
         Accept: application/json, text/javascript, */*; q=0.01
         Referer: {{BaseURL}}
+
     matchers-condition: and
     matchers:
       - type: status
         status:
           - 200
+
       - type: word
         words:
           - "DeviceName"

