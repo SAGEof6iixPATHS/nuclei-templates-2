@@ -1,16 +1,15 @@
 id: pop3
 info:
-  name: UW Imap pop3d
+  name: Dovecot DirectAdmin pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: imap_toolkit
+    product: dovecot
     rarity: 0
-    vendor: uw
+    vendor: dovecot
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 ([-.\w]+) v?(200\d\w?\.[-.\w]+) server ready\r\n
+    - ^\+OK Dovecot DA ready\. <[\w._=-]+@([\w._-]+)>\r\n

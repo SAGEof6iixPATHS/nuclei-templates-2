@@ -1,12 +1,11 @@
 id: irc
 info:
-  name: IRCXPRO admin ircd
+  name: Dancer ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +16,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^IRCXPRO ([\w._-]+)\r\nAUTHREQUEST :Authentication Required\r\n
+    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Checking ident\r\nNOTICE AUTH :\*\*\* No identd \(auth\) response\r\n
