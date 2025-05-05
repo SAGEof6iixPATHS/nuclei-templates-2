@@ -1,15 +1,15 @@
 id: ftp
 info:
-  name: Cerberus ftpd
+  name: HP-UX ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: ftp_server
+    hostname: $1
+    info: patchlevel $3
+    operating_system: HP-UX
     rarity: 0
-    vendor: cerberusftp
-    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-Welcome to Cerberus FTP Server\r\n220 Created by Grant Averett\r\n
+    - ^220 ([-.+\w ]+) FTP server \(Version (\d[-.\w]+)\(([^\)]+)\) [A-Z][a-z]{2} [A-Z].*\d{4}\) ready\.\r\n

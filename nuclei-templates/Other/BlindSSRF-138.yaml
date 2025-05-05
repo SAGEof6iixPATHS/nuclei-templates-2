@@ -2,24 +2,21 @@ id: 0x138
 
 info:
   name: Blind SSRF
-  author: reewardius
-  severity: high
-  tags: ssrf
+  author: 0xAwali
+  severity: info
 
-http:
+requests:
   - raw:
-      - |
-        GET http://{{Host}}.{{Port}}.BSSRF-138.{{interactsh-url}}/ HTTP/1.0
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Cache-Control: no-transform
-        Accept-Encoding: gzip, deflate
-        Accept: */*
+    - |+
+      GET http://{{Host}}.{{Port}}.BSSRF-138.{{MY-DOMAIN}}/ HTTP/1.0
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+      Cache-Control: no-transform
+      Accept-Encoding: gzip, deflate
+      Accept: */*
       
     unsafe: true
     matchers:
       - type: word
-        part: interactsh_protocol
+        part: body
         words:
-          - "dns"
-          - "http"
-        condition: or
+          - "Your Match"

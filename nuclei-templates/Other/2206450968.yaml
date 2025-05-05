@@ -1,15 +1,16 @@
 id: pop3
 info:
-  name: Microsoft Exchange 2007-2010 pop3d
+  name: Lotus Domino POP3 server
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: exchange_server
+    info: $2
+    product: lotus_domino
     rarity: 0
-    vendor: microsoft
+    vendor: ibm
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK The Microsoft Exchange POP3 service is ready\.\r\n
+    - '^\+OK Lotus Notes POP3 server version Release ([-.\w]+) ([A-Z]+\d+) ready on '

@@ -1,15 +1,14 @@
 id: smtp
 info:
-  name: Postfix smtpd
+  name: FirstClass SMTP server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    info: $3
-    product: postfix
+    product: firstclass
     rarity: 0
-    vendor: postfix
+    vendor: opentext
     verified: true
     version: $2
 tcp:
@@ -22,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) ESMTP Postfix \(([-.\w]+)\) \(([-.\w ]+)\)
+    - ^220 ([-.\w]+) FirstClass ESMTP Mail Server v(\d[-.\w]+) ready\r\n
