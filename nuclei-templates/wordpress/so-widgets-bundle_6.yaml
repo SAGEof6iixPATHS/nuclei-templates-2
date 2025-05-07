@@ -2,14 +2,14 @@ id: so-widgets-bundle
 
 info:
   name: >
-    SiteOrigin Widgets Bundle <= 1.60.0 -  - Authenticated (Contributor+) Stored Cross-Site Scripting via 'siteorigin_widget' Shortcode
+    SiteOrigin Widgets Bundle < 1.51.0 - Authenticated (Admin+) Local File Inclusion
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b7926ec6-3441-4062-93b2-6c2120c9f406?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1dbdc673-b0ee-4d1d-8cd9-603056f41cda?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.60.0')
+          - compare_versions(version, '<= 1.50.1')

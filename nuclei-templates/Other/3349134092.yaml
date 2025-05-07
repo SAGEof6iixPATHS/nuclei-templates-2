@@ -1,19 +1,23 @@
 id: vnc
 info:
-  name: vnc
-  author: cn-kali-team
-  tags: detect,tech,vnc
+  name: Microsoft Virtual Server remote control
+  author: nmap,cn-kali-team
+  tags: detect,tech,vnc,service
   severity: info
   metadata:
-    product: vnc
-    vendor: 00_unknown
-    verified: false
-http:
-- method: GET
-  path:
-  - '{{BaseURL}}/'
-  matchers:
-  - type: word
-    words:
-    - <applet code=vncviewer.class archive=vncviewer.jar
-    case-insensitive: true
+    operating_system: Windows
+    product: virtual_server
+    rarity: 0
+    vendor: microsoft
+    verified: true
+tcp:
+- name: 'null'
+  inputs:
+  - data: ''
+  host:
+  - '{{Hostname}}'
+  extractors:
+  - name: vnc
+    type: regex
+    regex:
+    - ^RFB 103\.006\n

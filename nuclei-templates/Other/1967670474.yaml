@@ -1,13 +1,15 @@
 id: http
 info:
-  name: Technicolor TG787 VoIP gateway http admin
+  name: CrushFTP web interface
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: VoIP adapter
+    info: IP banned
+    product: crushftp
     rarity: 0
-    version: $1
+    vendor: crushftp
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 400 Bad Request\r\nServer: Technicolor WebServer/([\w._-]+)\r\nContent-Type: text/html\r\nContent-Length: 58\r\n\r\nHTTP/1\.0 400 Bad Request: Invalid or incomplete request\.\r\n\r\n\r\n$'
+    - '^HTTP/1\.1 200 BANNED\r\nContent-Length: \d+\r\n\r\nYour IP is banned, no further requests will be processed from this IP \([\d.]+\)\.\r\n'

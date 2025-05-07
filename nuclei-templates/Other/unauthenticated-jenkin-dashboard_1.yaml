@@ -1,11 +1,12 @@
 id: unaunthenticated-jenkin
 
 info:
-  name: Unauthenticated Jenkin Dashboard
+  name: Unauthenticated Jenkins Dashboard
   author: dhiyaneshDK
   severity: high
+  tags: jenkins
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
