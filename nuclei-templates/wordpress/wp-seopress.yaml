@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/wp-seopress
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-seopress/readme.txt"
 
@@ -47,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a00463044022066d4318ff1e9ffbc0c91d95270a2cc509d399d6fb82be03573f54832054c709a022056d760f38acc38e0e7f9d9f5f46061750606deb124373c640eb72727161c3daf:922c64590222798bb761d5b6d8e72950

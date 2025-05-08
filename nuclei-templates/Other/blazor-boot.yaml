@@ -17,11 +17,17 @@ http:
   - method: GET
     path:
       - "{{BaseURL}}/_framework/blazor.boot.json"
-      
-    stop-at-first-match: true
+
     matchers:
       - type: word
         words:
           - 'Blazor'
           - '"config":'
         condition: and
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - \"([^"\r\n]+\.dll)\"
+# digest: 4b0a00483046022100dd123eb91ceaec7ad50fe39395622d6a22c88ca6ccb4d57ff4a4056184c25b35022100bd9cbbd0551d50023b951a126edf3e59a432303796b4d40fa8e3af41e85e6648:922c64590222798bb761d5b6d8e72950

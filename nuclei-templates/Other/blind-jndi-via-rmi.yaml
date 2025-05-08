@@ -3,8 +3,8 @@ id: blind-jndi-via-rmi
 info:
   name: Blind JNDI via RMI Detection
   author: reewardius
-  severity: critical
-  tags: fuzzing-log4j,fuzzing,fuzzing-rce
+  severity: high
+  tags: blind,fuzzing
 
 http:
   - method: GET

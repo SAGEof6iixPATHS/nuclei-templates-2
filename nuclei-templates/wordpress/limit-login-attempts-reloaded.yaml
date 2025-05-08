@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/limit-login-attempts-reloaded
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-requests:
+http:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/limit-login-attempts-reloaded/readme.txt"
 
@@ -47,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a004730450220170cc63f810fb860c0643e51389f0cd5befe62ca0c559e9aeeb116eee4d120e20221009aa53296d52213557b5062b09a0b789d329efe837129cd32bea4472ba2b8e240:922c64590222798bb761d5b6d8e72950

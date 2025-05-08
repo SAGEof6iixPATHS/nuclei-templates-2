@@ -3,49 +3,49 @@ id: pgsql-version-detect
 info:
   name: Postgresql Version - Detect
   author: pussycat0x
-  severity: info
+  severity: high
   description: |
-    Postgresql has a flaw that allows the attacker to login with empty password.
+    Detect Postgresql Version.
   reference:
-    - https://www.tenable.com/plugins/nessus/104031
+    - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/PostgreSQL%20Injection.md#postgresql-version
   metadata:
-    shodan-query: product:"PostgreSQL"
-  tags: brute,network,postgresql
+    verified: true
+    max-request: 8
+    shodan-query: "product:\"PostgreSQL\""
+  tags: js,network,postgresql,enum,authenticated
 
 javascript:
-  - code: |
+  - pre-condition: |
+      isPortOpen(Host,Port);
+    code: |
       const postgres = require('nuclei/postgres');
       const client = new postgres.PGClient;
       connected =  client.ExecuteQuery(Host, Port, User, Pass, Db, "select version();");
       Export(connected);
+
     args:
       Host: "{{Host}}"
       Port: 5432
       User: "{{usernames}}"
       Pass: "{{password}}"
       Db: "{{database}}"
-#      Query: "\du"
 
-    attack: clusterbomb
     payloads:
       usernames:
         - postgres
-        - meow
         - admin
-      database:
-        - foresight
-        - postgres
-        - template0
-        - template1
-        - test
       password:
         - postgres
-        - password
-        - secret
-        - admin
-        - 
-        
+        -
+        - 123
+        - amber
+      database:
+        - postgres
+
+    attack: clusterbomb
+
     extractors:
       - type: json
         json:
           - '.Rows[0].version'
+# digest: 4a0a0047304502204ba5d9ed3dafee6bc323f45468eff859e44f6e8773790e47e625d29685654c79022100b5e6a7a4e611537a7070c423e88343c9ae35dfb7f01d51fa3997b8231daf1433:922c64590222798bb761d5b6d8e72950

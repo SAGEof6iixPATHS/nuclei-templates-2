@@ -1,11 +1,14 @@
 id: imap
 info:
-  name: Atmail imapd
+  name: Dovecot imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    product: dovecot
     rarity: 0
+    vendor: dovecot
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4rev1[\w+= -]*\] Atmail IMAP4 Server ready\. See COPYING for distribution information\.\r\n
+    - ^\* OK Waiting for authentication process to respond\.\.\r\n

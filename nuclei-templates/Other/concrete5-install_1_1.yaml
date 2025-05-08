@@ -12,7 +12,7 @@ info:
     shodan-query: http.title:"Install concrete5"
   tags: panel,install,concrete,cms
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/index.php/install"

@@ -10,10 +10,11 @@ info:
     verified: true
     max-request: 16
     shodan-query: "port:3306"
-  tags: brute,network
-  
+  tags: js,mysql,network,enum
 javascript:
-  - code: |
+  - pre-condition: |
+      isPortOpen(Host,Port);
+    code: |
       let m = require('nuclei/mysql');
       let c = m.MySQLClient();
       let response = c.ExecuteQuery(Host,Port,User,Pass,Query);
@@ -25,7 +26,7 @@ javascript:
       Query: "show databases;"
       User: "{{usernames}}"
       Pass: "{{passwords}}"
-      
+
     payloads:
       usernames:
         - root
@@ -37,8 +38,8 @@ javascript:
         - admin
         - mysql
         - test
-        - 
     attack: clusterbomb
+
     stop-at-first-match: true
     matchers:
       - type: dsl
@@ -50,3 +51,4 @@ javascript:
         part: response
         json:
           - .Rows[] | .Database
+# digest: 490a00463044022034f91bcda0f9492e0126ca59d24f759224cfb18cebe611d5bb52b53d79b31f33022045334fbdcccdd05926ee37ec1c7372429c317905f6cc5b3c4aac427511c27f16:922c64590222798bb761d5b6d8e72950

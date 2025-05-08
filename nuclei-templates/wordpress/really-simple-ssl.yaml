@@ -1,7 +1,7 @@
 id: wordpress-really-simple-ssl
 
 info:
-  name: Really Simple SSL – Simple and Lightweight Security Detection
+  name: Really Simple Security – Simple and Performant Security (formerly Really Simple SSL) Detection
   author: ricardomaia
   severity: info
   reference:
@@ -46,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100c1c3c3ac6c4c425da32eb112d75d53e86db93cb1a10b93458f6ece0834c7525202200d735eb99d80b4507660dd7fe62ee9133494b665b5045bc9aef86941c855e455:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100abebb8edd365e4b32f478201e4ff7a6015563d76ea37cf19c14b45a68b07ccc702203f73799a33b0ae8fde46c8dcd6fbf3ccef48ff3cea5de9b08a1757c9278e7904:922c64590222798bb761d5b6d8e72950

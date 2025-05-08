@@ -1,24 +1,28 @@
 id: solarwinds-orion
 
 info:
-  name: SolarWinds Orion Panel
+  name: SolarWinds Orion Login Panel - Detect
   author: puzzlepeaches
   severity: info
-  tags: panel
+  description: SolarWinds Orion login panel was detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+    cpe: cpe:2.3:a:solarwinds:orion_platform:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: solarwinds
+    product: orion_platform
+  tags: panel,solarwinds
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/Orion/Login.aspx"
 
-    raw:
-      - |
-        GET /Orion/Login.aspx HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko)
     matchers:
       - type: word
         words:
           - "SolarWinds Orion"
         part: body
+# digest: 490a0046304402205f17358c83125e710b22b3ceea0f3e065fdc2ce3579060994ca1c6d13ca87e0c0220372bd8f9bf115a57fb67b40e9de6294f35ffee521b0c8afceaae4dfdf8109fab:922c64590222798bb761d5b6d8e72950
