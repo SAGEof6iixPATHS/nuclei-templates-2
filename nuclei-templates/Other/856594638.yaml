@@ -1,15 +1,13 @@
 id: sip
 info:
-  name: Epygi Quadro $2 PBX SIP
+  name: Cisco TelePresence MCU 4505 videoconference system SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: PBX
     fallback:
     - get-request
     rarity: 5
-    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 403 Non-self Request-URI\r\n(?:[^\r\n]+\r\n)*?Server: Epygi Quadro SIP User Agent/v([\w._-]+) \(QUADRO-([^\)]*)\)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Allow: INVITE,ACK,CANCEL,OPTIONS,UPDATE,INFO,NOTIFY,BYE,REFER\r\nAccept: application/sdp,application/media_control\+xml,application/dtmf-relay,application/dtmf,message/sipfrag;version=2\.0\r\n'

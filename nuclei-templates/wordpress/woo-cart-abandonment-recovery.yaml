@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/woo-cart-abandonment-recovery
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/woo-cart-abandonment-recovery/readme.txt"
@@ -46,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100c65591f24fe1f4cc6790a045def4dec4a8fe88002248265258745a298c4ed2d1022100e39583b49b659fd2246f7d1489b9741d4b73fbae89cd38a670a5b6f2a7215b22:922c64590222798bb761d5b6d8e72950

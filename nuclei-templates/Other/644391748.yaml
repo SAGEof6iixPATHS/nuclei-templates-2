@@ -1,13 +1,15 @@
 id: smtp
 info:
-  name: SCO smtpd
+  name: qmail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: Unknown host
-    operating_system: SCO UNIX
+    operating_system: Unix
+    product: qmail
     rarity: 0
+    vendor: djb
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^421 [-\w_.]+ - Your name, '\[[-\w_.]+\]', is unknown to me\.\r\n
+    - ^451 Temporary local problem - please try later\r\n

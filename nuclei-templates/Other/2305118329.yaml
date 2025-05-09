@@ -1,14 +1,13 @@
 id: imap
 info:
-  name: Axigen imapd
+  name: Synametrics Xeams imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    product: axigen_mail_server
+    product: xeams
     rarity: 0
-    vendor: ecad
+    vendor: synametrics
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK AXIGEN IMAP4rev1 at ([\w._-]+) service is ready\r\n
+    - ^\* OK Synametrics IMAP4rev1 server ready \d\d/\d\d/\d\d \d\d:\d\d [AP]M\r\n

@@ -9,7 +9,7 @@ info:
   metadata:
     plugin_namespace: gtranslate
     wpscan: https://wpscan.com/plugin/gtranslate
-  tags: tech,wordpress,wp-plugin,top-200
+  tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
@@ -46,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a004730450220351b20e08d3986d772ce67d4a22239c81f3ea22c04272e0ab14ccf70f026ca880221008292c69f4061104fd36d3af9937669bce2c4602baa47d545c6d2f245e86c3d97:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ade7f34e213b74bc313a2bbc2b20117aa6a565d867f415030c5d3afb0bf6069e022011020180d046075eead8812a1704c770ac14092cb2cb89c9287fe3058a41363b:922c64590222798bb761d5b6d8e72950
