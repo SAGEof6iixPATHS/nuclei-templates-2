@@ -1,0 +1,49 @@
+id: wordpress-jetpack-boost
+
+info:
+  name: Jetpack Boost – Website Speed, Performance and Critical CSS Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/jetpack-boost/
+  metadata:
+    plugin_namespace: jetpack-boost
+    wpscan: https://wpscan.com/plugin/jetpack-boost
+  tags: tech,wordpress,wp-plugin,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/jetpack-boost/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/jetpack-boost.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a004730450220459541a78d449b6bb377432b0eb85afc177ae72c123b32ff962ddb9b020b1e3702210087f7224b6a7f911ae8bab14424b1e539fb83758fba2e876d5cb6aed5e7373b86:922c64590222798bb761d5b6d8e72950

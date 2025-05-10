@@ -9,10 +9,11 @@ info:
   metadata:
     plugin_namespace: kirki
     wpscan: https://wpscan.com/plugin/kirki
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+  tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/kirki/readme.txt"
 
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100b0183fdf8c3a4ed337cebc54c3610d0b57618eab8bad4c657570bde78fee860a02206abdf48db2d65b2e591d84618b4265753b85de3c884bc62bfdccbe90076ec567:922c64590222798bb761d5b6d8e72950

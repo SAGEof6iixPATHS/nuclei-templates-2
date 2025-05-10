@@ -1,7 +1,7 @@
 id: wordpress-wpforms-lite
 
 info:
-  name: WPForms – Easy Form Builder for WordPress – Contact Forms, Payment Forms, Surveys, & More Detection
+  name: Contact Form by WPForms – Drag & Drop Form Builder for WordPress Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/wpforms-lite
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/wpforms-lite/readme.txt"
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100e8113a495c0ff27500f661ef9182afd2c9264b16b2b7f33084fede86233899ab022100b45a69349100ab4f337743724f53595f81843299819c4b3123cda7fb0dba06a5:922c64590222798bb761d5b6d8e72950

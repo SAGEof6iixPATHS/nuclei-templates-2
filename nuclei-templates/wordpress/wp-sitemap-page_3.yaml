@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/wp-sitemap-page
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-sitemap-page/readme.txt"
@@ -46,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100a748271d9f5b2c3ea42608d19b721be8b84d40277732b59aef43bae6894e769602210081af63a23a2c0f68832c32477bd7d7eb21576f2239aef5fb33bcb4286334bde1:922c64590222798bb761d5b6d8e72950

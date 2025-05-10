@@ -1,13 +1,12 @@
 id: smtp
 info:
-  name: VaMailArmor smtpd
+  name: cqgreylist minimal smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) VaMailArmor-([\d.]+)\r\n
+    - ^220 ([\w_.-]+) cqgreylist - minimal smptd\r\n

@@ -33,7 +33,14 @@ requests:
         Cookie: language=en; token={{token}}
         Content-Type: application/json
 
-        {"id":{"$ne": null},"message":"change_all_reviewsss\n"}
+        {"id":{{nosql-fuzz}},"message":"change_all_reviewsss\n"}
+        
+    
+    attack: Pitchfork
+    payloads:
+        xss-fuzz: /home/parrot/nuclei-templates/http/vulnerabilities/juice-shop/Injection/nosql-manipulation-fuzz.txt
+       
+    stop-at-first-match: true
 
     matchers:
           - type: status
