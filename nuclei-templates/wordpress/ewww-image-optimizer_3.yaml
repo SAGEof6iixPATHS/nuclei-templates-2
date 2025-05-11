@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/ewww-image-optimizer
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/ewww-image-optimizer/readme.txt"
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100e3cfebf6744c665ff1c9e322f04fa3843908504ec24b5558b2d105be83a8f6c4022011fb5cf9633619818288a5b221d4edb56d277e062269d9279a060030fadd7594:922c64590222798bb761d5b6d8e72950

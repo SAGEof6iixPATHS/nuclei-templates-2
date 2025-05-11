@@ -7,12 +7,14 @@ info:
   reference:
     - https://wordpress.org/plugins/gutenberg/
   metadata:
+    max-request: 1
     plugin_namespace: gutenberg
     wpscan: https://wpscan.com/plugin/gutenberg
   tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/gutenberg/readme.txt"
 
@@ -46,4 +48,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402207c19eacae896d65779b9b0b348f87780762bdae586e5e65b2ed68d99124dd40f02202f37218e36e194d5434b9f9f5ffe6158f46583b99b726d9ae58b9f5fd45bf23b:922c64590222798bb761d5b6d8e72950

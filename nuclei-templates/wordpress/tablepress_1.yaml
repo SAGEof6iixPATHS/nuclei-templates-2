@@ -7,12 +7,14 @@ info:
   reference:
     - https://wordpress.org/plugins/tablepress/
   metadata:
+    max-request: 1
     plugin_namespace: tablepress
     wpscan: https://wpscan.com/plugin/tablepress
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/tablepress/readme.txt"
 
@@ -46,4 +48,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402207b24106e9a8635652391861ac305188d57bd3387440f4c95a03b7df8dd08486502203d610d222e7ff1d4ed8b65e3978b3962d24959ec04829125faee64cb51001f73:922c64590222798bb761d5b6d8e72950

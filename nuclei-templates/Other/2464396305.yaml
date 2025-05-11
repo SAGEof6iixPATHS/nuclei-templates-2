@@ -1,13 +1,13 @@
 id: pop3
 info:
-  name: ArGoSoft Mail Server Pro pop3d
+  name: Execmail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ArGoSoft Mail Server Pro for WinNT/2000/XP, Version [-.\w]+ \(([-.\w]+)\)\r\n$
+    - ^\+OK ([-.\w]+) Execmail POP3 \((\d[^)]+)\)
