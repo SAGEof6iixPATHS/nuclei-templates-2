@@ -6,7 +6,8 @@ info:
   severity: high
   description: oob sqli
 
-http:
+requests:
+
   - raw:
       - |
         POST / HTTP/1.1

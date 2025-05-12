@@ -150686,5 +150686,12 @@
     "CVE-2025-3876.yaml": "2025-05-11 03:07:41",
     "CVE-2022-1119_5.yaml": "2025-05-11 03:07:41",
     "CVE-2025-2158.yaml": "2025-05-11 03:07:41",
-    "CVE-2024-12743.yaml": "2025-05-11 03:07:41"
+    "CVE-2024-12743.yaml": "2025-05-11 03:07:41",
+    "kingdee-eas-directory-traversal_3.yaml": "2025-05-12 03:11:22",
+    "anydesk-phish_2.yaml": "2025-05-12 03:11:22",
+    "phpmyadmin-misconfiguration_2.yaml": "2025-05-12 03:11:22",
+    "bitrix-esol-excel-rce.yaml": "2025-05-12 03:11:22",
+    "sangfor-ba-rce_1.yaml": "2025-05-12 03:11:22",
+    "springboot-threaddump_4.yaml": "2025-05-12 03:11:22",
+    "hospital-management-panel_3.yaml": "2025-05-12 03:11:22"
 }

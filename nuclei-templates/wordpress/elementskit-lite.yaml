@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/elementskit-lite
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/elementskit-lite/readme.txt"
@@ -46,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a0046304402207766af9d286b481bef505390e9318e313f3b8aaf3cfa057daa1f5848309a6a9802206133528d3bc40859c1d5916b20e5430b86e9b931d4608a45e43fadd650bfef95:922c64590222798bb761d5b6d8e72950

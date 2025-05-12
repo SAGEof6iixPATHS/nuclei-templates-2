@@ -1,14 +1,16 @@
 id: smtp
 info:
-  name: Eudora smtpd
+  name: FortiMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Mac OS X
+    info: 'time zone: $2'
+    product: fortimail
     rarity: 0
-    version: $2
+    vendor: fortinet
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220[-\s](\S+) running Eudora Internet Mail Server X (\d\S+)\r\n
+    - ^220 ([\w._-]+) ESMTP Smtpd; [\w, :]+ ([-+]\d\d\d\d)\r\n

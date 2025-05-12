@@ -1,15 +1,16 @@
 id: pop3
 info:
-  name: Mercury Mail Transport System pop3d
+  name: UW Imap pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: mercury_mail_transport_system
+    product: imap_toolkit
     rarity: 0
-    vendor: pmail
+    vendor: uw
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK <-?[\d.]+@([-\w_.]+)>, POP3 server ready\.\r\n
+    - ^\+OK POP3 ([-.\w]+) v?(200\d\w?\.[-.\w]+) server ready\r\n

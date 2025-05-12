@@ -2,14 +2,14 @@ id: exclusive-addons-for-elementor
 
 info:
   name: >
-    Exclusive Addons for Elementor <= 2.7.4 - Authenticated (Contributor+) Sensitive Information Exposure via Elementor Templates
+    Appsero <= 2.0.0 - Missing Authorization via handle_optin_optout
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dc931943-13f3-4ab1-b70f-c234253ca269?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/376c5091-7921-4470-acbf-44db53db38fc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/exclusive-addons-for-elementor/"
     google-query: inurl:"/wp-content/plugins/exclusive-addons-for-elementor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,exclusive-addons-for-elementor,low
+  tags: cve,wordpress,wp-plugin,exclusive-addons-for-elementor,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.7.4')
+          - compare_versions(version, '<= 2.6.9')

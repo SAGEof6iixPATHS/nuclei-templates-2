@@ -2,14 +2,14 @@ id: wp-booking-system
 
 info:
   name: >
-    WP Booking System – Booking Calendar < 1.4 - Cross-Site Scripting
+    WP Booking System – Booking Calendar <= 2.0.14 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae35a02c-ba33-478d-a054-98b486e2192a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f294575d-ce83-4301-ae38-3f0761d9b610?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-booking-system/"
     google-query: inurl:"/wp-content/plugins/wp-booking-system/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-booking-system,high
+  tags: cve,wordpress,wp-plugin,wp-booking-system,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.4')
+          - compare_versions(version, '< 2.0.15')

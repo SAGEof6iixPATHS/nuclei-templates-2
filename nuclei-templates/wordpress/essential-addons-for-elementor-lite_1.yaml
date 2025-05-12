@@ -1,20 +1,18 @@
 id: wordpress-essential-addons-for-elementor-lite
 
 info:
-  name: Essential Addons for Elementor Detection
+  name: Essential Addons for Elementor – Popular Elementor Addon With Ready Templates, Advanced Widgets, Kits & WooCommerce Builders Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/essential-addons-for-elementor-lite/
   metadata:
-    max-request: 1
     plugin_namespace: essential-addons-for-elementor-lite
     wpscan: https://wpscan.com/plugin/essential-addons-for-elementor-lite
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/essential-addons-for-elementor-lite/readme.txt"
 
@@ -48,3 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a0046304402202d6e973fa2da3eb3bd9a1f9f9df266c7b1b58037834c7141eac831874f56d195022021b01aa0b09d9f8a54e28c4cd9f76292b2bbd3c35205a851f9afb5b221e25ada:922c64590222798bb761d5b6d8e72950
