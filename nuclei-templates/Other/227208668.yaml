@@ -1,16 +1,14 @@
 id: pop3
 info:
-  name: Cyrus pop3d
+  name: GNU Mailutils pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: cyrus_imap_server
+    product: mailutils
     rarity: 0
-    vendor: cmu
+    vendor: gnu
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-.\w]+) Cyrus POP3 v(\d[-.\w]+) server ready <
+    - ^\+OK POP3 Ready <\d{3,6}\.1[012]\d{8}@\w+>\r\n

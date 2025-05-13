@@ -5,9 +5,9 @@ info:
   author: Thabisocn
   severity: info
   metadata:
-    github-query: "/[a-z0-9.-]+\\.appspot\\.com/"
     verified: "true"
-  tags: file,android,google
+    github-query: "/[a-z0-9.-]+\\.appspot\\.com/"
+  tags: android,file
 
 file:
   - extensions:

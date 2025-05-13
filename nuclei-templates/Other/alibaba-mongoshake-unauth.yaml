@@ -4,21 +4,27 @@ info:
   name: Alibaba Mongoshake Unauth
   author: pikpikcu
   severity: info
-  metadata:
-    max-request: 1
-  tags: mongoshake,unauth,alibaba,misconfig
+  tags: mongoshake,unauth
 
-http:
-  - method: GET
-    path:
-      - '{{BaseURL}}/'
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET / HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+        Accept-Encoding: gzip, deflate
+        Accept: */*
     matchers-condition: and
     matchers:
+
       - type: word
         words:
           - '{"Uri":"/worker","Method":"GET"}'
-
       - type: word
         words:
           - 'text/plain'
@@ -27,4 +33,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022043a5f981ec51ccd20165b770fc6d7e5b2a0d95eb8bec4b4b92fdb18dfffdf0c2022100e52cbea3dee4cd5db36605e3e4b3f08c8ba637ce60829e27f27ddc091bbfafe0:922c64590222798bb761d5b6d8e72950

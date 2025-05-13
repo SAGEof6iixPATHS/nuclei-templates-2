@@ -1,13 +1,15 @@
 id: http
 info:
-  name: SMC Barricade broadband router
+  name: IBM WebSphere Application Server
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: broadband router
-    info: simply redirects to real web admin port 88
+    product: websphere_application_server
     rarity: 0
+    vendor: ibm
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 301 Moved\r\nLocation: http://\d+\.\d+\.\d+\.\d+:88\r\n'
+    - '^HTTP/1\.1 408 Request Timeout\r\nServer: WebSphere Application Server/([\w._-]+)\r\nContent-Type: text/html\r\nContent-Length: 117\r\n'

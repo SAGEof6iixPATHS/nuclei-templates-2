@@ -150693,5 +150693,12 @@
     "bitrix-esol-excel-rce.yaml": "2025-05-12 03:11:22",
     "sangfor-ba-rce_1.yaml": "2025-05-12 03:11:22",
     "springboot-threaddump_4.yaml": "2025-05-12 03:11:22",
-    "hospital-management-panel_3.yaml": "2025-05-12 03:11:22"
+    "hospital-management-panel_3.yaml": "2025-05-12 03:11:22",
+    "CVE-2016-1000134_3.yaml": "2025-05-13 03:03:13",
+    "CVE-2014-8799_3.yaml": "2025-05-13 03:03:13",
+    "cleo-detect_6.yaml": "2025-05-13 03:03:13",
+    "deezer-phish_2.yaml": "2025-05-13 03:03:13",
+    "kanboard-login_3.yaml": "2025-05-13 03:03:13",
+    "discord-phish_3.yaml": "2025-05-13 03:03:13",
+    "battlenet-phish_3.yaml": "2025-05-13 03:03:13"
 }

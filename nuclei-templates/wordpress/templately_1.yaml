@@ -1,7 +1,7 @@
 id: wordpress-templately
 
 info:
-  name: Templately – Elementor & Gutenberg Template Library' 5000+ Free & Pro Ready Templates & Cloud! Detection
+  name: Templately – Gutenberg & Elementor Template Library' 5000+ Free & Pro Ready Templates & Cloud! Detection
   author: ricardomaia
   severity: info
   reference:
@@ -13,6 +13,7 @@ info:
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/templately/readme.txt"
 
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100f80933c447d63b897f6dbe4ceb8e5827b0eecef24acbfc68408fecdde215a98d02204d95f68593fef4174374348fb2f271b5eb20b55bad0245e96fecd8c8a6c205e2:922c64590222798bb761d5b6d8e72950

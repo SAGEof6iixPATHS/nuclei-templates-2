@@ -1,15 +1,11 @@
 id: ftp
 info:
-  name: pyftpdlib
+  name: eXo Platform JCR ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: pyftpdlib
     rarity: 0
-    vendor: giampaolo_rodola
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 pyftpdlib (\d[\w._-]*) based ftpd ready\.\r\n
+    - ^220- \r\n {14}_/_/_/_/  \*\*\* eXo Platform JCR FTP Server {8}_/_/_/_/\r\n

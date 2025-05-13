@@ -2,14 +2,16 @@ id: xss-fuzz-html-attribute-injection
 
 info:
   name: Reflected XSS Checks via HTML attribute injections
-  author: quas
+  author: quas,reewardius
   severity: medium
   description: Fuzzes all query parameters for various reflected XSS vulnerabilities via HTML attribute injections.
-
+  tags: fuzzing-xss,fuzzing-req
+  
 http:
   - method: GET
     path:
       - "{{BaseURL}}"
+      
     payloads:
       xss_payloads:
         - "\" x=\"y\" onmouseover=\"alert('xss')"
@@ -21,10 +23,11 @@ http:
     fuzzing:
       - part: query
         type: replace
-        mode: single
+        mode: multiple
         fuzz:
           - "{{url_encode(xss_payloads)}}"
           - "{{url_encode(url_encode(xss_payloads))}}"
+          
     matchers-condition: and
     matchers:
       - type: regex
@@ -36,8 +39,9 @@ http:
           - "(?i)<[^>]* x='y' onscrollsend='alert\\(1\\)'[^>]*>"
           - "(?i)<[^>]* x='y' onmouseover='alert\\(1\\)'[^>]*>"
           - "(?i)<[^>]* x='y' onfocus='alert\\(1\\)'[^>]*>"
+        condition: or
+        
       - type: word
         part: header
         words:
           - "text/html"
-

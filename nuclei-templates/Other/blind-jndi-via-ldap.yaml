@@ -3,8 +3,8 @@ id: blind-jndi-via-ldap
 info:
   name: Blind JNDI via LDAP Detection
   author: reewardius
-  severity: high
-  tags: blind,fuzzing
+  severity: critical
+  tags: fuzzing-log4j,fuzzing,fuzzing-rce
 
 http:
   - method: GET

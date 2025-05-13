@@ -8,9 +8,8 @@ info:
     A deezer phishing website was detected
   reference:
     - https://deezer.com
-  metadata:
-    max-request: 1
   tags: phishing,deezer,osint
+
 http:
   - method: GET
     path:
@@ -32,4 +31,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"deezer.com")'
-# digest: 4a0a00473045022100d2962c01816ca44244dbee4f087c887fed4e5b3312d9c47a0a43f18aff6ec26402203d350c29b1c7c73cc750486d108452d4a6d556013ea2bdcb078c9aee92956fb6:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502206f7fd05c9f820823ec9c2227437362942dae0460cbef2fe47b0426d9b4fc4755022100d5bb4018dde2270240d3b431886e7d42cab036c2510d492a3fdba6ef9df2f7e4:922c64590222798bb761d5b6d8e72950
