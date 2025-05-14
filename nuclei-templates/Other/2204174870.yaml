@@ -1,15 +1,12 @@
 id: smtp
 info:
-  name: McAfee Email Gateway
+  name: Konica Minolta bizhub 350 printer smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    product: email_gateway
+    device_type: printer
     rarity: 8
-    vendor: mcafee
-    verified: true
 tcp:
 - name: hello
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w.-]+) Ready\r\n250-Requested mail action okay, completed\.\r\n250 STARTTLS\r\n
+    - ^220 \r\n501 \r\n

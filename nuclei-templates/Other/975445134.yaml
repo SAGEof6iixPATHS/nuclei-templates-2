@@ -1,13 +1,13 @@
 id: telnet
 info:
-  name: Neuf Box telnetd
+  name: HP AdvanceStack $1 Ethernet hub SNMP Module telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    info: hardware $1; firmware $3
+    device_type: hub
+    info: ROM $2; EEPROM $3; HW $4
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfd\x01\xff\xfd\x1f\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\r\n\[([^]]*)\]\[([^]]*)\]\[([^]]*)\]\r\n
+    - '^\xff\xfb\x03\xff\xfb\x01\r\n\r\n\x07HP (\w+)  Ethernet SNMP Module\r\n ROM B\.([\d.]+)\r\n EEPROM A\.([\d.]+)\r\n HW B\.([\d.]+)\r\n\r\nEnter password: '

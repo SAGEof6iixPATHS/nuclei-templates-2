@@ -1,16 +1,13 @@
 id: ftp
 info:
-  name: Cerberus ftpd
+  name: VxWorks ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: banned
-    operating_system: Windows
-    product: ftp_server
+    operating_system: VxWorks
     rarity: 0
-    vendor: cerberusftp
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^421-Not currently accepting logins at this address\. Try back \r\n421 later\.\r\n
+    - ^220 VxWorks FTP server \(VxWorks ?([\w._-]+)\) ready\.\r\n

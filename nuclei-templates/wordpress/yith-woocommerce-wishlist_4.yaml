@@ -2,14 +2,14 @@ id: yith-woocommerce-wishlist
 
 info:
   name: >
-    YITH plugins by YITHEMES <= (Various Versions) - Cross-Site Request Forgery
+    YIT Plugin Framework <= 3.3.8 - Authenticated Settings Change
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f002d061-4e9d-49be-9d4c-c470ec97f653?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3b34a0c6-3573-48c7-8edb-c9cf9503da06?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/yith-woocommerce-wishlist/"
     google-query: inurl:"/wp-content/plugins/yith-woocommerce-wishlist/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,yith-woocommerce-wishlist,medium
+  tags: cve,wordpress,wp-plugin,yith-woocommerce-wishlist,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.14.0')
+          - compare_versions(version, '<= 2.2.13')
