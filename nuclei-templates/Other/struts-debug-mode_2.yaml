@@ -2,13 +2,10 @@ id: struts-debug-mode
 
 info:
   name: Apache Struts setup in Debug-Mode
-  author: pdteam
+  author: pd-team
   severity: low
-  tags: logs,struts,apache,exposure,setup
-  metadata:
-    max-request: 1
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}'

@@ -12,8 +12,8 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-200
   metadata:
-    max-request: 3
-    verified: true
+    max-request: 9
+    verified: "true"
     shodan-query: html:"Magnolia is a registered trademark"
   tags: magnolia,default-login
 
@@ -42,8 +42,12 @@ http:
     payloads:
       username:
         - superuser
+        - admin
+        - admin
       password:
         - superuser
+        - admin
+        - password
     attack: pitchfork
 
     extractors:

@@ -1,21 +1,24 @@
 id: wp-ticket
 
 info:
-  name: "Zebra_Form PHP library <= 2.9.8 - Reflected Cross-Site Scripting"
+  name: >
+    Customer Service Software & Support Ticket System <= 5.12.0 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
-  description: "The Zebra_Form library present in the WP Inimat, Ad Swapper, Drug Search, Teaser Maker, and Customer Service Software & Support Ticket System Plugins for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'form' and 'control' parameters in versions up to, and including, 2.9.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    The Customer Service Software & Support Ticket System plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in versions up to, and including, 5.12.0  due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled.
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b27338c7-2fbc-4985-a25e-8e2a9fdef8c3?source=api-prod
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 4.4
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-ticket/"
     google-query: inurl:"/wp-content/plugins/wp-ticket/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-ticket,high
+  tags: cve,wordpress,wp-plugin,wp-ticket,low
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  5.5.1')
+          - compare_versions(version, '< 5.13')

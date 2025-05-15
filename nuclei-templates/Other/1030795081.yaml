@@ -1,15 +1,15 @@
 id: nntp
 info:
-  name: InterNetNews (INN)
+  name: Kerio Connect nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: HDD full
-    product: inn
+    product: connect
     rarity: 0
-    vendor: isc
+    vendor: kerio
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^400 No space left on device writing SMstore file -- throttling\r\n
+    - ^200 Kerio Connect ([\w._-]+) NNTP server ready\r\n

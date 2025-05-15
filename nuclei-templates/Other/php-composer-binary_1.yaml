@@ -1,14 +1,17 @@
 id: php-composer-binary
 
 info:
-  name: Publically Accessible PHP Composer Binary
+  name: PHP Composer Binary - Exposure
   author: mayank_pandey01
   severity: info
   description: |
-    This Nuclei template checks if the specified endpoints have Publically Accessible PHP Composer Binary.
+    This Nuclei template checks if the specified endpoints have publically accessible PHP Composer Binary.
   remediation: |
     Restrict access to the PHP Composer binary by implementing proper access controls and permissions.
-  tags: php,composer,generic
+  metadata:
+    verified: true
+    max-request: 1
+  tags: php,composer,exposure,misconfig
 
 http:
   - method: GET
@@ -21,7 +24,10 @@ http:
         part: body
         words:
           - "/usr/bin/env php"
+          - "<?php"
+        condition: and
 
       - type: status
         status:
           - 200
+# digest: 490a0046304402200f3a284d37788c749db87780601f7c094bcde6b9f97773cf31b9d4bdd9a37b76022062554612cea9563b5a35f4564497502d65c17f6b97df4fc3a94bf562e8189f55:922c64590222798bb761d5b6d8e72950

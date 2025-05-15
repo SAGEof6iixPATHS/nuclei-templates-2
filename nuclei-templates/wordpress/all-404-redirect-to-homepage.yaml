@@ -1,17 +1,18 @@
 id: wordpress-all-404-redirect-to-homepage
 
 info:
-  name: All 404 Redirect to Homepage & Broken images Redirection Detection
+  name: All 404 Redirect to Homepage Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/all-404-redirect-to-homepage/
   metadata:
+    max-request: 1
     plugin_namespace: all-404-redirect-to-homepage
     wpscan: https://wpscan.com/plugin/all-404-redirect-to-homepage
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
 
     path:
