@@ -1,15 +1,14 @@
 id: pop3
 info:
-  name: CommuniGate Pro
+  name: Dovecot DirectAdmin pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: communigate_pro
+    product: dovecot
     rarity: 0
-    vendor: stalker
+    vendor: dovecot
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK CommuniGate Pro POP3 Server ([-.\w]+) ready
+    - ^\+OK Dovecot DA ready\.\r\n

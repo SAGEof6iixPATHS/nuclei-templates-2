@@ -4,13 +4,9 @@ info:
   name: Django Debug Method Enabled
   author: dhiyaneshDK,hackergautam,dk4trin
   severity: medium
-  reference:
-    - https://twitter.com/Alra3ees/status/1397660633928286208
-    - https://blog.scrt.ch/2018/08/24/remote-code-execution-on-a-facebook-server/
-    - https://hacklido.com/blog/704-exploiting-django-debug-mode-for-unrestricted-access-to-the-internal-dashboard
-  tags: debug,django
-  
-http:
+  tags: django,debug
+
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/NON_EXISTING_PATH/"
@@ -32,12 +28,18 @@ http:
       - "{{BaseURL}}/2/a"
       - "{{BaseURL}}/3/a"
       - "{{BaseURL}}/4/a"
-      
+
+    matchers-condition: and
     matchers:
       - type: word
         words:
           - URLconf defined
           - Page not found
           - Django tried these URL patterns, in this order
-          - Django
+          - DisallowedHost at
+
         condition: and
+
+      - type: status
+        status:
+          - 404

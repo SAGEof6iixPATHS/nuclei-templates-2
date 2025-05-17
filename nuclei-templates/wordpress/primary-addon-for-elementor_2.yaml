@@ -2,14 +2,14 @@ id: primary-addon-for-elementor
 
 info:
   name: >
-    Primary Addon for Elementor <= 1.5.7 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Primary Addon for Elementor <= 1.5.8 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8ffb789a-409f-4771-a5e1-2643b6aeadf8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/90d23f3a-a67d-4f92-9ca8-926569b72a71?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.7')
+          - compare_versions(version, '<= 1.5.8')

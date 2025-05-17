@@ -1,15 +1,13 @@
 id: imap
 info:
-  name: CommuniGate Pro imapd
+  name: Sun Solstice Internet Mail Server imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
-    product: communigate_pro
+    operating_system: Unix
     rarity: 0
-    vendor: stalker
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -21,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK CommuniGate Pro IMAP Server ([-.\w]+) at ([-.\w]+) ready\r\n$
+    - '^\* OK ([-/.+\w]+) Solstice \(tm\) Internet Mail Server \(tm\) (\d[-.\w]+) IMAP4 service - at '

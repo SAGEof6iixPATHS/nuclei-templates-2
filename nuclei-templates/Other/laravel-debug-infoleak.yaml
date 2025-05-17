@@ -17,7 +17,7 @@ info:
     max-request: 1
     shodan-query: Laravel-Framework
     fofa-query: app="Laravel-Framework"
-  tags: debug,laravel,php
+  tags: misconfig,laravel,debug,infoleak
 
 http:
   - raw:

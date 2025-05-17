@@ -7,10 +7,10 @@ info:
   description: |
     Fanwei E-Office mysql_config.ini file can be directly accessed, leaking database account password and other information.
   metadata:
+    verified: true
     max-request: 1
-    verified: "true"
     fofa-query: app="泛微-EOffice"
-  tags: generic
+  tags: fanwei,ecology,exposure,config
 
 http:
   - method: GET
@@ -26,23 +26,14 @@ http:
           - "datapassword"
           - "datauser"
         condition: and
-        case-insensitive: true
-        
+
       - type: word
         part: header
         words:
-          - "text/plain"
-          - "bytes"
-        condition: or
-        
-      - type: word
-        part: header
-        words:
-          - "text/html"
-        negative: true
-        
+          - text/plain
+
       - type: status
         status:
           - 200
-          - 206
-        condition: or
+
+# digest: 490a0046304402206de401970df9a10aa4813d5437cf8e19a2230f003e235f525c5142205ed15d65022027b4de220d6dfb4e1f2093a9758cf53c022083b2960b9643f4ced1aa6cb088dd:922c64590222798bb761d5b6d8e72950

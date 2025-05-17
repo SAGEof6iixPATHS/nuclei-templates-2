@@ -1,5 +1,4 @@
 id: azkaban-default-login
-
 info:
   name: Azkaban Web Client Default Credential
   author: pussycat0x
@@ -10,8 +9,7 @@ info:
   metadata:
     shodan-query: http.title:"Azkaban Web Client"
   tags: default-login,azkaban
-
-http:
+requests:
   - raw:
       - |
         POST / HTTP/1.1
@@ -19,7 +17,6 @@ http:
         Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
         action=login&username={{username}}&password={{password}}
-
     payloads:
       username:
         - admin
@@ -33,18 +30,15 @@ http:
           - '"session.id"'
           - '"success"'
         condition: and
-
       - type: word
         words:
           - 'azkaban.browser.session.id'
           - 'application/json'
         condition: and
         part: header
-
       - type: status
         status:
           - 200
-
     extractors:
       - type: kval
         kval:

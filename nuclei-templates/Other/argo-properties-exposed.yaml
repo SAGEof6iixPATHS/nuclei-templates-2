@@ -4,8 +4,8 @@ info:
   name: Argo Properties Exposed
   author: dk4trin
   severity: high
-  tags: generic,config-files,exposed
-  
+  tags: argo,exposure,dk4trin
+
 http:
   - method: GET
     path:
@@ -13,12 +13,11 @@ http:
       - "{{BaseURL}}/classes/argo.properties"
       - "{{BaseURL}}/argo.properties"
       - "{{BaseURL}}/WEB-INF/argo.properties"
-      
-    stop-at-first-match: true
+
+    matchers-condition: and
     matchers:
       - type: word
         part: body
         words:
           - "argo.database"
           - "argo.database.host"
-        condition: or
