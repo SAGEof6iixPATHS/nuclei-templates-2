@@ -1,12 +1,16 @@
 id: http
 info:
-  name: SonicWALL firewall http config
+  name: micro_httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: firewall
+    device_type: WAP
+    info: Buffalo WLI-TX4-G54HP WAP http config
+    product: micro_httpd
     rarity: 0
+    vendor: acme
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 \d\d\d .*\r\nServer: SonicWALL\r\n'
+    - '^HTTP/1\.0 408 Request Timeout\r\nServer: micro_httpd\r\nDate: .* GMT\r\nContent-Type: text/html\r\nConnection: close\r\n\r\n<HTML><HEAD><TITLE></TITLE><meta http-equiv=\"Pragma\" content=\"no-cache\"></HEAD>\n<BODY BGCOLOR=\"#FFFFFF\">\nRequest timed out\.\n\n</BODY></HTML>\n$'

@@ -1,12 +1,13 @@
 id: pop3
 info:
-  name: Quick 'n Easy pop3d
+  name: Neon Mail Server pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $2
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Quick 'n Easy Mail Server ready\r\n
+    - ^\+OK POP3 server \(Neon Mail Server System Advance ([-\w_.]+), [^)]*\) ready ([-\w_.]+)\. <

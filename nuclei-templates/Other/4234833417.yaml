@@ -1,14 +1,13 @@
 id: ftp
 info:
-  name: Pure-FTPd
+  name: DEC OpenVMS MultiNet FTPd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: pure-ftpd
+    hostname: $1
     rarity: 0
-    vendor: pureftpd
-    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - (?i)^220[- ]FTP server ready\.\r\n.*214 Pure-FTPd - http://pureftpd\.org/?\r\n
+    - ^220 ([-.\w]+) MultiNet FTP Server Process V(\S+) at .+\r\n$
