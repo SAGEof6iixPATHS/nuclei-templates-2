@@ -151253,5 +151253,11 @@
     "proxyshell.yaml": "2025-05-18 03:10:25",
     "mitel-micollab-version.yaml": "2025-05-18 03:10:25",
     "log4j-detect-waf.yaml": "2025-05-18 03:10:25",
-    "Subdomain_Takeover_Checker.yaml": "2025-05-18 03:10:25"
+    "Subdomain_Takeover_Checker.yaml": "2025-05-18 03:10:25",
+    "siteseo.yaml": "2025-05-19 03:09:22",
+    "CVE-2025-3715.yaml": "2025-05-19 03:09:22",
+    "mitsubishi-air-condition-detect.yaml": "2025-05-19 03:09:22",
+    "windows-server-remote-web-access-panel.yaml": "2025-05-19 03:09:22",
+    "genetec-synergis-detect.yaml": "2025-05-19 03:09:22",
+    "foundry-virtual-tabletop-detect.yaml": "2025-05-19 03:09:22"
 }
