@@ -2,17 +2,17 @@ id: ithemes-sync
 
 info:
   name: >
-    Solid Central <= 3.0.0 - Stored Cross-Site Scripting via packages
+    iThemes Sync <= 2.1.13 - Cross-Site Request Forgery and Missing Authorization via 'hide_authenticate_notice'
   author: topscoder
   severity: medium
   description: >
-    The Solid Central – Site Management, Backups, Security, and Reporting plugin for WordPress is vulnerable to Stored Cross-Site Scripting via via malicious package names in all versions up to and including 3.0.0 due to insufficient output escaping. This makes it possible for attackers able to compromise the packages retrieved from the iThemes API to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Note that such a compromise is considered highly unlikely.
+    
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/55234307-9d51-4fe8-bc22-78d32a5fed11?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f9229f2-e7dd-43c9-9c15-9b76c13e895b?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 5.4
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ithemes-sync/"
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.0.1')
+          - compare_versions(version, '< 2.1.14')

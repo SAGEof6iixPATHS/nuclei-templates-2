@@ -1,14 +1,17 @@
 id: nntp
 info:
-  name: Diablo NNTP service
+  name: Lotus Domino nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: 'Admin: $2'
+    info: posting denied
+    operating_system: $1
+    product: lotus_domino
     rarity: 0
-    version: $3
+    vendor: ibm
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-.\w]+) NNTP Service Ready - ([-.\w]+@[-.\w]+) \(DIABLO (\d[-.\w ]+)\)\r\n
+    - ^200 Lotus Domino NNTP Server for ([-./\w]+) \(Release (\d[-.\w]+), .*\) - Not OK to post\r\n$

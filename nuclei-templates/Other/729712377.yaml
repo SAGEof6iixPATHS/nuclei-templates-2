@@ -1,12 +1,11 @@
 id: telnet
 info:
-  name: Georgia SoftWorks telnetd
+  name: Lantronix ETS16 terminal server telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    info: Registered version
-    operating_system: Windows
+    device_type: terminal server
     rarity: 0
     version: $1
 tcp:
@@ -19,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfe\x01\xff\xfb\x01\xff\xfd\x03\xff\xfb\x03\xff\xfd\x18Georgia SoftWorks Telnet Server for Windows NT/2000 Version ([\w._-]+)\n\rRegistered copy
+    - '^\xff\xfb\x01\xff\xfb\x03\xff\xfd\x18\r\0\n\nLantronix ETS16 Version V([\d.]+)/\d+\(\d+\)\n\r\0\nType HELP at the ''BRTR-ETS16>'' prompt for assistance\.\n\r\0\nUsername> '
