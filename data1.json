@@ -151342,5 +151342,15 @@
     "gunicorn-detect_2.yaml": "2025-05-20 03:05:56",
     "netsparker-panel_2.yaml": "2025-05-20 03:05:56",
     "ibm-service-assistant_1.yaml": "2025-05-20 03:05:56",
-    "CVE-2025-41393.yaml": "2025-05-20 03:05:56"
+    "CVE-2025-41393.yaml": "2025-05-20 03:05:56",
+    "simplelightbox.yaml": "2025-05-21 03:07:31",
+    "CVE-2024-5878.yaml": "2025-05-21 03:07:31",
+    "CVE-2025-4322.yaml": "2025-05-21 03:07:31",
+    "icinga-web-login_2.yaml": "2025-05-21 03:07:31",
+    "rendertronDetect.yaml": "2025-05-21 03:07:31",
+    "ruijie-networks-rce_3.yaml": "2025-05-21 03:07:31",
+    "kibana-panel_3.yaml": "2025-05-21 03:07:31",
+    "nagios-status-page_1.yaml": "2025-05-21 03:07:31",
+    "httpd-config_1.yaml": "2025-05-21 03:07:31",
+    "CVE-2025-24016.yaml": "2025-05-21 03:07:31"
 }

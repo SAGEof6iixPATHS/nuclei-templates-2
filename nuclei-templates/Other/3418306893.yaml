@@ -1,14 +1,12 @@
 id: smtp
 info:
-  name: DynFX smtpd
+  name: Zeus SMTPS smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Windows
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) DynFX ESMTP Server ([-\w_.]+) \(
+    - ^220 - zeus SMTPS Sendmail ([-\w_.]+)/[-\w_.]+; .*\n
