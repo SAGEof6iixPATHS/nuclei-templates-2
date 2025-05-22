@@ -2,7 +2,7 @@ id: commvault-deploywebpackage-cve-2025-34028
 
 info:
   name: Commvault Pre-Auth RCE via deployWebpackage.do (CVE-2025-34028)
-  author: nickaures
+  author: n0ur5
   severity: critical
   description: |
     Commvault Innovation Release 11.38.0–11.38.19 is vulnerable to a pre-auth RCE via SSRF + Arbitrary File Write through the deployWebpackage.do endpoint.
@@ -28,7 +28,7 @@ http:
 
     payloads:
       interactsh-url:
-        - "e5kgvjvf0bbwzx0qhm29rn0rnit9hz5o.n0ur5sec.bugshieldlabs.com"
+        - "YOURCOLLABHERE"
 
     attack: pitchfork
 

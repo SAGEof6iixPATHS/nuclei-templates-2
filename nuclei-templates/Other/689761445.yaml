@@ -1,6 +1,6 @@
 id: rtsp
 info:
-  name: GM Streaming Server rtspd
+  name: Avigilon ONVIF camera rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
@@ -21,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nServer: GM Streaming Server v([\w._-]+)\r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE\r\n\r\n$'
+    - '^RTSP/1\.0 404 Not Found\r\nServer: AvigilonOnvifNvt/([\d.]+)\r\n'

@@ -1,11 +1,10 @@
 id: telnet
 info:
-  name: HP StorageWorks SSL1016 tape autoloader telnetd
+  name: NovaNET-WEB backup server telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    info: 'Name: $1'
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfd\x01\xff\xfb\x03\xff\xfd\x03\xff\xfb\x05\xff\xfd\x05Welcome to ([-\w_]+) Debug Terminal - \d*\n\r\n\r\n\rlogin:'
+    - '^\r\n\r\nBackup Server Telnet Session\r\n\r\nUser:'

@@ -1,16 +1,14 @@
 id: http
 info:
-  name: Trend Micro OfficeScan
+  name: Mitel SIP DEC VoIP phone http config
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    device_type: VoIP phone
     fallback:
     - get-request
-    product: officescan
     rarity: 5
-    vendor: trend_micro
-    verified: true
 tcp:
 - name: rtsprequest
   inputs:
@@ -22,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 400 Bad Request\r\nConnection: close\r\nContent-Type: text/html; charset=UTF-8\r\nCache-Control: no-cache\r\nDate: .*\r\n\r\n<HTML><HEAD><TITLE>400 Bad Request</TITLE></HEAD>\r\n<BODY><H1>400 Bad Request</H1>\r\n</BODY></HTML>\r\n'
+    - '^HTTP/1\.1 505 HTTP Version Not Supported\r\nContent-Type: text/html\r\nContent-Length: 166\r\n\r\n<html><head><title>505 HTTP Version Not Supported</title></head><body><h1>HTTP Version Not Supported</h1><p>HTTP versions 1\.0 and 1\.1 are supported\.</p></body></html>'
