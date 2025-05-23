@@ -13,39 +13,14 @@ info:
     - https://www.cyberciti.biz/tips/howto-openssh-sshd-listen-multiple-ip-address.html
   metadata:
     verified: true
-  tags: audit,config,ssh,auth
+  tags: audit,config,file,ssh
 
-javascript:
-  - pre-condition: |
-      isPortOpen(Host,Port);
-    code: |
-      var m = require("nuclei/ssh");
-      var c = m.SSHClient();
-      c.Connect(Host,Port,User,Pass);
-      const sshConfig = c.Run('cat /etc/ssh/sshd_config')
-      sshConfig
-      let result = "";
-      if (sshConfig.includes('#ListenAddress') && !sshConfig.includes('ListenAddress  ')){
-      result += "SSH access restriction not enforced";
-      }
-      else{
-      exit();
-      }
-      result
-
-    args:
-      Host: "{{Host}}"
-      Port: "22"
-      User: "{{usernames}}"
-      Pass: "{{passwords}}"
+file:
+  - extensions:
+      - all
 
     matchers:
-      - type: dsl
-        dsl:
-          - "success == true"
-
-    extractors:
-      - type: dsl
-        dsl:
-          - response
-# digest: 4b0a00483046022100e083bd557c319077edc862d63ff616e5f3b16c97993aa815fc99275c3d0b8681022100b655fa349c18a03be6a56866c42c56cdc6829c22ebf02f09b2d625e2b7119452:922c64590222798bb761d5b6d8e72950
+      - type: word
+        words:
+          - "#ListenAddress"
+# digest: 4a0a00473045022100d7475cc7e29e1d4f19aaf3bd56796c488ff66671858e48291f49c5732e9bfb6f0220148f7bc80f28b20868bce57c28305bf64d6d6500eec6fbd3aa7b97b973efef7e:922c64590222798bb761d5b6d8e72950

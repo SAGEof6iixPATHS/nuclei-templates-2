@@ -1,13 +1,12 @@
 id: pop3
 info:
-  name: Microsoft Windows 2003 POP3 Service
+  name: Cisco VPN 3000 Concentrator pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows 2000
+    device_type: security-misc
     rarity: 0
-    version: '1.0'
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Microsoft Windows POP3 Service Version 1.0 <
+    - ^\+OK Server Ready\r\n

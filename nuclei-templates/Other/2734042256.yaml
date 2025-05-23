@@ -1,14 +1,12 @@
 id: smtp
 info:
-  name: Hermes smtpd
+  name: Wanadoo blocks smtp - NOT A REAL smtpd!
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Windows
+    info: Wanadoo blocks smtp - NOT A REAL smtpd!
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) Hermes ([\d.]+) ML SMTP Ready\.\r\n
+    - ^554 Please check that your outgoing mail server settings are correct\. Contact your service provider's technical support for assistance\.\n

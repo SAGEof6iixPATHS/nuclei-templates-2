@@ -1,11 +1,12 @@
 id: printer
 info:
-  name: lpd
+  name: QMC DeskLaser printer
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    hostname: $1
+    device_type: printer
+    info: Status $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - '^([-\w_.]+): lpd: address for your hostname \([\d.]+\) not matched\n'
+    - ^Printer Status ---> (.*)                    \nno entries\n
