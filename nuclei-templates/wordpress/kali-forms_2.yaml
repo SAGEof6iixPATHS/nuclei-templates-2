@@ -1,19 +1,16 @@
 id: kali-forms
 
 info:
-  name: >
-    Contact Form builder with drag & drop - Kali Forms <= 2.3.27 - Missing Authorization via Contact Form
+  name: "Kali Forms <= 2.1.1 - Cross-Site Request Forgery"
   author: topscoder
   severity: high
-  description: >
-    
+  description: "The Kali Forms plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.1.1. This is due to incorrect nonce handling throughout the plugin's function. This makes it possible for unauthenticated attackers to access the plugin's administrative functions via forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bfb473a6-08ba-4b23-877d-4aa661c0053f?source=api-scan
+    - https://blog.nintechnet.com/wordpress-kali-forms-plugin-fixed-multiple-vulnerabilities/
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/kali-forms/"
     google-query: inurl:"/wp-content/plugins/kali-forms/"
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.27')
+          - compare_versions(version, '< 2.1.2')

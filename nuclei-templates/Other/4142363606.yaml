@@ -1,11 +1,13 @@
 id: pop3
 info:
-  name: coremail pop3d
+  name: cppop pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Welcome to coremail Mail Pop3 Server \(gzidcs\[[0-9a-f]{32}s\]\)\r\n$
+    - ^\+OK POP3 ([-\w_.]+) \[cppop (\d[^]]+)\] at \[

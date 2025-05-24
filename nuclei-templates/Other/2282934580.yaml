@@ -5,7 +5,8 @@ info:
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1; X.509 v3 certificate support
+    info: gssapi; protocol $1
+    operating_system: FreeBSD
     product: openssh
     rarity: 0
     vendor: openbsd
@@ -21,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+) PKIX\r\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+) FreeBSD-openssh-gssapi-
