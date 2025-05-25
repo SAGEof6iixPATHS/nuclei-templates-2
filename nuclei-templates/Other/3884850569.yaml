@@ -1,16 +1,12 @@
 id: ftp
 info:
-  name: SurgeFTPd
+  name: WinEggDrop ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    hostname: $1
-    product: surgeftp
+    operating_system: Windows
     rarity: 0
-    vendor: netwin
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 SurgeFTP ([-\w_.]+) \(Version ([\w.]+)\)\r\n
+    - ^220 Welcome To WinEggDrop Tiny FTP Server\r\n

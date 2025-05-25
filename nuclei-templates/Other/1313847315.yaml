@@ -1,16 +1,12 @@
 id: telnet
 info:
-  name: Cisco IOS telnetd
+  name: HP ProCurve $1 switch telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
-    operating_system: IOS
-    product: telnet
     rarity: 0
-    vendor: cisco
-    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '(?i)^\xff\xfb\x01\xff\xfb\x03\xff\xfd\x18\xff\xfd\x1f.*User Access Verification\r\n\r\n(?:Username|Password): $'
+    - ^\xff\xfd\x18\xff\xfb\x01\x1b\[2J\x1b\[\?7l\x1b\[3;23r\x1b\[\?6l\x1b\[1;1H\x1b\[\?25l\x1b\[1;1HProCurve J\w+ Switch ([\w-]+)\r\n\rSoftware revision ([\w._-]+)\r\n

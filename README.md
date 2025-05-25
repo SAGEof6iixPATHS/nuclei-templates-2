@@ -11,55 +11,60 @@
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
 | CVE-2010 | 123 |
-| CVE-2011 | 20 |
-| CVE-2012 | 36 |
-| CVE-2013 | 28 |
-| CVE-2014 | 60 |
-| CVE-2015 | 65 |
-| CVE-2016 | 64 |
-| CVE-2017 | 106 |
-| CVE-2018 | 272 |
-| CVE-2019 | 451 |
-| CVE-2020 | 817 |
-| CVE-2021 | 953 |
-| CVE-2022 | 919 |
+| CVE-2011 | 22 |
+| CVE-2012 | 38 |
+| CVE-2013 | 30 |
+| CVE-2014 | 63 |
+| CVE-2015 | 72 |
+| CVE-2016 | 73 |
+| CVE-2017 | 109 |
+| CVE-2018 | 276 |
+| CVE-2019 | 452 |
+| CVE-2020 | 823 |
+| CVE-2021 | 968 |
+| CVE-2022 | 937 |
 | CVE-2023 | 801 |
-| CVE-2024 | 477 |
+| CVE-2024 | 482 |
 | CVE-2025 | 58 |
-| Other | 45443 |
-| wordpress | 84652 |
+| Other | 50821 |
+| wordpress | 88536 |
 ## 近几天数量变化情况
-|2025-05-18 | 2025-05-19 | 2025-05-20 | 2025-05-21 | 2025-05-22 | 2025-05-23 | 2025-05-24|
+|2025-05-19 | 2025-05-20 | 2025-05-21 | 2025-05-22 | 2025-05-23 | 2025-05-24 | 2025-05-25|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|124978 | 137971 | 129929 | 96387 | 136064 | 139722 | 135401|
+|137971 | 129929 | 96387 | 136064 | 139722 | 135401 | 144740|
 ## 最近新增文件
 | templates name | 
 | --- |
-| CVE-2019-20504.yaml |
-| CVE-2025-31063.yaml |
-| CVE-2025-47529.yaml |
-| spotlight-social-photo-feeds-premium.yaml |
-| CVE-2025-39498.yaml |
-| experto-cta-widget.yaml |
-| quickcal.yaml |
-| CVE-2025-47582.yaml |
-| CVE-2025-5096.yaml |
-| CVE-2025-1123.yaml |
-| CVE-2025-32310.yaml |
-| CVE-2025-47576.yaml |
-| bimber.yaml |
-| CVE-2025-4594.yaml |
-| CVE-2025-31062.yaml |
-| CVE-2025-32299.yaml |
-| metadata-hetzner_3.yaml |
-| kace_systems_management.yaml |
-| magnusbilling-default-login.yaml |
-| xss-svg-onload.yaml |
-| youphptube_encoder.yaml |
-| openmrs.yaml |
-| emby-installer.yaml |
-| polarion-siemens-panel.yaml |
-| CVE-2025-2610.yaml |
-| CVE-2025-2609.yaml |
-| CVE-2018-19276.yaml |
-| CVE-2018-11222.yaml |
+| CVE-2025-1625.yaml |
+| store-manager-connector.yaml |
+| CVE-2024-13730.yaml |
+| CVE-2024-8703.yaml |
+| CVE-2025-1627.yaml |
+| CVE-2024-12679.yaml |
+| CVE-2025-4603.yaml |
+| CVE-2024-12680.yaml |
+| CVE-2024-13427.yaml |
+| CVE-2025-4602.yaml |
+| CVE-2025-2561.yaml |
+| CVE-2025-5058.yaml |
+| CVE-2025-1289.yaml |
+| CVE-2024-8699.yaml |
+| CVE-2025-1626.yaml |
+| CVE-2022-4363.yaml |
+| CVE-2025-1303.yaml |
+| CVE-2025-2524.yaml |
+| CVE-2025-4223.yaml |
+| CVE-2024-13729.yaml |
+| CVE-2025-2248.yaml |
+| CVE-2025-3869.yaml |
+| CVE-2025-2560.yaml |
+| CVE-2025-4336.yaml |
+| CVE-2024-8082.yaml |
+| CVE-2025-5055.yaml |
+| widgets-reset.yaml |
+| CVE-2024-9711.yaml |
+| CVE-2024-9765.yaml |
+| 4stats.yaml |
+| CVE-2025-2247.yaml |
+| CVE-2024-9709.yaml |
+| vbulletin-replacead-rce.yaml |

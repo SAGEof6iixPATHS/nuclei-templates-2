@@ -1,11 +1,15 @@
 id: pop3
 info:
-  name: qpopper pop3d
+  name: iPlanet messaging multiplexor
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    product: iplanet_messaging_server
     rarity: 0
+    vendor: sun
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 server ready\r\n$
+    - ^\+OK Messaging Multiplexor \(iPlanet Messaging Server ([-\w_.\s]+) \(built .*\)\)\r\n
