@@ -151623,5 +151623,8 @@
     "4stats.yaml": "2025-05-25 03:12:31",
     "CVE-2025-2247.yaml": "2025-05-25 03:12:31",
     "CVE-2024-9709.yaml": "2025-05-25 03:12:31",
-    "vbulletin-replacead-rce.yaml": "2025-05-25 03:12:31"
+    "vbulletin-replacead-rce.yaml": "2025-05-25 03:12:31",
+    "plantuml-detect.yaml": "2025-05-27 03:02:10",
+    "phpunit-template.yaml": "2025-05-27 03:02:10",
+    "CVE-2025-47916.yaml": "2025-05-27 03:02:10"
 }

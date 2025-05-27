@@ -1,14 +1,13 @@
 id: telnet
 info:
-  name: Check Point Firewall-1 telnetd
+  name: ASCOM ColtSoho router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    product: firewall-1
+    device_type: router
     rarity: 0
-    vendor: checkpoint
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^Check Point FireWall-1 authenticated Telnet server running on
+    - '^TELNET server version ([\d.]+) ready at \r\n\r\r\npassword: \xff\xfc\x01'
