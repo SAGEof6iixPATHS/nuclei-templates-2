@@ -1,11 +1,11 @@
 id: http
 info:
-  name: Glucose WeatherPop Advanced httpd
+  name: NetSupport Gateway httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    operating_system: Mac OS X
+    operating_system: Windows
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 \d\d\d .*\r\nContent-Type: text/plain\r\nServer: WPA/([-\w_.]+)\r\n\r\n'
+    - '^HTTP/1\.1 200 OK\nServer: NetSupport Gateway/([\d.]+) \(Windows NT\)\nContent-Type: application/x-www-form-urlencoded\nContent-Length:    14\nConnection: Keep-Alive\n\nCMD=HEARTBEAT\n$'

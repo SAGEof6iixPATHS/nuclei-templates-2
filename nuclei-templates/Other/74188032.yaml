@@ -1,17 +1,15 @@
 id: imap
 info:
-  name: Netscape Messaging Server Imapd
+  name: Microsoft Exchange imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    info: built $3
-    product: messaging_server
+    operating_system: Windows
+    product: exchange_server
     rarity: 0
-    vendor: netscape
+    vendor: microsoft
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-.\w]+) IMAP4 service \(Netscape Messaging Server (\d[-.\w ]+) \(built ([\w ]+)\)\)\r\n
+    - ^\* BYE Connection is closed\. 14\r\n

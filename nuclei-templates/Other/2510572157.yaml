@@ -1,12 +1,14 @@
 id: telnet
 info:
-  name: Huacam telnetd
+  name: WebSphere DataStage telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: webcam
+    product: infosphere_datastage
     rarity: 0
+    vendor: ibm
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x03\xff\xfb\x01\xff\xfd\x03\xff\xfd\x01                    Product of HUACAM\r\n  \r\n\r\nUsername: '
+    - '^Welcome to the DataStage Telnet Server\.\r\0\r\nEnter user name: '

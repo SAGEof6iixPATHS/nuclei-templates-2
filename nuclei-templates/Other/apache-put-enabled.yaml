@@ -1,0 +1,21 @@
+id: ai-apache-put-enabled
+
+info:
+  name: Apache PUT Method Enabled
+  author: reewardius
+  severity: high
+  description: |
+    Allows file upload via PUT method, possibly due to WebDAV or misconfig.
+
+http:
+  - method: PUT
+    path:
+      - "{{BaseURL}}/nuclei-check.txt"
+    body: "test"
+
+    stop-at-first-match: true
+    matchers:
+      - type: status
+        status:
+          - 200
+          - 201

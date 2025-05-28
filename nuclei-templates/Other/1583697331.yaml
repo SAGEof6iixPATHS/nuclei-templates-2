@@ -1,11 +1,10 @@
 id: pop3-proxy
 info:
-  name: DeleGate pop3 proxy
+  name: POPgate pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    hostname: $2
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK Proxy-POP server \(DeleGate/([\d.]+) by ysato AT delegate DOT org\) at ([-\w_.]+) starting\.\r\n
+    - ^\+OK hello from popgate\(([\d.]+)\)\r\n

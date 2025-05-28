@@ -1,0 +1,30 @@
+id: ai-exposed-backup
+
+info:
+  name: Common Backup File Exposure
+  severity: high
+  author: bugbounty-hunter
+  tags: backup,files
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/backup.zip"
+      - "{{BaseURL}}/sitebackup.zip"
+      - "{{BaseURL}}/site-backup.zip"
+      - "{{BaseURL}}/site.bak"
+      - "{{BaseURL}}/db.tar.gz"
+      
+    stop-at-first-match: true
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        part: header
+        words:
+          - "application/zip"
+          - "application/octet-stream"
+        condition: or
