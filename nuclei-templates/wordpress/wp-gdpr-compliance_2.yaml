@@ -2,14 +2,14 @@ id: wp-gdpr-compliance
 
 info:
   name: >
-    WP GDPR Compliance <= 1.4.2 - Arbitrary Options Update and Action Calling
+    Cookie Information | Free GDPR Consent Solution <= 2.0.7 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9312c73d-8eb6-4ca0-a03b-566099dc6487?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3c0b0bf7-55dd-40a1-8f12-f0ec0315c0ec?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-gdpr-compliance/"
     google-query: inurl:"/wp-content/plugins/wp-gdpr-compliance/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-gdpr-compliance,low
+  tags: cve,wordpress,wp-plugin,wp-gdpr-compliance,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.4.3')
+          - compare_versions(version, '< 2.0.8')

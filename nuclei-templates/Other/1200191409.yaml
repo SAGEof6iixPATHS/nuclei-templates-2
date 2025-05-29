@@ -1,6 +1,6 @@
 id: ftp-proxy
 info:
-  name: Finjan SurfinGate ftp proxy
+  name: Zscaler ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Finjan SurfinGate Proxy - Server Ready\.\r\n
+    - ^421 Proxy is closed \(unknown user location\)\r\n$

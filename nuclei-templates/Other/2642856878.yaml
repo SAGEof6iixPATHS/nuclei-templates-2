@@ -1,22 +1,19 @@
 id: http
 info:
-  name: cloudflare-nginx
+  name: JOSM OpenStreetMap editor remote control httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    fallback:
-    - get-request
-    rarity: 5
+    rarity: 0
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - ^<html>\r\n<head><title>400 Bad Request</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>400 Bad Request</h1></center>\r\n<hr><center>cloudflare-nginx</center>\r\n</body>\r\n</html>\r\n$
+    - '^HTTP/1\.1 500 Internal Server Error\r\nDate: \w+ \w+ \d\d \d\d:\d\d:\d\d \w+ \d\d\d\d\r\nServer: JOSM RemoteControl\r\nContent-type: text/html\r\nAccess-Control-Allow-Origin: \*\r\n'
