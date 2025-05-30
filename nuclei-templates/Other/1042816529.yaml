@@ -1,12 +1,11 @@
 id: ftp
 info:
-  name: RaidenFTPd
+  name: Kyocera $1 printer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Unregistered
-    operating_system: Windows
+    device_type: printer
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-\+----------------------\[ UNREGISTERED VERSION \]-----------------------\+\r\n220-\|   This site is running unregistered copy of RaidenFTPD ftp server   \+\r\n
+    - ^220 (FS-\w+) FTP server\.?\r\n
