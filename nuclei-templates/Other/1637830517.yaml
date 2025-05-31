@@ -1,15 +1,12 @@
 id: ftp
 info:
-  name: Microsoft ftpd
+  name: Polycom VSX 7000A VoIP phone ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: ftp_service
+    device_type: VoIP phone
     rarity: 0
-    vendor: microsoft
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220[ -]Microsoft FTP Service\r\n
+    - ^421 Closing non-secure connections in Secure Mode\. \r\n

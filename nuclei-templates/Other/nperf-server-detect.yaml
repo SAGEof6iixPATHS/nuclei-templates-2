@@ -1,0 +1,41 @@
+id: nperf-server-detect
+
+info:
+  name: nPerf Server - Detect
+  author: rxerium
+  severity: info
+  description: |
+    A nperf panel was detected.
+  reference:
+    - https://www.nperf.com
+  metadata:
+    verified: true
+    max-request: 1
+    shodan-query: product:"nPerf"
+  tags: tech,nperf,detect
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition: or
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "<title>nPerfServer</title>"
+
+      - type: word
+        part: header
+        words:
+          - "Nperfserver-Remote-Endpoint"
+          - "nPerf/"
+        condition: or
+
+    extractors:
+      - type: kval
+        part: header
+        kval:
+          - Server
+# digest: 4a0a0047304502201da94c3efbc38d170a5f46a5461e96e58c1cd470e81ff6d2734031aa06452585022100b2fc3c83c680d5fcfa52c934e39cb2e85ab362f6835c0b3b58e379083088b7ec:922c64590222798bb761d5b6d8e72950

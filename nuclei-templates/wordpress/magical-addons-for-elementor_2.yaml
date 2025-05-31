@@ -2,14 +2,14 @@ id: magical-addons-for-elementor
 
 info:
   name: >
-    Magical Addons For Elementor <= 1.1.40 - Authenticated (Subscriber+) Server-Side Request Forgery
+    Magical Addons For Elementor <= 1.2.1 - Authenticated (Subscriber+) Server-Side Request Forgery
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/532b58eb-6d8b-4bb7-b5c5-604ad24dba98?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4f9fb3a5-b669-4f3b-981d-face13a9a7c8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.40')
+          - compare_versions(version, '<= 1.2.1')

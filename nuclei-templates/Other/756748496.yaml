@@ -1,12 +1,16 @@
 id: pop3
 info:
-  name: BVRP Software SLMAIL pop3d
+  name: UW Imap pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
+    hostname: $2
+    product: imap_toolkit
     rarity: 0
+    vendor: uw
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 server ([-\w_.]+) ready <[\d.]+@[-\w_.]+>\r\n
+    - ^\+OK POP3 v?([\d.]+) server ready <[\w.]+@([-\w_.]+)>\r\n
