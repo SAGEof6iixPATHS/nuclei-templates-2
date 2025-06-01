@@ -1,10 +1,11 @@
 id: telnet
 info:
-  name: Slirp PPP/SLIP-on-terminal emulator telnetd
+  name: RemoteX telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    device_type: game console
     rarity: 0
     version: $1
 tcp:
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^Slirp v([\w._-]+)(?: \(BETA\))?(?: FULL_BOLT)?\n\nCopyright \(c\) 1995,1996 Danny Gasparovski and others\.\n'
+    - ^\xff\xfb\x01\xff\xfb\x03RemoteX Telnet Server V([\d.]+)\n\r\n\rc:\\>

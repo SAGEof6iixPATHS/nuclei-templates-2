@@ -1,16 +1,12 @@
 id: pop3
 info:
-  name: Netscape Messaginging Server pop3d
+  name: qpopper
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: messaging_server
     rarity: 0
-    vendor: netscape
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) POP3 server \(Netscape Messaging Server - Version ([\d.]+)\) ready .*\r\n
+    - ^\+OK ready  <[\d.]+@([-\w_.]+)>\r\n
