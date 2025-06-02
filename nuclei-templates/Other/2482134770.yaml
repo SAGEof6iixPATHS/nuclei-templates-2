@@ -6,7 +6,7 @@ info:
   severity: info
   metadata:
     hostname: $2
-    info: 'name: $1; protocol 3.3; Mac OS X 10.6; Mac mini'
+    info: 'name: $1; protocol 3.3; Mac OS X 10.5'
     operating_system: Mac OS X
     product: afp_server
     rarity: 6
@@ -23,4 +23,4 @@ tcp:
   - name: afp
     type: regex
     regex:
-    - (?i)^\x01\x03\0N........\0\0\0\0........\x8f\xfb.([^\0\x01]+)[\0\x01].*\nMacmini3,1\x04\x06AFP3\.3\x06AFP3\.2\x06AFP3\.1\x06AFPX03\x05\tDHCAST128.*\x04([\w.]+)\x01oafpserver
+    - (?i)^\x01\x03\0N........\0\0\0\0........\x8f\xfb.([^\0\x01]+)[\0\x01].*\tMacintosh\x05\x06AFP3\.3\x06AFP3\.2\x06AFP3\.1\x06AFPX03\x06AFP2\.2\x05\tDHCAST128.*\x04([\w.]+)\x01.afpserver
