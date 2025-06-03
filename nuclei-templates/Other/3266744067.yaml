@@ -1,15 +1,11 @@
 id: telnet
 info:
-  name: Cisco VG248 telnetd
+  name: D-Link $1 telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: VoIP adapter
-    product: telnet
     rarity: 0
-    vendor: cisco
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\x1b\[2J\x1b\[H\x1b\[2J\x1b\[H\x1b\[1;12H----------------------------------------------------------\x1b\[2;11H\|\x1b\[16CCisco VG248 \(
+    - ^\xff\xfd\x03\xff\xfb\x03\xff\xfb\x01\x1b\[0m\x1b\[1;1H\x1b\[2J\rD\r           \n\r             (DES-.*) Command Line Interface\n\r\n

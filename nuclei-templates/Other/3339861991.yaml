@@ -1,14 +1,13 @@
 id: ftp
 info:
-  name: OSF/1 ftpd
+  name: Cisco IronPort mail appliance ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
     hostname: $1
-    info: OSF/1 $2
-    operating_system: Unix
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) FTP server \(OSF/1 Version ([\d.]+)\) ready\.\r\n
+    - ^220 ([-.+\w]+) Cisco IronPort FTP server \(V([-.\w]+)\) ready\r\n

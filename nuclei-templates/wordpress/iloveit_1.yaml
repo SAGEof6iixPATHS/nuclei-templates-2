@@ -3,21 +3,19 @@ id: iloveit
 info:
   name: "I LOVE IT! < 2.4 - Multiple Vulnerabilities"
   author: topscoder
-  severity: critical
+  severity: low
   description: "The I LOVE IT!  theme is vulnerable to Cross-Site Scripting, Content Spoofing, and Path Traversal in versions up to, and including, 2.3. This is due to inclusion of a vulnerable version of jPlayer. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser, create fake content, and read the contents of arbitrary files on the server, which can contain sensitive information."
   reference:
-    - https://seclists.org/fulldisclosure/2013/May/77
-    - https://themeforest.net/item/i-love-it-content-sharing-wordpress-theme/698475
-    - https://packetstormsecurity.com/files/122386/
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N
-    cvss-score: 10.0
+    cvss-metrics:
+    cvss-score:
     cve-id:
   metadata:
-    fofa-query: "wp-content/themes/iloveit/"
-    google-query: inurl:"/wp-content/themes/iloveit/"
+    fofa-query: "wp-content/unknown/iloveit/"
+    google-query: inurl:"/wp-content/unknown/iloveit/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,iloveit,critical
+  tags: cve,wordpress,wp-theme,iloveit,low
 
 http:
   - method: GET
@@ -55,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3')
+          - compare_versions(version, '<=  2.3')
