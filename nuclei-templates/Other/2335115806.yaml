@@ -1,18 +1,12 @@
 id: smtp
 info:
-  name: MDaemon smtpd
+  name: cqgreylist minimal smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    info: MSA support
-    operating_system: Windows
-    product: mdaemon
     rarity: 0
-    vendor: altn
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220[ -]([-\w_.]+) ESMTP MSA MDaemon ([\d.]+);
+    - ^220 ([\w_.-]+) cqgreylist - minimal smptd\r\n

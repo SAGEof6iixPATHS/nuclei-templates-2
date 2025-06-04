@@ -6,62 +6,87 @@
 | CVE-2002 | 1 |
 | CVE-2004 | 3 |
 | CVE-2005 | 4 |
-| CVE-2006 | 5 |
+| CVE-2006 | 4 |
 | CVE-2007 | 6 |
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
 | CVE-2010 | 123 |
-| CVE-2011 | 21 |
-| CVE-2012 | 37 |
-| CVE-2013 | 30 |
-| CVE-2014 | 62 |
-| CVE-2015 | 70 |
-| CVE-2016 | 72 |
-| CVE-2017 | 109 |
-| CVE-2018 | 277 |
-| CVE-2019 | 457 |
-| CVE-2020 | 828 |
-| CVE-2021 | 970 |
-| CVE-2022 | 939 |
-| CVE-2023 | 809 |
-| CVE-2024 | 490 |
-| CVE-2025 | 63 |
-| Other | 52233 |
-| wordpress | 89563 |
+| CVE-2011 | 19 |
+| CVE-2012 | 32 |
+| CVE-2013 | 25 |
+| CVE-2014 | 54 |
+| CVE-2015 | 58 |
+| CVE-2016 | 60 |
+| CVE-2017 | 102 |
+| CVE-2018 | 269 |
+| CVE-2019 | 433 |
+| CVE-2020 | 797 |
+| CVE-2021 | 911 |
+| CVE-2022 | 909 |
+| CVE-2023 | 784 |
+| CVE-2024 | 473 |
+| CVE-2025 | 62 |
+| Other | 36057 |
+| wordpress | 75908 |
 ## 近几天数量变化情况
-|2025-05-28 | 2025-05-29 | 2025-05-30 | 2025-05-31 | 2025-06-01 | 2025-06-02 | 2025-06-03|
+|2025-05-29 | 2025-05-30 | 2025-05-31 | 2025-06-01 | 2025-06-02 | 2025-06-03 | 2025-06-04|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|146324 | 123963 | 94237 | 148016 | 125052 | 109288 | 147209|
+|123963 | 94237 | 148016 | 125052 | 109288 | 147209 | 117131|
 ## 最近新增文件
 | templates name | 
 | --- |
-| CVE-2021-24316_4.yaml |
-| wp-tutor-lfi_2.yaml |
-| CVE-2021-24389_5.yaml |
-| wordpress-wordfence-xss_2.yaml |
-| wp-securimage-xss_2.yaml |
-| resin-viewfile-lfr_3.yaml |
-| ueditor-file-upload_2.yaml |
-| mcafee-epo-rce_3.yaml |
-| symfony-debugmode_3.yaml |
-| icewarp-webclient-rce_1.yaml |
-| crlf-injection-path-and-param-chor4o.yaml |
-| akamai-arl-xss_2.yaml |
-| a3300r_firmware.yaml |
-| unauthorized-hp-printer_2.yaml |
-| d-link-arbitary-fileread_2.yaml |
-| keycloak-xss_2.yaml |
-| ax8.yaml |
-| moodle-filter-jmol-lfi_3.yaml |
-| craftercms.yaml |
-| huijietong-cloud-fileread_2.yaml |
-| dell-idrac-default-login_3.yaml |
-| wamp-server-configuration_2.yaml |
-| oscommerce-rce_2.yaml |
-| rack-mini-profiler_2.yaml |
-| qi-anxin-netkang-next-generation-firewall-rce_1.yaml |
-| sap-netweaver-info-leak_4.yaml |
-| CVE-2025-20188.yaml |
-| CVE-2023-4136.yaml |
-| CVE-2022-37061.yaml |
-| CVE-2024-24329.yaml |
+| CVE-2017-14942.yaml |
+| CVE-2025-31920.yaml |
+| CVE-2025-4047.yaml |
+| CVE-2025-48328.yaml |
+| CVE-2025-48334.yaml |
+| CVE-2025-48124.yaml |
+| CVE-2025-31050.yaml |
+| CVE-2025-5116.yaml |
+| CVE-2025-48329.yaml |
+| CVE-2025-47694.yaml |
+| nrgfashion.yaml |
+| CVE-2025-49074.yaml |
+| CVE-2025-49077.yaml |
+| CVE-2025-4224.yaml |
+| CVE-2025-48330.yaml |
+| quickcab.yaml |
+| CVE-2025-48335.yaml |
+| CVE-2025-4205.yaml |
+| affs.yaml |
+| woocommerce-orders-customers-exporter.yaml |
+| CVE-2025-4392.yaml |
+| CVE-2025-2939.yaml |
+| wpforo-advanced-attachments.yaml |
+| CVE-2025-39358.yaml |
+| CVE-2025-3919.yaml |
+| solar.yaml |
+| CVE-2025-47651.yaml |
+| CVE-2025-48267.yaml |
+| CVE-2025-48331.yaml |
+| CVE-2025-31643.yaml |
+| CVE-2025-32283.yaml |
+| gearside-developer-dashboard.yaml |
+| CVE-2025-31052.yaml |
+| product-quantity-for-woocommerce.yaml |
+| CVE-2025-48337.yaml |
+| CVE-2025-4420.yaml |
+| CVE-2025-4797.yaml |
+| CVE-2025-5103.yaml |
+| CVE-2025-4429.yaml |
+| CVE-2025-31059.yaml |
+| CVE-2025-32291.yaml |
+| CVE-2025-1725.yaml |
+| CVE-2025-5340.yaml |
+| CVE-2025-47601.yaml |
+| CVE-2025-47598.yaml |
+| real-time-validation-for-gravity-forms.yaml |
+| CVE-2025-49076.yaml |
+| CVE-2025-49075.yaml |
+| discount-and-dynamic-pricing.yaml |
+| CVE-2025-4671.yaml |
+| nplug.yaml |
+| wrn150.yaml |
+| nextcloudpi-panel.yaml |
+| nextcloudpi-dashboard.yaml |
+| CVE-2018-12455.yaml |

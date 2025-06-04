@@ -1,13 +1,15 @@
 id: pop3
 info:
-  name: IA MailServer pop3d
+  name: Novell GroupWise pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Windows
+    operating_system: Unix
+    product: groupwise
     rarity: 0
+    vendor: novell
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) <[\d.]+@[-\w_.]+>\r\n
+    - ^\+OK GroupWise POP3 server ready\r\n$
