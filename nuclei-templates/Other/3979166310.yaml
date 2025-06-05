@@ -1,13 +1,14 @@
 id: ftp
 info:
-  name: Infortrend EonStor DS iSCSI host ftpd
+  name: MikroTik router ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: storage-misc
-    info: 'model: $1'
+    device_type: router
+    hostname: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 IFT DS ([\w-]+) RAID FTP server ready\.\r\n
+    - ^220 (.+) FTP server \(MikroTik ([\w._-]+)\) ready\r\n

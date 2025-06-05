@@ -3,19 +3,15 @@ id: druid-console-exposure
 info:
   name: Alibaba Druid Panel - Detect
   author: pdteam
-  severity: info
+  severity: medium
   description: Alibaba Druid panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0.0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:alibaba:druid:*:*:*:*:*:*:*:*
-  metadata:
-    max-request: 1
-    product: druid
-    vendor: alibaba
   tags: panel,alibaba,druid
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}'
@@ -26,4 +22,5 @@ http:
           - 'src="/druid.js"'
           - 'href="/druid.css"'
         condition: and
-# digest: 4a0a00473045022100d4161cb16b1fa1f75f4a71ed8c2f35300ac1be66eacf7805dc92cc60896f158e0220057cafb07518bb1637590061583db933b70472dd2f94a66a1086bc19190d2194:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by md on 2022/11/11
