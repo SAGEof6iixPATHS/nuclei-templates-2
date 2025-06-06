@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: Nut/OS Demo ftpd
+  name: VxWorks ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Nut/OS
+    operating_system: VxWorks
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Nut/OS FTP ([\d.]+) beta ready at
+    - ^220 VxWorks FTP server \(VxWorks ?([\w._-]+)\) ready\.\r\n

@@ -1,17 +1,16 @@
 id: http
 info:
-  name: Serviio media server http status
+  name: Boa httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
     fallback:
     - get-request
-    product: restlet
+    product: boa
     rarity: 5
-    vendor: restlet
+    vendor: boa
     verified: true
-    version: '1.2'
 tcp:
 - name: sipoptions
   inputs:
@@ -23,4 +22,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '(?i)^HTTP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?Server: Restlet-Framework/@major-number@\.@minor-number@@release-type@@release-number@\r\n.*<p>The server has not found anything matching the request URI</p>'
+    - (?i)^HTTP/1\.0 501 Not Implemented\r\n(?:[^\r\n]+\r\n)*?\r\n<HTML><HEAD><TITLE>501 Not Implemented</TITLE></HEAD>\n<BODY><H1>501 Not Implemented</H1>\nPOST to non-script is not supported in Boa\.\n</BODY></HTML>\n

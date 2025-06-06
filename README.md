@@ -6,51 +6,41 @@
 | CVE-2002 | 1 |
 | CVE-2004 | 3 |
 | CVE-2005 | 4 |
-| CVE-2006 | 4 |
+| CVE-2006 | 5 |
 | CVE-2007 | 6 |
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
 | CVE-2010 | 123 |
-| CVE-2011 | 20 |
-| CVE-2012 | 36 |
-| CVE-2013 | 27 |
-| CVE-2014 | 54 |
-| CVE-2015 | 68 |
-| CVE-2016 | 61 |
-| CVE-2017 | 104 |
-| CVE-2018 | 273 |
-| CVE-2019 | 444 |
-| CVE-2020 | 816 |
-| CVE-2021 | 941 |
-| CVE-2022 | 924 |
-| CVE-2023 | 801 |
-| CVE-2024 | 482 |
-| CVE-2025 | 63 |
-| Other | 43045 |
-| wordpress | 83125 |
+| CVE-2011 | 22 |
+| CVE-2012 | 37 |
+| CVE-2013 | 29 |
+| CVE-2014 | 61 |
+| CVE-2015 | 67 |
+| CVE-2016 | 73 |
+| CVE-2017 | 109 |
+| CVE-2018 | 277 |
+| CVE-2019 | 455 |
+| CVE-2020 | 828 |
+| CVE-2021 | 967 |
+| CVE-2022 | 939 |
+| CVE-2023 | 808 |
+| CVE-2024 | 489 |
+| CVE-2025 | 65 |
+| Other | 49920 |
+| wordpress | 88394 |
 ## 近几天数量变化情况
-|2025-05-30 | 2025-05-31 | 2025-06-01 | 2025-06-02 | 2025-06-03 | 2025-06-04 | 2025-06-05|
+|2025-05-31 | 2025-06-01 | 2025-06-02 | 2025-06-03 | 2025-06-04 | 2025-06-05 | 2025-06-06|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|94237 | 148016 | 125052 | 109288 | 147209 | 117131 | 131462|
+|148016 | 125052 | 109288 | 147209 | 117131 | 131462 | 143719|
 ## 最近新增文件
 | templates name | 
 | --- |
-| CVE-2025-5532.yaml |
-| CVE-2025-5531.yaml |
-| CVE-2025-5482.yaml |
-| CVE-2025-5539.yaml |
-| employee-directory.yaml |
-| postgresql-dump-files.yaml |
-| global-admin-panel-unauthorized.yaml |
-| sqlite-database-files.yaml |
-| tl-wr840n_firmware.yaml |
-| verbose-error-messages.yaml |
-| debug-mode-enabled.yaml |
-| open-api-pii-exposure.yaml |
-| mw5360_firmware.yaml |
-| mssql-dump-files.yaml |
-| generic-db-backup-archives.yaml |
-| exposed-sensitive-files.yaml |
-| insecure-api-token-exposure.yaml |
-| default-admin-credentials.yaml |
-| CVE-2024-22729.yaml |
+| CVE-2025-5341.yaml |
+| wp-user-frontend-pro.yaml |
+| CVE-2025-3054.yaml |
+| CVE-2025-3055.yaml |
+| CVE-2025-5701.yaml |
+| apachespark-ui-exposed.yaml |
+| CVE-2025-5086.yaml |
+| CVE-2025-49113.yaml |
+| CVE-2018-8024.yaml |
