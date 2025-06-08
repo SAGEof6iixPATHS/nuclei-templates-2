@@ -1,13 +1,16 @@
 id: ssh
 info:
-  name: Array Networks sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    operating_system: ArrayOS
+    product: openssh
     rarity: 0
+    vendor: openbsd
+    verified: true
+    version: 3.4p1 with CMU Andrew patches
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-ArrayOS\n
+    - ^SSH-([\d.]+)-OpenSSH_3\.4\+p1\+gssapi\+OpenSSH_3\.7\.1buf_fix\+2006100301\r?\n

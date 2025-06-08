@@ -1,23 +1,24 @@
 id: smtp
 info:
-  name: Lotus Domino smtpd
+  name: FirstClass SMTP server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    product: lotus_domino
-    rarity: 8
-    vendor: ibm
+    hostname: $1
+    product: firstclass
+    rarity: 0
+    vendor: opentext
     verified: true
+    version: $2
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 .* SMTP ready at .*\r\n501 Command \"EHLO\" requires an argument\r\n
+    - ^220 ([-.\w]+) FirstClass ESMTP Mail Server v(\d[-.\w]+) ready\r\n

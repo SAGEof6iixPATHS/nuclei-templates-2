@@ -1,14 +1,12 @@
 id: telnet
 info:
-  name: AMX NetLinx telnetd
+  name: D-Link 524, DIR-300, or WBR-1310 WAP telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: media device
-    operating_system: VxWorks
+    device_type: WAP
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\r\nWelcome to NetLinx v([\d.]+) Copyright AMX '
+    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03login: '

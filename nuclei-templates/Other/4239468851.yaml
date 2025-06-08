@@ -1,17 +1,16 @@
 id: http
 info:
-  name: Allegro RomPager
+  name: Trend Micro OfficeScan
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
     fallback:
     - get-request
-    product: rompager
+    product: officescan
     rarity: 5
-    vendor: allegro
+    vendor: trend_micro
     verified: true
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -23,4 +22,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 405 Method Not Allowed\r\nAllow: GET, HEAD, POST, PUT\r\nContent-Length: 0\r\nServer: Allegro-Software-RomPager/([\d.]+)\r\n\r\n$'
+    - '^HTTP/1\.1 400 Bad Request\r\nConnection: close\r\nContent-Type: text/html; charset=UTF-8\r\nCache-Control: no-cache\r\nDate: .*\r\n\r\n<HTML><HEAD><TITLE>400 Bad Request</TITLE></HEAD>\r\n<BODY><H1>400 Bad Request</H1>\r\n</BODY></HTML>\r\n'

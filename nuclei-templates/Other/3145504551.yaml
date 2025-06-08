@@ -1,13 +1,17 @@
 id: ftp
 info:
-  name: RaidenFTPd
+  name: IBM OS/2 ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Unregistered
-    operating_system: Windows
+    hostname: $1
+    info: German
+    operating_system: OS/2
+    product: os2_ftp_server
     rarity: 0
+    vendor: ibm
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +22,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-\+----------------------\[ UNREGISTERED VERSION \]-----------------------\+\r\n220-\|   This site is running unregistered copy of RaidenFTPD ftp server   \+\r\n
+    - ^220 ([-/.+\w]+) IBM TCP/IP f\xfcr OS/2 - FTP-Server [Vv]er \d+:\d+:\d+ .* bereit\.\r\n
