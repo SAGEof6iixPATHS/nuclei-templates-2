@@ -1,11 +1,11 @@
 id: ssh
 info:
-  name: Huawei WAP sshd
+  name: BlueArc sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: WAP
+    device_type: storage-misc
     info: protocol $1
     rarity: 0
     version: $2
@@ -19,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-HUAWEI-([\d.]+)\r?\n
+    - ^SSH-([\d.]+)-BlueArcSSH_([\d.]+)\r?\n

@@ -1,13 +1,12 @@
 id: nntp
 info:
-  name: NNTPCache
+  name: WendzelNNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^20\d ([\w.-_]+) NNTPCache server V([\d.]+) \[see www\.nntpcache\.org\]
+    - ^200 WendzelNNTPd-OSE \(Open Source Edition\) ([\w._-]+) '\w+'  - \([^)]+\) ready \(posting ok\)\.\r\n
