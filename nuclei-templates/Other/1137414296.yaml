@@ -1,10 +1,11 @@
 id: ftp-proxy
 info:
-  name: Sidewinder FTP proxy
+  name: AVM KEN! ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - (?i)^220-\r\x0a220-Sidewinder ftp proxy
+    - ^220 ([\w._-]+), KEN! FTP-Gateway\r\n

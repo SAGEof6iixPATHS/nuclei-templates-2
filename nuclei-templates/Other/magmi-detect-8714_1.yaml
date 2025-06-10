@@ -1,9 +1,10 @@
 id: magmi-detect
+
 info:
-  name: MAGMI (Magento Mass Importer) Plugin Detect
-  author: dwisiswant0
-  severity: info
-  tags: magento,magmi
+  name: "MAGMI (Magento Mass Importer) Plugin Detect"
+  author: "dwisiswant0"
+  severity: "info"
+
 requests:
   - method: GET
     path:
