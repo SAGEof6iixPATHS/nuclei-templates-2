@@ -5,13 +5,14 @@ info:
   author: SirBugs
   severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/server-status"
       - "{{BaseURL}}/server-status?full"
       - "{{BaseURL}}/server-info"
-    matchers-condition: and
+
+    stop-at-first-match: true
     matchers:
       - type: word
         words:

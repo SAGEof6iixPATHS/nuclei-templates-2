@@ -4,7 +4,7 @@ info:
   name: Mantis portal detection
   author: makyotox
   severity: info
-  tags: panel,mantis
+ 
 
 requests:
   - method: GET

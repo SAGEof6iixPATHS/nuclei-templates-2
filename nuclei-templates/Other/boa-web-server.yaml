@@ -12,10 +12,13 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:boa:boa:*:*:*:*:*:*:*:*
   metadata:
-    shodan-query: "Server: Boa/"
     verified: true
     max-request: 1
+    shodan-query: "Server: Boa/"
+    product: boa
+    vendor: boa
   tags: boa,tech
 
 http:
@@ -35,4 +38,4 @@ http:
         part: header
         kval:
           - Server
-# digest: 4a0a0047304502202169ec1f1b72425327554db7f1a270b4560a3e56b3f12e0cde1f693f8031958702210083f4edf96fefff0f4aaa15cc8b8070c70f6d8fe222ecb2b68da0734125597713:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100ab7cab58156492599bfaf72377d34eb2f86a5e998e045c0a6261e46b0ad1d508022100a20c9500e34f1c72e13ebafea9d105ff0f4ffdc9c5d8be84a6408aa65129c653:922c64590222798bb761d5b6d8e72950

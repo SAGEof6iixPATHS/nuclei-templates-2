@@ -1,15 +1,13 @@
 id: pop3pw
 info:
-  name: Mercur pop3pw
+  name: Stalker Mail Server password change daemon
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: mercur
+    operating_system: Mac OS
     rarity: 0
-    vendor: atrium
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 MERCUR Password service for Windows NT ready\r\n
+    - ^200 Stalker Internet Password Server ready\. V\.([\w.]+)\r\n

@@ -3,7 +3,7 @@ info:
   name: Seeddms-
   author: pussycat0x
   severity: info
-  tags: tech
+ 
 requests:
   - method: GET
     path:

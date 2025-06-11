@@ -4,9 +4,9 @@ info:
   name: Apache Hbase Unauth
   author: pikpikcu
   severity: medium
-  tags: apache,unauth,misconfig
+ 
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}/conf'

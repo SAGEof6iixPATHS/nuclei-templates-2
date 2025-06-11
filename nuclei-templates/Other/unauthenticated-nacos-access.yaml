@@ -5,7 +5,7 @@ info:
   author: taielab,pikpikcu
   severity: critical
   reference: https://github.com/alibaba/nacos/issues/4593
-  tags: nacos,unauth
+ 
 
 requests:
   - method: GET

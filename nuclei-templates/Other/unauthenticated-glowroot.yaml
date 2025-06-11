@@ -5,9 +5,8 @@ info:
   author: pussycat0x
   severity: high
   description: Anonymous user access allows to understand the host internals
-  metadata:
-    shodan-query: http.title:"Glowroot"
-  tags: misconfig,unauth,glowroot
+  reference: https://www.shodan.io/search?query=http.title%3A%22Glowroot%22
+ 
 
 requests:
   - method: GET

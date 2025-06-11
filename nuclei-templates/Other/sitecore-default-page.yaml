@@ -6,7 +6,7 @@ info:
   severity: info
   metadata:
     shodan-query: http.title:"Welcome to Sitecore"
-  tags: tech,sitecore
+ 
 
 requests:
   - method: GET

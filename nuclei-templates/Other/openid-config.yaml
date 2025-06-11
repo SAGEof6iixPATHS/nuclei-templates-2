@@ -1,14 +1,15 @@
 id: openid-config
 info:
-  name: "OpenID Connect Configuration Check"
+  name: OpenID Connect Configuration Check
   author: SirBugs
   severity: low
   description: "Checks for OpenID Connect configuration endpoints in /.well-known/openid-configuration."
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.well-known/openid-configuration"
+
     matchers:
       - type: word
         words:

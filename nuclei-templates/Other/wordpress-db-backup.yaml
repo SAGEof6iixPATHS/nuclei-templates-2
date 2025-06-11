@@ -4,6 +4,7 @@ info:
   name: WordPress DB Backup
   author: dwisiswant0
   severity: medium
+ 
 
 requests:
   - method: GET

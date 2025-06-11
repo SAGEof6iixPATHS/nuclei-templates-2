@@ -4,7 +4,7 @@ info:
   name: campaignmonitor takeover detection
   author: pdteam
   severity: high
-  tags: takeover
+ 
   reference: https://github.com/EdOverflow/can-i-take-over-xyz
 
 requests:

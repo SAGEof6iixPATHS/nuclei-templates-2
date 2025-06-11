@@ -5,7 +5,7 @@ info:
   author: dhiyaneshDk
   severity: low
   reference: https://medium.com/@heinjame/office365-open-redirect-from-autodiscover-64284d26c168
-  tags: redirect,office365,microsoft
+ 
 
 requests:
   - method: GET

@@ -5,7 +5,7 @@ info:
   author: dhiyaneshDK
   severity: info
   reference: https://www.exploit-db.com/ghdb/7448
-  tags: iot
+ 
   metadata:
     shodan-query: 'http.title:"webcamXP 5"'
 

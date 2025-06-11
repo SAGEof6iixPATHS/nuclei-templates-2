@@ -4,7 +4,7 @@ info:
   name: VoipMonitor detect
   author: Yanyun
   severity: info
-  tags: tech,voipmonitor
+ 
 
 requests:
   - method: GET

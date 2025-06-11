@@ -4,7 +4,7 @@ info:
   name: Lansweeper Login
   author: divya_mudgal
   severity: info
-  tags: lansweeper,tech,panel
+ 
 
 requests:
   - method: GET

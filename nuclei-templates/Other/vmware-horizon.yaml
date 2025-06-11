@@ -4,7 +4,7 @@ info:
   name: VMware Horizon
   author: pdteam
   severity: info
-  tags: vmware,horizon
+ 
 
 requests:
   - method: GET
