@@ -5,7 +5,6 @@ info:
   author: daffainfo
   severity: low
   reference: https://www.bitkeeper.org/man/config-etc.html
- 
 
 requests:
   - method: GET
