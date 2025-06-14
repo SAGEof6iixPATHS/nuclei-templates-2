@@ -1,11 +1,13 @@
 id: smtp
 info:
-  name: DavMail smtpd
+  name: WebEasyMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220 DavMail SMTP ready at '
+    - ^220 ESMTP on WebEasyMail \[([\d.]+)\] ready\.  http://www\.51webmail\.com\r\n

@@ -1,12 +1,13 @@
 id: telnet
 info:
-  name: Vina Technologies $1 telnetd
+  name: PC Telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\*\*\*\*\*\*\* System Image Boot \*\*\*\*\*\*\*\n\r\n\rVina Technologies (.*) \((\d[-.\w]+ build \d+)\)\n\r
+    - '^PC Telnetd ([\d.]+)\r\n\r\nlogin: '

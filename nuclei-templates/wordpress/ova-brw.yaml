@@ -1,15 +1,15 @@
-id: ova-brw
+id: ova-brw-8761c81f29e814b03ba9c9a13ed18191
 
 info:
   name: >
-    BRW <= 1.8.6 - Authenticated (Contributor+) Local File Inclusion
+    BRW <= 1.8.6 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f7a32e2-d481-4b2b-bfad-8748f15140bb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/399b0bb0-37e1-4207-b3f5-2ded33c3d967?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
