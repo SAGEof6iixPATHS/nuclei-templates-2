@@ -1,14 +1,14 @@
 id: imap
 info:
-  name: SurgeMail imapd
+  name: Cyrus imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
-    product: surgemail
+    product: cyrus_imap_server
     rarity: 0
-    vendor: netwin
+    vendor: cmu
     verified: true
     version: $2
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAP ([-\w_.]+) \(Version ([-\w.]+)\)\r\n
+    - ^\* OK (?:\[CAPABILITY IMAP4[^\]]*?\] )?([-.\w]+) Cyrus IMAP4? v([-.\w\+]+) server ready\r\n

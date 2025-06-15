@@ -1,16 +1,12 @@
 id: ssh
 info:
-  name: Akamai SSH
+  name: AirTight WIPS sensor sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
-    product: ssh
+    info: protocol 2.0
     rarity: 0
-    vendor: akamai
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-(\d[\d.]*)-(Server-V)\r?\n$
+    - ^SSH-2\.0-Server\r\n
