@@ -1,12 +1,15 @@
 id: smtp
 info:
-  name: Sun sims smtpd
+  name: MailEnable smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    product: mailenable
     rarity: 0
+    vendor: mailenable
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -18,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 (\S+).*?SMTP \(Sun Internet Mail Server sims.(\d[^\)]+)\)
+    - '^220 ([\w._-]+)\.\* ESMTP MailEnable Service, Version: ([\w._-]+)-- ready at \d\d/\d\d/\d\d \d\d:\d\d:\d\d\r\n'
