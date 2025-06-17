@@ -1,12 +1,12 @@
 id: ftp
 info:
-  name: Blackjumbodog FTPd
+  name: Gene6 ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 .*BlackJumboDog Version ([^ ]+)
+    - ^220 .* by G6 FTP Server ready \.\.\.\r\n

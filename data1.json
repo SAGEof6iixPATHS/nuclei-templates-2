@@ -154400,5 +154400,13 @@
     "CVE-2025-27134.yaml": "2025-06-16 03:14:20",
     "CVE-2022-45699.yaml": "2025-06-16 03:14:20",
     "CVE-2024-36858.yaml": "2025-06-16 03:14:20",
-    "pieregister-plugin-open-redirect_1.yaml": "2025-06-16 03:14:20"
+    "pieregister-plugin-open-redirect_1.yaml": "2025-06-16 03:14:20",
+    "ssh-gssapiauthentication-disabled.yaml": "2025-06-17 03:08:52",
+    "jenkins-default_3.yaml": "2025-06-17 03:08:52",
+    "fortinetPrecheck.yaml": "2025-06-17 03:08:52",
+    "motive-eim-panel.yaml": "2025-06-17 03:08:52",
+    "github-phish_3.yaml": "2025-06-17 03:08:52",
+    "bestbuy-phish_3.yaml": "2025-06-17 03:08:52",
+    "hp-printer-default-login.yaml": "2025-06-17 03:08:52",
+    "beyondtrust-remotesupport-panel.yaml": "2025-06-17 03:08:52"
 }
