@@ -1,12 +1,10 @@
 id: ftp
 info:
-  name: Dumb FTP Server (dftpd)
+  name: D-Link/Comtrend DSL modem ftp firmware update
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: phone
-    operating_system: Symbian
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-Welcome to the S60 Dumb FTP Server \(dftpd\)\r\n
+    - ^220 Ftp firmware update utility\r\n

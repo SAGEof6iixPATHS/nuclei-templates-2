@@ -1,13 +1,16 @@
 id: telnet
 info:
-  name: Netgear DM111 broadband router telnetd
+  name: Cisco ASA firewall telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: broadband router
+    device_type: firewall
+    operating_system: IOS
+    product: telnet
     rarity: 0
-    version: $1
+    vendor: cisco
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03Netgear DM111 ADSL2\+ Modem \r\nSoftware Version: ([-\w_.]+)\r\nLogin name:'
+    - '(?i)^\xff\xfb\x03\xff\xfb\x01\xff\xfb\x03\xff\xfb\x01.*\r\n\r\nUser Access Verification\r\n\r\n\xff\xfd\x18Username: '

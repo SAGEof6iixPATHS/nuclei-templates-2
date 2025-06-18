@@ -18,28 +18,47 @@
 | CVE-2015 | 72 |
 | CVE-2016 | 74 |
 | CVE-2017 | 110 |
-| CVE-2018 | 280 |
+| CVE-2018 | 281 |
 | CVE-2019 | 459 |
-| CVE-2020 | 835 |
+| CVE-2020 | 834 |
 | CVE-2021 | 977 |
-| CVE-2022 | 944 |
-| CVE-2023 | 814 |
-| CVE-2024 | 500 |
-| CVE-2025 | 72 |
-| Other | 54530 |
-| wordpress | 90390 |
+| CVE-2022 | 943 |
+| CVE-2023 | 813 |
+| CVE-2024 | 499 |
+| CVE-2025 | 73 |
+| Other | 54374 |
+| wordpress | 90391 |
 ## 近几天数量变化情况
-|2025-06-11 | 2025-06-12 | 2025-06-13 | 2025-06-14 | 2025-06-15 | 2025-06-16 | 2025-06-17|
+|2025-06-12 | 2025-06-13 | 2025-06-14 | 2025-06-15 | 2025-06-16 | 2025-06-17 | 2025-06-18|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|148735 | 149602 | 149915 | 149600 | 149962 | 150350 | 150389|
+|149602 | 149915 | 149600 | 149962 | 150350 | 150389 | 150232|
 ## 最近新增文件
 | templates name | 
 | --- |
-| ssh-gssapiauthentication-disabled.yaml |
-| jenkins-default_3.yaml |
-| fortinetPrecheck.yaml |
-| motive-eim-panel.yaml |
-| github-phish_3.yaml |
-| bestbuy-phish_3.yaml |
-| hp-printer-default-login.yaml |
-| beyondtrust-remotesupport-panel.yaml |
+| nvrmini_firmware.yaml |
+| discord-invite-detect.yaml |
+| photoprism-default-login.yaml |
+| opensearch-dashboard-unauth.yaml |
+| nuuo-nvr-default-login.yaml |
+| photoprism-unauth.yaml |
+| unigui-server-monitor-exposure_4.yaml |
+| teleport-login-panel.yaml |
+| opensearch-dashboard-panel.yaml |
+| cryptshare-detect.yaml |
+| k8s-role-pod-create.yaml |
+| cicd-config-disclosure.yaml |
+| dahua-icc-getclassvalue-rce.yaml |
+| geoserver-wfs-detect.yaml |
+| dom-xss-complete-source-sink.yaml |
+| myq-panel.yaml |
+| opensearch-default-login.yaml |
+| CVE-2025-30220.yaml |
+| CVE-2018-14933.yaml |
+| CVE-2025-3774.yaml |
+| CVE-2025-5291.yaml |
+| CVE-2025-4775.yaml |
+| CVE-2025-5673.yaml |
+| CVE-2025-3880.yaml |
+| CVE-2025-5700.yaml |
+| CVE-2025-3515.yaml |
+| simple-logo-carousel.yaml |
