@@ -20,45 +20,81 @@
 | CVE-2017 | 110 |
 | CVE-2018 | 281 |
 | CVE-2019 | 459 |
-| CVE-2020 | 834 |
+| CVE-2020 | 835 |
 | CVE-2021 | 977 |
 | CVE-2022 | 943 |
-| CVE-2023 | 813 |
-| CVE-2024 | 499 |
-| CVE-2025 | 73 |
-| Other | 54374 |
-| wordpress | 90391 |
+| CVE-2023 | 814 |
+| CVE-2024 | 500 |
+| CVE-2025 | 78 |
+| Other | 54507 |
+| wordpress | 90455 |
 ## 近几天数量变化情况
-|2025-06-12 | 2025-06-13 | 2025-06-14 | 2025-06-15 | 2025-06-16 | 2025-06-17 | 2025-06-18|
+|2025-06-13 | 2025-06-14 | 2025-06-15 | 2025-06-16 | 2025-06-17 | 2025-06-18 | 2025-06-19|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|149602 | 149915 | 149600 | 149962 | 150350 | 150389 | 150232|
+|149915 | 149600 | 149962 | 150350 | 150389 | 150232 | 150437|
 ## 最近新增文件
 | templates name | 
 | --- |
-| nvrmini_firmware.yaml |
-| discord-invite-detect.yaml |
-| photoprism-default-login.yaml |
-| opensearch-dashboard-unauth.yaml |
-| nuuo-nvr-default-login.yaml |
-| photoprism-unauth.yaml |
-| unigui-server-monitor-exposure_4.yaml |
-| teleport-login-panel.yaml |
-| opensearch-dashboard-panel.yaml |
-| cryptshare-detect.yaml |
-| k8s-role-pod-create.yaml |
-| cicd-config-disclosure.yaml |
-| dahua-icc-getclassvalue-rce.yaml |
-| geoserver-wfs-detect.yaml |
-| dom-xss-complete-source-sink.yaml |
-| myq-panel.yaml |
-| opensearch-default-login.yaml |
-| CVE-2025-30220.yaml |
-| CVE-2018-14933.yaml |
-| CVE-2025-3774.yaml |
-| CVE-2025-5291.yaml |
-| CVE-2025-4775.yaml |
-| CVE-2025-5673.yaml |
-| CVE-2025-3880.yaml |
-| CVE-2025-5700.yaml |
-| CVE-2025-3515.yaml |
-| simple-logo-carousel.yaml |
+| greatpages-takeover.yaml |
+| CVE-2025-5569.yaml |
+| CVE-2025-3415.yaml |
+| CVE-2025-44148.yaml |
+| CVE-2025-45854.yaml |
+| CVE-2025-47423.yaml |
+| CVE-2025-49880.yaml |
+| CVE-2025-46494.yaml |
+| CVE-2025-49858.yaml |
+| CVE-2025-49878.yaml |
+| CVE-2025-49444.yaml |
+| reformer-elementor.yaml |
+| CVE-2025-47561.yaml |
+| CVE-2025-47559.yaml |
+| CVE-2025-49860.yaml |
+| CVE-2025-49881.yaml |
+| wp-tao.yaml |
+| CVE-2025-49862.yaml |
+| CVE-2025-4413.yaml |
+| CVE-2025-49265.yaml |
+| CVE-2025-49859.yaml |
+| CVE-2025-32510.yaml |
+| CVE-2025-1562.yaml |
+| CVE-2025-5237.yaml |
+| wpecounter.yaml |
+| CVE-2025-49872.yaml |
+| CVE-2025-49864.yaml |
+| CVE-2025-49871.yaml |
+| lbg-audio11-html5-shoutcast_history.yaml |
+| CVE-2025-6086.yaml |
+| CVE-2025-49857.yaml |
+| CVE-2025-3581.yaml |
+| CVE-2025-49861.yaml |
+| CVE-2025-49882.yaml |
+| CVE-2025-39508.yaml |
+| CVE-2025-49266.yaml |
+| CVE-2025-49855.yaml |
+| CVE-2025-31635.yaml |
+| CVE-2025-47452.yaml |
+| fw-gallery.yaml |
+| CVE-2025-4652.yaml |
+| flozen-theme.yaml |
+| CVE-2025-49071.yaml |
+| CVE-2025-48333.yaml |
+| CVE-2025-49447.yaml |
+| CVE-2025-4954.yaml |
+| CVE-2025-49875.yaml |
+| CVE-2025-49874.yaml |
+| widgetkit-pro.yaml |
+| CVE-2025-6220.yaml |
+| fw-food-menu.yaml |
+| axle-demo-importer.yaml |
+| ova-events-manager.yaml |
+| CVE-2025-49415.yaml |
+| advanced-settings.yaml |
+| CVE-2025-48145.yaml |
+| CVE-2025-49856.yaml |
+| aeroscroll-gallery.yaml |
+| csv-me.yaml |
+| CVE-2025-49451.yaml |
+| CVE-2025-49865.yaml |
+| CVE-2025-49863.yaml |
+| CVE-2025-30988.yaml |
