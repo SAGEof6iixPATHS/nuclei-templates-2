@@ -1,16 +1,12 @@
 id: smtp
 info:
-  name: Sun iPlanet smtpd
+  name: MailMasher smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    product: iplanet_messaging_server
     rarity: 0
-    vendor: sun
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220[-\s](\S+).*?Server ESMTP \(iPlanet Messaging Server (\d[^\(\)]+)
+    - ^220 ([-.+\w]+) ESMTP MailMasher ready to boogie\r\n

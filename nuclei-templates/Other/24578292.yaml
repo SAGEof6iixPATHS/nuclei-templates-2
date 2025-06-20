@@ -1,12 +1,15 @@
 id: pop3
 info:
-  name: SeattleLab SLMail pop3d
+  name: Zimbra pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    product: zimbra_collaboration_suite
     rarity: 0
+    vendor: zimbra
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Welcome to the SLnet POP3 Service\r\n
+    - ^\+OK ([\w._-]+) (?:POP3 Service )?Zimbra POP3 server ready\r\n
