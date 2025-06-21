@@ -1,13 +1,15 @@
 id: imap
 info:
-  name: IMAPMax
+  name: Lotus Domino secure imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: SSL redirect
+    product: lotus_domino
     rarity: 0
-    version: $1
+    vendor: ibm
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAP4rev1 SmartMax IMAPMax (\d+) Ready\r\n
+    - ^\* BYE Hi This is the IMAP SSL Redirect\r\n

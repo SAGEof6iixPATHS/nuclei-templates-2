@@ -1,14 +1,12 @@
 id: telnet
 info:
-  name: Sun X4100 telnetd
+  name: HP Scanjet N6350 telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: terminal server
-    hostname: $4
+    device_type: specialized
     rarity: 0
-    version: $1.$2.$3
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\xff\xfb\x03\xff\xfd\x03\r\n\r\n\r\nWelcome to X4100 version V\.([-\w_.]+) Rev\. (\d+) \(Patch (\d+)\) from [\d/]+ [\d:]+\r\nsystemname is ([-\w_.]+),
+    - '^\xff\xfd\x01\xff\xfd\x1f\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\r\n\x1b\[\?3l\x1b\[2JPlease enter your user name and password!! \r\n\r\nLogin:'

@@ -1,15 +1,11 @@
 id: smtp
 info:
-  name: Postfix smtpd
+  name: jMailer smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    product: postfix
     rarity: 0
-    vendor: postfix
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +16,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^(?:220-.*\r\n)?220 ([\w._-]+) ESMTP Postfix
+    - ^220 jMailer SMTP Server\r\n$
