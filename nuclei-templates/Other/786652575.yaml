@@ -1,14 +1,12 @@
 id: pop3
 info:
-  name: Dovecot MUA pop3d
+  name: SeattleLab SLMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: dovecot
+    operating_system: Windows
     rarity: 0
-    vendor: dovecot
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK dovecot MUA ready\r\n
+    - ^\+OK Welcome to the SLnet POP3 Service\r\n

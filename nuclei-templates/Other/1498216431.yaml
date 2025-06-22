@@ -1,16 +1,12 @@
 id: ftp
 info:
-  name: vsftpd
+  name: Crob FTPd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Access denied
-    operating_system: Unix
-    product: vsftpd
     rarity: 0
-    vendor: vsftpd
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - '^500 OOPS: vsftpd: both local and anonymous access disabled!\r\n'
+    - ^220[- ] ?[Cc]rob FTP [Ss]erver [Vv]?([-.\d\w]+)
