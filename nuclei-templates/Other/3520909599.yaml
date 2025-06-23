@@ -1,13 +1,12 @@
 id: pop3
 info:
-  name: MailMax PopMax pop3d
+  name: Scalix pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK [-\w_.]+ PopMax version ([\d. ]+) POP3 Mail Server Ready, Willing, and Waiting\r\n
+    - '^\+OK Scalix POP3 interface ready on: ([-\w_.]+)\r\n'

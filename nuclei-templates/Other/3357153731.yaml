@@ -1,15 +1,12 @@
 id: imap
 info:
-  name: DBMail imapd
+  name: ArGoSoft imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: imapd version may differ from overal dbmail version number
-    product: dbmail
+    operating_system: Windows
     rarity: 0
-    vendor: paul_j_stevens
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -21,4 +18,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK dbmail imap \(protocol version 4r1\) server (\d[-.\w]+) ready to run\r\n
+    - '^\* OK ArGoSoft Mail Server IMAP Module v\.([\w._-]+) at '
