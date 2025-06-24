@@ -5,12 +5,11 @@ info:
   tags: detect,tech,postgresql,service
   severity: info
   metadata:
-    operating_system: Windows
     product: postgresql
     rarity: 4
     vendor: postgresql
     verified: true
-    version: 13.2 - 13.4
+    version: 10.15 - 10.18
 tcp:
 - name: smbprog-neg
   inputs:
@@ -22,4 +21,4 @@ tcp:
   - name: postgresql
     type: regex
     regex:
-    - (?i)^E\0\0\0.S[^\0]+\0VFATAL\0C0A000\0M.*?65363\.19778.*\0F\.\\src\\backend\\postmaster\\postmaster\.c\0L2109\0RProcessStartupPacket\0\0$
+    - (?i)^E\0\0\0.S[^\0]+\0VFATAL\0C0A000\0M.*?65363\.19778.*\0Fpostmaster\.c\0L2086\0RProcessStartupPacket\0\0$

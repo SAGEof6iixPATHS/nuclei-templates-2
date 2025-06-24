@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: BolinTech Dream FTP Server
+  name: EFI Fiery ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: print server
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220- \*+\r\n220- \r\n220-      Welcome to Dream FTP Server\r\n220-      Copyright 2002 - 2004\r\n220-      BolinTech Inc\.\r\n
+    - ^220 EFI FTP Print server ready\.\r\n

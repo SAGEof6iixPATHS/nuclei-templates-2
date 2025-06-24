@@ -1,17 +1,14 @@
 id: smtp
 info:
-  name: MailEnable Enterprise smptd
+  name: Symantec Messaging Gateway smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Windows
-    product: mailenable
+    product: messaging_gateway
     rarity: 0
-    vendor: mailenable
+    vendor: symantec
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220 ([-.+\w]+) ESMTP MailEnable Service, Version: \d+--([\d.]+) ready at'
+    - '^554 5\.7\.1 <unknown\[[\w.]+\]>: Client host rejected: Access denied\r\n'

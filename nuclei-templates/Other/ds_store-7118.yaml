@@ -1,17 +1,20 @@
-id: npm-log-file
+id: ds-store-file
+
 info:
-  name: Publicly accessible NPM Log file
-  author: sheikhrishad
-  severity: low
-  tags: npm,logs,exposure
+  name: Directory Listing via DS_Store
+  author: 0w4ys
+  severity: info
+  tags: exposure
+
 requests:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
     attack: sniper
     threads: 100
+
     raw:
       - |
-        GET /npm-debug.log HTTP/1.1
+        GET /.DS_Store HTTP/1.1
         Host: {{Subdomains}}
         User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
         Accept-Encoding: gzip, deflate
@@ -20,7 +23,15 @@ requests:
     matchers:
       - type: word
         words:
-          - "info it worked if it ends with ok"
+          - "\x00@\x00"
+
       - type: status
         status:
           - 200
+
+      - type: word
+        words:
+          - "Accept-Ranges: bytes"
+          - "octet-stream"
+        condition: or
+        part: header
