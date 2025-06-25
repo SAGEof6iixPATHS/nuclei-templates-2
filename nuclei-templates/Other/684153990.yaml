@@ -1,12 +1,15 @@
 id: smtp
 info:
-  name: PSCS VPOP3 mail server
+  name: Trend Micro InterScan
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
+    hostname: $2
+    info: on Microsoft ESMTP $3
+    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) VPOP3 SMTP Server Ready\r\n
+    - '^220-InterScan Version (\S+) .*Ready\r\n220 ([-.+\w]+) Microsoft ESMTP MAIL Service, Version: ([\d.]+) ready at'
