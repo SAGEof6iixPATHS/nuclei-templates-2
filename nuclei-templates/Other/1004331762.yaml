@@ -1,15 +1,12 @@
 id: smtp
 info:
-  name: Kerio Connect smtpd
+  name: Oracle smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    product: connect
     rarity: 0
-    vendor: kerio
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -21,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) Kerio Connect ([\w._ -]+) ESMTP ready\r\n
+    - ^220 ([-\w_.]+) ESMTP Oracle Email Server SMTP Inbound Server\t([\d.]+) \t  Ready\r\n

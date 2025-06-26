@@ -1,14 +1,12 @@
 id: ftp
 info:
-  name: Sambar ftpd
+  name: EFI Fiery ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: sambar_server
+    device_type: print server
     rarity: 0
-    vendor: sambar
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-FTP Server ready\r\n220-Use USER user@host for native FTP proxy\r\n220 Your FTP Session will expire after 300 seconds of inactivity\.\r\n
+    - ^220 EFI FTP Print server ready\.\r\n

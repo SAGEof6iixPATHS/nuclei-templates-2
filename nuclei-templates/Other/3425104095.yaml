@@ -1,12 +1,12 @@
 id: telnet
 info:
-  name: Alteon Networks ACEDirector switch telnetd
+  name: Floosietek FTgate telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfd\x03\xff\xfb\x03\r\nEnter password: '
+    - '^S: FTGate [\w._-]+ \[Build ([\w._-]+) .*\]\n\r'
