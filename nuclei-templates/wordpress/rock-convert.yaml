@@ -1,15 +1,15 @@
-id: rock-convert-fc6af17090eb5aa4a2dcb25be9ce7cbb
+id: rock-convert
 
 info:
   name: >
-    Rock Convert <= 2.10.2 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Rock Convert <= 2.11.0 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8dbaed2a-cc35-455c-ad7e-c7826d5b3e7f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c29cb99f-72e9-4178-b961-7ab50a5b6c7d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.10.2')
+          - compare_versions(version, '<= 2.11.0')

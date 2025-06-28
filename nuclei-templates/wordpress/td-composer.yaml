@@ -1,15 +1,14 @@
-id: td-composer-295cde02828d9d45536ca632d0ddbdda
+id: td-composer
 
 info:
   name: >
-    tagDiv Composer <= 5.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via Multiple Shortcodes
+    tagDiv Composer <= 4.1 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2bd6b66d-f33e-4287-850b-a199de72f6ad?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3861f675-1a26-4947-91ef-8ab04646704f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.4')
+          - compare_versions(version, '<= 4.1')

@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   severity: info
   reference: https://developer.accuweather.com/apis
- 
+  tags: token-spray,accuweather
 
 self-contained: true
 requests:

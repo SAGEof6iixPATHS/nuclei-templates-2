@@ -5,7 +5,7 @@ info:
   author: dwisiswant0
   severity: info
   reference: https://docs.netlify.com/api/get-started/
- 
+  tags: token-spray,netlify
 
 self-contained: true
 requests:

@@ -1,15 +1,14 @@
-id: kadence-woocommerce-email-designer-08ee62c5198ddbcd412e18a648d1e554
+id: kadence-woocommerce-email-designer
 
 info:
   name: >
-    Kadence WooCommerce Email Designer <= 1.5.14 - Authenticated (Admin+) Arbitrary File Upload
+    Kadence WooCommerce Email Designer <= 1.5.11 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/463d0ecd-408c-4ccf-9f2c-8bff3deca213?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b8483b8-07b4-436f-992f-35e16fef867b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/kadence-woocommerce-email-designer/"
     google-query: inurl:"/wp-content/plugins/kadence-woocommerce-email-designer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,kadence-woocommerce-email-designer,low
+  tags: cve,wordpress,wp-plugin,kadence-woocommerce-email-designer,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.14')
+          - compare_versions(version, '<= 1.5.11')

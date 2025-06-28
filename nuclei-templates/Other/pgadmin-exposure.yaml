@@ -1,9 +1,10 @@
 id: pgadmin-exposure
+
 info:
   name: PostgreSQL - pgAdmin Dasboard Exposure
   author: princechaddha
   severity: info
- 
+  tags: unauth,pgadmin,postgres,panel
 
 requests:
   - method: GET

@@ -1,15 +1,14 @@
-id: sparkling-859cab2d9d2a47e67527eb02b24be5f3
+id: sparkling
 
 info:
   name: >
-    Sparkling <= 2.4.9 - Missing Authorization to Unauthenticated Arbitrary Plugin Activation/Deactivation
+    Epsilon Framework Themes (Various Versions) - Function Injection
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1fa8dba0-0227-428d-a6de-c4247c40e481?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b75c322-539d-44e9-8f26-5ff929874b67?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/themes/sparkling/"
     google-query: inurl:"/wp-content/themes/sparkling/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,sparkling,high
+  tags: cve,wordpress,wp-theme,sparkling,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.9')
+          - compare_versions(version, '<= 2.4.8')

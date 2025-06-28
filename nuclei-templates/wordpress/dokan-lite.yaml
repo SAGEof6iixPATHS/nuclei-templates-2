@@ -1,15 +1,15 @@
-id: dokan-lite-9c9fa005b03a174bb27dd2d88665a4e8
+id: dokan-lite
 
 info:
   name: >
-    Dokan <=3.7.19 - Authenticated(Shop Manager+) PHP Object Injection via create_dummy_vendor
+    Dokan <= 3.6.3 - Authenticated (Vendor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1597859c-2808-4e0f-aa8d-4e2727728e22?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2da02a0e-4bc5-4dc6-b46e-7e74e0eb36dd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.7.20')
+          - compare_versions(version, '<= 3.6.3')

@@ -4,7 +4,7 @@ info:
   name: MinIO Console
   author: pussycat0x
   severity: info
- 
+  tags: panel,minio
   metadata:
     fofa-query: app="MinIO-Console"
     shodan-query: title:"MinIO Console"

@@ -1,15 +1,14 @@
-id: interactive-3d-flipbook-powered-physics-engine-3487d21b9aaa5f52ddc512c6f0cee555
+id: interactive-3d-flipbook-powered-physics-engine
 
 info:
   name: >
-    3D FlipBook - Lite Edition <= 1.16.15 - Authenticated (Contributor+) Stored Cross-Site Scripting via style and mode Parameters
+    3D FlipBook – PDF Flipbook WordPress <= 1.15.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via Bookmarks
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/72b76475-5215-47fd-badf-e2c542b25d4b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/807eadff-b39e-4d7a-9b0a-06fc18a90626?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.16.15')
+          - compare_versions(version, '<= 1.15.3')

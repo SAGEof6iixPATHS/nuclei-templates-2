@@ -4,7 +4,12 @@ info:
   name: Teradici PCoIP Detection
   author: pdteam
   severity: info
- 
+  description: Teradici PColP was detected.
+  reference:
+    - https://www.teradici.com/
+  classification:
+    cwe-id: CWE-200
+  tags: tech,pcoip
 
 requests:
   - method: GET
@@ -21,3 +26,5 @@ requests:
         group: 1
         regex:
           - 'PCoIP Connection Manager\/([0-9.]+)\.'
+
+# Enhanced by mp on 2022/03/24

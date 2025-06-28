@@ -4,8 +4,9 @@ info:
   name: FatPipe IPVPN® Panel Detect
   author: dwisiswant0
   severity: info
-  reference: https://www.fatpipeinc.com/products/index.php
- 
+  reference:
+    - https://www.fatpipeinc.com/products/index.php
+  tags: panel,ipvpn,fatpipe
 
 requests:
   - method: GET

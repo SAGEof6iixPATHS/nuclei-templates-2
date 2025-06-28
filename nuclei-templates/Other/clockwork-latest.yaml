@@ -3,7 +3,7 @@ id: check-clockwork-latest
 info:
   name: Check for /__clockwork/latest
   author: SirBugs
-  severity: high
+  severity: info
   reference: https://example.com/reference
   tags: leaks, information, clockwork, latest
 
@@ -14,8 +14,8 @@ http:
 
     matchers:
       - type: word
-        part: body
         words:
           - "\"headers\":"
           - "\"uri\":"
         condition: and
+        part: body

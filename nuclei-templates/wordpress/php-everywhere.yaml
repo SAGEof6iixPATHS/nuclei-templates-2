@@ -1,15 +1,15 @@
-id: php-everywhere-547d207883318ac23ca7067a18227333
+id: php-everywhere
 
 info:
   name: >
-    PHP Everywhere <= 2.0.3 - Remote Code Execution by Contributor+ users via gutenberg block
+    PHP Everywhere <= 2.0.3 - Remote Code Execution by Subscriber+ users via shortcode
   author: topscoder
   severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7aa62be9-93b9-423f-89f8-809ca0035547?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d33467d4-aabd-4030-ba10-68e2460b2ed2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

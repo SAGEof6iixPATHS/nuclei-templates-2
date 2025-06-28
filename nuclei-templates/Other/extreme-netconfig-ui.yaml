@@ -1,11 +1,12 @@
 id: extreme-netconfig-ui
+
 info:
   name: Extreme NetConfig UI
   author: pussycat0x
   severity: info
   metadata:
     shodan-dork: 'http.title:"Extreme NetConfig UI"'
- 
+  tags: panel,tech,hiveos,extreme
 
 requests:
   - method: GET

@@ -1,15 +1,15 @@
-id: slider-wd-6d1defd71e3879f050f2beece2fd7283
+id: slider-wd
 
 info:
   name: >
-    Slider by 10Web – Responsive Image Slider <= 1.2.57 - Authenticated (Contributor+) SQL Injection via id Parameter
+    Slider by 10Web – Responsive Image Slider <= 1.2.54 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74d635b6-2b4a-49af-af5c-6bfa1b5d220e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d24c65b6-20da-4f17-be9f-b8fbf5e721e3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/slider-wd/"
     google-query: inurl:"/wp-content/plugins/slider-wd/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,slider-wd,low
+  tags: cve,wordpress,wp-plugin,slider-wd,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.57')
+          - compare_versions(version, '<= 1.2.54')

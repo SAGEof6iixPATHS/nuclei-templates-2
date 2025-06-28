@@ -7,7 +7,7 @@ info:
   reference:
     - https://developers.virustotal.com/reference
     - https://github.com/daffainfo/all-about-apikey/blob/main/Anti-Malware/VirusTotal.md
- 
+  tags: token-spray,virustotal
 
 self-contained: true
 requests:

@@ -1,15 +1,15 @@
-id: svg-vector-icon-plugin-0d1886f00477a3e51ff41d5a1b5c879d
+id: svg-vector-icon-plugin
 
 info:
   name: >
-    WP SVG Icons <= 3.2.2 - Cross-Site Request Forgery to Remote Code Execution
+    WP SVG Icons <= 3.2.3 - Authenticated (Admin+) Arbitrary File Upload
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e8c16dd9-0c04-42b9-a2d3-28b442cecdb3?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7e78d678-1560-401d-a409-21207332e062?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/svg-vector-icon-plugin/"
     google-query: inurl:"/wp-content/plugins/svg-vector-icon-plugin/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,svg-vector-icon-plugin,medium
+  tags: cve,wordpress,wp-plugin,svg-vector-icon-plugin,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.2.3')
+          - compare_versions(version, '<= 3.2.3')

@@ -5,7 +5,7 @@ info:
   author: pikpikcu
   severity: high
   reference: https://www.shuzhiduo.com/A/l1dygr36Je/
- 
+  tags: thinkcmf
 
 requests:
   - method: GET

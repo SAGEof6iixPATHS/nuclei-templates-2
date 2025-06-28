@@ -1,15 +1,14 @@
-id: seur-0bf08ff38b1385b74494f584502c730c
+id: seur
 
 info:
   name: >
-    SEUR Oficial <= 2.2.23 - Unauthenticated Local File Inclusion
+    SEUR Oficial <= 1.6.0 - Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/624c98c2-3fce-4f6b-a049-da3bce2a8c6a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f3543ce7-328e-4db8-8993-8cd78af997de?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/seur/"
     google-query: inurl:"/wp-content/plugins/seur/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,seur,critical
+  tags: cve,wordpress,wp-plugin,seur,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.23')
+          - compare_versions(version, '< 1.7.0')

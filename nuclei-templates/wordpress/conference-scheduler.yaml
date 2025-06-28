@@ -1,15 +1,14 @@
-id: conference-scheduler-f9685846105657b81dfb084b20fe4991
+id: conference-scheduler
 
 info:
   name: >
-    Conference Scheduler <= 2.5.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via className Parameter
+    Conference Scheduler <= 2.4.3 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d0a03e5-b09c-430d-aa65-8ef9e01cf241?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eed6306a-317b-40ed-b7f5-7f930b3509e0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/conference-scheduler/"
     google-query: inurl:"/wp-content/plugins/conference-scheduler/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,conference-scheduler,low
+  tags: cve,wordpress,wp-plugin,conference-scheduler,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.5.1')
+          - compare_versions(version, '<= 2.4.3')

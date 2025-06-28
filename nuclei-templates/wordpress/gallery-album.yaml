@@ -1,15 +1,15 @@
-id: gallery-album-b87ab7a706f84346c6216824794a6504
+id: gallery-album
 
 info:
   name: >
-    Gallery – Image and Video Gallery with Thumbnails <= 2.0.1 - Unauthenticated Stored Cross-Site Scripting
+    Responsive Image Gallery, Gallery Album <= 2.0.3 - Unauthenticated Cross-Site Scripting
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/091d306d-cce4-426e-a18f-38bdaa802264?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fa9e4635-43f8-4f3c-b62c-628e74028f7e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.1')
+          - compare_versions(version, '<= 2.0.3')

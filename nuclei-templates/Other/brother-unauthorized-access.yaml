@@ -5,7 +5,7 @@ info:
   author: pussycat0x
   severity: medium
   reference: https://www.exploit-db.com/ghdb/6889
- 
+  tags: iot,printer,unauth
 
 requests:
   - method: GET

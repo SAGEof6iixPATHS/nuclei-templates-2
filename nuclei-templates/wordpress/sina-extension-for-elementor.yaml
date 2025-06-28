@@ -1,15 +1,15 @@
-id: sina-extension-for-elementor-7929d6c127476685c0fa050e2f33d59f
+id: sina-extension-for-elementor
 
 info:
   name: >
-    Sina Extension for Elementor (Slider, Gallery, Form, Modal, Data Table, Tab, Particle, Free Elementor Widgets & Elementor Templates) <= 3.5.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Sina Fancy Text Widget
+    Sina Extension for Elementor (Slider, Gallery, Form, Modal, Data Table, Tab, Particle, Free Elementor Widgets & Elementor Templates) <= 3.5.3 - Authenticated (Contributor+) Stored Cross-site Scriping via 'Sina Particle Layer'
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/78b24567-c185-4bef-b025-016b091be2e4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eee04b1d-188a-4b92-a6f3-dfa843ca20d7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.2')
+          - compare_versions(version, '<= 3.5.3')

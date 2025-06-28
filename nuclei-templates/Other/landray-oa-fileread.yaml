@@ -5,7 +5,7 @@ info:
   author: pikpikcu
   severity: high
   reference: https://mp.weixin.qq.com/s/TkUZXKgfEOVqoHKBr3kNdw
- 
+  tags: landray,lfi
 
 requests:
   - raw:

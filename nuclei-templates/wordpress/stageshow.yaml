@@ -1,15 +1,14 @@
-id: stageshow-144051efe7fd728b12a9a0cb42038107
+id: stageshow
 
 info:
   name: >
-    StageShow <= 10.0.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via anchor Parameter
+    StageShow < 5.0.9 - Open Redirect
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6543b8ad-e3f3-43c7-93f9-23f7df07e391?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bbc8ccc1-7b72-44fb-8bf5-e7cb46081ed5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 10.0.3')
+          - compare_versions(version, '< 5.0.9')

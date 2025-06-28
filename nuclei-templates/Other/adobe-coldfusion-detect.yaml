@@ -5,7 +5,7 @@ info:
   author: philippedelteil
   severity: info
   description: With this template we can detect the version number of Coldfusion instances based on their logos.
- 
+  tags: adobe,coldfusion
 
 requests:
   - method: GET

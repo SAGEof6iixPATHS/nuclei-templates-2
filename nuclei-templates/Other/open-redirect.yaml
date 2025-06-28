@@ -2,200 +2,23 @@ id: open-redirect
 
 info:
   name: Open Redirect Detection
-  author: princechaddha,AmirHossein Raeisi,leadlife
-  severity: medium
-  metadata:
-    validate: true
-    max-request: 1
-  tags: redirect,dast
+  author: melbadry9 & Elmahdi & @pxmme1337 & @Regala_ & @andirrahmani1
+  severity: low
 
-http:
-  - pre-condition:
-      - type: dsl
-        dsl:
-          - 'method == "GET"'
+requests:
+  - method: GET
 
-    payloads:
-      redirect:
-        - "bing.com"
-
-    fuzzing:
-      - part: query
-        mode: single
-        keys:
-          - _url
-          - auth
-          - AuthState
-          - back
-          - backto
-          - backurl
-          - callback
-          - callback_url
-          - cgi
-          - checkout
-          - checkout_url
-          - confirm_url
-          - content
-          - continue
-          - continueTo
-          - counturl
-          - data
-          - dest
-          - dest_url
-          - destination
-          - destination_url
-          - dir
-          - DirectTo
-          - document
-          - domain
-          - domain_url
-          - done
-          - download
-          - entry
-          - exit
-          - feed
-          - file
-          - file_name
-          - file_url
-          - folder
-          - folder_url
-          - follow
-          - forward
-          - forward_url
-          - forwardUrl
-          - from_url
-          - go
-          - go_to
-          - goto
-          - goto_url
-          - home
-          - home_url
-          - host
-          - html
-          - http
-          - https
-          - image
-          - image_link
-          - image_src
-          - image_url
-          - imageurl
-          - img
-          - img_url
-          - include
-          - jump
-          - langTo
-          - link
-          - Lmage_url
-          - Lmge_url
-          - load
-          - load_file
-          - load_url
-          - location
-          - login
-          - login_to
-          - login_url
-          - loginto
-          - logout
-          - logout_url
-          - media
-          - menu
-          - move
-          - nav
-          - nav_to
-          - navigation
-          - nexrurI
-          - next
-          - next_page
-          - nexturl
-          - open
-          - Open
-          - orig_url
-          - origin
-          - out
-          - out_url
-          - page
-          - page_link
-          - page_url
-          - pageurl
-          - path
-          - picture
-          - port
-          - proxy
-          - query
-          - r
-          - r2
-          - redir
-          - redirect
-          - redirect_link
-          - redirect_to
-          - redirect_uri
-          - redirect_url
-          - redirectsaaspath
-          - redirectUri
-          - redirectUrl
-          - ref
-          - reference
-          - referrer
-          - referrer_url
-          - relay
-          - req
-          - request
-          - ret
-          - retUrl
-          - return
-          - return_link
-          - return_path
-          - return_to
-          - return_to_url
-          - return_url
-          - returnTo
-          - rt
-          - rurl
-          - service
-          - show
-          - site
-          - source
-          - source_url
-          - src
-          - srchttp
-          - srcweb
-          - target
-          - target_url
-          - to
-          - to_url
-          - u
-          - uri
-          - url
-          - URL
-          - url_redirect
-          - val
-          - validate
-          - validate_url
-          - view
-          - window
-
-
-        fuzz:
-          - "https://{{redirect}}"
-
-      - part: query
-        mode: single
-        values:
-          - "https?://" # Replace HTTP URLs with alternatives
-        fuzz:
-          - "https://{{redirect}}"
-
-    stop-at-first-match: true
-    matchers-condition: and
+    path:
+      - "{{BaseURL}}/evil.com/"
+      - "{{BaseURL}}///;@evil.com"
+      - "{{BaseURL}}/////evil.com"
+      - "{{BaseURL}}//evil.com/%2F.."
+      - "{{BaseURL}}//evil.com/..;/css"
+      - "{{BaseURL}}/evil%E3%80%82com"
+      - "{{BaseURL}}/%5Cevil.com"
+      - "{{BaseURL}}/?Page=evil.com&_url=evil.com&callback=evil.com&checkout_url=evil.com&content=evil.com&continue=evil.com&continueTo=evil.com&counturl=evil.com&data=evil.com&dest=evil.com&dest_url=evil.com&dir=evil.com&document=evil.com&domain=evil.com&done=evil.com&download=evil.com&feed=evil.com&file=evil.com&host=evil.com&html=evil.com&http=evil.com&https=evil.com&image=evil.com&image_src=evil.com&image_url=evil.com&imageurl=evil.com&include=evil.com&media=evil.com&navigation=evil.com&next=evil.com&open=evil.com&out=evil.com&page=evil.com&page_url=evil.com&pageurl=evil.com&path=evil.com&picture=evil.com&port=evil.com&proxy=evil.com&redir=evil.com&redirect=evil.com&redirectUri&redirectUrl=evil.com&reference=evil.com&referrer=evil.com&req=evil.com&request=evil.com&retUrl=evil.com&return=evil.com&returnTo=evil.com&return_path=evil.com&return_to=evil.com&rurl=evil.com&show=evil.com&site=evil.com&source=evil.com&src=evil.com&target=evil.com&to=evil.com&uri=evil.com&url=evil.com&val=evil.com&validate=evil.com&view=evil.com&window=evil.com&redirect_to=evil.com"
     matchers:
       - type: regex
-        part: header
         regex:
-          - '(?m)^(?:Location\s*?:\s*?)(?:https?:\/\/|\/\/|\/\\\\|\/\\)(?:[a-zA-Z0-9\-_\.@]*)bing\.com\/?(\/|[^.].*)?$' # https://regex101.com/r/idfD2e/1
-
-      - type: status
-        status:
-          - 301
-          - 302
-          - 307
-# digest: 490a004630440220798dab0882b46e287f296c1f1ba1f9b47422c2b080486183184727f3de119087022044b26046d5aba5529bb7583ccebd65748198fff98a625c16b07432abf5a4fe8c:922c64590222798bb761d5b6d8e72950
+          - '(?m)^(?:Location\s*?:\s*?)(?:https?://|//)?(?:[a-zA-Z0-9\-_]*\.)?evil\.com(?:\s*?)$'
+        part: header

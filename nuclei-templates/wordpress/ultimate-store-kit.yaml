@@ -1,15 +1,14 @@
-id: ultimate-store-kit-14c76bcb97255f78073a876b327e1731
+id: ultimate-store-kit
 
 info:
   name: >
-    Ultimate Store Kit Elementor Addons, Woocommerce Builder, EDD Builder, Elementor Store Builder, Product Grid, Product Table, Woocommerce Slider <= 2.4.1 - Cross-Site Request Forgery to Limited User Meta Update
+    Ultimate Store Kit Elementor Addons <= 1.5.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a48634d7-30c9-4124-87dd-93a303a969eb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ea630be6-16f8-4d93-ae27-8a29f82c5db9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/ultimate-store-kit/"
     google-query: inurl:"/wp-content/plugins/ultimate-store-kit/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-store-kit,medium
+  tags: cve,wordpress,wp-plugin,ultimate-store-kit,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.1')
+          - compare_versions(version, '<= 1.5.2')

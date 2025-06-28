@@ -4,7 +4,6 @@ info:
   name: Tiki Wiki CMS Groupware
   author: chron0x
   severity: info
- 
 
 requests:
   - method: GET

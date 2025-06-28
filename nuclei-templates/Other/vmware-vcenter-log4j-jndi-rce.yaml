@@ -9,7 +9,7 @@ info:
     - https://www.vmware.com/security/advisories/VMSA-2021-0028.html
     - https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
     - https://twitter.com/tnpitsecurity/status/1469429810216771589
- 
+  tags: rce,jndi,log4j,vcenter,vmware
 
 requests:
   - raw:

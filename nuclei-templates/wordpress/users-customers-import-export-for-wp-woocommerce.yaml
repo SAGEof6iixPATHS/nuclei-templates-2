@@ -1,15 +1,14 @@
-id: users-customers-import-export-for-wp-woocommerce-ad17def0f904177d6807e3a64d457942
+id: users-customers-import-export-for-wp-woocommerce
 
 info:
   name: >
-    Export and Import Users and Customers <= 2.6.2 - Directory Traversal to Authenticated (Administrator+) Limited Arbitrary File Deletion via admin_log_page Function
+    WebToffee Plugins <= (Various Versions) - Arbitrary User Creation
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2d443c70-6537-4c6d-a282-12d392f0f558?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/27ac48a7-52ee-46cb-a6d0-efbd2b516445?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.6.2')
+          - compare_versions(version, '< 1.3.9')

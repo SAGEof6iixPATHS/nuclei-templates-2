@@ -1,15 +1,15 @@
-id: wp-editor-746821f5435d883bf2727fb1ca59a3de
+id: wp-editor
 
 info:
   name: >
-    WP Editor <= 1.2.9.1 - Authenticated (Administrator+) Directory Traversal to Arbitrary File Update
+    WP Editor <= 1.2.6.2 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9298820e-3753-41b3-8ba6-9fb494e215a8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e4e16526-89a5-4d49-ab9d-dcc7ad3bc8d0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-editor/"
     google-query: inurl:"/wp-content/plugins/wp-editor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-editor,low
+  tags: cve,wordpress,wp-plugin,wp-editor,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.9.1')
+          - compare_versions(version, '< 1.2.6.3')

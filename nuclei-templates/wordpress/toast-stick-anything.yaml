@@ -1,15 +1,15 @@
-id: toast-stick-anything-c7967c94bd84c8bc106e271ed075cbf7
+id: toast-stick-anything
 
 info:
   name: >
-    Sticky Anything <= 2.1.5 - Unauthenticated Stored Cross-Site Scripting
+    Sticky Anything <= 2.1.5 - Missing Authorization
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ba5485be-7612-406d-870d-6827f6c7ea71?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e9c33bab-a27b-43b1-aa48-3f8c09a38528?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

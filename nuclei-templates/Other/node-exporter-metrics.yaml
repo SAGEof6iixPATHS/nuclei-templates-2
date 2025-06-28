@@ -5,9 +5,9 @@ info:
   author: pussycat0x
   severity: low
   description: Information Disclosure of Garbage Collection
- 
+  tags: node,exposure,debug
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/metrics"

@@ -1,18 +1,15 @@
 id: kodexplorer-detect
-
 info:
   name: KodExplorer-detect
   author: ffffffff0x
   severity: info
   metadata:
     fofa-query: app="Powered-by-KodExplorer"
- 
-
+  tags: kodexplorer,tech
 requests:
   - method: GET
     path:
       - "{{BaseURL}}"
-
     redirects: true
     max-redirects: 2
     matchers:
@@ -20,7 +17,6 @@ requests:
         part: body
         regex:
           - '(?i)<title>.* - Powered by KodExplorer</title>'
-
     extractors:
       - type: regex
         part: body

@@ -1,15 +1,15 @@
-id: miniorange-login-openid-7a86429e90ecf720375f60fb6f589711
+id: miniorange-login-openid
 
 info:
   name: >
-    WordPress Social Login and Register (Discord, Google, Twitter, LinkedIn) <= 7.5.14 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    WordPress Social Login and Register (Discord, Google, Twitter, LinkedIn) <= 7.6.4 - Authentication Bypass
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca91046d-61c1-4a65-a078-c7dffb27092c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/08ca186a-2486-4a58-9c53-03e9eba13e66?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/miniorange-login-openid/"
     google-query: inurl:"/wp-content/plugins/miniorange-login-openid/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,miniorange-login-openid,low
+  tags: cve,wordpress,wp-plugin,miniorange-login-openid,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.5.14')
+          - compare_versions(version, '<= 7.6.4')

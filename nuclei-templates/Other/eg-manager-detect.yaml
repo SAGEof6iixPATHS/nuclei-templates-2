@@ -4,7 +4,7 @@ info:
   name: eG Manager Detect
   author: pikpikcu
   severity: info
- 
+  tags: tech,eg
 
 requests:
   - method: GET

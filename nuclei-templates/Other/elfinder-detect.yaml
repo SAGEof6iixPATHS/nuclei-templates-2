@@ -4,7 +4,7 @@ info:
   name: elFinder Detect
   author: pikpikcu
   severity: info
- 
+  tags: tech,elfinder
 
 requests:
   - method: GET

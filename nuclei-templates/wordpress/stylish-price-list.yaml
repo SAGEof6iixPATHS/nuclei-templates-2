@@ -1,15 +1,14 @@
-id: stylish-price-list-27bbe5490d48fa8da8ab0a951109e256
+id: stylish-price-list
 
 info:
   name: >
-    Stylish Price List <= 7.1.7 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Stylish Price List <= 7.0.17 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f55c004a-366b-4555-9b3c-e2172a2e7f56?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d9cea4e-b619-4935-bb7c-a64ddf52d480?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/stylish-price-list/"
     google-query: inurl:"/wp-content/plugins/stylish-price-list/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,stylish-price-list,low
+  tags: cve,wordpress,wp-plugin,stylish-price-list,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.1.7')
+          - compare_versions(version, '<= 7.0.17')

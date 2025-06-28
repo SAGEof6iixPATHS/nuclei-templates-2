@@ -4,7 +4,7 @@ info:
   name: svnserve config file disclosure
   author: sheikhrishad
   severity: low
- 
+  tags: config,exposure,svnserve
 
 requests:
   - method: GET

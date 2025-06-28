@@ -4,7 +4,7 @@ info:
   name: SCEditor Detect
   author: pikpikcu
   severity: info
- 
+  tags: tech,sceditor
 
 requests:
   - method: GET

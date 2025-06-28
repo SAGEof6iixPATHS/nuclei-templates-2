@@ -1,15 +1,15 @@
-id: wp-forms-puzzle-captcha-aff3112ad689326307e33432ad0c6e98
+id: wp-forms-puzzle-captcha
 
 info:
   name: >
-    WP Forms Puzzle Captcha <= 4.1 - Cross-Site Request Forgery to Cross-Site Scripting
+    WP Forms Puzzle Captcha <= 4.1 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f34854a-5ca1-48a3-81d5-80f80f3a85fc?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c75edd2-fc38-48b1-b58c-1d19c95c3db8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

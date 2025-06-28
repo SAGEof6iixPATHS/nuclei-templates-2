@@ -1,13 +1,14 @@
 id: pop3
 info:
-  name: SCO pop3d
+  name: Lotus Domino POP3 server
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
-    operating_system: SCO UNIX
+    product: lotus_domino
     rarity: 0
+    vendor: ibm
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -19,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK SCO POP3 server \(version ([-\w.]+)\) at ([-\w_.]+) starting\.\r\n
+    - '^\+OK Lotus Notes POP3 server version Release ([-.\w]+) ready on '

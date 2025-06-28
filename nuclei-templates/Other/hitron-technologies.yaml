@@ -1,10 +1,11 @@
 id: hitron-technologies-detect
+
 info:
   name: Hitron Technologies
   author: pussycat0x
   severity: info
   reference: https://www.exploit-db.com/ghdb/7062
- 
+  tags: router,panel
 
 requests:
   - method: GET

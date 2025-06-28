@@ -1,12 +1,12 @@
 id: ftp
 info:
-  name: Android ftpd
+  name: e1137 ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
-    version: '2.1'
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FTP Server 2\.1 ready\r\n
+    - ^220-\.:\.\r\n220-\.:+\r\n220-\.::::::::::\. e1137 FTP Server loading \.::::::::::::::\. WinSock ready \.

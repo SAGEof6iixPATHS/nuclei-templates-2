@@ -1,15 +1,15 @@
-id: rafflepress-e32d259110829e1dc3b40d8826383100
+id: rafflepress
 
 info:
   name: >
-    Giveaways and Contests by RafflePress – Get More Website Traffic, Email Subscribers, and Social Followers <= 1.12.13 - Authenticated (Editor+) Stored Cross-Site Scripting
+    Giveaways and Contests by RafflePress <= 1.12.16 - Authenticated (Editor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f793b950-3066-45b8-bcf8-a4b4e39d4208?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8f8e6ca4-ceeb-4d0c-8b05-86c2abe435a2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.12.13')
+          - compare_versions(version, '<= 1.12.16')

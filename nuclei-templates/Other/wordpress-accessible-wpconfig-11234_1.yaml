@@ -4,9 +4,9 @@ info:
   author: Kiblyn11,zomsop82,madrobot,geeknik,daffainfo,r12w4n
   severity: high
   description: The remote WordPress installation has the `wp-config` file remotely accessible and its content available for reading.
- 
+  tags: wordpress,backup
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-config.php'

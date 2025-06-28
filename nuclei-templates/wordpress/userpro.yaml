@@ -1,24 +1,24 @@
-id: userpro-20d455554bf6e8270762255206961956
+id: userpro
 
 info:
   name: >
-    UserPro <= 4.9.20 - Privilege Escalation
+    UserPro <= 4.9.27 - Privilege Escalation
   author: topscoder
-  severity: critical
+  severity: low
   description: >
-    The UserPro plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 4.9.20. This is due to new users being able to freely register with the administrator role. This makes it possible for attackers to create administrators and execute code on the site.
+    
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ff32cb12-f010-45ae-97d7-f36ce2003f3c?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d7d6d15c-067f-44cb-bd61-ff39bed7e356?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    cvss-score: 10
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/userpro/"
     google-query: inurl:"/wp-content/plugins/userpro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,userpro,critical
+  tags: cve,wordpress,wp-plugin,userpro,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.9.21')
+          - compare_versions(version, '< 4.9.28')

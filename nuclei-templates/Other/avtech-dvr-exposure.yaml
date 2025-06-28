@@ -6,7 +6,7 @@ info:
   reference: http://www.avtech.com.tw/
   author: geeknik
   severity: low
- 
+  tags: dvr,exposure,avtech
 
 requests:
   - method: GET

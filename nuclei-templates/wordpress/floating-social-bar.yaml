@@ -1,15 +1,14 @@
-id: floating-social-bar-18a4d53040dfae5329e7bf75034ce4cd
+id: floating-social-bar
 
 info:
   name: >
-    Floating Social Bar <= 1.1.7 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Floating Social Bar < 1.1.7 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/89de2cb3-c089-49eb-8bb2-cfa11d66fa18?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bd1a98d4-bf67-4678-b30b-ca13e63c665a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/floating-social-bar/"
     google-query: inurl:"/wp-content/plugins/floating-social-bar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,floating-social-bar,low
+  tags: cve,wordpress,wp-plugin,floating-social-bar,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.7')
+          - compare_versions(version, '< 1.1.7')

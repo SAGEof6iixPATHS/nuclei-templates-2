@@ -7,17 +7,12 @@ info:
   description: FreeIPA Identity Management login panel was detected.
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:freeipa:freeipa:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    vendor: freeipa
-    product: freeipa
-    shodan-query:
-      - html:"FreeIPA"
-      - http.html:"freeipa"
-    fofa-query: body="freeipa"
+    shodan-query: html:"FreeIPA"
   tags: panel,login,freeipa
 
 http:
@@ -39,4 +34,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022055e5a1b5768fc2f88afdfba4efb7262ebc35c2cb7872400f66e18d969de61225022100a80bce2e0ed2c5a3fb7daca826d9f7c8563f396ef504cb10c3c2ccee7ee8d1f1:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450220559ee3428a8f4f283852f93135b9555c0b6747ab078282564745d07a221176a7022100ae1d71d6fb2e51d100c4b41641545cca884e55e47461316cdf94216391d2e6e9:922c64590222798bb761d5b6d8e72950

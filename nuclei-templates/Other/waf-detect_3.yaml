@@ -1,30 +1,24 @@
 id: waf-detect
-
 info:
   name: WAF Detection
-  author: dwisiswant0
+  author: dwisiswant0,lu4nx
   severity: info
-
-  # Source:
-  # - https://github.com/Ekultek/WhatWaf
-
+  reference: https://github.com/Ekultek/WhatWaf
+  tags: waf,tech,misc
 requests:
   - raw:
       - |
-          POST / HTTP/1.1
-          Host: {{Hostname}}
-          Content-Type: application/x-www-form-urlencoded
+        POST / HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/x-www-form-urlencoded
 
-          _=<script>alert(1)</script>
-
-    redirects: true
-    max-redirects: 2
+        _=<script>alert(1)</script>
     matchers:
       - type: regex
         name: instart
         regex:
           - '(?i)instartrequestid'
-        part: all
+        part: body
       - type: regex
         name: perimx
         regex:
@@ -598,7 +592,7 @@ requests:
           - '(?i)class=.(db)?waf.?(-row.)?>'
         part: all
       - type: regex
-        name: chuangyu
+        name: chuangyudun
         regex:
           - '(?i)(http(s)?.//(www.)?)?365cyd.(com|net)'
         part: all
@@ -658,3 +652,11 @@ requests:
         regex:
           - '(?i)nginix.wallarm'
         part: all
+      - type: regex
+        part: all
+        name: huaweicloud
+        condition: and
+        regex:
+          - '(?)content="CloudWAF"'
+          - 'Server: CloudWAF'
+          - 'Set-Cookie: HWWAFSESID='

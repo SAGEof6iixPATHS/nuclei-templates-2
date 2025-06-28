@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   reference: https://devcenter.heroku.com/articles/platform-api-quickstart#calling-the-api
   severity: info
- 
+  tags: token-spray,heroku
 
 self-contained: true
 requests:

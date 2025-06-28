@@ -1,19 +1,16 @@
-id: mathjax-latex-69c683f44f598774c1b4ec1e956175e2
+id: mathjax-latex
 
 info:
-  name: >
-    MathJax-LaTeX < 1.2 - Cross-Site Request Forgery
+  name: "MathJax-LaTeX < 1.2 - Cross-Site Request Forgery"
   author: topscoder
   severity: medium
-  description: >
-    The MathJax LaTeX plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions before 1.2. This is due to missing or incorrect nonce validation on the mathjax_plugin_options function. This may make it possible for unauthenticated attackers to arbitrarily change plugin settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+  description: "The MathJax LaTeX plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions before 1.2. This is due to missing or incorrect nonce validation on the mathjax_plugin_options function. This may make it possible for unauthenticated attackers to arbitrarily change plugin settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/10c1402d-613d-4d72-b488-c0af2bee4d59?source=api-prod
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/mathjax-latex/"
     google-query: inurl:"/wp-content/plugins/mathjax-latex/"
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.2')
+          - compare_versions(version, '<= 1.2')

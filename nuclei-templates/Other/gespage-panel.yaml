@@ -5,8 +5,8 @@ info:
   author: pikpikcu,daffainfo
   severity: info
   metadata:
-    shodan-query: "Path=/gespage"
- 
+    shodan-query: Path=/gespage
+  tags: panel,gespage
 
 requests:
   - method: GET

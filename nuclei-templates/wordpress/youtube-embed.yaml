@@ -1,15 +1,14 @@
-id: youtube-embed-4f4deeeaebe813e82ec9feb5ed809e28
+id: youtube-embed
 
 info:
   name: >
-    YouTube Embed <= 5.3.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    YouTube Embed <= 3.3.2 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/429acb91-4846-45be-8f39-d8584a70c131?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1f95bd2d-c835-4824-b241-f645b4a8fdb2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/youtube-embed/"
     google-query: inurl:"/wp-content/plugins/youtube-embed/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,youtube-embed,low
+  tags: cve,wordpress,wp-plugin,youtube-embed,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.3.1')
+          - compare_versions(version, '< 3.3.3')
