@@ -1,6 +1,6 @@
 id: ssh
 info:
-  name: iPage Hosting sftpd
+  name: SSHTools J2SSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-ipage FTP Server Ready\r\n
+    - ^SSH-([\d.]+)-http://www\.sshtools\.com J2SSH \[SERVER\]\r\n

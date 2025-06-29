@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: Foundry NetIron XMR 4000 router telnetd
+  name: Huawei HG-series router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: router
+    device_type: broadband router
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfb\x03\*{60}\r\n\* WARNING ALERT: AUTHORIZED USERS ONLY! +\*\r\n\* +\*\r\n\* All activities conducted on this system may be monitored \*\r\n\* and recorded\. If you are not an authorized user, log off \*\r\n\* immediately\.  Illegal entry, misuse, and / or criminal   \*\r\n\* activity will be documented and prosecuted to the full   \*\r\n\* extend of the law\. +\*\r\n\*{60}\r\n\r\n\r\nPress <Enter> to accept and continue the login process\.\.\.\.\r\n'
+    - ^\xff\xfb\x01\xff\xfb\x03\xff\xfb\x18Welcome, you are from .*\r\n-------------------------------\r\n-----Welcome to ATP Cli------\r\n-------------------------------\r\n

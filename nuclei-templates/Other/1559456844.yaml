@@ -1,15 +1,12 @@
 id: nntp
 info:
-  name: INN NNTPd
+  name: Lyris ListManager nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: broken
-    product: inn
+    hostname: $1
     rarity: 0
-    vendor: isc
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - '^nnrpd: invalid option -- S\nUsage error\.\n'
+    - ^200 ([-\w.]+) Lyris ListManager NNTP Service ready \(posting ok\)\.\r\n
