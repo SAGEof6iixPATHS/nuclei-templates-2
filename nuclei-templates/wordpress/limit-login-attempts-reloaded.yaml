@@ -1,7 +1,7 @@
 id: wordpress-limit-login-attempts-reloaded
 
 info:
-  name: Limit Login Attempts Reloaded Detection
+  name: Limit Login Attempts Reloaded – Login Security, Brute Force Protection, Firewall Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/limit-login-attempts-reloaded
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/limit-login-attempts-reloaded/readme.txt"

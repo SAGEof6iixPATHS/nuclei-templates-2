@@ -2,14 +2,14 @@ id: mail-masta
 
 info:
   name: >
-    Mail Masta <= 1.0 - SQL Injection via filter_list parameter
+    Mail Masta <= 1.0 - SQL Injection via id parameter
   author: topscoder
   severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/69ed990e-6c40-49d5-859c-768a5a6a803f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1653c4e0-c5e5-44c6-a84d-cdd070696ac4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

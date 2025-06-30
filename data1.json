@@ -155070,5 +155070,13 @@
     "royal-mail-phish_3.yaml": "2025-06-29 03:20:27",
     "bitdefender-phish_6.yaml": "2025-06-29 03:20:27",
     "CVE-2024-51977.yaml": "2025-06-29 03:20:27",
-    "CVE-2024-51978.yaml": "2025-06-29 03:20:27"
+    "CVE-2024-51978.yaml": "2025-06-29 03:20:27",
+    "CVE-2025-6462.yaml": "2025-06-30 03:15:37",
+    "totolink-n150rt-password-exposure.yaml": "2025-06-30 03:15:37",
+    "gladinet-centrestack-panel_2.yaml": "2025-06-30 03:15:37",
+    "veritas-netbackup-panel_8.yaml": "2025-06-30 03:15:37",
+    "openshift-oauth-proxy-panel.yaml": "2025-06-30 03:15:37",
+    "ccleaner-phish_6.yaml": "2025-06-30 03:15:37",
+    "forgerock-ig-panel.yaml": "2025-06-30 03:15:37",
+    "fingerprinthub-web-fingerprints_4.yaml": "2025-06-30 03:15:37"
 }
