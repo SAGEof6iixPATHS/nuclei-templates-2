@@ -1,0 +1,59 @@
+id: advanced-subdomain-takeover
+
+info:
+  name: Advanced Subdomain Takeover Detection
+  author: asif-khan
+  severity: high
+  tags: takeover, subdomain, dns
+
+dns:
+  - name: "{{FQDN}}"
+    type: CNAME
+    class: inet
+    retries: 2
+
+    extractors:
+      - type: regex
+        name: cname
+        regex:
+          - 'CNAME[^\n]+'
+
+    matchers:
+      - type: word
+        words:
+          - "github.io"
+          - "s3.amazonaws.com"
+          - "herokudns.com"
+          - "storage.googleapis.com"
+          - "pages.dev"
+          - "readthedocs.io"
+          - "zendesk.com"
+          - "shopify.com"
+          - "bitbucket.io"
+          - "unbouncepages.com"
+          - "fastly.net"
+          - "surge.sh"
+          - "fly.io"
+          - "azurewebsites.net"
+          - "cloudapp.net"
+          - "pantheonsite.io"
+          - "statuspage.io"
+          - "smartling.com"
+          - "helpscoutdocs.com"
+          - "cargocollective.com"
+          - "wpengine.com"
+          - "desk.com"
+          - "simplebooklet.com"
+          - "teamwork.com"
+          - "ghost.io"
+          - "tictail.com"
+          - "aftership.com"
+          - "bigcartel.com"
+          - "cargo.site"
+          - "intercom.io"
+          - "launchrock.com"
+          - "acquia.com"
+          - "cloudfront.net"
+          - "domain.tld"
+
+    matchers-condition: or

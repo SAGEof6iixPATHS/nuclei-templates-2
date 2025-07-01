@@ -6,40 +6,37 @@
 | CVE-2002 | 1 |
 | CVE-2004 | 3 |
 | CVE-2005 | 4 |
-| CVE-2006 | 5 |
+| CVE-2006 | 4 |
 | CVE-2007 | 6 |
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
-| CVE-2010 | 123 |
-| CVE-2011 | 22 |
-| CVE-2012 | 38 |
-| CVE-2013 | 30 |
-| CVE-2014 | 63 |
-| CVE-2015 | 71 |
-| CVE-2016 | 74 |
-| CVE-2017 | 110 |
-| CVE-2018 | 281 |
-| CVE-2019 | 461 |
-| CVE-2020 | 834 |
-| CVE-2021 | 976 |
-| CVE-2022 | 943 |
-| CVE-2023 | 815 |
-| CVE-2024 | 503 |
+| CVE-2010 | 122 |
+| CVE-2011 | 15 |
+| CVE-2012 | 31 |
+| CVE-2013 | 26 |
+| CVE-2014 | 56 |
+| CVE-2015 | 54 |
+| CVE-2016 | 53 |
+| CVE-2017 | 101 |
+| CVE-2018 | 270 |
+| CVE-2019 | 426 |
+| CVE-2020 | 797 |
+| CVE-2021 | 882 |
+| CVE-2022 | 887 |
+| CVE-2023 | 794 |
+| CVE-2024 | 480 |
 | CVE-2025 | 82 |
-| Other | 54297 |
-| wordpress | 90716 |
+| Other | 30735 |
+| wordpress | 64251 |
 ## 近几天数量变化情况
-|2025-06-23 | 2025-06-24 | 2025-06-25 | 2025-06-26 | 2025-06-28 | 2025-06-29 | 2025-06-30|
+|2025-06-24 | 2025-06-25 | 2025-06-26 | 2025-06-28 | 2025-06-29 | 2025-06-30 | 2025-07-01|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|150413 | 150607 | 150359 | 150666 | 117141 | 145974 | 150495|
+|150607 | 150359 | 150666 | 117141 | 145974 | 150495 | 100117|
 ## 最近新增文件
 | templates name | 
 | --- |
-| CVE-2025-6462.yaml |
-| totolink-n150rt-password-exposure.yaml |
-| gladinet-centrestack-panel_2.yaml |
-| veritas-netbackup-panel_8.yaml |
-| openshift-oauth-proxy-panel.yaml |
-| ccleaner-phish_6.yaml |
-| forgerock-ig-panel.yaml |
-| fingerprinthub-web-fingerprints_4.yaml |
+| subdomain-takeover-advanced.yaml |
+| env1337.yaml |
+| deliveroo-phish_5.yaml |
+| imind-rce.yaml |
+| CVE-2025-52207.yaml |

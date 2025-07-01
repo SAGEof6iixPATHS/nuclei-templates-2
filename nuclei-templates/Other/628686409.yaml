@@ -1,11 +1,10 @@
 id: smtp-proxy
 info:
-  name: SnertSoft Barricade MX smtp proxy
+  name: F-Secure Internet Gatekeeper smtp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    hostname: $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - '^220-([\w._-]+) ESMTP Welcome to smtpf #\d+ \(\w+\)\r\n220 Copyright 2006, 2011 by SnertSoft\. All rights reserved\.\r\n'
+    - ^521 Host does not accept mail from you, closing transmission channel\.\.\.\r\n

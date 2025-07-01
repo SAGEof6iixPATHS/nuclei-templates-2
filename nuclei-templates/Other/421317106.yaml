@@ -1,11 +1,13 @@
 id: pop3
 info:
-  name: qpopper pop3d
+  name: IMA pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 server ready\r\n$
+    - ^\+OK ([-\w_.]+) POP3 Server Version ([\d.]+) Copyright \d{4} International Messaging Associates\r\n

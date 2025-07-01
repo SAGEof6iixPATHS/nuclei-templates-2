@@ -3,7 +3,7 @@ id: accessfile
 info:
   name: Finding root account Informations For MySQL Server
   author: c4sper0
-  severity: high
+  severity: critical
   description: |
     "Allows attackers to know the data sensitive to the Informations connection root to database."
   classification:
@@ -48,6 +48,7 @@ http:
         - "txt.bak"
         - "log"
 
+    stop-at-first-match: true
     matchers-condition: and
     matchers:
       - type: regex

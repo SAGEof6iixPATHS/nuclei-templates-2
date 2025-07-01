@@ -155078,5 +155078,10 @@
     "openshift-oauth-proxy-panel.yaml": "2025-06-30 03:15:37",
     "ccleaner-phish_6.yaml": "2025-06-30 03:15:37",
     "forgerock-ig-panel.yaml": "2025-06-30 03:15:37",
-    "fingerprinthub-web-fingerprints_4.yaml": "2025-06-30 03:15:37"
+    "fingerprinthub-web-fingerprints_4.yaml": "2025-06-30 03:15:37",
+    "subdomain-takeover-advanced.yaml": "2025-07-01 03:28:21",
+    "env1337.yaml": "2025-07-01 03:28:21",
+    "deliveroo-phish_5.yaml": "2025-07-01 03:28:21",
+    "imind-rce.yaml": "2025-07-01 03:28:21",
+    "CVE-2025-52207.yaml": "2025-07-01 03:28:21"
 }

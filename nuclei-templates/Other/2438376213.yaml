@@ -1,6 +1,6 @@
 id: ftp-proxy
 info:
-  name: Zscaler ftp proxy
+  name: FileCatalyst ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - '^220 Zscaler/([\d.]+): USER expected \(Unix syntax\)\r\n'
+    - ^220 FileCatalyst Server Enterprise v([^\r\n]*)\r\n$
