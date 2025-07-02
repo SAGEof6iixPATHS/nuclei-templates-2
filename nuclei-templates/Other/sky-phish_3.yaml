@@ -8,8 +8,9 @@ info:
     A sky phishing website was detected
   reference:
     - https://sky.com
+  metadata:
+    max-request: 1
   tags: phishing,sky,osint
-
 http:
   - method: GET
     path:
@@ -31,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"sky.com")'
-# digest: 4a0a00473045022013366b0873344e630167747b3c1dfb7b0d532aae6ab34723c1f5520c0cc8bad70221009332d81c874793606b5653eb5e469693686bc004c49e9748c848a6363f5f9b59:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a2a32a99206155569a877d9e2a3949e55762e656a662e92d23fdf3f9d18a9670022100a01c1363c0b43d0ed04532ae02a7151e998e65e80100c3fff5af456313e2c4ec:922c64590222798bb761d5b6d8e72950
