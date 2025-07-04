@@ -23,4 +23,3 @@ http:
         part: body
         words:
           - 'sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ'
-
