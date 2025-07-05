@@ -6,415 +6,102 @@
 | CVE-2002 | 1 |
 | CVE-2004 | 3 |
 | CVE-2005 | 4 |
-| CVE-2006 | 3 |
+| CVE-2006 | 5 |
 | CVE-2007 | 6 |
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
 | CVE-2010 | 123 |
-| CVE-2011 | 19 |
-| CVE-2012 | 32 |
-| CVE-2013 | 28 |
-| CVE-2014 | 56 |
+| CVE-2011 | 17 |
+| CVE-2012 | 35 |
+| CVE-2013 | 27 |
+| CVE-2014 | 57 |
 | CVE-2015 | 63 |
-| CVE-2016 | 59 |
-| CVE-2017 | 104 |
+| CVE-2016 | 64 |
+| CVE-2017 | 106 |
 | CVE-2018 | 272 |
-| CVE-2019 | 436 |
-| CVE-2020 | 801 |
-| CVE-2021 | 905 |
-| CVE-2022 | 898 |
-| CVE-2023 | 795 |
-| CVE-2024 | 479 |
-| CVE-2025 | 84 |
-| Other | 36400 |
-| wordpress | 72641 |
+| CVE-2019 | 445 |
+| CVE-2020 | 817 |
+| CVE-2021 | 927 |
+| CVE-2022 | 915 |
+| CVE-2023 | 801 |
+| CVE-2024 | 499 |
+| CVE-2025 | 83 |
+| Other | 42210 |
+| wordpress | 80380 |
 ## 近几天数量变化情况
-|2025-06-26 | 2025-06-28 | 2025-06-29 | 2025-06-30 | 2025-07-01 | 2025-07-02 | 2025-07-04|
+|2025-06-28 | 2025-06-29 | 2025-06-30 | 2025-07-01 | 2025-07-02 | 2025-07-04 | 2025-07-05|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|150666 | 117141 | 145974 | 150495 | 100117 | 137827 | 114249|
+|117141 | 145974 | 150495 | 100117 | 137827 | 114249 | 127897|
 ## 最近新增文件
 | templates name | 
 | --- |
-| neom-blog.yaml |
-| CVE-2022-1580_4.yaml |
-| CVE-2025-52827.yaml |
-| image-slider-with-description.yaml |
-| CVE-2025-53309.yaml |
-| CVE-2025-52814.yaml |
-| CVE-2022-3768_6.yaml |
-| theme-junkie-team-content.yaml |
-| CVE-2025-31067.yaml |
-| import-external-attachments.yaml |
-| samex.yaml |
-| CVE-2025-53199.yaml |
-| CVE-2022-2552_5.yaml |
-| CVE-2025-53266.yaml |
-| CVE-2025-52828.yaml |
-| CVE-2025-53305.yaml |
-| CVE-2025-49274.yaml |
-| drag-and-drop-file-uploads-wc-pro.yaml |
-| CVE-2025-52778.yaml |
-| CVE-2025-6464.yaml |
-| CVE-2024-9017.yaml |
-| CVE-2025-52811.yaml |
-| thumbnail-editor.yaml |
-| wp-edit.yaml |
-| CVE-2025-27361.yaml |
-| CVE-2025-5014.yaml |
-| CVE-2025-4689.yaml |
-| education.yaml |
-| CVE-2025-49416.yaml |
-| CVE-2025-39362.yaml |
-| CVE-2022-1119_7.yaml |
-| CVE-2025-28978.yaml |
-| CVE-2023-6065_3.yaml |
-| CVE-2025-53202.yaml |
-| CVE-2023-4490_2.yaml |
-| CVE-2025-52818.yaml |
-| CVE-2025-28993.yaml |
-| ctuser.yaml |
-| CVE-2024-3495_2.yaml |
-| CVE-2021-24278_5.yaml |
-| CVE-2025-5746.yaml |
-| CVE-2025-53255.yaml |
-| CVE-2023-6875_4.yaml |
-| replace.yaml |
-| CVE-2025-53316.yaml |
-| CVE-2025-53269.yaml |
-| CVE-2025-49331.yaml |
-| CVE-2025-28960.yaml |
-| add-replace-affiliate-links-for-amazon.yaml |
-| CVE-2025-53288.yaml |
-| CVE-2025-53278.yaml |
-| CVE-2025-24771.yaml |
-| CVE-2025-53292.yaml |
-| ec-stars-rating.yaml |
-| peepso-groups.yaml |
-| wp-permalink-translator.yaml |
-| cms-blocks.yaml |
-| CVE-2025-53284.yaml |
-| CVE-2025-3848.yaml |
-| CVE-2025-52798.yaml |
-| bw-printxtore.yaml |
-| CVE-2023-6063_4.yaml |
-| blogbyte.yaml |
-| CVE-2022-1392_5.yaml |
-| CVE-2025-5692.yaml |
-| CVE-2025-4946.yaml |
-| zikzag-core.yaml |
-| CVE-2025-53254.yaml |
-| CVE-2025-53314.yaml |
-| CVE-2025-53270.yaml |
-| CVE-2015-9499_4.yaml |
-| audio-editor-recorder.yaml |
-| CVE-2025-53274.yaml |
-| CVE-2025-49278.yaml |
-| CVE-2024-6028_2.yaml |
-| wp-visual-sitemap.yaml |
-| CVE-2021-24145_4.yaml |
-| CVE-2023-5089_3.yaml |
-| CVE-2025-53339.yaml |
-| CVE-2025-53195.yaml |
-| katerio.yaml |
-| CVE-2024-9047_1.yaml |
-| CVE-2025-53259.yaml |
-| CVE-2021-25112_8.yaml |
-| CVE-2025-31037.yaml |
-| CVE-2025-52816.yaml |
-| CVE-2017-18590_4.yaml |
-| free-downloads-edd.yaml |
-| CVE-2025-50039.yaml |
-| CVE-2025-53315.yaml |
-| CVE-2025-53321.yaml |
-| CVE-2024-32709_2.yaml |
-| CVE-2023-5558_3.yaml |
-| CVE-2021-24750-5764_1.yaml |
-| CVE-2025-28970.yaml |
-| CVE-2024-10486_1.yaml |
-| CVE-2025-52796.yaml |
-| CVE-2025-53268.yaml |
-| pressroom.yaml |
-| CVE-2025-49873.yaml |
-| amely.yaml |
-| CVE-2022-1904_5.yaml |
-| CVE-2025-53271.yaml |
-| CVE-2025-28947.yaml |
-| CVE-2023-48777_4.yaml |
-| CVE-2025-53277.yaml |
-| CVE-2025-52829.yaml |
-| CVE-2025-24765.yaml |
-| pre-publish-post-checklist.yaml |
-| CVE-2025-53298.yaml |
-| CVE-2025-53211.yaml |
-| cron-logger.yaml |
-| CVE-2023-2745_4.yaml |
-| CVE-2023-1119_3.yaml |
-| CVE-2025-2330.yaml |
-| CVE-2025-5944.yaml |
-| CVE-2025-28968.yaml |
-| blossomthemes-instagram-feed.yaml |
-| CVE-2025-53332.yaml |
-| CVE-2025-52824.yaml |
-| CVE-2019-9912_5.yaml |
-| CVE-2023-6786_2.yaml |
-| trusty-whistleblowing-solution.yaml |
-| CVE-2025-49247.yaml |
-| navayan-subscribe.yaml |
-| easy-image-gallery.yaml |
-| CVE-2025-53281.yaml |
-| CVE-2025-24769.yaml |
-| CVE-2025-53293.yaml |
-| CVE-2025-53296.yaml |
-| CVE-2024-5765_2.yaml |
-| CVE-2024-13888_1.yaml |
-| CVE-2025-52817.yaml |
-| CVE-2021-25085_4.yaml |
-| CVE-2025-53257.yaml |
-| CVE-2025-53275.yaml |
-| wpb-woocommerce-category-slider.yaml |
-| CVE-2025-53206.yaml |
-| hidepost.yaml |
-| CVE-2025-53295.yaml |
-| CVE-2024-1380_3.yaml |
-| CVE-2025-6686.yaml |
-| icount.yaml |
-| CVE-2025-53264.yaml |
-| CVE-2025-53193.yaml |
-| dashboard-widget-sidebar.yaml |
-| CVE-2022-0595_4.yaml |
-| image-shadow.yaml |
-| CVE-2025-53310.yaml |
-| CVE-2025-53318.yaml |
-| CVE-2025-2932.yaml |
-| photo-express-for-google.yaml |
-| CVE-2025-5817.yaml |
-| CVE-2025-2537.yaml |
-| CVE-2025-52809.yaml |
-| CVE-2023-5991_3.yaml |
-| CVE-2025-53276.yaml |
-| CVE-2025-53300.yaml |
-| CVE-2025-28946.yaml |
-| CVE-2024-11405.yaml |
-| CVE-2025-53265.yaml |
-| CVE-2025-52815.yaml |
-| CVE-2025-6687.yaml |
-| CVE-2021-34643_7.yaml |
-| CVE-2019-9879_3.yaml |
-| CVE-2023-2518_4.yaml |
-| CVE-2025-53279.yaml |
-| CVE-2025-53304.yaml |
-| CVE-2025-53200.yaml |
-| CVE-2025-53313.yaml |
-| CVE-2025-4380.yaml |
-| CVE-2025-32297.yaml |
-| CVE-2025-52826.yaml |
-| blogvy.yaml |
-| CVE-2025-39474.yaml |
-| CVE-2025-53336.yaml |
-| jkdevkit.yaml |
-| CVE-2025-53308.yaml |
-| CVE-2024-9707_1.yaml |
-| CVE-2025-53197.yaml |
-| CVE-2025-49282.yaml |
-| CVE-2025-53290.yaml |
-| abandoned-contact-form-7.yaml |
-| lms.yaml |
-| CVE-2025-53323.yaml |
-| rss-digest.yaml |
-| CVE-2025-53301.yaml |
-| CVE-2024-13624_1.yaml |
-| wp-optimize-by-xtraffic.yaml |
-| spolecznosciowa-6-pl-2013.yaml |
-| CVE-2025-53312.yaml |
-| CVE-2025-39487.yaml |
-| puca.yaml |
-| CVE-2025-49448.yaml |
-| wp-db-booster.yaml |
-| CVE-2025-53261.yaml |
-| CVE-2025-49883.yaml |
-| CVE-2024-5522_2.yaml |
-| CVE-2025-53302.yaml |
-| CVE-2025-49276.yaml |
-| blogprise.yaml |
-| CVE-2025-52808.yaml |
-| wp-gdpr-cookie-consen.yaml |
-| CVE-2023-6421_3.yaml |
-| CVE-2025-53327.yaml |
-| CVE-2023-6360_3.yaml |
-| CVE-2025-6463.yaml |
-| CVE-2025-52799.yaml |
-| CVE-2025-53282.yaml |
-| CVE-2024-6460_1.yaml |
-| bw-zenny.yaml |
-| CVE-2024-4295_2.yaml |
-| writesonic.yaml |
-| citygov.yaml |
-| CVE-2025-23967.yaml |
-| CVE-2023-4151_3.yaml |
-| podcast-feed-player-widget.yaml |
-| CVE-2025-24760.yaml |
-| CVE-2023-25998.yaml |
-| evangtermine.yaml |
-| sala.yaml |
-| plugin-inspector.yaml |
-| CVE-2025-49279.yaml |
-| CVE-2022-0234_7.yaml |
-| image-cleanup.yaml |
-| CVE-2025-53260.yaml |
-| weblizar-companion.yaml |
-| CVE-2025-53263.yaml |
-| CVE-2024-13496_1.yaml |
-| CVE-2019-8943_4.yaml |
-| CVE-2025-53329.yaml |
-| CVE-2021-34640_6.yaml |
-| national-weather-service-alerts.yaml |
-| CVE-2023-6623_3.yaml |
-| CVE-2025-52834.yaml |
-| CVE-2025-53320.yaml |
-| CVE-2014-9735_5.yaml |
-| CVE-2025-49280.yaml |
-| CVE-2025-32281.yaml |
-| CVE-2024-10783_1.yaml |
-| CVE-2024-27956_3.yaml |
-| ht-mega-for-wpbakery.yaml |
-| CVE-2024-3136_3.yaml |
-| CVE-2025-53272.yaml |
-| CVE-2025-49321.yaml |
-| my-resume-builder.yaml |
-| snsvicky.yaml |
-| aioseo-multibyte-descriptions.yaml |
-| CVE-2025-6437.yaml |
-| CVE-2024-2473_2.yaml |
-| CVE-2025-53287.yaml |
-| CVE-2025-5961.yaml |
-| CVE-2021-24522_4.yaml |
-| magty.yaml |
-| CVE-2025-25171.yaml |
-| wp-optimizer.yaml |
-| hide-admin-bar-from-front-end.yaml |
-| CVE-2025-49290.yaml |
-| CVE-2025-53311.yaml |
-| CVE-2019-25141_4.yaml |
-| realtyelite.yaml |
-| plationline.yaml |
-| CVE-2023-6553_4.yaml |
-| CVE-2021-4436_3.yaml |
-| mbstore.yaml |
-| CVE-2023-6634_4.yaml |
-| CVE-2022-1950_3.yaml |
-| CVE-2019-20141_6.yaml |
-| wpkit-elementor.yaml |
-| CVE-2023-6114_4.yaml |
-| CVE-2025-53203.yaml |
-| woo-3d-viewer.yaml |
-| CVE-2023-28662_3.yaml |
-| CVE-2022-27849_6.yaml |
-| CVE-2024-4620_2.yaml |
-| CVE-2025-53258.yaml |
-| CVE-2024-13786.yaml |
-| CVE-2025-24774.yaml |
-| CVE-2025-28988.yaml |
-| constructor.yaml |
-| CVE-2021-24472_6.yaml |
-| CVE-2025-53253.yaml |
-| CVE-2025-53262.yaml |
-| CVE-2022-0479_3.yaml |
-| CVE-2025-49303.yaml |
-| elessi-theme.yaml |
-| wp-wall.yaml |
-| CVE-2024-13451.yaml |
-| track-everything.yaml |
-| CVE-2022-0422_4.yaml |
-| CVE-2025-53267.yaml |
-| sofass.yaml |
-| CVE-2015-1000012-2458_1.yaml |
-| CVE-2025-50052.yaml |
-| CVE-2025-52810.yaml |
-| CVE-2025-53317.yaml |
-| gg-bought-together.yaml |
-| file-manager-plugin-for-wordpress.yaml |
-| CVE-2023-5974_4.yaml |
-| CVE-2016-10033_3.yaml |
-| CVE-2025-53285.yaml |
-| beauty-contact-popup-form.yaml |
-| contact-form-7-hide-success-message.yaml |
-| CVE-2024-4443_2.yaml |
-| sb-breadcrumbs.yaml |
-| nuss.yaml |
-| cyrlitera.yaml |
-| raise-the-money.yaml |
-| CVE-2025-49886.yaml |
-| CVE-2024-11396_1.yaml |
-| CVE-2025-52812.yaml |
-| CVE-2024-3032_2.yaml |
-| CVE-2023-6697_3.yaml |
-| CVE-2025-53331.yaml |
-| CVE-2021-24926_6.yaml |
-| CVE-2018-17207_4.yaml |
-| CVE-2025-53256.yaml |
-| CVE-2024-6205_2.yaml |
-| twitch-tv-embed-suite.yaml |
-| CVE-2025-30992.yaml |
-| CVE-2021-24943_5.yaml |
-| CVE-2025-52776.yaml |
-| popup-addon-for-ninja-forms.yaml |
-| CVE-2024-11740_1.yaml |
-| CVE-2025-6459.yaml |
-| CVE-2025-53280.yaml |
-| CVE-2025-53306.yaml |
-| CVE-2025-53273.yaml |
-| CVE-2021-24442_4.yaml |
-| CVE-2020-11530_3.yaml |
-| CVE-2021-25094_4.yaml |
-| CVE-2024-5647.yaml |
-| CVE-2022-2168_3.yaml |
-| CVE-2025-49281.yaml |
-| CVE-2025-39488.yaml |
-| CVE-2025-5339.yaml |
-| CVE-2022-0346_5.yaml |
-| CVE-2025-28990.yaml |
-| magze.yaml |
-| wpshapere-lite.yaml |
-| CVE-2025-53322.yaml |
-| redart.yaml |
-| CVE-2025-4654.yaml |
-| CVE-2024-6289_2.yaml |
-| CVE-2025-32311.yaml |
-| virusdie.yaml |
-| CVE-2025-32298.yaml |
-| davenport.yaml |
-| CVE-2024-7313_1.yaml |
-| CVE-2025-53294.yaml |
-| CVE-2025-2540.yaml |
-| magways.yaml |
-| zita.yaml |
-| CVE-2025-28956.yaml |
-| CVE-2025-28998.yaml |
-| CVE-2025-4381.yaml |
-| onet-regenerate-thumbnails.yaml |
-| CVE-2023-5003_3.yaml |
-| flexo-countdown.yaml |
-| domnoo.yaml |
-| auto-thickbox.yaml |
-| CVE-2024-2340_2.yaml |
-| CVE-2025-53325.yaml |
-| directiq-wp.yaml |
-| CVE-2025-53338.yaml |
-| CVE-2025-49277.yaml |
-| blogmine.yaml |
-| CVE-2025-52774.yaml |
-| magic-buttons-for-elementor.yaml |
-| gf-google-address-autocomplete.yaml |
-| magone.yaml |
-| quick-favicon.yaml |
-| CVE-2025-49275.yaml |
-| blogty.yaml |
-| dom-invader-xss1337.yaml |
-| evolution-file-fuzz.yaml |
-| web-tutor-detection.yaml |
-| evolution-dir-listing.yaml |
-| google-adk-webui-exposed.yaml |
-| evolution-sql-backup-detect.yaml |
-| google-adk-api-exposed.yaml |
-| cms-evolution-detect.yaml |
-| dubbo.yaml |
+| ycontributors.yaml |
+| CVE-2020-36728_4.yaml |
+| CVE-2025-6673.yaml |
+| CVE-2024-6651_1.yaml |
+| CVE-2017-18598_6.yaml |
+| CVE-2021-24934_3.yaml |
+| CVE-2024-33575_2.yaml |
+| CVE-2021-24849_5.yaml |
+| CVE-2022-0201_4.yaml |
+| gozen-forms.yaml |
+| doccheck-login.yaml |
+| CVE-2025-6787.yaml |
+| CVE-2021-24791_3.yaml |
+| CVE-2025-6814.yaml |
+| CVE-2025-6238.yaml |
+| CVE-2025-6786.yaml |
+| CVE-2024-2879_4.yaml |
+| woocommerce-paymaster-gateway-019.yaml |
+| CVE-2025-6039.yaml |
+| wp-push-notification-firebase.yaml |
+| CVE-2020-35749_7.yaml |
+| booking-x.yaml |
+| CVE-2023-2309_3.yaml |
+| CVE-2025-5953.yaml |
+| CVE-2023-3077_4.yaml |
+| CVE-2024-1512_3.yaml |
+| processingjs-for-wp.yaml |
+| CVE-2022-0591_5.yaml |
+| CVE-2025-5933.yaml |
+| CVE-2024-8522_3.yaml |
+| rd-wapp.yaml |
+| CVE-2025-6041.yaml |
+| CVE-2025-5322.yaml |
+| CVE-2023-0159_3.yaml |
+| CVE-2025-6783.yaml |
+| CVE-2021-24276-5664_2.yaml |
+| CVE-2025-6739.yaml |
+| CVE-2024-0235_3.yaml |
+| CVE-2025-5567.yaml |
+| CVE-2021-34630_4.yaml |
+| CVE-2021-24278-5669_2.yaml |
+| CVE-2023-6444_3.yaml |
+| CVE-2023-2256_4.yaml |
+| CVE-2023-7246_3.yaml |
+| CVE-2024-7354_2.yaml |
+| CVE-2025-6944.yaml |
+| CVE-2014-5181_4.yaml |
+| CVE-2021-39341_3.yaml |
+| CVE-2024-5932_2.yaml |
+| CVE-2025-6586.yaml |
+| CVE-2025-7046.yaml |
+| CVE-2025-5956.yaml |
+| wpquiz.yaml |
+| CVE-2024-0250_3.yaml |
+| CVE-2023-6505_2.yaml |
+| CVE-2024-27954_2.yaml |
+| CVE-2025-6740.yaml |
+| CVE-2025-6782.yaml |
+| CVE-2016-10940_5.yaml |
+| CVE-2025-6729.yaml |
+| CVE-2024-8529_2.yaml |
+| CVE-2022-0783_3.yaml |
+| CVE-2025-5924.yaml |
+| CVE-2024-9061_2.yaml |
+| CVE-2024-9796_2.yaml |
+| CVE-2022-0208_5.yaml |
+| smart-docs.yaml |
+| CVE-2020-8772_5.yaml |
+| CVE-2024-11937.yaml |
+| wftpserver.yaml |
