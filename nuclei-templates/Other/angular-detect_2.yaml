@@ -1,5 +1,4 @@
 id: angular-detect
-
 info:
   name: Angular detect
   author: TechbrunchFR
@@ -8,24 +7,19 @@ info:
   reference:
     - https://github.com/angular/angular
   metadata:
-    max-request: 1
     verified: true
     shodan-query: html:"ng-version="
-  tags: tech,angular
-
-http:
+  tags: technology,angular
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"
-
     matchers-condition: and
-
     matchers:
       - part: body
         type: word
         words:
           - "ng-version="
-
     extractors:
       - type: regex
         group: 1

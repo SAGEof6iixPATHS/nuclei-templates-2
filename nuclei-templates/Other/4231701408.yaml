@@ -1,20 +1,22 @@
 id: smtp
 info:
-  name: Wanadoo blocks smtp - NOT A REAL smtpd!
+  name: Rustock smtp backdoor
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: Wanadoo blocks smtp - NOT A REAL smtpd!
-    rarity: 0
+    info: '**BACKDOOR**'
+    operating_system: Windows
+    rarity: 8
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^554 Please check your SMTP server is set to [-\w_.]+\.co\.uk\. Further help is available at
+    - ^220 ESMTP service ready\r\n250\x20ok\r\n
