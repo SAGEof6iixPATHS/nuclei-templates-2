@@ -1,17 +1,17 @@
 id: imap
 info:
-  name: IceWarp imapd
+  name: University of Washington IMAP imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: time zone $3
-    operating_system: Linux
-    product: mail_server
+    hostname: $1
+    info: 'time zone: $3'
+    product: uw_imap
     rarity: 0
-    vendor: icewarp
+    vendor: uw
     verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +22,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IceWarp ([\w._-]+) RHEL(\d+) x64 IMAP4rev1 .* ([-+]\d+)\r\n
+    - ^\* OK \[CAPABILITY IMAP4REV1 [^]]+\] \[([\w.-]+)\] IMAP4rev1 (20\w+\.\d+) at [ \w,:]+ ([+-]\d+) \(\w+\)\r\n
