@@ -1,18 +1,13 @@
 id: unauthenticated-lansweeper
-
 info:
   name: Unauthenticated Lansweeper Instance
   author: divya_mudgal
   severity: high
   tags: lansweeper,unauth
-  metadata:
-    max-request: 1
-
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/Default.aspx"
-
     matchers:
       - type: word
         words:

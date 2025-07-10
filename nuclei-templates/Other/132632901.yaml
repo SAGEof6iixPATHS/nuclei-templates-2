@@ -1,11 +1,12 @@
 id: telnet
 info:
-  name: Broadcom $1 ADSL router telnetd
+  name: Netgear $2 switch telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: broadband router
+    device_type: switch
+    hostname: $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\n\r\n\r\n\r\n(BCM\w+) Broadband Router\r\n
+    - '^Welcome to ([\w._-]+)\.\r\r\nUnauthorized access is punishable by law\.\r\r\n\xff\xfb\x01\xff\xfb\x03\r\n\((GSM[\w._-]+)\) \r\nUser:'

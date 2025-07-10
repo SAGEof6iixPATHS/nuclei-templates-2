@@ -2,14 +2,14 @@ id: winterlock
 
 info:
   name: >
-    Wbcom Designs Plugins (Various Versions) - Arbitrary Plugin Installation, Activation and Deactivation
+    WP System Log < 1.0.21 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74d222b9-22e9-485d-8111-d3bee505b200?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f5733a60-8078-48ed-9395-ea79b4199f7e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/winterlock/"
     google-query: inurl:"/wp-content/plugins/winterlock/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,winterlock,low
+  tags: cve,wordpress,wp-plugin,winterlock,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= *')
+          - compare_versions(version, '< 1.0.21')

@@ -7,12 +7,11 @@ info:
   reference:
     - https://wordpress.org/plugins/otter-blocks/
   metadata:
-    max-request: 1
     plugin_namespace: otter-blocks
     wpscan: https://wpscan.com/plugin/otter-blocks
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
 
     path:

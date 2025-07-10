@@ -1,14 +1,15 @@
 id: nntp
 info:
-  name: InterNetNews (INN)
+  name: Lotus Domino nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    product: inn
+    info: posting ok
+    operating_system: $1
+    product: lotus_domino
     rarity: 0
-    vendor: isc
+    vendor: ibm
     verified: true
     version: $2
 tcp:
@@ -21,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^20. ([\w._-]+) InterNetNews NNRP server INN ([\w._-]+) ready \((?:posting ok|no posting)\)\.?\r\n
+    - ^200 Lotus Domino NNTP Server for ([-./\w]+) \(Release (\d[-.\w]+), .*\) - OK to post\r\n$
