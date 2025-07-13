@@ -1,22 +1,25 @@
-id: jboss-web-console
+id: jboss-web-console-2
+
 info:
-  name: JBoss Management Console Server Information
-  author: dhiyaneshDK
-  severity: low
-  reference:
-    - https://www.exploit-db.com/ghdb/5215
-  tags: jboss,unauth
-requests:
+  name: Jboss web console
+  author: reewardius
+  reference: https://medium.com/@madrobot/exploiting-jboss-like-a-boss-223a8b108206
+  severity: medium
+  metadata:
+    max-request: 4
+  tags: java,jboss,generic
+
+http:
   - method: GET
     path:
-      - "{{BaseURL}}/web-console/ServerInfo.jsp"
-    matchers-condition: and
+        - '{{BaseURL}}/web-console/'
+        - '{{BaseURL}}/web-console'
+        - '{{BaseURL}}/..;/web-console'
+        - '{{BaseURL}}/%5C../web-console'
+        
+    stop-at-first-match: true
     matchers:
       - type: word
+        part: body
         words:
-          - "Application Server"
-          - "Management Console"
-        condition: and
-      - type: status
-        status:
-          - 200
+          - "JBoss Management Console"

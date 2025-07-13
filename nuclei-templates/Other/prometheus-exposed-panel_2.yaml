@@ -1,24 +1,29 @@
 id: prometheus-exposed-panel
+
 info:
-  name: Prometheus.io exposed panel
-  author:
-  - l0ne1y
-  description: |-
-    Prometheus时间序列信息泄露
-    通过访问/graph泄露Prometheus时间序列收集、处理服务器等敏感信息
-  severity: low
-  remediation: |-
-    官方修复方案：
-    1、建议用户到官方获取最新补丁或者最新版本程序：
-    https://github.com/prometheus/prometheus/
-    临时修复方案：
-    1、禁止带有敏感数据的Web页面展示，以防止敏感信息泄漏。
-    2、对必须发送的敏感数据或页面请求接口做好严格的权限认证
-requests:
-- matchers:
-  - type: word
-    words:
-    - <title>Prometheus Time Series Collection and Processing Server</title>
-  path:
-  - '{{BaseURL}}/graph'
-  method: GET
+  name: Prometheus Panel - Detect
+  author: organiccrap,jfbes
+  severity: info
+  description: Prometheus panel was detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+  metadata:
+    max-request: 2
+    vendor: prometheus
+    product: prometheus
+  tags: panel,prometheus
+
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/graph'
+      - "{{BaseURL}}/prometheus/graph"
+
+    stop-at-first-match: true
+    matchers:
+      - type: word
+        part: body
+        words:
+          - '<title>Prometheus Time Series Collection and Processing Server</title>'
+# digest: 490a0046304402200fe96c3bc466127e0c9b5462ee22dc9128c2adce0c1f911c76d145203b15c10c022016dd6caa54ecc475162e0c3a3faae51ab558ff4ff82e1d2781082bf7e23b47c7:922c64590222798bb761d5b6d8e72950

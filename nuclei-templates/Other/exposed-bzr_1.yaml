@@ -5,7 +5,6 @@ info:
   author: daffainfo
   severity: low
   reference: http://doc.bazaar.canonical.com/beta/en/user-reference/configuration-help.html
-  tags: config,exposure
 
 requests:
   - method: GET
@@ -18,13 +17,8 @@ requests:
         words:
           - "parent_location"
           - "push_location"
-        condition: or
+        condition: and
 
       - type: status
         status:
           - 200
-
-      - type: word
-        part: header
-        words:
-          - "text/plain"

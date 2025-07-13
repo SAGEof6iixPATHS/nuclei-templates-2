@@ -3,7 +3,7 @@ id: nginx-config
 info:
   name: Nginx Config - Detect
   author: sheikhrishad,geeknik
-  severity: high
+  severity: info
   description: Nginx configuration information was detected.
   reference:
     - https://nginx.org/en/

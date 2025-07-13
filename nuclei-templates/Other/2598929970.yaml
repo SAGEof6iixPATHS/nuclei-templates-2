@@ -1,16 +1,13 @@
 id: nntp
 info:
-  name: INN nntpd
+  name: Microsoft NNTP Service
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: posting ok
-    product: inn
+    info: refused
+    operating_system: Windows
     rarity: 0
-    vendor: isc
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) NNRP Service Ready - [-\w_.]+@[-\w_.]+ \(posting ok\)\.\r\n
+    - ^502 Connection refused\r\n

