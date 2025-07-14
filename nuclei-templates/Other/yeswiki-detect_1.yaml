@@ -1,21 +1,15 @@
 id: yeswiki-detect
 
 info:
-  name: YesWiki Panel - Detect
+  name: YesWiki Detect
   author: ritikchaddha
   severity: info
-  description: YesWiki panel was detected.
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cwe-id: CWE-200
   metadata:
-    max-request: 1
     verified: true
     shodan-query: http.html:"yeswiki"
   tags: yeswiki,panel,tech
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}'
@@ -34,5 +28,3 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2023/01/29
