@@ -1,18 +1,17 @@
 id: wordpress-tinymce-advanced
 
 info:
-  name: Advanced Editor Tools Detection
+  name: Advanced Editor Tools (previously TinyMCE Advanced) Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/tinymce-advanced/
   metadata:
-    max-request: 1
     plugin_namespace: tinymce-advanced
     wpscan: https://wpscan.com/plugin/tinymce-advanced
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
 
     path:

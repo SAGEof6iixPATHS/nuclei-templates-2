@@ -1,15 +1,15 @@
-id: restrict-file-access-ebf292b00912caaf1da510aeb14a39a4
+id: restrict-file-access-99e9cbb0fb386dfbd55bb4a1cbba811b
 
 info:
   name: >
-    Restrict File Access <= 1.1.2 - Authenticated (Subscriber+) Arbitrary File Read
+    Restrict File Access <= 1.1.2 - Cross-Site Request Forgery to Arbitrary File Deletion
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6e9eec61-bf51-4cf7-b567-58ee2ccd91c5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e1105717-134b-48cc-960d-f78437c06793?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/restrict-file-access/"
     google-query: inurl:"/wp-content/plugins/restrict-file-access/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,restrict-file-access,low
+  tags: cve,wordpress,wp-plugin,restrict-file-access,medium
 
 http:
   - method: GET

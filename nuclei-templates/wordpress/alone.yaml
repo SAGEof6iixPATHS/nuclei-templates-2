@@ -1,15 +1,15 @@
-id: alone-6925d54f578e9f9682a9dccb8a9725aa
+id: alone-5ef65f37ffb2461816c3950599ce6a82
 
 info:
   name: >
-    Alone <= 7.8.2 - Unauthenticated Remote Code Execution
+    Alone – Charity Multipurpose Non-profit WordPress Theme <= 7.8.3 - Missing Authorization to Unauthenticated Arbitrary File Upload via Plugin Installation
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3f8397ff-35aa-445f-b370-d9fd0d1847e6?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/86f91589-b309-49aa-8b04-ca972acaf8fb?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/themes/alone/"
     google-query: inurl:"/wp-content/themes/alone/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,alone,critical
+  tags: cve,wordpress,wp-theme,alone,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.8.2')
+          - compare_versions(version, '<= 7.8.3')
