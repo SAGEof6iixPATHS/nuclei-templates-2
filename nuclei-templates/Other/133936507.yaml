@@ -1,13 +1,15 @@
 id: imap
 info:
-  name: Nortel CallPilot imapd
+  name: SurgeMail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    device_type: telecom-misc
     hostname: $1
+    product: surgemail
     rarity: 0
+    vendor: netwin
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -19,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+) CallPilot IMAP4rev1 v([\d.]+) server ready\.?\r\n
+    - ^\* OK IMAP \(C\) ([\w.-]+) \(Version (\d[\w.-]*)\)\r\n

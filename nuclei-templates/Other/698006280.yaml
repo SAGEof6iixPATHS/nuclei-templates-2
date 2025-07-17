@@ -1,14 +1,15 @@
 id: ftp
 info:
-  name: Witelcom router ftpd
+  name: pyftpdlib
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: router
-    hostname: $1
+    product: pyftpdlib
     rarity: 0
-    version: $2
+    vendor: giampaolo_rodola
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([\w_.-]+) FTP server \(witelcom ([\d.]+)\) ready\r\n
+    - ^220 pyftpdlib ([\w._-]+) ready\.\r\n

@@ -1,7 +1,7 @@
 id: ldap-account-manager-panel
 
 info:
-  name: LDAP Account Manager Login Panel - Detect
+  name: LDAP Account Manager Login Panel
   author: DhiyaneshDk
   severity: info
   description: |
@@ -13,12 +13,11 @@ info:
     cvss-score: 0.0
     cwe-id: CWE-200
   metadata:
-    max-request: 2
     verified: true
     shodan-query: title:"LDAP Account Manager"
   tags: panel,ldap
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/templates/login.php"
@@ -36,5 +35,3 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by md on 2023/01/16

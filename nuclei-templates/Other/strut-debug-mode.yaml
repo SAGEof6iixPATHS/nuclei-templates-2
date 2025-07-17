@@ -9,10 +9,9 @@ requests:
   - method: GET
     path:
       - '{{BaseURL}}'
-
     matchers:
       - type: word
         words:
           - "<debug>"
           - "<struts.actionMapping>"
-        condition: and
+        condition: and 
