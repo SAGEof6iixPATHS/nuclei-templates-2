@@ -5,7 +5,7 @@ info:
   author: alperenkesk
   severity: low
   reference: https://www.exploit-db.com/exploits/44734
-  tags: scada,config,exposure
+  tags: scada
 
 requests:
   - method: GET

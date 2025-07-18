@@ -1,13 +1,19 @@
 id: http
 info:
-  name: Fineground performance httpd
+  name: Allegro RomPager
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    device_type: power-device
     fallback:
     - get-request
+    info: APC http config
+    product: rompager
     rarity: 5
+    vendor: allegro
+    verified: true
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -19,4 +25,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 400 Bad Request\r\nDate: .*\r\nServer: FineGround Performance Server\r\n'
+    - '(?i)^HTTP/1\.1 403 Forbidden\r\nContent-Type: text/html\r\nServer: Allegro-Software-RomPager/([\d.]+).*This object on the APC Management Web Server is protected and requires a secure socket connection\.'

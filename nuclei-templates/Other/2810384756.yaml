@@ -1,17 +1,17 @@
 id: pop3
 info:
-  name: Microsoft Exchange pop3d
+  name: XMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
-    operating_system: Windows
-    product: exchange_server
+    hostname: $1
+    operating_system: Linux
+    product: xmail
     rarity: 0
-    vendor: microsoft
+    vendor: davide_libenzi
     verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +22,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Microsoft Exchange POP3 server version ([\d.]+) ready  <[\d.]+@([-\w_.]+)>\r\n
+    - '^\+OK <[\d.]+@([-\w_.]+)> \[XMail ([\d.]+) \(Linux/Ix86\) POP3 Server\] service ready; '

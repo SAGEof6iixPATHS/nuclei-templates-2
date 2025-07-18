@@ -1,13 +1,12 @@
 id: wordpress-hostinger
 
 info:
-  name: Hostinger Detection
+  name: Hostinger Tools Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/hostinger/
   metadata:
-    max-request: 1
     plugin_namespace: hostinger
     wpscan: https://wpscan.com/plugin/hostinger
   tags: tech,wordpress,wp-plugin,top-100,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022048841cfc7eec486ed6fd0ac8e2037bf05790ad619f19697a54ca3a31f561bc83022100d2a3ec8a3f9f6d68327003f2f93f5e29f63a1975fdc4af9304ec4bd914b7f1aa:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202cc468a375b57ce2e9d0940535abdbb058170c683ec3792a44da208c3db85a6c022100b4ac4734ed0c9fe8b90acd3df056d25cfbd199d570322e8fa03d4398e6fa01da:922c64590222798bb761d5b6d8e72950
