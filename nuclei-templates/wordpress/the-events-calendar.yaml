@@ -7,7 +7,6 @@ info:
   reference:
     - https://wordpress.org/plugins/the-events-calendar/
   metadata:
-    max-request: 1
     plugin_namespace: the-events-calendar
     wpscan: https://wpscan.com/plugin/the-events-calendar
   tags: tech,wordpress,wp-plugin,top-100,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a004730450220484436a67435c851f304fa221f382d707741811a19ef2c89c3d53b5a429f40ee022100d34fa3d3afe830d6603bb8f5c5ec7646fc43f9f6e79d57f1ebff480e11de944c:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008e4b46be38dcbe67e39efb324195c8e701c70b2d2a0178744a6bb43c20afd831022100889c6c9192d5efea63170fdf050ca2788a33df2ef70252c050824efc8967ba5b:922c64590222798bb761d5b6d8e72950

@@ -1,10 +1,11 @@
 id: smtp-proxy
 info:
-  name: Barracuda 300 spam filter
+  name: Avast! anti-virus smtp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^421 too many connections\r\n
+    - ^220 [-\w_.]+ avast! SMTP proxy ready\.\r\n

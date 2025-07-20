@@ -1,14 +1,15 @@
 id: pop3
 info:
-  name: Eudora Internet Mail Server X pop3d
+  name: FirstClass pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Mac OS X
+    product: firstclass
     rarity: 0
-    version: $2
+    vendor: opentext
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) running Eudora Internet Mail Server X ([\d.]+) <
+    - ^\+OK POP3 server at ([-\w_.]+) ready <[\d.]+@
