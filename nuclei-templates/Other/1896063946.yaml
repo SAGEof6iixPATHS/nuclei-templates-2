@@ -1,14 +1,12 @@
 id: nntp
 info:
-  name: Microsoft NNTP Service
+  name: inn2 nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: Portuguese
-    operating_system: Windows
+    info: unauthorized
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - '^200 Servi\xe7o NNTP ([\w._-]+) Version: [\w._-]+ Posting Allowed \r\n'
+    - ^502 Could not get your access name\.  Goodbye\.\r\n

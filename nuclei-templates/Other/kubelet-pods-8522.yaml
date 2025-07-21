@@ -1,19 +1,25 @@
 id: kubelet-pods
+
 info:
   name: Kubelet Scan
   author: sharath
   severity: info
   description: Scans for kubelet pods
   tags: tech,k8s,kubernetes,devops,kubelet,pods
-requests:
+  metadata:
+    max-request: 1
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pods"
+
     matchers-condition: and
     matchers:
       - type: status
         status:
           - 200
+
       - type: word
         part: body
         words:

@@ -11,9 +11,9 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 5.3
     cwe-id: CWE-200
-  tags: phpmyadmin,misconfig
+  tags: phpmyadmin,misconfig,edb
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/phpmyadmin/index.php?db=information_schema"

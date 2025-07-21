@@ -1,17 +1,18 @@
 id: wordpress-wordfence
 
 info:
-  name: Wordfence Security – Firewall & Malware Scan Detection
+  name: Wordfence Security – Firewall, Malware Scan, and Login Security Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/wordfence/
   metadata:
+    max-request: 1
     plugin_namespace: wordfence
     wpscan: https://wpscan.com/plugin/wordfence
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-requests:
+http:
   - method: GET
 
     path:

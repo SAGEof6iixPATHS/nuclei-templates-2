@@ -7,10 +7,7 @@ info:
   description: Mongo Express was able to be access with no authentication requirements in place.
   reference:
     - https://www.exploit-db.com/ghdb/5684
-  metadata:
-    verified: true
-    shodan-query: title:"Home - Mongo Express"
-  tags: mongo,unauth,edb
+  tags: mongo,unauth
 
 requests:
   - method: GET

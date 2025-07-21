@@ -1,11 +1,15 @@
 id: imap
 info:
-  name: AVM KEN! imapd
+  name: Sun Java System Messaging Multiplexor imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    product: java_system_messaging_server
     rarity: 0
+    vendor: sun
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK AVM KEN!4 IMAP Server ready\r\n
+    - ^\* OK \[CAPABILITY IMAP4[^\]]*\] Messaging Multiplexor \(Sun Java\(tm\) System Messaging Server (\d[-\w_.]+) \(built .*\)\)\r\n

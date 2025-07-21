@@ -1,11 +1,16 @@
 id: smtp
 info:
-  name: DavMail smtpd
+  name: Microsoft Exchange smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    info: disabled
+    operating_system: Windows
+    product: exchange_server
     rarity: 0
+    vendor: microsoft
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220 DavMail SMTP ready at '
+    - ^421 [\d.]+ Service not available, closing transmission channel\r\n

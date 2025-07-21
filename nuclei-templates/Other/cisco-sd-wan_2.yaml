@@ -4,8 +4,9 @@ info:
   name: Cisco SD-WAN panel
   author: z3bd
   severity: info
-  reference: https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-bufovulns-B5NrSHbj
-  tags: cisco
+  reference:
+    - https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-bufovulns-B5NrSHbj
+  tags: panel,cisco
 
 requests:
   - method: GET
