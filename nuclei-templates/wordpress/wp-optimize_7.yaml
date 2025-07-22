@@ -7,12 +7,11 @@ info:
   reference:
     - https://wordpress.org/plugins/wp-optimize/
   metadata:
-    max-request: 1
     plugin_namespace: wp-optimize
     wpscan: https://wpscan.com/plugin/wp-optimize
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
 
     path:

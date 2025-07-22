@@ -6,15 +6,14 @@ info:
   severity: critical
   description: "The kernel-theme theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation via the uploadify.php file in all versions. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible."
   reference:
-    - https://packetstormsecurity.com/files/123954/
-    - https://wpscan.com/vulnerability/3dbb3b02-e028-4dd8-b601-ef5cfb60ae55
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
+    cvss-metrics:
+    cvss-score:
     cve-id:
   metadata:
-    fofa-query: "wp-content/themes/kernel-theme/"
-    google-query: inurl:"/wp-content/themes/kernel-theme/"
+    fofa-query: "wp-content/unknown/kernel-theme/"
+    google-query: inurl:"/wp-content/unknown/kernel-theme/"
     shodan-query: 'vuln:'
   tags: cve,wordpress,wp-theme,kernel-theme,critical
 
@@ -54,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>0')
+          - compare_versions(version, '*')

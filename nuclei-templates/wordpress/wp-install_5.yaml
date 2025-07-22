@@ -2,7 +2,7 @@ id: wp-install
 
 info:
   name: WordPress Exposed Installation
-  author: princechaddha,0xpugazh
+  author: 0xpugazh
   severity: critical
   description: Wordpress installation files have been detected
   classification:
@@ -33,4 +33,3 @@ http:
         status:
           - 200
 
-# Enhanced by cs 01/26/2023

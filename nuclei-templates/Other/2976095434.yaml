@@ -1,21 +1,26 @@
 id: http
 info:
-  name: Polycom VVX VoIP phone http config
+  name: Serviio media server http status
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: VoIP phone
-    rarity: 6
+    fallback:
+    - get-request
+    product: restlet
+    rarity: 5
+    vendor: restlet
+    verified: true
+    version: '1.2'
 tcp:
-- name: lpdstring
+- name: sipoptions
   inputs:
-  - data: \x01default\n
+  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
   host:
   - '{{Hostname}}'
-  port: 515,2947,3333,32211,19350
+  port: 406,5060,8081,31337
   extractors:
   - name: http
     type: regex
     regex:
-    - ^<html><head><title>Error</title></head>\n<body>Your client sent an invalid \x01default request without a\nprotocol version \(assuming HTTP v0\.9\)\.\n<p>The request can not be processed\.</body></html>$
+    - '(?i)^HTTP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?Server: Restlet-Framework/@major-number@\.@minor-number@@release-type@@release-number@\r\n.*<p>The server has not found anything matching the request URI</p>'
