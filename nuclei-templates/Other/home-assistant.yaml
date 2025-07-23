@@ -3,13 +3,13 @@ id: home-assistant
 info:
   name: Detect Home Assistant
   author: fabaff
-  severity: low
+  severity: info
+  tags: tech,iot
 
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}:8123/"
-      - "{{BaseURL}}/"
+      - "{{BaseURL}}"
     matchers:
       - type: word
         words:

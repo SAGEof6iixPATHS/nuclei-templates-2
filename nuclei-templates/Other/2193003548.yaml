@@ -1,12 +1,17 @@
 id: domain
 info:
-  name: Nominum Vantio $1
+  name: Microsoft DNS
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
+    info: Windows Server 2016
+    operating_system: Windows
+    product: dns
     rarity: 1
-    version: $2
+    vendor: microsoft
+    verified: true
+    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -18,4 +23,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}Nominum Vantio (\w+) ([\d\.]+)$
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x01.{7}Microsoft DNS (10\.0$)

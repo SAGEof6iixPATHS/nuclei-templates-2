@@ -1,21 +1,24 @@
 id: wp-spell-check
 
 info:
-  name: "WP Spell Check <= 9.12 - Cross-Site Request Forgery"
+  name: >
+    WP Spell Check <= 9.12 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The WP Spell Check plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 9.12. This is due to missing nonce validation. This makes it possible for unauthenticated attackers to delete ignored words via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    
   reference:
-
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e5674e2-593a-4f53-bb03-9184eccc3244?source=api-scan
   classification:
-    cvss-metrics:
-    cvss-score:
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-spell-check/"
     google-query: inurl:"/wp-content/plugins/wp-spell-check/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-spell-check,medium
+  tags: cve,wordpress,wp-plugin,wp-spell-check,low
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<=  9.12')
+          - compare_versions(version, '<= 9.12')

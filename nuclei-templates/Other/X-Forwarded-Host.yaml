@@ -4,7 +4,7 @@ info:
   name: Custom IP Authorization Bypass
   author: MNM
   severity: medium
-  description: Checks for 401/403 responses and attempts bypass using X-Forwarded-Host header
+  description: Checks for 401/403 responses and attempts bypass using X-Orginal-Remote-Addr header
 
 flow: http(1) && http(2)
 
@@ -25,7 +25,7 @@ http:
     path:
       - "{{BaseURL}}"
     headers:
-      X-Forwarded-Host: "127.0.0.1"
+      X-Orginal-Remote-Addr: "127.0.0.1"
     
     matchers:
       - type: status
@@ -35,4 +35,5 @@ http:
     extractors:
       - type: dsl
         dsl:
-          - '"X-Forwarded-Host: 127.0.0.1"'
+          - '"X-Orginal-Remote-Addr: 127.0.0.1"'
+

@@ -1,15 +1,13 @@
 id: imap
 info:
-  name: IMail imapd
+  name: Oracle imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
-    product: imail
     rarity: 0
-    vendor: ipswitch
-    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\+OK X1 ([-\w_.]+)\r\n
+    - ^\* OK ([-\w_.]+) Oracle Email Server esimap\t([\d.]+) \t  is ready\r\n

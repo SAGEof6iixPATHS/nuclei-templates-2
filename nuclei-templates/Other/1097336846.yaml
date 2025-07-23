@@ -1,12 +1,14 @@
 id: ftp
 info:
-  name: DigiDNA FileApp ftpd
+  name: IBM Infoprint $2$3 ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: iOS
+    device_type: printer
+    hostname: $1
     rarity: 0
+    version: $4
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FileApp - FTP Server\r\n
+    - ^220 (\w+) IBM Infoprint (Color |)(\d+) FTP Server ([\w.]+) ready\.\r\n

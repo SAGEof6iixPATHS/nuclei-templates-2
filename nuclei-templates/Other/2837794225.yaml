@@ -1,13 +1,12 @@
 id: telnet
 info:
-  name: Biamp AudiaFlex $1 telnetd
+  name: D-Link switch telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: VoIP adapter
+    info: D-Link $1
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfe\x01Welcome to BIAMP Tesira VoIP\r\nSystem: AudiaFlex ([\w-]+) ([\d.]+)\r\nBuild Date: .*\r\n\r\nUsername: '
+    - ^\xff\xfb\x01\x1b\[0m\x1b\[2J\x1b\[0m\x1b\[9;20HCopyright\(C\) 1995-99 D-Link Systems Inc\.\x1b\[13;30HUser Name\x1b\[14;30HPassword\x1b\[23;10HMAC Address:\x1b\[8;29H([-.\w]+) Console Program\x1b\[13;41H
