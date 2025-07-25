@@ -7,7 +7,6 @@ info:
   reference:
     - https://wordpress.org/plugins/shortcodes-ultimate/
   metadata:
-    max-request: 1
     plugin_namespace: shortcodes-ultimate
     wpscan: https://wpscan.com/plugin/shortcodes-ultimate
   tags: tech,wordpress,wp-plugin,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402200e7b7228f182d1bcc439957ad267f9a0615819d3debe5c7b2a47b5cb64bed42c02202320892a0453e6622ff27b0f556a11c30484382e7e6af2c535246c89a03f6132:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203fa83798fe4e1a7cef95078998735dcabb6d3c1812cd9baf7276d4281d8e27fa022100bc12bf3025f2f4b363024fedad2aa447d0bd1658c91b834a4a89e8c8d1589df4:922c64590222798bb761d5b6d8e72950

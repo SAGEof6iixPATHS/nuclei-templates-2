@@ -4,7 +4,7 @@ info:
   name: Custom IP Authorization Bypass
   author: MNM
   severity: medium
-  description: Checks for 401/403 responses and attempts bypass using X-Originating-IP header
+  description: Checks for 401/403 responses and attempts bypass using X-Real-IP header
 
 flow: http(1) && http(2)
 

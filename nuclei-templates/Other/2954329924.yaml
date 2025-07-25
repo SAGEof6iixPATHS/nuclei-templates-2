@@ -1,13 +1,12 @@
 id: smtp
 info:
-  name: Mercury Mail smtpd
+  name: Netasq Mfiltro spam detection smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) Mercury (\d[-.\w]+) ESMTP server ready\.\r\n$
+    - ^220 ([\w._-]+) mfiltro ESMTP server ready\r\n
