@@ -8,7 +8,7 @@ info:
     SAProuter is a software application that provides a remote connection between our customer's network and SAP.
   metadata:
     max-request: 1
-  tags: network,sap,detect,saprouter,detection,tcp
+  tags: network,sap,detect
 
 tcp:
   - inputs:
@@ -24,4 +24,4 @@ tcp:
       - type: word
         words:
           - "SAProuter"
-# digest: 490a00463044022049d89464b5d605d73826258a47d21b1437bbb2687c3109bef2700bd0f7ab9b640220325714b60bdf4628d06437f9a30341193c8080fc33631b1a10d4bf52ef4fbabb:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220788404f08e8b3bc5f996b3391d3a6e30c35980667b613c65d01d1c8f00ef5b70022029437f40e2e588e308ce995757da75ee28eebb7ed9f048199ad1ac0cdebc45ba:922c64590222798bb761d5b6d8e72950

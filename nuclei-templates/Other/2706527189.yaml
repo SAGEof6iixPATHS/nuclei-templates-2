@@ -1,14 +1,15 @@
 id: smtp
 info:
-  name: ArGoSoft Mail Server Freeware
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Windows
+    product: postfix
     rarity: 0
-    version: $2
+    vendor: postfix
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ArGoSoft Mail Server Freeware, Version [\d.]+ \(([\d.]+)\)\r\n
+    - ^220 ([-\w_.]+) SMTPD Server - Postfix\r\n

@@ -7,6 +7,7 @@ info:
   reference:
     - https://wordpress.org/plugins/woocommerce-gateway-stripe/
   metadata:
+    max-request: 1
     plugin_namespace: woocommerce-gateway-stripe
     wpscan: https://wpscan.com/plugin/woocommerce-gateway-stripe
   tags: tech,wordpress,wp-plugin,top-100,top-200
@@ -46,4 +47,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a00463044022056a22f3f5f4432f9ee155e090e51e4cf9d20e8fb246d7505367f5448378a3c6d02203985a05e1cce292adb2f2139e86f9c9db1bce0e5452083eb78cb4a2baeb12b5f:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022047d8f578f3e4bb7e1d73f27e27b12c1156bb2bda7e6402ff580723441c80b0be022100a6c3e808b95b4e688b3e80ec5821912d82511ff6856b1db2de32388a7a7d08d2:922c64590222798bb761d5b6d8e72950

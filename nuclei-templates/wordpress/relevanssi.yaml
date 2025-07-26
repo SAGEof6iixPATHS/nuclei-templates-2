@@ -2,13 +2,14 @@ id: relevanssi
 
 info:
   name: >
-    Relevanssi - A Better Search Free & Premium <= 2.16.3 & 4.14.3 - Stored Cross-Site Scripting
+    Relevanssi <= 4.22.2 - Unauthenticated Information Exposure
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8e12d132-c036-4665-bb8d-e31e2b155fbd?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3fa78f4e-ede2-4863-a2d7-99bd8c7b5912?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/relevanssi/"
     google-query: inurl:"/wp-content/plugins/relevanssi/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,relevanssi,high
+  tags: cve,wordpress,wp-plugin,relevanssi,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.14.3')
+          - compare_versions(version, '<= 4.22.2')
