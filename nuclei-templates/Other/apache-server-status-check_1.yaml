@@ -1,14 +1,15 @@
 id: apache-server-status-check
 
 info:
-  name: Apache Server Status
+  name: Apache Server Status Check
   author: SirBugs
   severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/server-status"
+      - "{{BaseURL}}/server-status?full"
       - "{{BaseURL}}/server-info"
     matchers-condition: and
     matchers:

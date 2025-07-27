@@ -1,9 +1,10 @@
 id: parallels-html-client
+
 info:
   name: Parallels HTML5 Client
-  author: pdteam
-  severity: info
-  tags: panel
+  author: bauthard
+  severity: medium
+
 requests:
   - method: GET
     path:
