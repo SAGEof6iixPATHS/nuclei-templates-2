@@ -1,13 +1,14 @@
 id: pop3
 info:
-  name: Classic Hamster pop3d
+  name: GoMail mass mailing plugin pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
     operating_system: Windows
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3-Server Classic Hamster (?:Vr\.|Version) [\d.]+ \(Build ([\d.]+)\) greets you! <.*>\r\n
+    - ^\+OK ([-\w_.]+) .* GoMail V([\d.]+) POP3

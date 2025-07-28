@@ -1,18 +1,13 @@
 id: smtp
 info:
-  name: Trend Micro InterScan
+  name: MailGate smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $2
-    info: on Postfix
-    operating_system: Unix
-    product: postfix
+    hostname: $1
+    operating_system: Windows
     rarity: 0
-    vendor: postfix
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220-InterScan Version (\S+) .*Ready\r\n220 ([-.+\w]+) ESMTP Postfix\r\n
+    - '^220 ([-/.+\w]+) MailGate ready for ESMTP on '

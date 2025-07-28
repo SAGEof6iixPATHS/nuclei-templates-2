@@ -6,10 +6,8 @@ info:
   severity: high
   description: Codeigniter .env file was discovered.
   tags: config,exposure,codeigniter
-  metadata:
-    max-request: 12
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/.env"

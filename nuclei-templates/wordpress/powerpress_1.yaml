@@ -2,14 +2,14 @@ id: powerpress
 
 info:
   name: >
-    PowerPress <= 8.3.7 - Arbitrary File Upload
+    PowerPress <= 6.0.0 - Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cc987edf-5a68-4baf-947c-e623c85ec659?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5820352-a271-43c6-950d-815402241362?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/powerpress/"
     google-query: inurl:"/wp-content/plugins/powerpress/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,powerpress,critical
+  tags: cve,wordpress,wp-plugin,powerpress,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 8.3.7')
+          - compare_versions(version, '<= 6.0.0')
