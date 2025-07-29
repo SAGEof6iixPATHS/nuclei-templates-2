@@ -10,35 +10,43 @@
 | CVE-2007 | 6 |
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
-| CVE-2010 | 123 |
-| CVE-2011 | 16 |
-| CVE-2012 | 32 |
-| CVE-2013 | 25 |
-| CVE-2014 | 51 |
-| CVE-2015 | 58 |
-| CVE-2016 | 52 |
-| CVE-2017 | 100 |
-| CVE-2018 | 266 |
-| CVE-2019 | 431 |
-| CVE-2020 | 801 |
-| CVE-2021 | 902 |
-| CVE-2022 | 889 |
-| CVE-2023 | 786 |
-| CVE-2024 | 487 |
-| CVE-2025 | 111 |
-| Other | 33122 |
-| wordpress | 68260 |
+| CVE-2010 | 122 |
+| CVE-2011 | 20 |
+| CVE-2012 | 37 |
+| CVE-2013 | 28 |
+| CVE-2014 | 58 |
+| CVE-2015 | 65 |
+| CVE-2016 | 63 |
+| CVE-2017 | 109 |
+| CVE-2018 | 274 |
+| CVE-2019 | 443 |
+| CVE-2020 | 817 |
+| CVE-2021 | 935 |
+| CVE-2022 | 919 |
+| CVE-2023 | 802 |
+| CVE-2024 | 501 |
+| CVE-2025 | 112 |
+| Other | 44346 |
+| wordpress | 81956 |
 ## 近几天数量变化情况
-|2025-07-21 | 2025-07-22 | 2025-07-23 | 2025-07-25 | 2025-07-26 | 2025-07-27 | 2025-07-28|
+|2025-07-22 | 2025-07-23 | 2025-07-25 | 2025-07-26 | 2025-07-27 | 2025-07-28 | 2025-07-29|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|134439 | 139421 | 98574 | 122360 | 95637 | 129089 | 106567|
+|139421 | 98574 | 122360 | 95637 | 129089 | 106567 | 131662|
 ## 最近新增文件
 | templates name | 
 | --- |
-| opera-phish_9.yaml |
-| hikvision-detect_4.yaml |
-| yahoo-phish_7.yaml |
-| git-mailmap_4.yaml |
-| brighthr-phish_11.yaml |
-| CVE-2025-8104.yaml |
-| wordpress-seo_7.yaml |
+| meddream-dicom-viewer-panel.yaml |
+| safeq-panel.yaml |
+| eticaret-turkey-cms-filemanager-exploit.yaml |
+| adobe-phish_9.yaml |
+| disneyplus-phish_8.yaml |
+| cockpit-project-panel_6.yaml |
+| instagram-phish_8.yaml |
+| ssrf-cxf-services-metadata.yaml |
+| justboil-me-image-upload.yaml |
+| plumcloud-imagebrowser-file-upload.yaml |
+| filezilla-phish_9.yaml |
+| sql-monitor_2.yaml |
+| bimi-detect_8.yaml |
+| CVE-2025-34143.yaml |
+| simple-history_3.yaml |

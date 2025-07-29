@@ -1,15 +1,12 @@
 id: irc
 info:
-  name: ratbox ircd
+  name: BitlBee IRCd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
     hostname: $1
-    product: ircd-ratbox
     rarity: 0
-    vendor: ratbox
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Processing connection to ([-\w_.]+)\r\n
+    - '^Warning: Unable to read configuration file `.*/bitlbee\.conf''\.\n:([-:\w_.]+)\. NOTICE AUTH :BitlBee-IRCd initialized, please go on\r\n'

@@ -7,6 +7,7 @@ info:
   reference:
     - https://wordpress.org/plugins/widget-importer-exporter/
   metadata:
+    max-request: 1
     plugin_namespace: widget-importer-exporter
     wpscan: https://wpscan.com/plugin/widget-importer-exporter
   tags: tech,wordpress,wp-plugin,top-200
@@ -46,4 +47,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100e332a93c191e06f506c6a8287b5dec4c15b17303a2de7e5ac98092852eeb059f0220661ce88fd43c12802796efe35fac0797e5c578fdfc67ef298ac11d82dd48e8f3:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c99d197669275cd70818b6eb22090a6b0f57171599a8f24af31643cba2ebcc85022100b8261299f2e09d10128973d75d5c3d346fa6ac7dd8b758a7ab3e5d672f48ca3f:922c64590222798bb761d5b6d8e72950

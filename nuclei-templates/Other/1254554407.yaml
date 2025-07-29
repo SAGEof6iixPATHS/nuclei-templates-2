@@ -1,14 +1,14 @@
 id: ssh
 info:
-  name: Akamai SSH
+  name: ProFTPD mod_sftp
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    product: ssh
+    product: proftpd
     rarity: 0
-    vendor: akamai
+    vendor: proftpd
     verified: true
     version: $2
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-(\d[\d.]*)-(Server-V)\r?\n$
+    - ^SSH-([\d.]+)-mod_sftp/([\w._-]+)\r\n

@@ -10,6 +10,8 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cwe-id: CWE-200
   metadata:
+    runzero-match: |-
+      any(each(service["html.titles"]), {# matches "(?i)CentreStack"})
     verified: true
     max-request: 1
     shodan-query: title:"CentreStack"
@@ -30,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402204ed55cadac63081bbbc1ee49f4a0404a79fe21d35438967987309ca115e250110220060ce07d3134909c48bfe9af8ad66a183bf9ec1c2f130aad3fddec62eecad457:922c64590222798bb761d5b6d8e72950
+

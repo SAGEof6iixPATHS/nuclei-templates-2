@@ -159067,5 +159067,20 @@
     "git-mailmap_4.yaml": "2025-07-28 03:29:49",
     "brighthr-phish_11.yaml": "2025-07-28 03:29:49",
     "CVE-2025-8104.yaml": "2025-07-28 03:29:49",
-    "wordpress-seo_7.yaml": "2025-07-28 03:29:49"
+    "wordpress-seo_7.yaml": "2025-07-28 03:29:49",
+    "meddream-dicom-viewer-panel.yaml": "2025-07-29 03:32:38",
+    "safeq-panel.yaml": "2025-07-29 03:32:38",
+    "eticaret-turkey-cms-filemanager-exploit.yaml": "2025-07-29 03:32:38",
+    "adobe-phish_9.yaml": "2025-07-29 03:32:38",
+    "disneyplus-phish_8.yaml": "2025-07-29 03:32:38",
+    "cockpit-project-panel_6.yaml": "2025-07-29 03:32:38",
+    "instagram-phish_8.yaml": "2025-07-29 03:32:38",
+    "ssrf-cxf-services-metadata.yaml": "2025-07-29 03:32:38",
+    "justboil-me-image-upload.yaml": "2025-07-29 03:32:38",
+    "plumcloud-imagebrowser-file-upload.yaml": "2025-07-29 03:32:38",
+    "filezilla-phish_9.yaml": "2025-07-29 03:32:38",
+    "sql-monitor_2.yaml": "2025-07-29 03:32:38",
+    "bimi-detect_8.yaml": "2025-07-29 03:32:38",
+    "CVE-2025-34143.yaml": "2025-07-29 03:32:38",
+    "simple-history_3.yaml": "2025-07-29 03:32:38"
 }
