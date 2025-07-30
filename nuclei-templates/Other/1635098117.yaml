@@ -1,15 +1,15 @@
 id: ftp
 info:
-  name: WarFTPd
+  name: APC AOS ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: warftpd
+    device_type: power-device
+    info: on APC $1 network management card
+    operating_system: AOS
     rarity: 0
-    vendor: jgaa
-    verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - (?i)^220-.*\r\n(?:220-|)    WarFTPd (\d[-.\w]+) \([\w ]+\) Ready\r\n
+    - ^220 ([-.\w]+) Network Management Card AOS v([-.\w]+) FTP server ready.\r\n$
