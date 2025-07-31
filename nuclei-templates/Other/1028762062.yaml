@@ -1,12 +1,12 @@
 id: pop3
 info:
-  name: WinRoute Pro pop3
+  name: Quick 'n Easy pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK WinRoute Pro ([\d.]+) POP3 server ready <[-\w_.]+@unspecified.host>\r\n
+    - ^\+OK Quick 'n Easy Mail Server ready\r\n

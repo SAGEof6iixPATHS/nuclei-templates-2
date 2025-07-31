@@ -1,13 +1,14 @@
 id: nntp
 info:
-  name: JAMES nntpd
+  name: Netwinsite DNEWS
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
     hostname: $1
-    info: posting ok
+    info: posting OK
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) NNTP Service Ready, posting permitted\r\n
+    - ^200 ([-.\w]+) DNEWS Version *(\d[-.\w]+).*posting OK \r\n

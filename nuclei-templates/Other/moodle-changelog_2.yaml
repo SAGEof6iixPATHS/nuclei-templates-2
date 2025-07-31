@@ -4,9 +4,12 @@ info:
   name: Moodle Changelog File
   author: oppsec
   severity: info
-  description: Moodle have a file which describes API changes in core libraries and APIs, can be used to discover Moodle version.
+  description: Moodle has a file which describes API changes in core libraries and APIs, and can be used to discover Moodle version.
+  metadata:
+    max-request: 1
+  tags: miscellaneous,misc,moodle
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/lib/upgrade.txt"
@@ -21,10 +24,11 @@ requests:
         condition: and
 
       - type: word
+        part: header
         words:
           - "text/plain"
-        part: header
 
       - type: status
         status:
           - 200
+# digest: 4a0a004730450221009a5a837a6d37a0b5cb27e42ba8ae6011cb155f7d44cd139c1513e753a1c2ee7502203d6c817b57b2b002ce85426e4a43bbdd1d99b4c67d285b10c285d859f16ff320:922c64590222798bb761d5b6d8e72950
