@@ -1,12 +1,15 @@
 id: pop3
 info:
-  name: Google Gmail pop3d
+  name: CommuniGate Pro
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    info: $1
+    hostname: $1
+    product: communigate_pro
     rarity: 0
+    vendor: stalker
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Gpop ready for requests from [\d\.]+ ([\w\d]+)
+    - ^\+OK CommuniGate Pro POP3 Server ready <[\d.]+@([-\w_.]+)>\r\n

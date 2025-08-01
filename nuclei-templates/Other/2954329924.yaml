@@ -1,14 +1,12 @@
 id: smtp
 info:
-  name: L-Soft HDMail smtpd
+  name: Netasq Mfiltro spam detection smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Linux
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220 ([-\w_.]+) L-Soft HDMail SMTP Service Version: ([-\w_.()]+) ready'
+    - ^220 ([\w._-]+) mfiltro ESMTP server ready\r\n

@@ -3,12 +3,14 @@ id: drupal-install
 info:
   name: Drupal Install
   author: NkxxkN
-  severity: medium
+  severity: low
+  tags: exposure
 
 requests:
   - method: GET
     path:
       - "{{BaseURL}}/install.php?profile=default"
+
     redirects: true
     max-redirects: 1
     matchers:

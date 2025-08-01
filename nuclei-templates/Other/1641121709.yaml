@@ -1,13 +1,16 @@
 id: ftp
 info:
-  name: Lanier $1 ftpd
+  name: vsftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    device_type: WAP
+    info: Freetz firmware for AVM Fritz!Box
+    product: vsftpd
     rarity: 0
-    version: $2
+    vendor: vsftpd
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 LANIER ([\w\d /-]+) FTP server \(([\d+.]+)\) ready\.\r\n
+    - ^220-   __  _   __  __ ___ __\r\n220-  \|__ \|_\) \|__ \|__  \|   /\r\n220-  \|   \|\\  \|__ \|__  \|  /_\r\n220-\r\n220-   The fun has just begun\.\.\.\r\n220 \r\n
