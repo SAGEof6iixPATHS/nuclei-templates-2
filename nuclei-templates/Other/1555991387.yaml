@@ -1,13 +1,17 @@
 id: nntp
 info:
-  name: ArGoSoft nntpd
+  name: INN nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    info: posting ok
+    product: inn
     rarity: 0
-    version: $1
+    vendor: isc
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ArGoSoft News Server for WinNT/2000/XP v ([\d.]+) ready\r\n
+    - ^200 ([-\w_.]+) InterNetNews (?:NNRP )?server INN ([\d.]+) .* ready \(posting ok\)\.\r\n

@@ -15,70 +15,114 @@
 | CVE-2012 | 38 |
 | CVE-2013 | 30 |
 | CVE-2014 | 63 |
-| CVE-2015 | 72 |
-| CVE-2016 | 74 |
+| CVE-2015 | 71 |
+| CVE-2016 | 73 |
 | CVE-2017 | 111 |
-| CVE-2018 | 280 |
-| CVE-2019 | 462 |
-| CVE-2020 | 838 |
-| CVE-2021 | 977 |
+| CVE-2018 | 281 |
+| CVE-2019 | 460 |
+| CVE-2020 | 839 |
+| CVE-2021 | 974 |
 | CVE-2022 | 945 |
 | CVE-2023 | 815 |
-| CVE-2024 | 512 |
-| CVE-2025 | 116 |
-| Other | 56007 |
-| wordpress | 92537 |
+| CVE-2024 | 513 |
+| CVE-2025 | 117 |
+| Other | 55602 |
+| wordpress | 92325 |
 ## 近几天数量变化情况
-|2025-07-26 | 2025-07-27 | 2025-07-28 | 2025-07-29 | 2025-07-30 | 2025-07-31 | 2025-08-01|
+|2025-07-27 | 2025-07-28 | 2025-07-29 | 2025-07-30 | 2025-07-31 | 2025-08-01 | 2025-08-02|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|95637 | 129089 | 106567 | 131662 | 107673 | 149208 | 154078|
+|129089 | 106567 | 131662 | 107673 | 149208 | 154078 | 153458|
 ## 最近新增文件
 | templates name | 
 | --- |
-| appLoaderDefLogin.yaml |
-| adfinity-panel_7.yaml |
-| nocobase-detect.yaml |
-| ebay-phish_11.yaml |
-| inlong.yaml |
-| pronote-panel_8.yaml |
-| apache-inlong-default-login.yaml |
-| voipDetectiveDefLogin.yaml |
-| avast-phish_11.yaml |
-| protop.yaml |
-| slims-9-xss-index_6.yaml |
-| barracuda-message-archiver-panel.yaml |
-| apache-inlong-detect.yaml |
-| CVE-2025-44177.yaml |
-| CVE-2024-2053.yaml |
-| CVE-2022-0434_7.yaml |
-| CVE-2016-1000138_5.yaml |
-| CVE-2016-1000137_6.yaml |
-| CVE-2013-7240_5.yaml |
-| CVE-2016-1000143_3.yaml |
-| CVE-2015-9414_7.yaml |
-| CVE-2022-2314_7.yaml |
-| CVE-2019-15858_6.yaml |
-| CVE-2021-24407_7.yaml |
-| CVE-2025-8401.yaml |
-| CVE-2023-2122_7.yaml |
-| CVE-2022-0788_6.yaml |
-| ninjascanner.yaml |
-| CVE-2025-8068.yaml |
-| CVE-2022-1168_6.yaml |
-| CVE-2016-1000136_4.yaml |
-| CVE-2022-0212_6.yaml |
-| CVE-2025-7205.yaml |
-| CVE-2025-8151.yaml |
-| CVE-2022-0288_4.yaml |
-| CVE-2016-1000153_6.yaml |
-| CVE-2022-1609_6.yaml |
-| CVE-2022-45835_6.yaml |
-| CVE-2024-3097_2.yaml |
-| CVE-2022-1168_5.yaml |
-| CVE-2021-24436_6.yaml |
-| CVE-2014-9444_6.yaml |
-| CVE-2023-0261_5.yaml |
-| CVE-2015-9480_5.yaml |
-| CVE-2025-7847.yaml |
-| CVE-2025-5720.yaml |
-| CVE-2025-8213.yaml |
+| UPLOAD-bitrix-html-editor-upload-check.yaml |
+| SQLI-bitrix-sql-injection.yaml |
+| UPLOAD-bitrix-cve-2022-27228.yaml |
+| genius-users.yaml |
+| flow-supply-chain-analyzer.yaml |
+| INFO-bitrix-common-checks.yaml |
+| codechef.yaml |
+| INFO-bitrix-initphp-access.yaml |
+| CSRF-2025-06581-bitrix-sessid-bypass.yaml |
+| INFO-bitrix-logs-precise.yaml |
+| hudsonrock.yaml |
+| INFO-bitrix-info-disclosure-simple.yaml |
+| flow-api-security-recon.yaml |
+| geeksforgeeks.yaml |
+| giant-bomb.yaml |
+| mixcloud.yaml |
+| DESER-bitrix-deserialization.yaml |
+| headless-browser-fingerprinting.yaml |
+| INFO-bitrix-extras-checks.yaml |
+| strava.yaml |
+| XSS-bitrix-map-google-xss.yaml |
+| headless-postmessage-vuln.yaml |
+| UPLOAD-bitrix-upload-vulnerabilities.yaml |
+| headless-template-injection.yaml |
+| reverbnation.yaml |
+| RCE-bitrix-rce-vulnerabilities.yaml |
+| headless-clickjacking.yaml |
+| topcoder.yaml |
+| MULTI-bitrix-ultimate-checks.yaml |
+| INFO-bitrix-composite-data.yaml |
+| INFO-bitrix-info-disclosure-fixed.yaml |
+| INFO-bitrix-info-disclosure.yaml |
+| bluesky.yaml |
+| atcoder.yaml |
+| UPLOAD-2025-06613-bitrix-html-editor-action.yaml |
+| MULTI-bitrix-vulns-core.yaml |
+| flow-basic-test.yaml |
+| headless-prototype-pollution.yaml |
+| SSRF-bitrix-html-editor-ssrf.yaml |
+| monkeytype.yaml |
+| flow-ssl-simple.yaml |
+| flow-graphql-security-analyzer.yaml |
+| cgtrader.yaml |
+| UPLOAD-bitrix-webdav-upload.yaml |
+| SSRF-bitrix-ssrf-advanced.yaml |
+| headless-websocket-security.yaml |
+| LFI-bitrix-path-traversal.yaml |
+| apple-discussions.yaml |
+| headless-js-framework-vuln.yaml |
+| apple-developer.yaml |
+| flow-multi-protocol-fingerprinting.yaml |
+| CSRF-bitrix-csrf-vulnerabilities.yaml |
+| scribd.yaml |
+| XXE-bitrix-xxe-vulnerabilities.yaml |
+| INFO-2025-06614-bitrix-show-include-exec-time.yaml |
+| mydramalist.yaml |
+| headless-csp-bypass.yaml |
+| flow-ssl-tls-profiler.yaml |
+| replit.yaml |
+| flow-behavioral-auth-analysis.yaml |
+| headless-advanced-dom-xss.yaml |
+| INFO-bitrix-info-disclosure-precise.yaml |
+| INFO-bitrix-updater-log-disclosure.yaml |
+| INFO-bitrix-misc-paths.yaml |
+| 9gag.yaml |
+| nationstates-nation.yaml |
+| flow-zero-trust-assessment.yaml |
+| REDIRECT-bitrix-open-redirect.yaml |
+| letterboxd.yaml |
+| flow-adaptive-jwt-security.yaml |
+| younow.yaml |
+| runescape.yaml |
+| weblate.yaml |
+| INFO-2025-06612-bitrix-composite-data.yaml |
+| INFO-bitrix-sessid-get.yaml |
+| UPLOAD-bitrix-vm-restore-upload.yaml |
+| sketchfab.yaml |
+| kaskus.yaml |
+| SSRF-bitrix-urlpreview-ssrf.yaml |
+| graphql-subscription-oob.yaml |
+| CVE-2025-8286.yaml |
+| CVE-2025-4523.yaml |
+| CVE-2025-7646.yaml |
+| CVE-2025-7443.yaml |
+| CVE-2025-6228.yaml |
+| CVE-2025-5954.yaml |
+| CVE-2025-5947.yaml |
+| CVE-2025-4684.yaml |
+| CVE-2025-7725.yaml |
+| aone-sms.yaml |
+| CVE-2025-7845.yaml |
