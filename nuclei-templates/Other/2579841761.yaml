@@ -1,6 +1,6 @@
 id: rtsp
 info:
-  name: Hikvision DVR rtspd
+  name: Amino AmiNET set-top box rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
@@ -20,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 401 Unauthorized\r\nWWW-Authenticate: Digest realm=\"Hikvision\", nonce=\"[\da-f]{32}\", stale=\"FALSE\"\r\nWWW-Authenticate: Basic realm=\"/\"\r\n\r\n'
+    - '(?i)^RTSP/1\.0 200 OK 200\r\n(?:[^\r\n]+\r\n)*?Server: Amino streamer\r\n'

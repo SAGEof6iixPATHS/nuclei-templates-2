@@ -1,16 +1,14 @@
 id: ftp-proxy
 info:
-  name: AnalogX FTP proxy
+  name: Squid ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
-    product: proxy
+    product: squid
     rarity: 0
-    vendor: analogx
+    vendor: squid-cache
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([-.+\w]+) FTP AnalogX Proxy (\d[-.\w]+) \(Release\) ready\r\n
+    - ^220 server ready - login please\r\n

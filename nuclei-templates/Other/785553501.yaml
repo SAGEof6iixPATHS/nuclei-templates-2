@@ -1,18 +1,14 @@
 id: imap
 info:
-  name: Cyrus imapd
+  name: Dovecot DirectAdmin imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    info: RedHat
-    operating_system: Linux
-    product: cyrus_imap_server
+    product: dovecot
     rarity: 0
-    vendor: cmu
+    vendor: dovecot
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-.\w]+) Cyrus IMAP4 v([-.\w\+]+)-Red Hat [-.\w\+]+ server ready\r\n
+    - ^\* OK \[CAPABILITY IMAP4rev1 LITERAL\+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE AUTH=PLAIN\] Dovecot DA ready\.\r\n

@@ -1,15 +1,13 @@
 id: pop3
 info:
-  name: Microsoft Exchange 2007-2010 pop3d
+  name: eXtremail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: exchange_server
+    hostname: $3
     rarity: 0
-    vendor: microsoft
-    verified: true
+    version: $1 rel$2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK The Microsoft Exchange POP3 service is ready\.\r\n
+    - ^\+OK eXtremail V(\d[-.\w]+) release (\d+) POP3 server ready <[\d.]+@([-\w_.]+)>\r\n
