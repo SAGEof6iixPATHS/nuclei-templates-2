@@ -1,20 +1,24 @@
 id: smtp
 info:
-  name: LiteMail smtpd
+  name: McAfee Email Gateway
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
-    rarity: 0
+    hostname: $1
+    product: email_gateway
+    rarity: 8
+    vendor: mcafee
+    verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 LiteMail SMTP Server Ready\.\r\n
+    - ^220 ([\w.-]+) Ready\r\n250-Requested mail action okay, completed\.\r\n250 STARTTLS\r\n

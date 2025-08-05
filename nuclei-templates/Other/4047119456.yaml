@@ -1,21 +1,20 @@
 id: smtp
 info:
-  name: Freemail smtpd
+  name: Mail Matrix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    rarity: 8
+    operating_system: Windows
+    rarity: 0
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w_.-]+) ready\r\n250-[\w_.-]+\r\n250 AUTH LOGIN PLAIN \r\n$
+    - ^220 mailmatrix SMTP Server \(Mail Matrix Server\) ready
