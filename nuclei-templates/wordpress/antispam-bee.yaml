@@ -7,6 +7,7 @@ info:
   reference:
     - https://wordpress.org/plugins/antispam-bee/
   metadata:
+    max-request: 1
     plugin_namespace: antispam-bee
     wpscan: https://wpscan.com/plugin/antispam-bee
   tags: tech,wordpress,wp-plugin,top-100,top-200
@@ -46,4 +47,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a0047304502206906cf35f5bef0d9a58ac5c3fad1144dd74b9c5552e633416bd9deb11a2c68a7022100d0f7010b272133536c6cbbaa56f233646c91e0bd3dfad191f18fb3d7e1041a4f:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402204152d262fff64485c53d50560a75023aab3defa6a9a6537e91629c90f7775307022061dea93c2c763ee436742eddd5764a6449599f76d31ab78879d9983d02f209c8:922c64590222798bb761d5b6d8e72950

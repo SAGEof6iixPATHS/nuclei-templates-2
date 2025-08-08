@@ -13,8 +13,8 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"MOLGENIS"
+    runzero-match: service["http.body"] contains "MOLGENIS" || service["last.http.body"] contains "MOLGENIS"
   tags: molgenis,default-login,exposure
-
 variables:
   username: 'admin'
   password: 'admin'
@@ -27,7 +27,6 @@ http:
         Content-Type: application/x-www-form-urlencoded
 
         username={{username}}&password={{password}}
-
       - |
         GET /menu/admin/logmanager HTTP/1.1
         Host: {{Hostname}}

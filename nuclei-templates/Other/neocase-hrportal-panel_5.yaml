@@ -10,8 +10,8 @@ info:
     - https://www.neocasesoftware.com/neocase-hr-solution/
     - https://www.neocasesoftware.com/self-service-portal-module/
   metadata:
-    max-request: 1
     verified: true
+    max-request: 1
   tags: panel,neocase,login,detect
 
 http:
@@ -32,4 +32,4 @@ http:
         group: 1
         regex:
           - 'name="version"\s+content="([0-9\.]+)"'
-# digest: 4a0a0047304502205f47a9f52af5b210dc327d36dd898fb0fb41c1c36341c075fd88cdf71c4b25ac02210092a4f9083e28a870766b7e62bcc060777b5f672e3ffef43da07690b23b8f194b:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220741189780747237497fd09fc25164d9e1b3ba4bcd8045dee983ee470aa5abe2002200ce0a69bfe1260385b62fa652d7270d62b3ee13a2e9af87f4d2fad3084f1afa4:922c64590222798bb761d5b6d8e72950

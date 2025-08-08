@@ -1,17 +1,13 @@
 id: nntp
 info:
-  name: Mailtraq nntpd
+  name: Microsoft NNTP Service
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
+    info: refused
     operating_system: Windows
-    product: mailtraq
     rarity: 0
-    vendor: mailtraq
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) ready for action \(Mailtraq ([\d.]+)/NNTP\)\r\n
+    - ^502 Connection refused\r\n

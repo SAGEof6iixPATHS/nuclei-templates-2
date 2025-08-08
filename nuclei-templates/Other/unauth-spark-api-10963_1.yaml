@@ -1,9 +1,8 @@
 id: unauth-spark-api
-
 info:
   name: Unauthenticated Spark REST API
   author: princechaddha
-  severity: critical
+  severity: medium
   description: The Spark product's REST API interface allows access to unauthenticated users.
   reference:
     - https://xz.aliyun.com/t/2490
@@ -13,7 +12,6 @@ info:
     cwe-id: CWE-77
   remediation: Restrict access the exposed API ports.
   tags: spark,unauth
-
 requests:
   - method: GET
     path:

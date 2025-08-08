@@ -1,10 +1,11 @@
 id: rtsp
 info:
-  name: Kodi OSMC rtspd
+  name: Boxee rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
+    device_type: media device
     fallback:
     - get-request
     rarity: 5
@@ -19,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nCSeq: 0\r\nPublic: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE,GET_PARAMETER\r\n\r\n$'
+    - '^RTSP/1\.0 200 OK\r\nAudio-Jack-Status: connected; type=analog\r\nCSeq: \r\nPublic: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER\r\n\r\n'

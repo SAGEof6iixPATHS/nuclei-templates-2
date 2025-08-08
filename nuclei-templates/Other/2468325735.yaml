@@ -1,12 +1,15 @@
 id: sip
 info:
-  name: AVM FRITZ!OS SIP
+  name: Ekiga
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP adapter
+    product: ekiga
     rarity: 5
+    vendor: ekiga
+    verified: true
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?User-Agent: FRITZ!OS\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Ekiga/([\w._-]+)\r\n'

@@ -1,11 +1,11 @@
 id: wordpress-accessible-wpconfig
 info:
-  name: "WordPress accessible wp-config"
-  author: Kiblyn11, zomsop82, madrobot, geeknik, daffainfo
+  name: WordPress accessible wp-config
+  author: Kiblyn11,zomsop82,madrobot,geeknik,daffainfo
   severity: high
-  tags: wordpress-misc,wordpress,backups
+  tags: wordpress,backups
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}/wp-config.php'
@@ -30,10 +30,10 @@ http:
     matchers-condition: and
     matchers:
       - type: word
-        part: body
         words:
           - DB_NAME
           - WPENGINE_ACCOUNT
+        part: body
       - type: status
         status:
           - 200
