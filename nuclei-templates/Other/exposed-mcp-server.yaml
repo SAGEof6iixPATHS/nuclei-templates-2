@@ -9,24 +9,23 @@ info:
     MCP servers often provide administrative access to AI tools, LLM systems, or other automation infrastructure.
     Exposed MCP interfaces can lead to unauthorized access, information disclosure, and potential system compromise.
     This template tests multiple detection methods including tools/list, rpc.discover, resources/list, and prompts/list.
+  metadata:
+    verified: true
+    max-request: 10
   reference:
     - https://jsonrpc.org/specification
     - https://github.com/anthropics/anthropic-tools/tree/main/mcp
     - https://lab.wallarm.com/wallarm-research-nuclei-template-counter-threats-targeting-llm-apps/
-  metadata:
-    verified: true
-    max-request: 10
   tags: mcp,jsonrpc,devtools,exposure,api,ai,llm
 
 http:
   - method: POST
     path:
       - "{{BaseURL}}"
-      - "{{BaseURL}}/mcp/"
 
     headers:
-      Accept: application/json, text/event-stream
       Content-Type: application/json
+
     payloads:
       method:
         - rpc.discover
@@ -39,13 +38,14 @@ http:
         - tool.help
         - tool.version
         - tool.list
+
     attack: pitchfork
 
     body: |
       {
         "jsonrpc": "2.0",
         "method": "{{method}}",
-        "params": {},
+        "params": [],
         "id": 1
       }
 
@@ -75,4 +75,4 @@ http:
         part: body
         regex:
           - "\"name\"\\s*:\\s*\"([^\"]+)\""
-
+# digest: 490a0046304402207df81a810c5f61c09a667bdd51298a5415c1a197e42091c471ef9276d10509aa02205d0a884a4a89a8e7b993d52892323be6b036d1a6606daa96cb59ffb5929fdecb:922c64590222798bb761d5b6d8e72950

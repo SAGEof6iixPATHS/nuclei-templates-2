@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/wp-pagenavi
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-pagenavi/readme.txt"
@@ -46,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a00473045022062d9ed2b5cbe892afe280898edca5e151527000de4a91aac3a231d5c6c675328022100dff96af200899082dd4c1fe57c495b779c5bbf70609433ca7e8c40f8149851bf:922c64590222798bb761d5b6d8e72950

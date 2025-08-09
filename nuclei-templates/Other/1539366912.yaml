@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: ZyXEL $1 WAP ftpd
+  name: Intermec 540+/542+ printer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: WAP
+    device_type: printer
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FTP Server \(([NWAP]{3}\d+[\w-]*)\) \[[a-f:\d.]+\]\r\n
+    - ^220 INTERMEC 540\+/542\+ FTP Printer Server V([\d.]+) .* ready\.\r\n

@@ -5,7 +5,7 @@ info:
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    hostname: $1
+    info: 'error: $1'
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - '^([-\w_.]+): lpd: address for your hostname \([\d.]+\) not matched\n'
+    - '^lpd: (.*)\n'

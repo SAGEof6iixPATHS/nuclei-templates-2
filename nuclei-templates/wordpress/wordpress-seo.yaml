@@ -7,7 +7,6 @@ info:
   reference:
     - https://wordpress.org/plugins/wordpress-seo/
   metadata:
-    max-request: 1
     plugin_namespace: wordpress-seo
     wpscan: https://wpscan.com/plugin/wordpress-seo
   tags: tech,wordpress,wp-plugin,top-100,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a004830460221008166cede67db17764dbd530ba12cf038bbce85178187b6cb948bb6996f57953702210080df5a422481d752743aeb68ad47d7497d55ec196fdd8322baa77c318f23f720:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100f0e7e112f69cf7b21a7a734dd17adc10dab483be98e39db4fe5f75e48d7a4491022026dea3a8b8adc4c0ddff89a12a1bf94d3899e9c917f3172a7d4f0ffbfc52d460:922c64590222798bb761d5b6d8e72950

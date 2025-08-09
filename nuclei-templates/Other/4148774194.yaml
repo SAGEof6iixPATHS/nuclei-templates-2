@@ -5,7 +5,7 @@ info:
   tags: detect,tech,qotd,service
   severity: info
   metadata:
-    info: Czech
+    info: German
     operating_system: Windows
     product: qotd
     rarity: 0
@@ -21,4 +21,4 @@ tcp:
   - name: qotd
     type: regex
     regex:
-    - ^"(?:Clovek ma tri cesty, jak moudre jednat\. Nejprve premyslenim|Co je vubec hodno toho, aby to bylo vykonano,|Fantazie je dulezitejsi nez vedeni\.|Potize narustaji, cim vice se clovek blizi|Kdo nezna pristav, do ktereho se chce plavit,|Lidske mysleni ztraci smysl,|Nikdo nevi, co muze vykonat,|Nic neprekvapi lidi vice nez zdravy rozum|Zadny cil neni tak vysoky,)
+    - ^(?:Wer wirklich Autorit\xe4t hat, wird sich nicht scheuen,|Moral ist immer die Zuflucht der Leute,|Beharrlichkeit wird zuweilen mit Eigensinn|Wer den Tag mit Lachen beginnt, hat ihn|Wenn uns keine Ausweg mehr bleibt,|Gesichter sind die Leseb\xfccher des Lebens|Grosse Ereignisse werfen mitunter ihre Schatten|Dichtung ist verpflichtet, sich nach den|Ohne Freihet geht das Leben|Liebe ist wie ein Verkehrsunfall\. Man wird angefahren)

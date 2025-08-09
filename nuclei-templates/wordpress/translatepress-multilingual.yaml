@@ -7,7 +7,6 @@ info:
   reference:
     - https://wordpress.org/plugins/translatepress-multilingual/
   metadata:
-    max-request: 1
     plugin_namespace: translatepress-multilingual
     wpscan: https://wpscan.com/plugin/translatepress-multilingual
   tags: tech,wordpress,wp-plugin,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100cf4dbccd89edd62a1fb8c257f3d24e62bd71bd6545b431a5b7c33c4fd151333d02202bc05dcdf461586f673e3e2058858a268ec351cec31a9d56e31db4f78029d5c7:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210084563645dd57919d87158f8038f816f729c345a8d33303ee0715151571d1c64002201a5bedd61ab3d983401e6d4b357de063aa0c1be61e338bbfdb55a3dd4cd5689d:922c64590222798bb761d5b6d8e72950

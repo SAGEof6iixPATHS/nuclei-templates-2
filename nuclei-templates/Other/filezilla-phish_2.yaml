@@ -8,8 +8,9 @@ info:
     A filezilla phishing website was detected
   reference:
     - https://filezilla-project.org
+  metadata:
+    max-request: 1
   tags: phishing,filezilla,osint
-
 http:
   - method: GET
     path:
@@ -31,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"filezilla-project.org")'
-# digest: 490a0046304402203eb9fe1dd506cffb07deeffadd9af29740f1ebb1e3e8a84236b3e2b67a30658d02204ff3caba243ce3fb502b06c3e0ac0005f12e91d2f77a8701f8f132f56dc5faa9:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d3dccfbf00a621f9125f79c085f77a2e26edd80f3f0beac3f114a537297a9979022100fe0d88064028b28d4e783ff52f37c7020ae9bb7d4047be4308a1d97b0e7ad788:922c64590222798bb761d5b6d8e72950

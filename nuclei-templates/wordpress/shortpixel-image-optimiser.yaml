@@ -7,7 +7,6 @@ info:
   reference:
     - https://wordpress.org/plugins/shortpixel-image-optimiser/
   metadata:
-    max-request: 1
     plugin_namespace: shortpixel-image-optimiser
     wpscan: https://wpscan.com/plugin/shortpixel-image-optimiser
   tags: tech,wordpress,wp-plugin,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022014c60ff2ece164f4475d6c8f3659d1e6269c03457e1578a8ba6e9b2b9486c133022100e18f8f5bc2d55ff34191a1943753ea8cb3a8df1b7c89e795a2f09b81ac2d97db:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203515ae1e2082dfecdb9c0a5a4b509295516e4add29d8c23e979dadcd2631fa6d022100b382ac006cad8f1fd191252d5e466d22e909e1550b645ee47c6d6c95820f12c7:922c64590222798bb761d5b6d8e72950

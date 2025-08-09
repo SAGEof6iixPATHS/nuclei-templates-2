@@ -5,7 +5,7 @@ info:
   author: Fur1na
   severity: high
   description: |
-    NocoBase default login credentials were discovered.
+    NocoBase default login was discovered.
   reference:
     - https://www.nocobase.com/
     - https://github.com/nocobase/nocobase
@@ -13,9 +13,9 @@ info:
   metadata:
     verified: true
     max-request: 1
-    runzero-match: any(each(service["http.bodies"]), {# matches "'NOCOBASE_'"})
     zoomeye-query: app="NocoBase"
   tags: default-login,nocobase
+
 variables:
   username: "admin@nocobase.com"
   password: "admin123"
@@ -47,4 +47,4 @@ http:
       - type: status
         status:
           - 200
-
+# digest: 4a0a004730450220793daeed0403293a3557a247d244758bda0435d3961a53590ae51d6ddcfe8b4a022100d325278d8c91ca6e03d97fd26c0f94014020dcc2025da401cd6110f108f1175d:922c64590222798bb761d5b6d8e72950

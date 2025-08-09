@@ -126,18 +126,12 @@ http:
       - part: query
         mode: single
         keys:
-          - _url
-          - auth
           - AuthState
-          - back
-          - backto
-          - backurl
+          - URL
+          - _url
           - callback
-          - callback_url
-          - cgi
           - checkout
           - checkout_url
-          - confirm_url
           - content
           - continue
           - continueTo
@@ -146,136 +140,127 @@ http:
           - dest
           - dest_url
           - destination
-          - destination_url
           - dir
-          - DirectTo
           - document
           - domain
-          - domain_url
           - done
           - download
-          - entry
-          - exit
           - feed
           - file
           - file_name
           - file_url
           - folder
           - folder_url
-          - follow
           - forward
-          - forward_url
-          - forwardUrl
           - from_url
           - go
-          - go_to
           - goto
-          - goto_url
-          - home
-          - home_url
           - host
           - html
           - http
           - https
           - image
-          - image_link
           - image_src
           - image_url
           - imageurl
           - img
           - img_url
           - include
-          - jump
           - langTo
-          - link
-          - Lmage_url
-          - Lmge_url
-          - load
           - load_file
           - load_url
-          - location
-          - login
           - login_to
           - login_url
-          - loginto
           - logout
-          - logout_url
           - media
-          - menu
-          - move
-          - nav
-          - nav_to
           - navigation
-          - nexrurI
           - next
           - next_page
-          - nexturl
           - open
-          - Open
-          - orig_url
-          - origin
           - out
-          - out_url
           - page
-          - page_link
           - page_url
           - pageurl
           - path
           - picture
           - port
           - proxy
-          - query
           - r
           - r2
           - redir
           - redirect
-          - redirect_link
+          - redirectUri
+          - redirectUrl
           - redirect_to
           - redirect_uri
           - redirect_url
-          - redirectsaaspath
-          - redirectUri
-          - redirectUrl
-          - ref
           - reference
           - referrer
-          - referrer_url
-          - relay
           - req
           - request
           - ret
           - retUrl
           - return
-          - return_link
+          - returnTo
           - return_path
           - return_to
-          - return_to_url
           - return_url
-          - returnTo
           - rt
           - rurl
-          - service
           - show
           - site
           - source
-          - source_url
           - src
-          - srchttp
-          - srcweb
           - target
-          - target_url
           - to
-          - to_url
           - u
           - uri
           - url
-          - URL
-          - url_redirect
           - val
           - validate
-          - validate_url
           - view
           - window
+          - back
+          - cgi
+          - follow
+          - home
+          - jump
+          - link
+          - location
+          - menu
+          - move
+          - nav
+          - orig_url
+          - out_url
+          - query
+          - auth
+          - callback_url
+          - confirm_url
+          - destination_url
+          - domain_url
+          - entry
+          - exit
+          - forward_url
+          - go_to
+          - goto_url
+          - home_url
+          - image_link
+          - load
+          - logout_url
+          - nav_to
+          - origin
+          - page_link
+          - redirect_link
+          - ref
+          - referrer_url
+          - return_link
+          - return_to_url
+          - source_url
+          - target_url
+          - to_url
+          - validate_url
+          - DirectTo
+          - relay
 
         fuzz:
           - "{{redirect}}"

@@ -2,8 +2,8 @@ id: citrix-vpn-detect
 
 info:
   name: Citrix VPN Detection
-  author: pd-team
-  severity: info
+  author: bauthard
+  severity: low
 
 requests:
   - method: GET

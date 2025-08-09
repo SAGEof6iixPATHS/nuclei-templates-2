@@ -33,8 +33,6 @@ http:
       - '{{BaseURL}}/phpinfo.old'
       - '{{BaseURL}}/phpinfo/save.php'
       - '{{BaseURL}}/phpinfo_new.php'
-    matchers-condition: and
-    stop-at-first-match: true
     matchers:
       - type: word
         words:
@@ -44,6 +42,7 @@ http:
       - type: status
         status:
           - 200
+    stop-at-first-match: true
 
     extractors:
       - type: regex

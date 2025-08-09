@@ -18,10 +18,9 @@ info:
     max-request: 2
     vendor: wpxpo
     product: ninja-tables
-    shodan-query: http.html:"/wp-content/plugins/ninja-tables/"
     fofa-query: body="/wp-content/plugins/ninja-tables/"
-    runzero-match: service["http.body"] matches "(?i)/wp-content/plugins/ninja-tables/"
   tags: ninja-tables,file-download,wordpress,unauth,lfi,wp-plugin
+
 flow: http(1) && http(2)
 
 http:
@@ -31,6 +30,7 @@ http:
         Host: {{Hostname}}
 
     redirects: true
+
     matchers:
       - type: dsl
         dsl:
@@ -58,3 +58,4 @@ http:
           - status_code == 200
           - contains(body, "PRETTY_NAME=")
         condition: and
+# digest: 490a0046304402201c1afbe6c0dc3b57ec40c97b0f8f706b25753ad285bb53ac37791e50838bcdcd022032ca2a8dcd160d22ef4fffb0f424bb5ab4aaf6cd2e0aa19cae1b064850498dc2:922c64590222798bb761d5b6d8e72950

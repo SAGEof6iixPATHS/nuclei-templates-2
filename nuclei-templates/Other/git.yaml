@@ -1,34 +1,21 @@
-id: git-disclosure
-
+id: git
 info:
-  name: Git Repository Disclosure
-  author: XAKEP
-  severity: high
-  description: Checks for exposed .git directory and sensitive Git files.
-  reference:
-    - https://en.wikipedia.org/wiki/Git
-    - https://blog.gitguardian.com/git-leaks-and-how-to-prevent-them/
-  tags: git,exposure,repo-disclosure,osint
-
-requests:
-  - method: GET
-    path:
-      - "{{BaseURL}}/.git/index"
-      - "{{BaseURL}}/.git/HEAD"
-      - "{{BaseURL}}/.git/config"
-      - "{{BaseURL}}/.git/logs/HEAD"
-      - "{{BaseURL}}/.git/description"
-      - "{{BaseURL}}/.git/info/exclude"
-      - "{{BaseURL}}/.git/refs/heads/master"
-
-    matchers:
-      - type: status
-        status:
-          - 200
-      - type: word
-        words:
-          - "ref: refs/heads/"
-          - "[core]"          
-          - "DIRC"             
-          - "Unnamed repository"
-        condition: or
+  name: git
+  author: cn-kali-team
+  tags: detect,tech,git
+  severity: info
+  metadata:
+    product: git
+    shodan-query:
+    - x-jenkins
+    vendor: jenkins
+    verified: true
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: word
+    words:
+    - x-jenkins
+    case-insensitive: true

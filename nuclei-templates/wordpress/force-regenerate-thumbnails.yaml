@@ -7,7 +7,6 @@ info:
   reference:
     - https://wordpress.org/plugins/force-regenerate-thumbnails/
   metadata:
-    max-request: 1
     plugin_namespace: force-regenerate-thumbnails
     wpscan: https://wpscan.com/plugin/force-regenerate-thumbnails
   tags: tech,wordpress,wp-plugin,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100b10bb32bc79aec2059e3f5c1bad91272207b0da126ec1ce7ce804508dfe8b6f9022100eca670cb1543143c6574b2ae66e0ddc4bc2f064afeb8ddb807ee5c7a83260a88:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220454b2ad519fa90a50ea0dec30bec1c603d4114d85802d2f4c8125362d3f060f002202a9d94c0e1bb1421d68ca917faa0b23ef6c4112857ad2c7e63883540d03d93ea:922c64590222798bb761d5b6d8e72950

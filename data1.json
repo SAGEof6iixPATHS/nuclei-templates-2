@@ -159814,5 +159814,17 @@
     "CVE-2025-54685.yaml": "2025-08-08 03:27:33",
     "CVE-2025-6994.yaml": "2025-08-08 03:27:33",
     "thebooking.yaml": "2025-08-08 03:27:33",
-    "zakra.yaml": "2025-08-08 03:27:33"
+    "zakra.yaml": "2025-08-08 03:27:33",
+    "cve-2025-44148.yaml": "2025-08-09 03:09:24",
+    "smtp-header-injection-relay-oob.yaml": "2025-08-09 03:09:24",
+    "titiler-ssrf.yaml": "2025-08-09 03:09:24",
+    "config-ini_2.yaml": "2025-08-09 03:09:24",
+    "netlify.yaml": "2025-08-09 03:09:24",
+    "tink.yaml": "2025-08-09 03:09:24",
+    "optimizely.yaml": "2025-08-09 03:09:24",
+    "onelogin.yaml": "2025-08-09 03:09:24",
+    "ssrf-advanced-chain-correlation-oob.yaml": "2025-08-09 03:09:24",
+    "fortitoken-cloud.yaml": "2025-08-09 03:09:24",
+    "apigee-edge.yaml": "2025-08-09 03:09:24",
+    "fontawesome.yaml": "2025-08-09 03:09:24"
 }

@@ -141,32 +141,35 @@ http:
         User-Agent: nuclei
 
     matchers-condition: and
-    stop-at-first-match: true
     matchers:
       - type: status
         status:
           - 200
+          - 401 # Unauthorised, still shows the path is present.
+          - 403 # Forbidden, path found.
 
       - type: word
         words:
-          - '"status":"UP"' # Actuator Health
-          - '"metrics":' # Actuator Metrics
-          - '"contexts":' # Actuator Info
-          - '"swagger"' # Swagger UI
-          - '"paths":' # API Docs
-          - '"beans":' # Actuator Beans
-          - '"loggers":' # Loggers endpoint
+          - 'actuator'
+          - 'swagger-ui'
+          - 'v2/api-docs'
+          - 'v3/api-docs'
+          - 'api-docs'
+          - 'h2-console'
+          - 'jolokia'
+          - 'env'
+          - 'beans'
+          - 'mappings'
+          - 'configprops'
+          - 'threaddump'
+          - 'heapdump'
+          - 'loggers'
+          - 'trace'
         part: body
         condition: or
 
       - type: word
         words:
           - 'This application has no explicit mapping for /error'
-          - 'Whitelabel Error Page'
-          - '404 Not Found'
         part: body
         negative: true
-
-      - type: dsl
-        dsl:
-          - 'content_length > 50' # Avoids empty responses

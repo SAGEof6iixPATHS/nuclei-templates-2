@@ -7,7 +7,6 @@ info:
   reference:
     - https://wordpress.org/plugins/custom-fonts/
   metadata:
-    max-request: 1
     plugin_namespace: custom-fonts
     wpscan: https://wpscan.com/plugin/custom-fonts
   tags: tech,wordpress,wp-plugin,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402201fb94ebf61bdaaa427c48c382576b5dd048ef9eb0f6a44e3cf025f5f9455dd1302202e7cf378395ec53591a64d701fc934b7ab1729ae7567472e0723e63398fc9b18:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100dcf1f7b60c0e1f974ed7c99816d168c84533c15119228cd9e4c82c9eaed106b1022100cb46f8b7b219ef8aea121a6fc90ffcb7cd43e4654c4cb2302eafcd6f93bff2ca:922c64590222798bb761d5b6d8e72950

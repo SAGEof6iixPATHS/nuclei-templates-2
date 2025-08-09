@@ -7,7 +7,6 @@ info:
   reference:
     - https://wordpress.org/plugins/complianz-gdpr/
   metadata:
-    max-request: 1
     plugin_namespace: complianz-gdpr
     wpscan: https://wpscan.com/plugin/complianz-gdpr
   tags: tech,wordpress,wp-plugin,top-100,top-200
@@ -47,4 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402204e7d0dede43e03cabaa29c1759ad0239a21d3d894b986fc7378ee17d538007fa022034ce4d9bdd6c558a0fe1a43bf012bb87bcea3ef9b60553c3254cfebaf0915f7a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ea625388c37de62e8620182f1df1a6b9655bfae3c9d42c53f7b75ee6aad46de002207ad19d37cd3e33033131cf46934a8e8248153e4a8036a69b016c1f52f575b5e5:922c64590222798bb761d5b6d8e72950

@@ -13,7 +13,6 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"CentreStack"
-    runzero-match: any(each(service["html.titles"]), {# matches "(?i)CentreStack"})
   tags: panel,centrestack,login,gladinet
 
 http:
@@ -31,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-
+# digest: 4b0a00483046022100bd6334cb00fbd1f04a368d69fb03c78e28458acf8a60f894184acb6e970d5bb4022100bb20c176008e04ecf9bd74416916a6f67ed41451031de67ccb8425a7727c83f3:922c64590222798bb761d5b6d8e72950

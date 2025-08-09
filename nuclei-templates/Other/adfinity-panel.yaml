@@ -9,10 +9,9 @@ info:
   reference:
     - https://easi.net/en/solutions/adfinity
   metadata:
-    verified: true
     max-request: 1
+    verified: true
     shodan-query: http.html:"Adfinity"
-    runzero-match: service["http.body"] matches "(?i)Adfinity"
   tags: panel,adfinity,login
 
 http:
@@ -33,4 +32,4 @@ http:
         group: 1
         regex:
           - '(?i)Version\s+Adfinity([0-9.]+)'
-
+# digest: 4a0a00473045022100db9cca5d847acd65c0f3a26084582a7be2675813a608edf93306898985d4788f02205a06ecfa7cf311a7fadc623de25dcf75581f2f1543464d9875aefc7592e687cd:922c64590222798bb761d5b6d8e72950
