@@ -1,11 +1,11 @@
 id: pop3
 info:
-  name: Neon Mail Server pop3d
+  name: Classic Hamster pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
+    operating_system: Windows
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 server \(Neon Mail Server System Advance ([-\w_.]+), [^)]*\) ready ([-\w_.]+)\. <
+    - ^\+OK POP3-Server Classic Hamster (?:Vr\.|Version) [\d.]+ \(Build ([\d.]+)\) greets you! <.*>\r\n

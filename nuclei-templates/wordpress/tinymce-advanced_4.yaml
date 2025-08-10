@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/tinymce-advanced
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/tinymce-advanced/readme.txt"
@@ -46,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100d6c45fd55434c412b8e12ec8235a8668c22df83df399be9917c5876a8b0245a10221009ac924d58933f82705f0e0ec54aa4cf600a5ca033cc79e4a63eae38ed4c3391a:922c64590222798bb761d5b6d8e72950

@@ -1,15 +1,15 @@
 id: http
 info:
-  name: Virtual Programming Lab for Moodle
+  name: CrushFTP web interface
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    product: vpl
+    info: IP banned
+    product: crushftp
     rarity: 0
-    vendor: ulpgc
+    vendor: crushftp
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 408 Request Time-out\r\nServer: vpl-jail-system ([\d.]+)\r\n'
+    - '^HTTP/1\.1 200 BANNED\r\nContent-Length: \d+\r\n\r\nYour IP is banned, no further requests will be processed from this IP \([\d.]+\)\.\r\n'

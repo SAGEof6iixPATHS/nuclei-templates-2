@@ -3,12 +3,13 @@ id: home-assistant
 info:
   name: Detect Home Assistant
   author: fabaff
-  severity: info
+  severity: low
 
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
+      - "{{BaseURL}}:8123/"
+      - "{{BaseURL}}/"
     matchers:
       - type: word
         words:

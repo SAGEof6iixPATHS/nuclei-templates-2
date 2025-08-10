@@ -1,12 +1,16 @@
 id: ssh
 info:
-  name: Cisco WLC sshd
+  name: Serv-U SSH Server
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: remote management
+    info: protocol $1
+    product: serv-u
     rarity: 0
+    vendor: serv-u
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-2\.0-CISCO_WLC\n
+    - ^SSH-([\d.]+)-Serv-U_([\w._-]+)\r\n

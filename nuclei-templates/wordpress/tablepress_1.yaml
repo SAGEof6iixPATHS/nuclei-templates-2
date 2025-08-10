@@ -1,17 +1,18 @@
 id: wordpress-tablepress
 
 info:
-  name: TablePress Detection
+  name: TablePress – Tables in WordPress made easy Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/tablepress/
   metadata:
+    max-request: 1
     plugin_namespace: tablepress
     wpscan: https://wpscan.com/plugin/tablepress
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-requests:
+http:
   - method: GET
 
     path:
