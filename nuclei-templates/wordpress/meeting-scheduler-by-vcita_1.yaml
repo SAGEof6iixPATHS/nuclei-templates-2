@@ -2,14 +2,14 @@ id: meeting-scheduler-by-vcita
 
 info:
   name: >
-    Online Booking & Scheduling Calendar for WordPress by vcita <= 4.3.0 - Unauthenticated Stored Cross-Site Scripting
+    vCita Online Booking & Scheduling Calendar <= 4.4.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7e6a0bf9-4767-4d4c-9a1e-adcb3c7719d9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5e79bdfe-5b91-4459-9e0f-f25859e4d0ce?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/meeting-scheduler-by-vcita/"
     google-query: inurl:"/wp-content/plugins/meeting-scheduler-by-vcita/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,meeting-scheduler-by-vcita,high
+  tags: cve,wordpress,wp-plugin,meeting-scheduler-by-vcita,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.3.0')
+          - compare_versions(version, '<= 4.4.0')

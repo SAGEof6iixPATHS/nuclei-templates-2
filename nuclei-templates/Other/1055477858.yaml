@@ -1,13 +1,18 @@
 id: http-proxy
 info:
-  name: HTTP Replicator proxy
+  name: Palo Alto PanWeb httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
+    device_type: proxy server
     fallback:
     - get-request
+    product: panweb
     rarity: 5
+    vendor: paloaltonetworks
+    verified: true
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -19,4 +24,4 @@ tcp:
   - name: http-proxy
     type: regex
     regex:
-    - '^HTTP/1\.1 503 Service Unavailable\r\ndate: .*\r\nconnection: close\r\n\r\n<html><body><pre><h1>Service unavailable</h1></pre></body></html>\n'
+    - '(?i)^RTSP/1\.0 400 Bad Request\r\nServer: PanWeb Server/([\w._-]+)\r\n(?:[^\r\n]+\r\n)*?Keep-Alive: timeout=60, max=2000\r\nContent-Type: text/html\r\nContent-length: 130\r\n\r\n<HTML><HEAD><TITLE>Document Error: Bad Request</TITLE>'

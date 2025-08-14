@@ -1,12 +1,14 @@
 id: telnet
 info:
-  name: Dell PowerConnect switch telnetd
+  name: Eggdrop IRC bot DCC
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
+    product: eggdrop
     rarity: 0
+    vendor: eggheads
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfd\x03\xff\xfb\x03\xff\xfd\x01\xff\xfb\x01\r\n\rCannot authenticate user due to:\r\nbad/missing configuration, inaccessible server, user low privileges\.\r\nPlease reconfigure or use Password Recovery\.\r\n\r\n
+    - ^\xff\xfb\x05\n\r\nNickname\.\r\n

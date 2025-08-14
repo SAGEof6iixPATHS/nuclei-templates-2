@@ -1,40 +1,33 @@
 id: iis-internal-ip-disclosure
 
 info:
-  name: IIS Internal IP Disclosure Template
-  author: WillD96
-  severity: info
+  name: IIS Internal IP Disclosure
+  author: Mark Dube
+  severity: Low
   reference:
     - https://support.kemptechnologies.com/hc/en-us/articles/203522429-How-to-Mitigate-Against-Internal-IP-Address-Domain-Name-Disclosure-In-Real-Server-Redirect
   tags: iis,misconfig,disclosure
 
-requests:
+http:
   - raw:
-      - |+
-        GET / HTTP/1.0
-        Accept: */*
+    - |
+        GET /aspnet_client HTTP/1.0
 
-      - |+
-        GET / HTTP/1.0
-        Host:
-        Accept: */*
 
-    stop-at-first-match: true
-    unsafe: true # Use Unsafe HTTP library for malformed HTTP requests.
+        Host: {{Hostname}}
+    unsafe: true # Enables rawhttp client
     matchers-condition: and
     matchers:
-      - type: regex
-        part: location
-        regex:
-          - '([0-9]{1,3}[\.]){3}[0-9]{1,3}'
-
+      - type: dsl
+        dsl:
+          - 'contains(body, "This document may be found")'
       - type: status
         status:
           - 301
           - 302
-
     extractors:
-      - type: regex
-        part: location
+      - type: regex # type of the extractor
+        name: Internal_IP
+        part: body  # part of the response (header,body,all)
         regex:
-          - '([0-9]{1,3}[\.]){3}[0-9]{1,3}'
+          - '([0-9]{1,3}[\.]){3}[0-9]{1,3}'  # regex for IP addr

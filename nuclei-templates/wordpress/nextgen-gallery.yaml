@@ -1,18 +1,20 @@
 id: wordpress-nextgen-gallery
 
 info:
-  name: Photo Gallery, Sliders, Proofing and Themes – NextGEN Gallery Detection
+  name: WordPress Gallery Plugin – NextGEN Gallery Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/nextgen-gallery/
   metadata:
+    max-request: 1
     plugin_namespace: nextgen-gallery
     wpscan: https://wpscan.com/plugin/nextgen-gallery
   tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/nextgen-gallery/readme.txt"
 
@@ -46,4 +48,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a0047304502210089a4fd53473326b81c08928421547e0b31c650cee8d673e6e55ffd4d649410d7022027381dc45c3200a1a6aa6e574df9cc55e499afe186ea94fdb0010cce7b37c9db:922c64590222798bb761d5b6d8e72950

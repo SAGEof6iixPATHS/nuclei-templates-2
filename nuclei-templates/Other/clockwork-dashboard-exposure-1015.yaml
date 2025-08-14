@@ -4,13 +4,10 @@ info:
   name: Clockwork Dashboard Exposure
   author: dhiyaneshDk
   severity: high
-  reference:
-    - https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/clockwork-dashboard-exposure.json
-  tags: exposure,unauth,misconfig
-  metadata:
-    max-request: 1
+  reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/clockwork-dashboard-exposure.json
+  tags: exposure,unauth
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/__clockwork/latest"

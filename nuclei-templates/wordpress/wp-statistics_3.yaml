@@ -1,7 +1,7 @@
 id: wordpress-wp-statistics
 
 info:
-  name: WP Statistics Detection
+  name: WP Statistics – The Most Popular Privacy-Friendly Analytics Plugin Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/wp-statistics
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-statistics/readme.txt"
@@ -46,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a00473045022001da73f10b030166efdb852a16dac0803e973c6ca5f02ccd7c2b94a0d247e8bd022100ecfd1e1037cc027bc02f455b491083006c4066dc3c9e7bf9e6c7b151a82a3d18:922c64590222798bb761d5b6d8e72950

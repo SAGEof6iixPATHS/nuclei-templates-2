@@ -1,7 +1,7 @@
 id: wordpress-better-wp-security
 
 info:
-  name: Solid Security – Password, Two Factor Authentication, and Brute Force Protection Detection
+  name: iThemes Security Detection
   author: ricardomaia
   severity: info
   reference:
@@ -13,6 +13,7 @@ info:
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/better-wp-security/readme.txt"
 
@@ -46,4 +47,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100b685e4c8b13f4fc0957cd10cc275e5b8d522ca1f9ffc47c0d1ff020f1c2716cf022100987506d811ff778559ca55639fd12b3660e6acdc633562c57251e905390cb4d5:922c64590222798bb761d5b6d8e72950
