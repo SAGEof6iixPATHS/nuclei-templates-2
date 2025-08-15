@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/admin-menu-editor
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/admin-menu-editor/readme.txt"
 
@@ -47,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a00473045022061d30e06ce36fb99b7bcdae537ef488b56ef00eaecec9903d08b1908e4640123022100b0d5869f2fd5643bc1614a7446ef82743b6b1c1f49f6145f7cfeec8cc30203d0:922c64590222798bb761d5b6d8e72950

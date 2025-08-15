@@ -8,9 +8,8 @@ info:
     A Wikipedia phishing website was detected
   reference:
     - https://wikipedia.com
-  metadata:
-    max-request: 1
   tags: phishing,wikipedia,osint
+
 http:
   - method: GET
     path:
@@ -32,4 +31,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"wikipedia.org")'
-# digest: 4b0a00483046022100ab775cb16b53ef4ef6939e101d512a89b459990de1975e507b3e66bdd14a43cc022100b0b711c82d5df5f0dc14d239890c48d07832545b29a5d844c08b4c8b94acc7ec:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022054a847d77d552aa416323c843c449eaa3410e6c265f3115fdf13cb96dbfaae6b022058dbc41b751fa16e3a418b941089a042489c1413f0370474876d3f87b5827958:922c64590222798bb761d5b6d8e72950

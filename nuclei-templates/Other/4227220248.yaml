@@ -1,10 +1,13 @@
 id: telnet
 info:
-  name: FORE Systems ES-3810
+  name: utelnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    device_type: media device
+    info: FetchTV DVR
+    operating_system: Linux
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x03\xff\xfb\x01.*ForeRunner ES-3810.*Enter Username: '
+    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03\(none\) login: '

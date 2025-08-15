@@ -4,16 +4,14 @@ info:
   name: Synology RackStation Login Detect
   author: princechaddha
   severity: info
-  tags: login,tech,synology,rackstation,panel
-  metadata:
-    max-request: 1
+  tags: login,tech,synology,rackstation
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"
 
-    host-redirects: true
+    redirects: true
     max-redirects: 1
     matchers-condition: and
     matchers:

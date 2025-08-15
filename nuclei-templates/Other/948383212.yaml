@@ -1,13 +1,16 @@
 id: pop3
 info:
-  name: vm-pop3d
+  name: NetMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    info: derived from gnu-pop3d
+    hostname: $1
+    product: netmail
     rarity: 0
-    version: $1
+    vendor: novell
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 Welcome to vm-pop3d (\d[-.\w]+)
+    - '^\+OK ([-\w_.]+) NetMail POP3 Agent \$R...sion:   ([\d.]+)  \$\r\n'

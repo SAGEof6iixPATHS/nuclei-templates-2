@@ -1,0 +1,35 @@
+id: keybase-phish
+
+info:
+  name: keybase phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A keybase phishing website was detected
+  reference:
+    - https://keybase.io
+  metadata:
+    max-request: 1
+  tags: phishing,keybase,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "Keybase is for keeping everyone's chats and files safe, from families to communities to companies. MacOS, Windows, Linux, iPhone, and Android."
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"keybase.io")'
+# digest: 4a0a004730450220343630878958e19e2a82d8a0cc592765785e650ea85e804dd1d4e11ccd152a560221008feafe796b912c2b07c84507925e6b4f6adea4f8723b016625f4f460e0028d98:922c64590222798bb761d5b6d8e72950
