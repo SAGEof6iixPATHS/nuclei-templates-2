@@ -1,7 +1,7 @@
 id: wordpress-easy-wp-smtp
 
 info:
-  name: Easy WP SMTP – WordPress SMTP and Email Logs' Gmail, Office 365, Outlook, Custom SMTP, and more Detection
+  name: Easy WP SMTP by SendLayer – WordPress SMTP and Email Log Plugin Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/easy-wp-smtp
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/easy-wp-smtp/readme.txt"
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402201ebf02dfb915861e0a645db8d390239484d4c646e72f802ab2742da1c2b566e902200770790ec91348f70fa1631bcf363296850ad99fa943672d7938d6e153ce762c:922c64590222798bb761d5b6d8e72950

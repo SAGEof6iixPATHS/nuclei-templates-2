@@ -1,11 +1,15 @@
 id: pop3
 info:
-  name: Qpop pop3d
+  name: UW Imap pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $2
+    product: imap_toolkit
     rarity: 0
+    vendor: uw
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK QPOP \(version ([^)]+)\) at .*starting\.
+    - ^\+OK POP3 v?([\d.]+) server ready <[\w.]+@([-\w_.]+)>\r\n

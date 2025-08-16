@@ -10,12 +10,13 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 9.8
     cwe-id: CWE-200
-  tags: config,exposure,symfony
+  tags: config,exposure,symfony,php,bounty,generic
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/app_dev.php/_profiler/open?file=app/config/parameters.yml"
+      
     matchers-condition: and
     matchers:
       - type: status
@@ -25,4 +26,6 @@ requests:
         part: body
         words:
           - "parameters:"
-# Enhanced by md on 2023/05/20
+          - "database_host:"
+          - "database_password:"
+        condition: and

@@ -1,16 +1,11 @@
 id: yii-debugger
-
 info:
   name: View Yii Debugger Information
   author: geeknik
+  reference: https://yii2-framework.readthedocs.io/en/stable/guide/tool-debugger/
   severity: low
-  reference:
-    - https://yii2-framework.readthedocs.io/en/stable/guide/tool-debugger/
   tags: yii,debug,exposure
-  metadata:
-    max-request: 5
-
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/debug/default/view.html"
@@ -18,8 +13,7 @@ http:
       - "{{BaseURL}}/frontend/web/debug/default/view"
       - "{{BaseURL}}/web/debug/default/view"
       - "{{BaseURL}}/sapi/debug/default/view"
-
-    host-redirects: true
+    redirects: true
     max-redirects: 2
     stop-at-first-match: true
     matchers-condition: and
@@ -27,7 +21,6 @@ http:
       - type: status
         status:
           - 200
-
       - type: word
         words:
           - "<title>Yii Debugger</title>"

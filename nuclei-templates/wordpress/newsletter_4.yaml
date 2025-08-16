@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/newsletter
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/newsletter/readme.txt"
@@ -46,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a0046304402203b24f32f8accf68772b59e3e45e228bd3ddd3be1dfc8df3e472c8fa93706c67b022049f275efb0f61256d1b246d835c9d028234a0224d5471c02d569b920f0061d40:922c64590222798bb761d5b6d8e72950

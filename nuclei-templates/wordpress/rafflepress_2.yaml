@@ -2,14 +2,14 @@ id: rafflepress
 
 info:
   name: >
-    Giveaways and Contests by RafflePress <= 1.12.16 - Authenticated (Editor+) Stored Cross-Site Scripting
+    Giveaways and Contests by RafflePress <= 1.12.4 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8f8e6ca4-ceeb-4d0c-8b05-86c2abe435a2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e13a38d0-9781-4b1e-8b2b-fdcb1001b8d5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/rafflepress/"
     google-query: inurl:"/wp-content/plugins/rafflepress/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,rafflepress,low
+  tags: cve,wordpress,wp-plugin,rafflepress,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.12.16')
+          - compare_versions(version, '<= 1.12.4')
