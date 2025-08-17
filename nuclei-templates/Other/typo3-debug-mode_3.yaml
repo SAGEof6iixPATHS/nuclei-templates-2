@@ -2,20 +2,14 @@ id: typo3-debug-mode
 
 info:
   name: TYPO3 Debug Mode Enabled
-  author: tess,FLX
+  author: tess
   severity: low
-  description: TYPO3 Debug Mode is enabled.
-  classification:
-    cpe: cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*
   metadata:
     verified: true
-    max-request: 1
-    vendor: typo3
-    product: typo3
     shodan-query: http.title:"TYPO3 Exception"
   tags: typo3,debug,misconfig
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}'
@@ -29,7 +23,6 @@ http:
           - "Uncaught TYPO3 Exception"
         condition: or
 
-      - type: dsl
-        dsl:
-          - "status_code >= 500 && status_code < 600"
-# digest: 4b0a00483046022100be7d261453dad5efa215015692d66f7039411e338242cebcd0e3df0700926ee4022100b5ef6f58ca9dd70050fb2460c5346c98b318a24cef5d99e0bb2edf4e8033f251:922c64590222798bb761d5b6d8e72950
+      - type: status
+        status:
+          - 500

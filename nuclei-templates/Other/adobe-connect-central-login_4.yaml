@@ -3,23 +3,18 @@ id: adobe-connect-central-login
 info:
   name: Adobe Connect Central Login Panel
   author: dhiyaneshDk
-  severity: info
   description: An Adobe Connect Central login panel was detected.
+  severity: info
+  tags: adobe,panel,connect-central
   reference:
     - https://www.adobe.com/products/adobeconnect.html
   classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0.0
+    cve-id:
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:adobe:connect:*:*:*:*:*:*:*:*
-  metadata:
-    max-request: 1
-    vendor: adobe
-    product: connect
-    shodan-query: http.title:"openvpn connect"
-    fofa-query: title="openvpn connect"
-    google-query: intitle:"openvpn connect"
-  tags: adobe,panel,connect-central
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/system/login"
@@ -34,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100c876f18c787ac5cb128ed24f93c259a65192e250e4beb87772a8782aabd6d321022100cdd90845a695d4b16f31befa68a814a8de062c71a295594d642b4467dd191838:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/03/20

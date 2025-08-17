@@ -1,14 +1,13 @@
 id: ftp
 info:
-  name: Hummingbird FTP server
+  name: Tandem FTP server
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: connectivity
+    info: Tandem Himalaya K2000
+    operating_system: GuardianOS
     rarity: 0
-    vendor: hummingbird
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220  FTP server \(Hummingbird Communications Ltd\. \(HCLFTPD\) Version ([\d.]+)\) ready\.\r\n
+    - ^220 tandem FTP SERVER \w+ \(Version ([\w.]+) TANDEM \w+\) ready\.\r\n

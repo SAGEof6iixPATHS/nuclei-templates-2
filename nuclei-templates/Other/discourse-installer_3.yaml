@@ -3,15 +3,10 @@ id: discourse-installer
 info:
   name: Discourse Installer Exposure
   author: DhiyaneshDk
-  severity: high
-  description: Discourse is susceptible to the Installation page exposure due to misconfiguration.
-  classification:
-    cpe: cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*
+  severity: unknown
   metadata:
     verified: true
     max-request: 1
-    vendor: discourse
-    product: discourse
     shodan-query: title:"Discourse Setup"
   tags: misconfig,discourse,install
 
@@ -37,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022062cafe10e4527228a4846d583320bcb1a9140fb26df8d1c54819c523cb9deb930220424e3806f66e9cd382a93b41ef97efa23a7b6ecbcfbda4b35f67b7ee054a7f75:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502207bf378bb2518de6a22c216274c8d019a58e3b1787947dfbed0d6d655d43f5c67022100edfbaa63f3b114e70d750d70a51d43bf3c0a71501c72204858a6e40f17dd3f42:922c64590222798bb761d5b6d8e72950

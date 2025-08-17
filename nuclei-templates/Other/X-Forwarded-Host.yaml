@@ -4,7 +4,7 @@ info:
   name: Custom IP Authorization Bypass
   author: MNM
   severity: medium
-  description: Checks for 401/403 responses and attempts bypass using CF-Connecting-IP header
+  description: Checks for 401/403 responses and attempts bypass using X-Forwarded-Host header
 
 flow: http(1) && http(2)
 
@@ -25,7 +25,7 @@ http:
     path:
       - "{{BaseURL}}"
     headers:
-      CF-Connecting-IP: "127.0.0.1"
+      X-Forwarded-Host: "127.0.0.1"
     
     matchers:
       - type: status
@@ -35,4 +35,4 @@ http:
     extractors:
       - type: dsl
         dsl:
-          - '"CF-Connecting-IP: 127.0.0.1"'
+          - '"X-Forwarded-Host: 127.0.0.1"'

@@ -1,18 +1,20 @@
 id: wordpress-really-simple-ssl
 
 info:
-  name: Really Simple Security – Simple and Performant Security (formerly Really Simple SSL) Detection
+  name: Really Simple SSL Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/really-simple-ssl/
   metadata:
+    max-request: 1
     plugin_namespace: really-simple-ssl
     wpscan: https://wpscan.com/plugin/really-simple-ssl
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/really-simple-ssl/readme.txt"
 
@@ -46,4 +48,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a004730450220780e8fb11377d303f26405757c4c54275b34b12371df8bfe2a2b519736951df40221009ded1c13e8f8f1aa577bbe5dfb297133c5dcb1968e83329f790c2f5e2df3c95d:922c64590222798bb761d5b6d8e72950

@@ -1,13 +1,14 @@
 id: mailchimp-access-key-value
+
 info:
   name: Mailchimp API Value
   author: puzzlepeaches
   severity: medium
+
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/"
-    matchers-condition: and
+      - "{{BaseURL}}"
     matchers:
       - type: regex
         part: body

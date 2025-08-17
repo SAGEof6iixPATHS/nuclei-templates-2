@@ -1,15 +1,11 @@
 id: smtp
 info:
-  name: amavisd-new smtpd
+  name: DavMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    product: amavisd_new
     rarity: 0
-    vendor: ijs
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +16,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 \[([-\w_.]+)\] ESMTP amavisd-new service ready\r\n
+    - '^220 DavMail SMTP ready at '

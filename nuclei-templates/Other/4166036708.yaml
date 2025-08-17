@@ -1,15 +1,15 @@
 id: imap
 info:
-  name: Slackware 3.5 imapd
+  name: Novell GroupWise imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    info: time zone $3
-    operating_system: Linux
+    operating_system: Unix
+    product: groupwise
     rarity: 0
-    version: $2
+    vendor: novell
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([\w._-]+) IMAP2bis Service ([\w._()-]+) at .* ([-+]\d+)
+    - ^\* OK GroupWise IMAP4rev1 Server Ready\r\n
