@@ -1,15 +1,19 @@
 id: default-lucee-page
+
 info:
   name: Lucee Default Page
   author: dhiyaneshDk
   severity: info
-  reference:
-    - https://www.shodan.io/search?query=http.title%3A%22Lucee%22
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"Lucee"
   tags: tech,lucee
-requests:
+
+http:
   - method: GET
     path:
       - '{{BaseURL}}'
+
     matchers:
       - type: word
         words:

@@ -1,16 +1,14 @@
 id: nntp
 info:
-  name: Symantec Enterprise Firewall nntpd
+  name: Diablo nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    device_type: firewall
-    info: unauthorized
-    product: enterprise_firewall
+    hostname: $1
+    operating_system: Unix
     rarity: 0
-    vendor: symantec
-    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^201 NNTP server ready \(no posting\)\r\n502 No permission\r\n
+    - '^502 ([-\w_.]+): Transfer permission denied to [\d.]+ - [-\w_.@]+ \(DIABLO ([-\w_.]+)\)\r\n'

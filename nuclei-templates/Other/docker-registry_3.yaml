@@ -4,9 +4,9 @@ info:
   name: Docker Registry Listing
   author: puzzlepeaches
   severity: medium
-  tags: docker
+  tags: docker,devops
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/v2/_catalog"

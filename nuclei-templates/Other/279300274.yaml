@@ -1,12 +1,10 @@
 id: http
 info:
-  name: SMC Barricade broadband router
+  name: Pcounter httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: broadband router
-    info: simply redirects to real web admin port 88
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +16,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 301 Moved\r\nLocation: http://\d+\.\d+\.\d+\.\d+:88\r\n'
+    - '^HTTP/1\.1 400 Bad Request\r\nContent-Type: text/plain\r\nContent-Length: 51\r\nConnection: close\r\n\r\nError 400: Bad Request\nCan not parse request: \[\r\n\r\]$'

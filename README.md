@@ -6,97 +6,99 @@
 | CVE-2002 | 1 |
 | CVE-2004 | 3 |
 | CVE-2005 | 4 |
-| CVE-2006 | 5 |
+| CVE-2006 | 3 |
 | CVE-2007 | 6 |
 | CVE-2008 | 13 |
 | CVE-2009 | 20 |
-| CVE-2010 | 123 |
-| CVE-2011 | 20 |
-| CVE-2012 | 38 |
+| CVE-2010 | 122 |
+| CVE-2011 | 18 |
+| CVE-2012 | 35 |
 | CVE-2013 | 30 |
-| CVE-2014 | 60 |
-| CVE-2015 | 69 |
-| CVE-2016 | 68 |
-| CVE-2017 | 109 |
-| CVE-2018 | 279 |
-| CVE-2019 | 454 |
-| CVE-2020 | 833 |
-| CVE-2021 | 959 |
-| CVE-2022 | 933 |
-| CVE-2023 | 808 |
-| CVE-2024 | 512 |
-| CVE-2025 | 127 |
-| Other | 53048 |
-| wordpress | 90594 |
+| CVE-2014 | 58 |
+| CVE-2015 | 60 |
+| CVE-2016 | 55 |
+| CVE-2017 | 104 |
+| CVE-2018 | 272 |
+| CVE-2019 | 441 |
+| CVE-2020 | 812 |
+| CVE-2021 | 914 |
+| CVE-2022 | 907 |
+| CVE-2023 | 796 |
+| CVE-2024 | 492 |
+| CVE-2025 | 126 |
+| Other | 40618 |
+| wordpress | 77423 |
 ## 近几天数量变化情况
-|2025-08-08 | 2025-08-09 | 2025-08-10 | 2025-08-14 | 2025-08-15 | 2025-08-16 | 2025-08-17|
+|2025-08-09 | 2025-08-10 | 2025-08-14 | 2025-08-15 | 2025-08-16 | 2025-08-17 | 2025-08-19|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|137290 | 150807 | 146906 | 115779 | 149890 | 97923 | 149120|
+|150807 | 146906 | 115779 | 149890 | 97923 | 149120 | 123337|
 ## 最近新增文件
 | templates name | 
 | --- |
-| CVE-2022-0189_7.yaml |
-| latestcheckins.yaml |
-| earnware-connect.yaml |
-| CVE-2025-6221.yaml |
-| weichuncai.yaml |
-| linux-promotional-plugin.yaml |
-| intl-datetime-calendar.yaml |
-| CVE-2025-7441.yaml |
-| CVE-2025-7686.yaml |
-| CVE-2024-12612.yaml |
-| CVE-2025-7649.yaml |
-| CVE-2025-7684.yaml |
-| CVE-2024-8393.yaml |
-| CVE-2025-7499.yaml |
-| CVE-2021-20792_6.yaml |
-| CVE-2025-7664.yaml |
-| CVE-2021-39350_8.yaml |
-| CVE-2025-8105.yaml |
-| CVE-2025-8719.yaml |
-| CVE-2025-8142.yaml |
-| CVE-2025-8143.yaml |
-| CVE-2025-7683.yaml |
-| CVE-2025-6079.yaml |
-| CVE-2025-8293.yaml |
-| CVE-2025-6080.yaml |
-| anber-elementor-addon.yaml |
-| CVE-2025-7439.yaml |
-| alpack.yaml |
-| CVE-2025-7651.yaml |
-| CVE-2025-8089.yaml |
-| CVE-2025-3671.yaml |
-| CVE-2021-24176_8.yaml |
-| surbma-recent-comments-shortcode.yaml |
-| CVE-2025-8896.yaml |
-| CVE-2025-8878.yaml |
-| lastfm-recent-album-artwork.yaml |
-| CVE-2024-12575.yaml |
-| translate-this-google-translate-web-element-shortcode.yaml |
-| CVE-2025-8898.yaml |
-| CVE-2025-7440.yaml |
-| embed-bokun.yaml |
-| CVE-2025-7668.yaml |
-| CVE-2025-8464.yaml |
-| norton-phish_11.yaml |
-| keepass-phish_11.yaml |
-| medium-webapp-weak-password-policy-enumeration.yaml |
-| netflix-phish_7.yaml |
-| chrome-phish_13.yaml |
-| unleash-panel_8.yaml |
-| manageengine-exchangereporter-panel.yaml |
-| paloaltonetworks-globalprotect-version.yaml |
-| generic-windows-lfi_4.yaml |
-| medium-webapp-xss-mutation-dom-based.yaml |
-| cryptshare-panel.yaml |
-| versa-director-panel.yaml |
-| microsoft-sharepoint-amsi.yaml |
-| osgeo-geoserver-version.yaml |
-| medium-webapp-dom-clobbering-prototype-pollution.yaml |
-| msafe-panel.yaml |
-| instagram-phish_10.yaml |
-| microsoft-sharepoint-favicon.yaml |
-| photoprism-panel_6.yaml |
-| foundry-virtual-tabletop-panel.yaml |
-| topdesk-panel.yaml |
-| microsoft-sharepoint-version.yaml |
+| CVE-2025-27888.yaml |
+| stops-core-theme-and-plugin-updates_6.yaml |
+| wp-super-cache_7.yaml |
+| woocommerce-pdf-invoices-packing-slips_7.yaml |
+| svg-support_6.yaml |
+| really-simple-captcha_5.yaml |
+| siteorigin-panels_6.yaml |
+| sucuri-scanner_6.yaml |
+| safe-svg_6.yaml |
+| wordpress-importer_5.yaml |
+| siteguard_6.yaml |
+| pretty-link_7.yaml |
+| redirection_7.yaml |
+| woocommerce-gateway-stripe_7.yaml |
+| wp-maintenance-mode_6.yaml |
+| smart-slider-3_6.yaml |
+| translatepress-multilingual_6.yaml |
+| popup-maker_7.yaml |
+| wp-file-manager_6.yaml |
+| wp-fastest-cache_7.yaml |
+| wordpress-seo_8.yaml |
+| really-simple-ssl_7.yaml |
+| woocommerce-services_8.yaml |
+| user-role-editor_7.yaml |
+| wp-google-maps_5.yaml |
+| webp-converter-for-media_6.yaml |
+| wp-reset_6.yaml |
+| woo-variation-swatches_6.yaml |
+| wps-hide-login_4.yaml |
+| woo-cart-abandonment-recovery_6.yaml |
+| wp-sitemap-page_6.yaml |
+| woocommerce-paypal-payments_6.yaml |
+| wpcf7-recaptcha_4.yaml |
+| wp-multibyte-patch_5.yaml |
+| yeswiki-detect_4.yaml |
+| bugbounty-rce.yaml |
+| bugbounty-xss.yaml |
+| bugbounty-ssti.yaml |
+| apache-druid-log4j_4.yaml |
+| template-6.yaml |
+| bugbounty-sqli-in-uri-path.yaml |
+| dataiku-default-login_5.yaml |
+| template-8.yaml |
+| all-in-one.yaml |
+| bugbounty-xxe.yaml |
+| bugbounty-open-redirect.yaml |
+| unauthenticated-prtg-10926_2.yaml |
+| template-5.yaml |
+| cisco-unified-communications-log4j_4.yaml |
+| template-1.yaml |
+| bugbounty-lfi.yaml |
+| bugbounty-cors-misconfiguration.yaml |
+| bugbounty-ssrf.yaml |
+| aem-forms-panel.yaml |
+| anydesk-phish_10.yaml |
+| template-7.yaml |
+| datahub-metadata-default-login_5.yaml |
+| template-4.yaml |
+| template-3.yaml |
+| graylog-log4j_4.yaml |
+| bugbounty-xss-in-uri-path.yaml |
+| bugbounty-crlf-injection.yaml |
+| bugbounty-host-header-injection.yaml |
+| mapproxy-file-read.yaml |
+| bugbounty-sqli.yaml |
+| fortinet-fortimanager-panel_4.yaml |
+| template-2.yaml |

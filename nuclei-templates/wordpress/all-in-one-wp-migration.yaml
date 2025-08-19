@@ -1,18 +1,20 @@
 id: wordpress-all-in-one-wp-migration
 
 info:
-  name: All-in-One WP Migration and Backup Detection
+  name: All-in-One WP Migration Detection
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/all-in-one-wp-migration/
   metadata:
+    max-request: 1
     plugin_namespace: all-in-one-wp-migration
     wpscan: https://wpscan.com/plugin/all-in-one-wp-migration
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/all-in-one-wp-migration/readme.txt"
 
@@ -46,4 +48,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100befe71ceff976aac4e4f9c3624adecc2f8908a1d21d73cff0f94d91f24036f450220021d1cf4f12c68d73350fb39e4b5edc83ec8a6e489b87987ccd45cc603b8e5b9:922c64590222798bb761d5b6d8e72950
