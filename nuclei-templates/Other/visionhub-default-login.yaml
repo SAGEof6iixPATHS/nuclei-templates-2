@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   tags: visionhub,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /VisionHubWebApi/api/Login HTTP/1.1
@@ -33,6 +33,12 @@ requests:
         words:
           - "Set-Cookie: admin"
         part: header
+
+      - type: word
+        words:
+          - "Set-Cookie: adminer_key"
+        part: header
+        negative: true
 
       - type: status
         status:

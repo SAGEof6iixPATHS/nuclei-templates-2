@@ -1,11 +1,10 @@
 id: telnet
 info:
-  name: Samsung $1 WAP telnetd
+  name: Ascentia DataStage telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: WAP
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfe\x01\n\r\n\r\n\r\n\n\n\n\r\t={51}\n\r\t       Samsung ([\w()-]+) Configuration\n\r\t={51}\n\r\n\r\tTo configure the Access Point, the password is required\.\n\r\tEnter password:'
+    - '^\xff\xfb\x01Welcome to the DataStage Telnet Server\.\r\0\r\nEnter user name: '

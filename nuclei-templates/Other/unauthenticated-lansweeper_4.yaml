@@ -4,9 +4,11 @@ info:
   name: Unauthenticated Lansweeper Instance
   author: divya_mudgal
   severity: high
-  tags: lansweeper,unauth
+  tags: lansweeper,unauth,misconfig
+  metadata:
+    max-request: 1
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/Default.aspx"

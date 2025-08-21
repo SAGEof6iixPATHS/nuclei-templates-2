@@ -3,10 +3,7 @@ id: grafana-detect
 info:
   name: Grafana panel detect
   author: organiccrap
-  severity: info
-  metadata:
-    shodan-query: title:"Grafana"
-  tags: panel,grafana
+  severity: low
 
 requests:
   - method: GET
@@ -17,9 +14,3 @@ requests:
         words:
           - "<title>Grafana</title>"
         part: body
-    extractors:
-      - type: regex
-        part: body
-        group: 1
-        regex:
-          - 'Grafana ([v0-9.]+)'

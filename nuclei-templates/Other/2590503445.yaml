@@ -1,12 +1,12 @@
 id: smtp
 info:
-  name: Goodtech smtpd
+  name: AntiVir MailGate smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220.*Simple Mail Transfer Service Ready\. Version ([\d.]+)
+    - ^220 ([-\w_.]+) AntiVir MailGate\r\n

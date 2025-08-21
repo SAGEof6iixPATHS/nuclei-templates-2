@@ -8,9 +8,8 @@ info:
     A vultr phishing website was detected
   reference:
     - https://my.vultr.com/
-  metadata:
-    max-request: 1
   tags: phishing,vultr,osint
+
 http:
   - method: GET
     path:
@@ -32,4 +31,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"vultr.com")'
-# digest: 4a0a0047304502205bcd786fde1e3ad12cc5c6ef4829ef2b5cee59b778bdbb50e3978a763c4a0238022100afdfc970469a40133c8eb42a09ee2439d16add9e9bd06c79260cf5f8374aa04e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c5e893a2192a855e240ccfaeb623282ee0edfe8fee737f5a923bb1bc6ef3a45f022057f7bf47c8e7e0d66f85edc47dc69f8e82bb411a8bab2b00070193c0b16d6f0d:922c64590222798bb761d5b6d8e72950
