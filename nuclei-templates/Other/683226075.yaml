@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: Sonic FTP Server
+  name: GlobespanVirata ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
+    device_type: broadband router
     rarity: 0
-    version: $1
+    version: '1.0'
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - '^220-\xa1\xee Sonic FTP Server \(Version ([\w._-]+)\)\.\r\n220-\xa1\xee '
+    - ^220 FTP Server \(Version 1.0\) ready.\r\n$

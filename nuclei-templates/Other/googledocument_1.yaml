@@ -5,19 +5,18 @@ info:
   author: cipher387
   severity: info
   description: Extract Google Documents links from web page body
-  tags: juicy-info,cloud
-  
-http:
+  tags: osint,juicy-info
+
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"
-      
+
     matchers:
       - type: regex
         part: body
         regex:
           - 'docs.google.com/((.|\n)*?)(\s|\"|\]|\,)'
-          
     extractors:
       - type: regex
         part: body

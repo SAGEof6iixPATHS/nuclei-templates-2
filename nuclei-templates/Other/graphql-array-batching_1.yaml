@@ -1,5 +1,4 @@
 id: graphql-array-batching
-
 info:
   name: GraphQL Array-based Batching
   author: Dolev Farhi
@@ -13,11 +12,8 @@ info:
     - https://graphql.security/
   remediation: |
     Deactivate or limit Batching in your GraphQL engine.
-  tags: graphql,misconfig
-  metadata:
-    max-request: 2
-
-http:
+  tags: graphql
+requests:
   - raw:
       - |
         POST /graphql HTTP/1.1
@@ -25,14 +21,12 @@ http:
         Content-Type: application/json
 
         [{"query":"query {\n __typename \n }"}, {"query":"mutation { \n __typename \n }"}]
-
       - |
         POST /api/graphql HTTP/1.1
         Host: {{Hostname}}
         Content-Type: application/json
 
         [{"query":"query {\n __typename \n }"}, {"query":"mutation { \n __typename \n }"}]
-
     stop-at-first-match: true
     matchers-condition: and
     matchers:
@@ -43,7 +37,6 @@ http:
           - ':"Mutations"'
         case-insensitive: true
         condition: and
-
       - type: word
         part: header
         words:

@@ -9,11 +9,10 @@ info:
   metadata:
     plugin_namespace: ocean-extra
     wpscan: https://wpscan.com/plugin/ocean-extra
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+  tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/ocean-extra/readme.txt"
 
@@ -47,3 +46,4 @@ requests:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100ed387f8771bf69a681a836c5bb8606aa206870b845170abea9ca862d48c2f31a022100ffa3602625f60cc112f8cfafcbb6f390593ba013c218126ae93eede4a608ba42:922c64590222798bb761d5b6d8e72950

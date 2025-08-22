@@ -3,15 +3,12 @@ id: gunicorn-detect
 info:
   name: Detect Gunicorn Server
   author: joanbono
-  severity: info
   description: Gunicorn Python WSGI HTTP Server for UNIX
-  reference:
-    - https://github.com/benoitc/gunicorn
+  reference: https://github.com/benoitc/gunicorn
+  severity: info
   tags: tech,gunicorn
-  metadata:
-    max-request: 1
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"

@@ -1,13 +1,15 @@
 id: pop3
 info:
-  name: Microsoft Windows 2003 POP3 Service
+  name: MailEnable pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows 2000
+    operating_system: Windows
+    product: mailenable
     rarity: 0
-    version: '1.0'
+    vendor: mailenable
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Microsoft Windows POP3 Service Version 1.0 <
+    - ^\+OK POP3 Mail server\r\n

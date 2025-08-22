@@ -1,7 +1,7 @@
 id: wordpress-seo-by-rank-math
 
 info:
-  name: Rank Math SEO – AI SEO Tools to Dominate SEO Rankings Detection
+  name: Rank Math SEO Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/seo-by-rank-math
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/seo-by-rank-math/readme.txt"
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a004730450220736818b5257b01e17218854f485c2e3c38409744219a3420284e609ea72e9eb3022100b1f5f2231fe466650c47dfc21f168dab2aa1bfc6fec39f8c52e434146abe1077:922c64590222798bb761d5b6d8e72950

@@ -1,16 +1,17 @@
 id: ssh
 info:
-  name: Akamai SSH
+  name: Dropbear sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
-    product: ssh
+    info: protocol 2.0
+    operating_system: Linux
+    product: dropbear_ssh_server
     rarity: 0
-    vendor: akamai
+    vendor: matt_johnston
     verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-(\d[\d.]*)-(Server-VI)\r?\n$
+    - ^SSH-2\.0-dropbear_([-\w.]+)\r?\n

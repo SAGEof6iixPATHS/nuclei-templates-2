@@ -1,12 +1,13 @@
 id: http
 info:
-  name: Remote Potato media player
+  name: Local HTTPD
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    device_type: phone
+    info: based on NanoHTTPD
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 405 Method Not Allowed\r\nServer: remote-potato-v([\w._-]+)\r\n'
+    - '^HTTP/1\.0 500 Internal Server Error \r\nContent-Type: text/plain\r\nDate: .*\r\n\r\nSERVER INTERNAL ERROR: Invalid ip\.$'
