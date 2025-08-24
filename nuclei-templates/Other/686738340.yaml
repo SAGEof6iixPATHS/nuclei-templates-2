@@ -1,15 +1,14 @@
 id: ssh
 info:
-  name: Akamai SSH
+  name: 3Com switch sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
+    device_type: switch
     info: protocol $1
-    product: ssh
+    operating_system: Comware
     rarity: 0
-    vendor: akamai
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -21,4 +20,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-(\d[\d.]*)-(Server-VII)\r?\n
+    - ^SSH-([\d.]+)-3Com OS-([\w._-]+ Release \w+)\n

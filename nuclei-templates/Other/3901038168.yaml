@@ -1,10 +1,12 @@
 id: pop3
 info:
-  name: cppop pop3d
+  name: Hermes pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $2
+    operating_system: Windows
     rarity: 0
     version: $1
 tcp:
@@ -17,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 \[cppop (\d[^]]+)\] at \[
+    - ^\+OK Hermes ([\w. ]+) POP3 Ready\. <[\d.]+@([-\w_.]+)>\r\n

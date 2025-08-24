@@ -1,13 +1,12 @@
 id: ftp
 info:
-  name: NetComm NS4000 Network Camera
+  name: IBM FTPSERVE
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: webcam
-    hostname: $1
-    info: ARM_BE $2
+    hostname: $3
+    operating_system: z/VM $1.$2
     rarity: 0
 tcp:
 - name: 'null'
@@ -19,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([-\w_.]+)           FTP server \(ARM_BE - V([\w.]+)\) ready\.\r\n
+    - ^220-FTPSERVE IBM VM Level (\d)(\d+) at ([\w._-]+), [^\r\n]*\r\n220 Connection will close if idle for more than 5 minutes\.\r\n

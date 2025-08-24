@@ -4,6 +4,10 @@ info:
   name: Airflow Debug Trace
   author: pdteam
   severity: low
+  metadata:
+    max-request: 1
+    verified: true
+    shodan-query: title:"Airflow - DAGs"
   tags: apache,airflow,fpd
 
 http:

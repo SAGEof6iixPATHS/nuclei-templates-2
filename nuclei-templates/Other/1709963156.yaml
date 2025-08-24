@@ -1,13 +1,14 @@
 id: smtp
 info:
-  name: Rustock smtp backdoor
+  name: Lotus Domino smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: '**BACKDOOR**'
-    operating_system: Windows
+    product: lotus_domino
     rarity: 8
+    vendor: ibm
+    verified: true
 tcp:
 - name: hello
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ESMTP service ready\r\n250\x20ok\r\n
+    - ^220 .* SMTP ready at .*\r\n501 Command \"EHLO\" requires an argument\r\n

@@ -3,8 +3,8 @@ id: api-apigee-edge
 info:
   name: Apigee Edge API Test
   author: dwisiswant0
-  severity: info
   reference: https://apidocs.apigee.com/apis
+  severity: info
   tags: token-spray,apigee
 
 self-contained: true
@@ -24,6 +24,5 @@ requests:
       - type: word
         part: body
         words:
-          - '"uuid":'
-          - '"name":'
-        condition: and
+          - "fault"
+        negative: true
